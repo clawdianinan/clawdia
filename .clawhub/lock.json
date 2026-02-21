@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "skills": {
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1771718199328
+    },
+    "frontend-design": {
+      "version": "1.0.0",
+      "installedAt": 1771718201093
+    },
+    "trello": {
+      "version": "1.0.0",
+      "installedAt": 1771718202796
+    },
+    "calendly-api": {
+      "version": "1.0.3",
+      "installedAt": 1771718204536
+    },
+    "zoho-mail": {
+      "version": "1.0.4",
+      "installedAt": 1771718206346
+    },
+    "zoho-crm": {
+      "version": "1.0.4",
+      "installedAt": 1771718208001
+    },
+    "zoho-calendar": {
+      "version": "1.0.3",
+      "installedAt": 1771718209851
+    },
+    "n8n-workflow-automation": {
+      "version": "1.0.0",
+      "installedAt": 1771718211571
+    }
+  }
+}
