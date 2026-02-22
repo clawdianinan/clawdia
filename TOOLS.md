@@ -39,8 +39,21 @@ If a system requires broad compatibility, default to Gmail.
 - Do not mix operational and public system logins unnecessarily
 - Confirm which identity is being used before integration
 - If automation touches inboxes, explicitly confirm target account
+- Prioritize all emails from **IHS Towers** above other non-critical email threads
 
 When unsure, ask before acting.
+
+### 2.1 VIP Alert Rules
+
+WhatsApp VIP contacts:
+- HE
+- Darwish
+- Oladepo
+
+Behavior:
+- Trigger immediate emergency escalation when any VIP contact sends a message
+- Use emergency format in HEARTBEAT rules
+- Do not batch VIP alerts into normal periodic summaries
 
 ---
 

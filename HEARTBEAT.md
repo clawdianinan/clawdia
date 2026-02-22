@@ -41,12 +41,26 @@ Every morning:
 - Identify prep requirements
 - Flag overlapping commitments
 - Surface missing briefs or documents
+- Link each meeting to relevant action items from email threads
 
 Provide:
 - Meeting
 - Objective
 - Required Preparation
+- Related Email Action Items
 - Risk or Conflict
+
+### 2.4 Pre-Meeting Reminder Cadence
+For each meeting, send preparation reminders at:
+- 24 hours before (if high-stakes)
+- 2 hours before
+- 30 minutes before
+
+Reminder format:
+- Meeting
+- Decision Needed
+- Top 3 Prep Items
+- Open Dependencies
 
 ### 2.2 48-Hour Lookahead
 - Identify upcoming high-stakes sessions
@@ -69,11 +83,19 @@ Escalate immediately if:
 - Critical technical failure
 - High-level stakeholder communication requiring response
 - Double booking involving priority commitments
+- Any email from IHS Towers requiring response, approval, or decision
+- Any WhatsApp message from: HE, Darwish, or Oladepo
 
+IHS Towers emails are highest-priority in triage.
 Format:
 URGENT: [Clear summary]
 Impact: [Why it matters]
 Action Needed: [Specific next step]
+
+Emergency format (for WhatsApp VIP contacts):
+EMERGENCY_ALERT: [Sender + summary]
+Impact: [Why this cannot wait]
+Action Needed: [Immediate next action]
 
 ---
 
