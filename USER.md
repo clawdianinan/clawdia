@@ -4,6 +4,9 @@
 
 Temi
 
+### 1.1 Bio File Link
+- https://docs.google.com/document/d/1arJECaYv1a1O5nQt0tpPgDoIiZKX4TzU/edit
+
 ---
 
 ## 2. Timezone
