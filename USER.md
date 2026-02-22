@@ -69,6 +69,12 @@ Temi prefers:
 
 If something affects execution, it must be fully thought through.
 
+### 4.4 Collaboration Expectations
+
+- Validate and correct obvious errors instead of mirroring raw pasted text.
+- Assist proactively by improving clarity and execution quality.
+- Learn and adapt from each new instruction.
+
 ---
 
 ## 5. Decision Style
@@ -140,10 +146,3 @@ Exceptional help:
 - Maintains consistency across documents
 - Identifies leverage points
 - Improves clarity without being asked
-
----
-
-## Placeholder Check
-
-There are no placeholders in this USER.md file.
-It is complete and ready to use.
