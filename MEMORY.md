@@ -5,6 +5,43 @@ Memory must remain structured, pruned, and actionable.
 
 ---
 
+## 0. Strategic Context Layer (Durable Narrative)
+
+### Institutional & Government Layer
+- **Ilorin Innovation Hub (IIH):** Government-aligned innovation infrastructure managing programs, operations, and ecosystem growth. Purpose: Regional digital capacity building.
+- **Kwara State IT Infrastructure Oversight:** Strategic modernization and management of state-level IT and network systems. Purpose: Institutional digital reliability and transformation.
+
+### Financial Infrastructure
+- **STREAMS Billing:** Compliance-ready invoicing and POS engine with VAT/WHT logic and multi-currency support. Purpose: Programmable financial infrastructure.
+- **STREAMS Tax:** Modular tax rules abstraction engine. Purpose: Configurable compliance automation.
+- **Subscription Lifecycle Platform:** Africa-focused recurring billing system integrating card and direct debit rails. Purpose: Subscription management infrastructure at scale.
+
+### Agritech Infrastructure
+- **LandLink:** Structured farmland discovery and sale/lease platform with geolocation and constraint enforcement. Purpose: Digitize agricultural land access.
+
+### Space & Operational Infrastructure
+- **Unified Space Management Platform:** Workspace and facility booking system with slot logic, admin dashboards, and SaaS evolution path. Purpose: Operational infrastructure for managed physical spaces.
+- **VisitDesk:** Visitor check-in and access tracking system for institutions. Purpose: Structured facility governance and entry control.
+
+### Marketplace & Mobility Systems
+- **Quaride:** Ride-hailing architecture with rider/driver apps and integrated payments. Purpose: Transport marketplace infrastructure.
+- **IIH Job Board:** Admin-controlled job marketplace with structured application workflow. Purpose: Institutional hiring pipeline infrastructure.
+
+### Learning & Knowledge Infrastructure
+- **Sabify:** Micro-learning platform for short-form digital skill delivery. Purpose: Modular knowledge distribution.
+
+### Productivity & Memory Systems
+- **TracMemo:** Structured decision and context tracking system. Purpose: Externalized memory for long-term leverage.
+
+### Creative IP Layer
+- **Apes of Zamoonda:** Original African sci-fi narrative IP exploring civilization, AI symbolism, and power structures. Purpose: Long-horizon creative world-building.
+
+### AI & Development Infrastructure
+- **Local AI Stack & Clawdia:** Multi-model AI orchestration and guardrail-enforced coding system. Purpose: AI-native product development acceleration.
+- **Vibe Coding Workflow:** AI-assisted rapid development pipeline using modular PRDs and architecture discipline. Purpose: Speed without structural compromise.
+
+---
+
 ## 1. Stable Preferences
 
 Information that rarely changes and should influence all outputs.
@@ -41,6 +78,15 @@ Long-horizon themes across projects.
 - Clean execution over noise
 - Priority discipline across concurrent initiatives
 - Build-once, reuse-everywhere leverage patterns
+
+### 2.1 Recurring Philosophy
+- Infrastructure over surface features
+- Modular systems over one-off apps
+- Guardrail-first architecture
+- Compliance-aware design
+- Cross-system dependency visibility
+- Long-term defensibility
+- AI-native workflows
 
 If a new initiative aligns with these, flag synergy.
 
@@ -147,6 +193,29 @@ Store non-negotiables:
 - Migration-safe change sequencing
 
 These guardrails are enforced in future design discussions.
+
+---
+
+## Active Strategic Bets
+
+### Primary Focus
+- STREAMS financial infrastructure
+- AI-native system architecture
+- Institutional digital infrastructure
+- Modular SaaS consolidation
+
+### Secondary Focus
+- LandLink scaling
+- Space management SaaS evolution
+- Sabify growth
+- VisitDesk deployment
+
+### Exploration
+- Cross-border positioning
+- Creative IP expansion
+- AI monetization layers
+
+Review Frequency: Monthly
 
 ---
 
