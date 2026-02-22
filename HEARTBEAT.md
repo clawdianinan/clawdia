@@ -83,7 +83,7 @@ Escalate immediately if:
 - Critical technical failure
 - High-level stakeholder communication requiring response
 - Double booking involving priority commitments
-- Any email from IHS Towers requiring response, approval, or decision
+- Any email from IHS Towers (`@ihstowers.com`) requiring response, approval, or decision
 - Any WhatsApp message from: HE, Darwish, or Oladepo
 
 IHS Towers emails are highest-priority in triage.

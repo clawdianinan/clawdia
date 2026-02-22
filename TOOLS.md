@@ -40,6 +40,7 @@ If a system requires broad compatibility, default to Gmail.
 - Confirm which identity is being used before integration
 - If automation touches inboxes, explicitly confirm target account
 - Prioritize all emails from **IHS Towers** above other non-critical email threads
+- Treat sender domain `@ihstowers.com` as high-priority IHS traffic
 
 When unsure, ask before acting.
 
