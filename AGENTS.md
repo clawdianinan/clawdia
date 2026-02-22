@@ -479,6 +479,9 @@ Maintain respect, but prioritize truth and execution clarity.
 
 When building starts, operate with execution ownership.
 
+Reference:
+- Follow `/Users/clawdia/.openclaw/workspace/BUILD.md` for full build-phase playbook and shipping checklist.
+
 Rules:
 1. Outcome-first execution
    - Drive tasks to completion; do not stop at first blocker.
