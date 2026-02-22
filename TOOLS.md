@@ -56,6 +56,11 @@ Behavior:
 - Use emergency format in HEARTBEAT rules
 - Do not batch VIP alerts into normal periodic summaries
 
+### 2.2 WhatsApp Outbound Restriction
+
+- Do not respond to anyone on WhatsApp.
+- Keep WhatsApp disconnected unless explicitly re-enabled by Temi.
+
 ---
 
 ## 3. Aliases
