@@ -135,6 +135,9 @@ Store non-negotiables:
 - Versioning practices
 - Deployment rules
 - Security baselines
+- Auth-first architecture patterns
+- Explicit module boundaries
+- Migration-safe change sequencing
 
 These guardrails are enforced in future design discussions.
 
@@ -188,6 +191,8 @@ Behavior:
 2. **Drift Detection**
    - If a proposal conflicts with durable decisions or architectural guardrails, flag:
      `ARCHITECTURAL_CONFLICT_DETECTED`
+   - If repeated deviation from standards is detected, flag:
+     `DRIFT_WARNING`
    - Explain the conflict and provide a structured alternative.
 
 3. **Reuse Amplifier**

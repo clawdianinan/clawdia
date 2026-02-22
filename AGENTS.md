@@ -398,6 +398,16 @@ Add persistent enforcement:
 If not, output:
 `GUARDRAIL_BREACH`
 
+### 6.1 Coding Proposal Gate (Persistent)
+
+Before suggesting any new feature or module:
+1. Check if module already exists
+2. Check duplication risk
+3. Suggest abstraction/shared module when appropriate
+4. Flag technical debt and migration impact early
+
+Assume strong React/TypeScript SaaS context, auth-first architecture, explicit module boundaries, and version-aware changes.
+
 ---
 
 ### 7. Silence Discipline

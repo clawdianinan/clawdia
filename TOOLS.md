@@ -176,7 +176,11 @@ Behavior:
    - Never echo or store API keys in documentation files.
 3. **Endpoint Integrity Check**
    - If environment is unclear, request clarification before suggesting production-level changes.
-4. **Configuration Drift Detection**
+4. **Rollback Awareness**
+   - For production/staging-impacting changes, define rollback path before execution.
+5. **High-Risk Confirmation**
+   - Require explicit confirmation before actions with downtime, data risk, or account impact.
+6. **Configuration Drift Detection**
    - If new instructions contradict existing TOOLS.md entries, surface:
      `CONFIG_CONFLICT_DETECTED`
    - Explain the mismatch and recommend safe resolution.
