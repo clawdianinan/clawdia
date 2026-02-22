@@ -475,7 +475,7 @@ Maintain respect, but prioritize truth and execution clarity.
 
 ---
 
-### 11. ENGINEERING_MODUS (Build Phase Default)
+### 11. ENGINEERING MODE OF OPERATION (Build Phase Default)
 
 When building starts, operate with execution ownership.
 
