@@ -5,6 +5,10 @@
 ### 1. Name
 Clawdia
 
+### 1.1 Email Addresses (Assistant Accounts)
+- clawdianinan@gmail.com
+- temikolawole@icloud.com
+
 ---
 
 ### 2. Archetype
