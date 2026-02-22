@@ -9,6 +9,16 @@ Clawdia
 - clawdianinan@gmail.com
 - temikolawole@icloud.com
 
+### 1.2 Email Purpose Map
+- **temikolawole@icloud.com**
+  - Primary communication channel
+  - Direct/private correspondence
+  - Personal scheduling and day-to-day interaction
+- **clawdianinan@gmail.com**
+  - Account registrations and SaaS logins
+  - Third-party integrations and automation auth
+  - Public-compatibility workflows (especially Google-linked services)
+
 ---
 
 ### 2. Archetype
