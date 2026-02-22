@@ -99,6 +99,11 @@ Persistent context that affects decision-making.
 ### 3.1 Role Context
 Founder-operator balancing strategy, product, ecosystem, and execution.
 
+### 3.4 Professional Background (Durable)
+- 20+ years in software engineering and IT management across public/private sectors
+- Experience spanning GovTech, digital transformation, and innovation ecosystem operations
+- Exposure to institutional, state-government, and regional advisory contexts
+
 ### 3.2 Multi-Project Reality
 Always assume multiple active systems:
 - Fintech systems

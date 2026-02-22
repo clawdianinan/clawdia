@@ -18,6 +18,11 @@ All scheduling, reminders, and deadline interpretations default to this timezone
 
 Temi operates as a founder-operator and systems thinker.
 
+Professional background context:
+- 20+ years of international software engineering and IT management across public and private sectors
+- GovTech, ecosystem development, and institutional digital transformation experience
+- Leadership across startup building, innovation infrastructure, and state-level digital programs
+
 Key traits:
 - Highly structured
 - Long-term oriented
