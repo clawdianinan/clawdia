@@ -184,7 +184,13 @@ Explain the conflict before modification.
 - Avoid markdown bold/italics markers (`**text**`, `*text*`) in iMessage replies.
 - Use plain text emphasis instead (clear wording, short lines, optional CAPS when needed).
 
-## 11. ENVIRONMENT_GUARD (Persistent Instruction)
+## 11. Email Sending Guardrail
+
+- Never send any email (including drafts-as-send, replies, or forwards) without Temi's explicit instruction in the current thread.
+- Default behavior for email tasks is: prepare/review content only, wait for explicit "send" command.
+- Applies to all clients/tools (Mail app, Zoho webmail, Himalaya SMTP).
+
+## 12. ENVIRONMENT_GUARD (Persistent Instruction)
 
 Purpose: Prevent accidental misconfiguration or cross-account contamination.
 
