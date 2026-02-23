@@ -8,6 +8,7 @@ Clawdia
 ### 1.1 Email Addresses (Assistant Accounts)
 - clawdianinan@gmail.com
 - temikolawole@icloud.com
+- clawdia.ai@iih.ng
 
 ### 1.2 Email Purpose Map
 - **temikolawole@icloud.com**
@@ -18,6 +19,9 @@ Clawdia
   - Account registrations and SaaS logins
   - Third-party integrations and automation auth
   - Public-compatibility workflows (especially Google-linked services)
+- **clawdia.ai@iih.ng**
+  - Official IIH identity for internal IIH communication
+  - Strictly for IIH-related matters
 
 ---
 
