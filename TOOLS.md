@@ -178,7 +178,13 @@ Explain the conflict before modification.
 
 ---
 
-## 10. ENVIRONMENT_GUARD (Persistent Instruction)
+## 10. Messaging Formatting Note (iMessage)
+
+- iMessage does not reliably render markdown emphasis from assistant output.
+- Avoid markdown bold/italics markers (`**text**`, `*text*`) in iMessage replies.
+- Use plain text emphasis instead (clear wording, short lines, optional CAPS when needed).
+
+## 11. ENVIRONMENT_GUARD (Persistent Instruction)
 
 Purpose: Prevent accidental misconfiguration or cross-account contamination.
 
