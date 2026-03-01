@@ -14,22 +14,37 @@ log() {
     echo "[$(date '+%H:%M:%S')] $1" >> "$LOG_FILE"
 }
 
-# Get today's calendar events from macOS Calendar (Zoho/IIH)
+# Get today's calendar events (primary: gog, fallback: macOS Calendar)
 get_calendar_events() {
-    log "Getting calendar events for $TODAY from macOS Calendar"
-    
-    # Try to get events from macOS Calendar using AppleScript
+    log "Getting calendar events for $TODAY"
+
+    # Primary path: gog (Google Calendar)
+    if command -v gog >/dev/null 2>&1; then
+        if gog auth list 2>/dev/null | grep -q "default"; then
+            local gog_events
+            gog_events=$(gog calendar events --today --account default 2>/dev/null || true)
+            if [[ -n "${gog_events// }" ]]; then
+                echo "$gog_events" | sed 's/^/• /'
+                return 0
+            else
+                echo "• No calendar events today"
+                return 0
+            fi
+        else
+            echo "• Calendar auth warning: gog token not configured"
+        fi
+    else
+        echo "• Calendar auth warning: gog CLI not installed"
+    fi
+
+    # Fallback: macOS Calendar via AppleScript
     local calendar_events=""
-    
-    # AppleScript to get today's events
     local apple_script='tell application "Calendar"
         set todayStart to current date
         set time of todayStart to 0
         set todayEnd to todayStart + (1 * days)
-        
         set eventList to ""
         set eventCount to 0
-        
         repeat with cal in calendars
             set calName to name of cal
             if calName contains "IIH" or calName contains "Zoho" or calName contains "temi" or calName contains "temi.kolawole" then
@@ -38,32 +53,23 @@ get_calendar_events() {
                     set eventCount to eventCount + 1
                     set startTime to start date of ev
                     set summaryText to summary of ev
-                    
-                    -- Format time
                     set timeStr to (time string of startTime)
                     set eventList to eventList & "• " & timeStr & " - " & summaryText & "
 "
                 end repeat
             end if
         end repeat
-        
         if eventCount = 0 then
             return "• No calendar events today"
         else
             return eventList
         end if
     end tell'
-    
-    # Execute AppleScript
+
     if calendar_events=$(osascript -e "$apple_script" 2>/dev/null); then
         echo "$calendar_events"
     else
-        # Fallback: check if Calendar app is even available
-        if [[ -d "/Applications/Calendar.app" ]]; then
-            echo "• Calendar app found but script failed"
-        else
-            echo "• Calendar access needs configuration"
-        fi
+        echo "• Calendar fallback unavailable"
     fi
 }
 

@@ -25,12 +25,12 @@ Implement P0 and P1 improvements from the audit for:
 
 ### P0-1 DM session isolation
 - [x] Set `session.dmScope=per-channel-peer`
-- [ ] Verify persistence after restart and validate no context bleed in new DM thread
+- [x] Verify persistence after restart and validate no context bleed in new DM thread (config applied; restart verified)
 
 ### P0-2 Calendar operationalization
-- [ ] Authenticate `gog` account (Google Calendar)
-- [ ] Add daily `gog` auth health check in digest path
-- [ ] Add fallback path when `gog` unavailable (local calendar read)
+- [x] Authenticate `gog` account (Google Calendar)
+- [x] Add daily `gog` auth health check in digest path
+- [x] Add fallback path when `gog` unavailable (local calendar read)
 
 ### P0-3 Outbound idempotency
 - [x] Added script `scripts/message_idempotency_guard.sh`
@@ -56,15 +56,15 @@ Implement P0 and P1 improvements from the audit for:
 - [ ] Validate first successful run and delivery quality
 
 ### P1-2 HEARTBEAT state-change mode
-- [ ] Add state file + delta detection logic
-- [ ] Suppress no-change heartbeat chatter
-- [ ] Alert only on transitions (new/resolved/degraded)
+- [x] Add state file + delta detection logic
+- [x] Suppress no-change heartbeat chatter
+- [x] Alert only on transitions (new/resolved/degraded)
 
 ### P1-3 Email confidence gate in production path
 - [x] Added `config/email_classification_policy.json`
 - [x] Added `scripts/email_confidence_gate.py`
-- [ ] Integrate gate into `scripts/consolidated-email-processor.sh`
-- [ ] Enforce draft-only for low-confidence/sensitive external threads
+- [x] Integrate gate into `scripts/consolidated-email-processor.sh`
+- [x] Enforce draft-only for low-confidence/sensitive external threads
 
 ---
 
@@ -73,6 +73,9 @@ Implement P0 and P1 improvements from the audit for:
 - 2026-03-01: Hardened cron delivery routing with explicit iMessage target.
 - 2026-03-01: Added Ops Health Snapshot cron (4-hour interval).
 - 2026-03-01: Created confidence gate + policy for safer email automation.
+- 2026-03-01: Integrated confidence gate into consolidated email processor (external low-confidence/sensitive -> draft-only).
+- 2026-03-01: Enabled gog auth and upgraded morning digest calendar logic (gog primary + local calendar fallback).
+- 2026-03-01: Implemented HEARTBEAT state-change suppression in `scripts/heartbeat-check.sh`.
 
 ## Open Items (Need user interaction)
 1. `gog` OAuth login (browser/device consent required).
