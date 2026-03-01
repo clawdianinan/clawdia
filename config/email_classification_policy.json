@@ -1,0 +1,25 @@
+{
+  "version": "2026-03-01",
+  "thresholds": {
+    "high_confidence": 0.85,
+    "medium_confidence": 0.65,
+    "low_confidence": 0.0
+  },
+  "sensitive_keywords": [
+    "invoice",
+    "payment",
+    "bank",
+    "salary",
+    "contract",
+    "nda",
+    "legal",
+    "termination",
+    "tax",
+    "regulatory"
+  ],
+  "rules": {
+    "external_sensitive": "draft_only",
+    "low_confidence": "draft_only",
+    "high_confidence_non_sensitive": "can_suggest_action"
+  }
+}
