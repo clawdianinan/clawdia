@@ -4,28 +4,32 @@ Owner: Clawdia
 Status: In Progress
 
 ## Goal
-Keep markdown memory files as source of truth, while improving recall reliability and retrieval quality.
+Keep markdown memory files as source of truth, while improving recall reliability, retrieval quality, and long-term chat-history durability.
 
 ## Principles
 1. Do NOT scrap `.md` memory files.
 2. Treat markdown as canonical records.
 3. Use indexing + health checks + fallback for resilience.
 4. Keep retrieval observable and testable.
+5. Preserve chat history with multi-layer backups and restore testing.
 
 ---
 
 ## Current State
 - Memory files: active (`MEMORY.md` + `memory/*.md`)
+- Session transcripts: available under `~/.openclaw/agents/main/sessions/*.jsonl`
 - Indexing: present but can become stale
 - Hybrid/vector: partially available; fallback needed
 - Recall quality: inconsistent for recent operational changes
+- Durability: backups exist, but no explicit immutable/offsite policy yet
 
 ## Target Architecture
-1. Canonical Store: markdown files
+1. Canonical Store: markdown files + session transcripts (`.jsonl`)
 2. Index Layer: BM25 + optional vector index
 3. Router: hybrid when healthy, keyword fallback when degraded
 4. Health checks: freshness + index presence + retrieval mode
 5. Daily maintenance: index update + snapshot + anomaly alert
+6. Durability Layer: local backup + versioned snapshots + offsite encrypted backup + restore tests
 
 ---
 
@@ -53,6 +57,16 @@ Keep markdown memory files as source of truth, while improving recall reliabilit
 - [ ] Add dedupe and canonicalization for repeated notes
 - [ ] Add monthly memory quality review (signal vs noise)
 
+### M5 — Persistent chat history (durability)
+- [ ] Add daily backup of session transcripts (`~/.openclaw/agents/main/sessions/*.jsonl`) to `~/.openclaw/backups/sessions/`
+- [ ] Add weekly immutable snapshot (date-stamped, append-only folder)
+- [ ] Add encrypted offsite sync target (e.g., Google Drive/remote storage)
+- [ ] Add monthly restore drill (test restore + checksum verification)
+- [ ] Add retention policy: keep all transcripts + rolling compressed archives
+- [ ] Add corruption detection (hash manifest for transcript files)
+
+> Note: "never lost" cannot be guaranteed in absolute terms, but this design targets near-zero loss through layered redundancy + tested restore.
+
 ---
 
 ## KPIs
@@ -60,6 +74,9 @@ Keep markdown memory files as source of truth, while improving recall reliabilit
 - Retrieval availability: 99% (hybrid or fallback)
 - Recall hit quality: > 80% relevant top-5 for operational queries
 - False “no memory” responses: < 5%
+- Transcript backup success rate: 100% daily
+- Restore drill pass rate: 100% monthly
+- Recovery Point Objective (RPO): <= 24h (target <= 4h after phase 2)
 
 ## Rollback / Safety
 - Markdown files remain untouched and canonical.
