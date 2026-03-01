@@ -73,53 +73,59 @@ get_calendar_events() {
     fi
 }
 
-# Get accurate email summary
+# Get accurate email summary (priority accounts first)
 get_email_summary() {
     log "Getting accurate email summary"
-    
-    if command -v himalaya >/dev/null 2>&1; then
-        local unread_count=0
-        local iih_count=0
-        local external_count=0
-        
-        # Quick check of recent emails
-        if emails_json=$(himalaya envelope list --limit 15 --output json 2>/dev/null); then
-            local email_count=$(echo "$emails_json" | jq 'length')
-            
-            for i in $(seq 0 $((email_count - 1))); do
-                local email=$(echo "$emails_json" | jq -r ".[$i]")
-                local flags=$(echo "$email" | jq -r '.flags')
-                local from=$(echo "$email" | jq -r '.from')
-                
-                if [[ "$flags" != *"Seen"* ]]; then
-                    ((unread_count++))
-                    
-                    # Categorize emails accurately
-                    if [[ "$from" == *"@iih.ng"* ]]; then
-                        ((iih_count++))
-                    elif [[ "$from" != *"@iih.ng"* ]]; then
-                        ((external_count++))
-                    fi
-                fi
-            done
-            
-            # Generate accurate summary
-            if [[ "$unread_count" -eq 0 ]]; then
-                echo "📭 No unread emails"
-            elif [[ "$iih_count" -gt 0 ]] && [[ "$external_count" -gt 0 ]]; then
-                echo "📬 $unread_count unread ($iih_count IIH, $external_count external)"
-            elif [[ "$iih_count" -gt 0 ]]; then
-                echo "📬 $unread_count unread ($iih_count IIH internal)"
-            elif [[ "$external_count" -gt 0 ]]; then
-                echo "📬 $unread_count unread ($external_count external)"
-            else
-                echo "📬 $unread_count unread emails"
-            fi
-        else
-            echo "📧 Email check failed"
-        fi
-    else
+
+    if ! command -v himalaya >/dev/null 2>&1; then
         echo "📧 himalaya not installed"
+        return 0
+    fi
+
+    local accounts=(iih_clawdia zoho gmail icloud)
+    local total_unread=0
+    local iih_unread=0
+    local external_unread=0
+    local used_accounts=0
+
+    for acc in "${accounts[@]}"; do
+        if emails_json=$(himalaya envelope list --account "$acc" --page-size 15 --output json 2>/dev/null); then
+            used_accounts=$((used_accounts+1))
+            local email_count
+            email_count=$(echo "$emails_json" | jq 'length')
+            if [[ "$email_count" -gt 0 ]]; then
+                for i in $(seq 0 $((email_count - 1))); do
+                    local email flags from
+                    email=$(echo "$emails_json" | jq -r ".[$i]")
+                    flags=$(echo "$email" | jq -r '.flags')
+                    from=$(echo "$email" | jq -r '.from')
+                    if [[ "$flags" != *"Seen"* ]]; then
+                        total_unread=$((total_unread+1))
+                        if [[ "$from" == *"@iih.ng"* ]]; then
+                            iih_unread=$((iih_unread+1))
+                        else
+                            external_unread=$((external_unread+1))
+                        fi
+                    fi
+                done
+            fi
+        fi
+    done
+
+    if [[ "$used_accounts" -eq 0 ]]; then
+        echo "📧 Email check failed (no accessible accounts)"
+    elif [[ "$total_unread" -eq 0 ]]; then
+        echo "📭 No unread emails"
+    else
+        echo "📬 $total_unread unread ($iih_unread IIH, $external_unread external)"
+    fi
+}
+
+get_email_account_health() {
+    if [[ -x "/Users/clawdia/.openclaw/workspace/scripts/email_account_health.sh" ]]; then
+        /Users/clawdia/.openclaw/workspace/scripts/email_account_health.sh | sed 's/^/• /'
+    else
+        echo "• account health script unavailable"
     fi
 }
 
@@ -203,6 +209,9 @@ generate_digest() {
     # Email Section
     digest+="📧 EMAIL STATUS:\n"
     digest+="$(get_email_summary)\n\n"
+
+    digest+="🩺 EMAIL ACCOUNT HEALTH:\n"
+    digest+="$(get_email_account_health)\n\n"
     
     # Todo Section
     digest+="✅ TODAY'S TODOS:\n"

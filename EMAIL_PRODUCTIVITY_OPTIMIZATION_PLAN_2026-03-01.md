@@ -44,7 +44,7 @@ Implement P0 and P1 improvements from the audit for:
 - [x] Evening Wrap-up: channel+to set explicitly
 - [x] Daily Memory Maintenance: channel+to set explicitly
 - [x] Daily Memory Backup: channel+to set explicitly
-- [ ] Weekly maintenance: set explicit delivery policy or keep intentionally silent
+- [x] Weekly maintenance: explicit iMessage delivery set
 
 ---
 
@@ -76,6 +76,9 @@ Implement P0 and P1 improvements from the audit for:
 - 2026-03-01: Integrated confidence gate into consolidated email processor (external low-confidence/sensitive -> draft-only).
 - 2026-03-01: Enabled gog auth and upgraded morning digest calendar logic (gog primary + local calendar fallback).
 - 2026-03-01: Implemented HEARTBEAT state-change suppression in `scripts/heartbeat-check.sh`.
+- 2026-03-01: Added multi-account email health probe (`scripts/email_account_health.sh`) and surfaced status in morning digest.
+- 2026-03-01: Updated email summary to prioritize IIH accounts (`iih_clawdia`, `zoho`) with fallback to personal accounts.
+- 2026-03-01: Set explicit delivery for weekly maintenance cron.
 
 ## Access Matrix (Current Verified State)
 

@@ -87,15 +87,34 @@ check_ihs_towers_emails() {
     fi
 }
 
+# Select best available account by priority
+select_active_email_account() {
+    local accounts=(iih_clawdia zoho gmail icloud)
+    for acc in "${accounts[@]}"; do
+        if himalaya envelope list --account "$acc" --page-size 1 --output json >/dev/null 2>&1; then
+            echo "$acc"
+            return 0
+        fi
+    done
+    return 1
+}
+
 # Get unread emails in batch
 get_unread_emails_batch() {
     local limit="$1"
-    
+
     log "INFO" "Fetching up to $limit unread emails..."
-    
-    # This would integrate with actual email client
-    # For now, return simulated data
-    echo "[]"
+
+    local acc
+    acc=$(select_active_email_account || true)
+    if [[ -z "$acc" ]]; then
+        log "ERROR" "No accessible email account (Himalaya)."
+        echo "[]"
+        return 0
+    fi
+
+    log "INFO" "Using email account: $acc"
+    himalaya envelope list --account "$acc" --page-size "$limit" --output json 2>/dev/null || echo "[]"
 }
 
 # Classify email type
