@@ -1,0 +1,14 @@
+{
+  "index_path": "/Users/clawdia/.openclaw/workspace/skills/qmd/index",
+  "documents_path": "/Users/clawdia/.openclaw/workspace",
+  "extensions": [".md", ".txt"],
+  "exclude_patterns": ["node_modules", ".git", ".venv", "__pycache__", ".openclaw/credentials"],
+  "max_file_size_mb": 10,
+  "max_results": 20,
+  "bm25_weight": 1.0,
+  "vector_weight": 0.0,
+  "log_level": "INFO",
+  "auto_index_on_startup": false,
+  "watch_for_changes": false,
+  "default_search_fields": ["title", "content", "filename"]
+}
