@@ -142,9 +142,39 @@ Escalation:
 
 ---
 
-## 8) Recommended Next Actions (Immediate)
+## 8) Alignment with Original Agent Creation Prompts (Important)
 
-1. Approve agent roster above.
-2. Decide whether to install `cursor-cli` skill after security review.
-3. Implement agent config updates + routing map.
-4. Start with pilot trio: `chief-of-staff`, `comms-ops`, `web-engineer`.
+1. Existing setup already follows the original intent:
+   1.1 `main` is orchestrator/final approver.
+   1.2 `shuri`, `trinity`, `nova`, `ebun` map to the originally defined functional lanes.
+   1.3 Shared governance exists in your root docs (SOUL/HEARTBEAT) and should remain centralized to avoid duplication.
+2. To preserve your anti-bloat rule, do not create a large new agent fleet immediately.
+3. Keep the original four specialist agents and tune behavior/routing before adding new agents.
+4. Any new agent must be justified by sustained workload not solvable by improved routing.
+
+## 9) Lean Agent Recommendation (Based on your prompt history + current workload)
+
+1. Keep and tune existing agents (no new agent for comms/calendar):
+   1.1 `main` (Clawdia) -> comms/calendar load owner + final approvals.
+   1.2 `shuri` -> IIH docs/ops/reporting + structured review gate.
+   1.3 `trinity` -> all dev execution (web + mobile), avoid splitting into many dev agents.
+   1.4 `nova` -> personal venture strategy.
+   1.5 `ebun` -> public writing/thought leadership.
+2. Development scaling model:
+   2.1 Use one primary dev agent (`trinity`) + temporary task branches/subsessions.
+   2.2 Review path: `shuri` performs scope/risk/test checklist review; `main` approves ship/no-ship.
+   2.3 Add a dedicated QA agent only when release frequency makes this a bottleneck.
+
+## 10) Cursor CLI Skill Decision
+
+1. `cursor-cli` exists on ClawHub but is flagged suspicious.
+2. Recommended policy:
+   2.1 Do not install with `--force` until manual code review.
+   2.2 If approved, sandbox usage and restrict to dev folders only.
+
+## 11) Recommended Next Actions (Immediate)
+
+1. You provide names for any optional new agents.
+2. I will map those names to strict roles and update agent config minimally.
+3. We then run a 7-day pilot with current core agents before adding more.
+4. Decide on Cursor skill after explicit security review.
