@@ -83,14 +83,15 @@ Keep markdown memory files as source of truth, while improving recall reliabilit
 - 2026-03-01: Added `scripts/weekly_immutable_snapshot.sh` (snapshot + best-effort immutable flag).
 - 2026-03-01: Added `scripts/restore_drill_check.sh` (checksum-based restore drill).
 - 2026-03-01: Added `scripts/memory_index_refresh.sh` and scheduled memory refresh reporting.
-- 2026-03-01: Added `scripts/offsite_memory_sync.sh` (target-based offsite sync via rclone).
+- 2026-03-01: Added `scripts/offsite_memory_sync.sh` (Google Drive local mirror sync to `My Drive/Clawdia Documents/OpenClaw-Backups`).
 - 2026-03-01: Added `scripts/session_backup_retention.sh` (rolling archive retention).
 - 2026-03-01: Added `memory/TEMPLATE_SIGNIFICANT_DECISION.md`, `scripts/memory_dedupe_report.sh`, `scripts/memory_monthly_review.sh`.
 - 2026-03-01: Added cron jobs for transcript backup, snapshot, restore drill, memory refresh, offsite sync, retention, dedupe, and monthly review.
 
 ## Remaining Manual Configuration
-- Configure offsite target in `/Users/clawdia/.openclaw/workspace/.offsite-backup-target`.
-- Install and configure `rclone` remote (encrypted target recommended).
+- Ensure Google Drive desktop sync remains enabled for:
+  - `/Users/clawdia/My Drive/Clawdia Documents/OpenClaw-Backups`
+- Optional hardening: add encrypted archive step before sync if you want at-rest encryption on Drive copies.
 
 ## Rollback / Safety
 - Markdown files remain untouched and canonical.

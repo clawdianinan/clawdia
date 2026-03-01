@@ -79,6 +79,8 @@ Implement P0 and P1 improvements from the audit for:
 - 2026-03-01: Added multi-account email health probe (`scripts/email_account_health.sh`) and surfaced status in morning digest.
 - 2026-03-01: Updated email summary to prioritize IIH accounts (`iih_clawdia`, `zoho`) with fallback to personal accounts.
 - 2026-03-01: Set explicit delivery for weekly maintenance cron.
+- 2026-03-01: Repaired Himalaya auth for `gmail` and `icloud`; all four accounts now healthy.
+- 2026-03-01: Reduced cron noise by disabling redundant jobs and lowering Ops Snapshot frequency to every 8h.
 
 ## Access Matrix (Current Verified State)
 
@@ -117,15 +119,12 @@ Implement P0 and P1 improvements from the audit for:
 - [ ] Ops snapshot runs and delivers reliably
 
 ## Next Phase (P1.5 / P2 Immediate)
-1. **Multi-account inbox normalization**
-   - Add account priority order: `iih_clawdia` + `zoho` (IIH) first, then personal accounts.
-   - Build account health probe output into digest (OK/DEGRADED per account).
-2. **Credential repair for failed accounts**
-   - Re-save `himalaya-gmail` and `himalaya-icloud` keychain secrets and re-run doctor.
-3. **Skill reliability telemetry**
+1. **Skill reliability telemetry**
    - Add daily skill success report (invocations, failures, avg runtime) for mail/productivity skills.
-4. **Fallback continuity**
+2. **Fallback continuity**
    - If Himalaya fails, fallback to Apple Mail search skill; if both fail, produce explicit degraded-mode alert.
+3. **Cron budget optimization (ongoing)**
+   - Keep low-noise schedule and avoid duplicate health jobs.
 
 ## Rollback Plan
 - Keep prior scripts and backups.

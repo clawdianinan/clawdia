@@ -1,27 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Optional offsite sync for backups (requires user-configured target)
-# Example target: rclone remote 'secure-backup:openclaw-backups'
-TARGET_FILE="/Users/clawdia/.openclaw/workspace/.offsite-backup-target"
+# Google Drive local folder sync (no rclone)
 SRC="/Users/clawdia/.openclaw/backups"
+TARGET="/Users/clawdia/My Drive/Clawdia Documents/OpenClaw-Backups"
 
-if [[ ! -f "$TARGET_FILE" ]]; then
-  echo "OFFSITE_SYNC: SKIP - no target configured (create $TARGET_FILE)"
-  exit 0
-fi
-
-TARGET="$(cat "$TARGET_FILE" | tr -d '[:space:]')"
-if [[ -z "$TARGET" ]]; then
-  echo "OFFSITE_SYNC: SKIP - empty target"
-  exit 0
-fi
-
-if ! command -v rclone >/dev/null 2>&1; then
-  echo "OFFSITE_SYNC: FAIL - rclone not installed"
+if [[ ! -d "$TARGET" ]]; then
+  echo "GDRIVE_SYNC: FAIL - target folder not found: $TARGET"
   exit 1
 fi
 
-rclone sync "$SRC" "$TARGET" --transfers 4 --checkers 8 --create-empty-src-dirs
+# Keep mirror current
+rsync -a --delete "$SRC/" "$TARGET/"
 
-echo "OFFSITE_SYNC: OK - synced $SRC -> $TARGET"
+echo "GDRIVE_SYNC: OK - synced $SRC -> $TARGET"
