@@ -1,0 +1,141 @@
+name: Upstream Sync (Clawdia)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: upstream-sync
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      date: ${{ steps.vars.outputs.date }}
+    steps:
+      - id: vars
+        run: echo "date=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+  pr-main-from-upstream:
+    runs-on: ubuntu-latest
+    needs: prepare
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "clawdia-sync-bot"
+          git config user.email "clawdia-sync-bot@users.noreply.github.com"
+          git remote add upstream https://github.com/openclaw/openclaw.git
+          git fetch --all --prune
+          git fetch upstream --prune
+
+      - name: Build sync/main branch from upstream/main
+        run: |
+          git checkout -B sync/upstream-main upstream/main
+
+      - name: Create/Update PR main <- sync/upstream-main
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(sync): align main with upstream/main"
+          branch: sync/upstream-main
+          base: main
+          title: "chore(sync): mirror upstream/main into main"
+          body: |
+            Automated upstream sync.
+
+            Source: `openclaw/openclaw:main`
+            Target: `clawdianinan/clawdia:main`
+
+            This PR is auto-updated by workflow.
+          labels: |
+            automated
+            upstream-sync
+          delete-branch: false
+
+  pr-clawdia-main-from-main:
+    runs-on: ubuntu-latest
+    needs: pr-main-from-upstream
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "clawdia-sync-bot"
+          git config user.email "clawdia-sync-bot@users.noreply.github.com"
+          git fetch --all --prune
+
+      - name: Rebase clawdia/main onto main
+        run: |
+          git checkout -B sync/clawdia-main origin/clawdia/main
+          git rebase origin/main || (git rebase --abort && echo "Rebase conflict for clawdia/main" && exit 1)
+
+      - name: Create/Update PR clawdia/main <- sync/clawdia-main
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(sync): rebase clawdia/main onto main"
+          branch: sync/clawdia-main
+          base: clawdia/main
+          title: "chore(sync): update clawdia/main from main"
+          body: |
+            Automated sync step.
+
+            Source: `main`
+            Target: `clawdia/main`
+
+            If this PR has conflicts, resolve manually.
+          labels: |
+            automated
+            upstream-sync
+          delete-branch: false
+
+  pr-clawdia-dev-from-clawdia-main:
+    runs-on: ubuntu-latest
+    needs: pr-clawdia-main-from-main
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "clawdia-sync-bot"
+          git config user.email "clawdia-sync-bot@users.noreply.github.com"
+          git fetch --all --prune
+
+      - name: Rebase clawdia/dev onto clawdia/main
+        run: |
+          git checkout -B sync/clawdia-dev origin/clawdia/dev
+          git rebase origin/clawdia/main || (git rebase --abort && echo "Rebase conflict for clawdia/dev" && exit 1)
+
+      - name: Create/Update PR clawdia/dev <- sync/clawdia-dev
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(sync): rebase clawdia/dev onto clawdia/main"
+          branch: sync/clawdia-dev
+          base: clawdia/dev
+          title: "chore(sync): update clawdia/dev from clawdia/main"
+          body: |
+            Automated sync step.
+
+            Source: `clawdia/main`
+            Target: `clawdia/dev`
+
+            If this PR has conflicts, resolve manually.
+          labels: |
+            automated
+            upstream-sync
+          delete-branch: false

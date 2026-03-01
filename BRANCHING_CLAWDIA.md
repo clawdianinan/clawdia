@@ -43,3 +43,15 @@ git push -u origin feature/<name>
 - Merge approved changes into `clawdia/dev`.
 - Promote tested changes from `clawdia/dev` to `clawdia/main` via PR.
 - Keep `main` reserved for upstream mirror only.
+
+## Automated Sync (GitHub Actions)
+
+Workflow: `.github/workflows/upstream-sync.yml`
+
+- Runs every 6 hours and on manual dispatch.
+- Opens/updates PRs for:
+  1. `main` <= `upstream/main`
+  2. `clawdia/main` <= `main`
+  3. `clawdia/dev` <= `clawdia/main`
+
+This keeps your custom branches cleanly layered while preserving review control.
