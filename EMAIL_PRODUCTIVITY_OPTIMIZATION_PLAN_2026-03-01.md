@@ -77,14 +77,52 @@ Implement P0 and P1 improvements from the audit for:
 - 2026-03-01: Enabled gog auth and upgraded morning digest calendar logic (gog primary + local calendar fallback).
 - 2026-03-01: Implemented HEARTBEAT state-change suppression in `scripts/heartbeat-check.sh`.
 
+## Access Matrix (Current Verified State)
+
+### Google Workspace (`gog`)
+- `clawdianinan@gmail.com` (default): ✅ Authenticated (calendar scope available)
+
+### Himalaya Accounts (`~/.config/himalaya/config.toml`)
+- `gmail` (`clawdianinan@gmail.com`): ❌ IMAP auth failed (invalid credentials)
+- `icloud` (`clawdianinan@icloud.com`): ❌ IMAP auth failed (authentication failed)
+- `zoho` (`temi.kolawole@iih.ng`): ✅ IMAP+SMTP OK
+- `iih_clawdia` (`clawdia.ai@iih.ng`): ✅ IMAP+SMTP OK (default account)
+
+### Channel/Delivery Accounts
+- iMessage: ✅ enabled (default + custom-1)
+- WhatsApp: ✅ linked
+- Telegram: ✅ configured
+
+## Custom Skills Audit (Email/Productivity related)
+- `mail`: installed
+- `apple-mail-search-safe`: installed
+- `himalaya-fixed`: installed
+- `local-email`: installed
+- `mail-attachments`: installed
+- `todo-management`: installed
+- `qmd`: installed
+- `office-document-specialist-suite`: installed
+
 ## Open Items (Need user interaction)
-1. `gog` OAuth login (browser/device consent required).
+1. Refresh credentials for Himalaya `gmail` and `icloud` keychain entries.
+2. Confirm whether `temi.kolawole@iih.ng` and/or `clawdia.ai@iih.ng` should be primary inbound processing account for automated flows.
 
 ## Validation Checklist
 - [ ] No duplicate digest/wrap-up messages across 24h
 - [ ] No cron channel ambiguity errors across 24h
 - [ ] Calendar section shows true events (not placeholder)
 - [ ] Ops snapshot runs and delivers reliably
+
+## Next Phase (P1.5 / P2 Immediate)
+1. **Multi-account inbox normalization**
+   - Add account priority order: `iih_clawdia` + `zoho` (IIH) first, then personal accounts.
+   - Build account health probe output into digest (OK/DEGRADED per account).
+2. **Credential repair for failed accounts**
+   - Re-save `himalaya-gmail` and `himalaya-icloud` keychain secrets and re-run doctor.
+3. **Skill reliability telemetry**
+   - Add daily skill success report (invocations, failures, avg runtime) for mail/productivity skills.
+4. **Fallback continuity**
+   - If Himalaya fails, fallback to Apple Mail search skill; if both fail, produce explicit degraded-mode alert.
 
 ## Rollback Plan
 - Keep prior scripts and backups.
