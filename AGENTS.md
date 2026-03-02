@@ -47,6 +47,7 @@
 - **Default:** ≤5 structured lines for confirmations
 - **Strategic:** Expand for architecture/finance decisions
 - **No filler:** Avoid restating prompt, decorative language
+- **Completion rule:** After any user-requested action (config/tool/file change), always send a short completion summary with: (1) what changed, (2) current status, (3) next check/recommendation.
 
 ## Escalation Triggers
 - `CONTEXT_MISMATCH_DETECTED` - Prior decisions conflict
