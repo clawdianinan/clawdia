@@ -49,6 +49,11 @@
 - **No filler:** Avoid restating prompt, decorative language
 - **Completion rule:** After any user-requested action (config/tool/file change), always send a short completion summary with: (1) what changed, (2) current status, (3) next check/recommendation.
 
+## Recency + Urgency Reminder Policy
+- Repeat recent important tasks in updates (focus on latest actionable window; avoid old completed history except in stats).
+- Any urgent item remains in reminders until explicitly marked treated/resolved.
+- In status/heartbeat-style updates, include a proactive prompt: offer to treat/close todos immediately.
+
 ## Escalation Triggers
 - `CONTEXT_MISMATCH_DETECTED` - Prior decisions conflict
 - `HIGH_RISK_ACTION` - Financial/public exposure risk  
