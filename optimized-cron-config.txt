@@ -1,0 +1,35 @@
+# OpenClaw Optimized Cron Configuration
+# Consolidated to reduce model costs and improve efficiency
+
+# Consolidated Email Processing (every 10 minutes during business hours)
+*/10 8-18 * * 1-5 /Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-email.log 2>&1
+
+# HEARTBEAT Check (every 30 minutes, respects quiet hours)
+0,30 * * * * /Users/clawdia/.openclaw/workspace/scripts/heartbeat-check.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-heartbeat.log 2>&1
+
+# System Maintenance (hourly)
+0 * * * * /Users/clawdia/.openclaw/workspace/scripts/system-maintenance.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-maintenance.log 2>&1
+
+# QMD Health Check (every 2 hours)
+0 */2 * * * /Users/clawdia/.openclaw/workspace/skills/qmd/scripts/check-qdrant.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-qmd.log 2>&1
+
+# Daily Memory Cleanup (6 AM)
+0 6 * * * /Users/clawdia/.openclaw/workspace/scripts/cleanup-memory.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-cleanup.log 2>&1
+
+# Weekly Backup (Sunday 2 AM)
+0 2 * * 0 /Users/clawdia/.openclaw/workspace/scripts/backup-workspace.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-backup.log 2>&1
+
+# Monthly Log Rotation (1st of month, 3 AM)
+0 3 1 * * /Users/clawdia/.openclaw/workspace/scripts/rotate-logs.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-logs.log 2>&1
+
+# Gateway Health Check (every 15 minutes)
+*/15 * * * * /Users/clawdia/.openclaw/workspace/scripts/check-gateway.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-gateway.log 2>&1
+
+# Model Availability Check (every 2 hours)
+0 */2 * * * /Users/clawdia/.openclaw/workspace/scripts/check-models.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-models.log 2>&1
+
+# Skill Updates Check (daily at noon)
+0 12 * * * /Users/clawdia/.openclaw/workspace/scripts/check-skill-updates.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-skills.log 2>&1
+
+# temi (IIH) Calendar Check (every 30 minutes during business hours)
+*/30 8-18 * * 1-5 /Users/clawdia/.openclaw/workspace/scripts/check_temi_calendar.sh >> /Users/clawdia/.openclaw/workspace/logs/cron-calendar.log 2>&1
