@@ -21,3 +21,8 @@ Date: 2026-03-01
 1. Ambiguous classification -> main.
 2. Public outputs -> main approval required.
 3. Sensitive/legal/financial -> main approval required.
+
+## 5) Automatic Routing Trigger (NEW)
+- If task clearly fits a specialty, route automatically to the named agent first (no manual prompt needed).
+- On resumed/aborted tasks, re-read the original plan/instructions before dispatch.
+- After delegation, always send coordinator feedback: assigned agent, progress, blockers, remaining tasks.
