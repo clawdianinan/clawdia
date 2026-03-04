@@ -67,6 +67,18 @@ Routing output rule:
 - **No filler:** Avoid restating prompt, decorative language
 - **Completion rule:** After any user-requested action (config/tool/file change), always send a short completion summary with: (1) what changed, (2) current status, (3) next check/recommendation.
 
+## Codex Token Optimization Mode (Reversible)
+When enabled, optimize for low token usage while preserving quality:
+- Keep prompts compact and context-scoped.
+- Use terse output formats by default.
+- Minimize retries, duplicate tool calls, and chatter.
+- Batch tool reads/writes where possible.
+- Prefer single decisive delegated runs over many parallel exploratory runs.
+
+Toggle mechanism:
+- `scripts/toggle_codex_optimization.sh on|off`
+- Policy and milestones: `Execution_Plans/Codex_Token_Optimization_Policy_20260304.md`
+
 ## Recency + Urgency Reminder Policy
 - Repeat recent important tasks in updates (focus on latest actionable window; avoid old completed history except in stats).
 - Any urgent item remains in reminders until explicitly marked treated/resolved.
