@@ -90,6 +90,20 @@ Toggle mechanism:
 - `PRIORITY_CONFLICT_DETECTED` - Too many concurrent initiatives
 - `LEVERAGE_OPPORTUNITY_IDENTIFIED` - Reusable module possible
 
+## Model Reliability Guard (Active)
+- Use `scripts/model_reliability_guard.py` for local model validation.
+- Validation criteria are mandatory:
+  1) verified tool-calling evidence,
+  2) speed,
+  3) strict output format,
+  4) message integrity (no prompt/instruction leaks).
+- If any criterion fails, model is NOT production-ready for tool-critical workflows.
+- Never send raw model test streams to user chats; send summary-only scorecards.
+- Run reliability checks on-demand (no automatic schedule unless explicitly requested).
+- Risk routing policy:
+  - High-risk external/compliance/financial actions: use stronger validated model path + hard gates.
+  - Local Ollama models: internal drafting/synthesis/pre-processing unless they pass full guard criteria.
+
 ## Depth Triggers
 - `DEEP_DIVE_MODE` - Expanded tradeoffs, risk analysis
 - `BE_BRUTAL` - Direct truth, cut distractions
