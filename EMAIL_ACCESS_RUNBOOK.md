@@ -6,6 +6,54 @@ Scope: Read/search/extract workflow only. No sending.
 
 ---
 
+## Quick Start (10-command cheat sheet)
+
+Use this when a model needs a fast, reliable path.
+
+```bash
+# 1) Find candidate emails
+fruitmail search --days 7 --limit 30
+
+# 2) Narrow by subject/sender
+fruitmail search --subject "REQUEST FOR STATEMENT" --days 7 --limit 20
+fruitmail sender "zumah" --limit 50
+
+# 3) Inspect body/context
+fruitmail body <id>
+
+# 4) List attachment names from Mail
+osascript <<'APPLESCRIPT'
+tell application "Mail"
+  set msgs to (messages of inbox whose subject contains "STATEMENT")
+  repeat with m in msgs
+    log "subject:" & (subject of m)
+    repeat with a in mail attachments of m
+      log " - " & (name of a)
+    end repeat
+  end repeat
+end tell
+APPLESCRIPT
+
+# 5) Locate attachment file path in Mail store
+find ~/Library/Mail/V10 -type f -name "*ILORIN TECH PARK LTD*.pdf" 2>/dev/null | head -20
+
+# 6) Ensure destination folder exists
+mkdir -p "/Users/clawdia/My Drive/Clawdia Documents/IIH/Reports/Latest-Monthly-Submissions/2026-02 Source Reports"
+
+# 7) Copy attachment to destination
+cp -f "<source-file-from-find>" "/Users/clawdia/My Drive/Clawdia Documents/IIH/Reports/Latest-Monthly-Submissions/2026-02 Source Reports/"
+
+# 8) Verify saved files
+ls -la "/Users/clawdia/My Drive/Clawdia Documents/IIH/Reports/Latest-Monthly-Submissions/2026-02 Source Reports"
+
+# 9) If wrong folder used, move immediately (example)
+# mv -f "/wrong/path/file.pdf" "/Users/clawdia/My Drive/Clawdia Documents/IIH/Reports/Latest-Monthly-Submissions/2026-02 Source Reports/"
+
+# 10) Report completion with subject/date/filename evidence
+```
+
+---
+
 ## 0) Preconditions
 
 - Host is macOS with Mail.app synced to target accounts.
