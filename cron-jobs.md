@@ -34,8 +34,8 @@ Automated scheduling for OpenClaw maintenance, QMD operations, and business proc
 
 ### 3. Business Operations
 ```
-# Email monitoring (every 20 minutes during business hours)
-*/20 8-18 * * 1-5 /Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh
+# Email monitoring (hourly during business hours)
+0 8-18 * * 1-5 /Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh
 
 # Calendar sync (every hour)
 0 * * * * /Users/clawdia/.openclaw/workspace/scripts/sync-calendar.sh
