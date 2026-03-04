@@ -5,6 +5,13 @@
 
 set -e
 
+# DEPRECATED: unified into scripts/consolidated-email-processor.sh
+# Keep this shim to avoid cron breakage.
+if [[ -x "/Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh" ]]; then
+  echo "[DEPRECATED] corrected-email-processor-wrapper.sh -> consolidated-email-processor.sh" >&2
+  EMAIL_CONTEXT_MODE="${EMAIL_CONTEXT_MODE:-iih}" exec /Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh "$@"
+fi
+
 # Configuration
 OPENCLAW_WORKSPACE="/Users/clawdia/.openclaw/workspace"
 CORRECTED_PROCESSOR="$OPENCLAW_WORKSPACE/corrected_email_auto_processor.sh"

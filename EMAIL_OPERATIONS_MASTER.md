@@ -132,6 +132,11 @@ For IIH monthly source reports, default active path:
 
 Rule: If policy changes, update this master/profile docs first; script should only execute those rules.
 
+Legacy script cleanup status:
+- `scripts/smart-email-processor.sh` -> deprecated shim to consolidated processor
+- `scripts/check-emails.sh` -> deprecated shim to consolidated processor
+- `scripts/corrected-email-processor-wrapper.sh` -> deprecated shim to consolidated processor
+
 ---
 
 ## 10) Reference Docs
