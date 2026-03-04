@@ -4,7 +4,10 @@ Purpose: Practical, repeatable steps for accessing Temi’s email data and savin
 
 Scope: Read/search/extract workflow only. No sending.
 
-See also: EMAIL_OPERATIONS_MASTER.md (single source for rules, accounts, guardrails, and fallback policy).
+See also:
+- EMAIL_OPERATIONS_MASTER.md (global rules, accounts, fallback policy)
+- EMAIL_PROFILE_IIH.md (IIH-specific overlay)
+- EMAIL_PROFILE_GENERAL.md (non-IIH/general overlay)
 
 ---
 

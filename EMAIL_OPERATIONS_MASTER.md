@@ -1,124 +1,146 @@
 # EMAIL_OPERATIONS_MASTER.md
 
-Single source of truth for email operations across models/agents.
+Single source of truth for system-wide email operations across all models/agents.
 
 Last updated: 2026-03-04
 
-## 1) Objectives
-- Keep all email handling consistent across models.
-- Prevent account mixups.
-- Preserve prior operating rules (approval, formatting, signature, priority routing).
-- Provide fallback methods when one tool fails.
+---
 
-## 2) Accounts and Purpose Map
+## 1) Scope
 
-User accounts (Temi)
-- temi@iih.ng: Primary IIH professional mailbox.
-- temi.kolawole@iih.ng: Alternate IIH mailbox (same operational context).
-- temikolawole@icloud.com: Personal iCloud.
-- temikolawole@gmail.com: Personal Gmail.
+This is GLOBAL (not IIH-only).
+Use this for:
+- IIH operations
+- Personal/admin work
+- Non-IIH projects
+- Cross-account email research and attachment handling
 
-Assistant accounts (Clawdia)
-- clawdia.ai@iih.ng: Official IIH assistant identity for IIH matters.
-- clawdianinan@icloud.com: Primary communication channel.
-- clawdianinan@gmail.com: Registrations/integrations and public compatibility.
+For context-specific policy overlays, also read:
+- `EMAIL_PROFILE_IIH.md`
+- `EMAIL_PROFILE_GENERAL.md`
 
-Operational preference rules
-- IIH work: default to IIH mailboxes.
-- Public integration compatibility: prefer Gmail context.
-- Do not mix account contexts without explicit need.
+---
 
-## 3) Non-negotiable Guardrails
+## 2) Core Operating Principles (All Contexts)
 
-Approvals and sending
-- Never send any email without Temi’s explicit instruction in current thread.
-- For IIH inbound requests, draft/review only until explicit send approval.
-- For external-party emails requiring action, ask Temi before responding.
+1. Never send email without explicit instruction in the active thread.
+2. Always select account context first (before searching/saving/drafting).
+3. Keep read/search/extract auditable (cite subject/date/filepath in completion updates).
+4. Use tool fallback chain when one method fails.
+5. Keep active working files out of archive folders.
 
-IIH composition rules
-- Address Temi by title (Managing Director / MD), not first name, in IIH emails.
-- Always CC temi@iih.ng on IIH outbound emails sent on instruction.
-- Mandatory outbound signature block:
-  Clawdia AI
-  AI Assistant | Ilorin Innovation Hub
-  https://iih.ng
-  Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+---
 
-Formatting rules
-- Send as HTML when sending is authorized.
-- Never attach .md files to email.
-- Prefer .docx/.pdf/.xlsx attachments.
-- Include executive summary in email body for reports.
+## 3) Account Directory + Purpose
 
-Priority rules
-- IHS Towers emails/domains are highest priority and escalated immediately.
-- Time-sensitive (<24h) items remain in urgent reminders until resolved.
+### Temi accounts
+- `temi@iih.ng` — Primary IIH professional mailbox
+- `temi.kolawole@iih.ng` — Alternate IIH mailbox (same operational context)
+- `temikolawole@icloud.com` — Personal iCloud
+- `temikolawole@gmail.com` — Personal Gmail
 
-## 4) Tool Order and Fallback Matrix
+### Clawdia accounts
+- `clawdia.ai@iih.ng` — IIH assistant identity (official IIH work)
+- `clawdianinan@icloud.com` — Primary direct communication
+- `clawdianinan@gmail.com` — Registrations/integrations/public compatibility
 
-Primary read/search path (Apple Mail local)
-1) fruitmail search/sender/body (fast metadata + body access)
-2) AppleScript via Mail app for attachment listing
-3) Direct file extraction from Mail store: ~/Library/Mail/V10/.../Data/Attachments
+---
 
-Secondary path
-4) himalaya (IMAP/SMTP CLI) for mailbox checks where configured
-5) gog gmail commands for Google account scopes where relevant
+## 4) Decision Tree: Pick the Right Profile First
 
-If one tool fails
-- fruitmail fails: use AppleScript query + Mail store path find/copy
-- AppleScript save is inconsistent: skip save, copy files directly from Mail store
-- Mail store filename unknown: enumerate attachment names first, then find exact file
-- One mailbox inaccessible: check forwarded copy in paired mailbox (temi.kolawole@iih.ng <-> clawdia.ai@iih.ng)
+1. Is this IIH/institutional work?
+   - Yes -> apply `EMAIL_PROFILE_IIH.md`
+   - No -> apply `EMAIL_PROFILE_GENERAL.md`
 
-## 5) Attachment Handling Standard
+2. Is action outbound (reply/send/forward)?
+   - Yes -> explicit approval required first
+   - No -> proceed with read/search/extract
 
-Canonical active monthly source folder
-- /Users/clawdia/My Drive/Clawdia Documents/IIH/Reports/Latest-Monthly-Submissions/<YYYY-MM Source Reports>
+3. Is attachment handling required?
+   - Yes -> use attachment workflow in Section 7
 
-Archive rule
-- IIH/Archive is for archived documents only (not active monthly source collection).
+4. Is primary tool failing?
+   - Yes -> follow fallback matrix in Section 6
 
-Attachment workflow
-1) Find target email(s) with subject/sender/date filters.
-2) Read body for context and ensure report relevance.
-3) List attachment names.
-4) Locate attachment files in Mail store.
-5) Copy to active monthly source folder.
-6) Verify destination listing and filenames.
-7) Report completion with evidence (subject/date/file names/paths).
+---
 
-## 6) Quick Commands
+## 5) Standard Tooling Order (Read/Search/Extract)
 
-- fruitmail search --days 7 --limit 30
-- fruitmail search --subject "REQUEST FOR STATEMENT" --days 7 --limit 20
-- fruitmail sender "zumah" --limit 50
-- fruitmail body <id>
-- osascript (Mail attachment listing)
-- find ~/Library/Mail/V10 -type f -name "*keyword*" 2>/dev/null | head
-- mkdir -p "<monthly-source-folder>"
-- cp -f "<mail-store-file>" "<monthly-source-folder>/"
-- ls -la "<monthly-source-folder>"
+Primary path:
+1. `fruitmail` (search/sender/body)
+2. AppleScript (Mail attachment enumeration)
+3. Direct Mail store extraction (`~/Library/Mail/V10/.../Data/Attachments`)
 
-## 7) Consolidation Notes
+Secondary path:
+4. `himalaya` (IMAP checks where configured)
+5. `gog` (Google-account scope workflows)
 
-This file consolidates email-related rules previously spread across:
-- TOOLS.md (email guardrails, formatting, account preferences)
-- IDENTITY.md (assistant account purposes)
-- USER.md (Temi account map)
-- EMAIL_ACCESS_RUNBOOK.md (tooling execution details)
+---
 
-Use this master first, then EMAIL_ACCESS_RUNBOOK.md for command-level execution.
+## 6) Fallback Matrix (Required)
 
-## 8) Should there be a dedicated skill?
+- If `fruitmail` fails:
+  - Use AppleScript query + Mail store file lookup.
+- If AppleScript save is inconsistent:
+  - Do not rely on save; copy directly from Mail store paths.
+- If attachment filename is unknown:
+  - Enumerate attachment names first, then `find` exact file.
+- If one mailbox is inaccessible:
+  - Check mirrored/forwarded copy in paired mailbox (`temi.kolawole@iih.ng` <-> `clawdia.ai@iih.ng`).
+- If local Mail DB appears stale:
+  - Re-run search with broader date window and verify in alternate tool.
 
-Recommendation: Yes, useful if email operations will be repeated by many models.
+---
 
-Proposed skill: "iih-email-ops"
-- Purpose: enforce account context, search strategy, attachment extraction, and guardrails.
-- Includes: fallback matrix, destination-folder policy, send-approval checks, and completion report template.
-- Benefit: reduces model drift and repeated mistakes.
+## 7) Attachment Handling Standard (Global)
 
-When to create now
-- Create immediately if multiple models/subagents will keep running email research + report assembly.
-- Defer if this remains occasional and current runbook usage is sufficient.
+Workflow:
+1. Identify target email(s) via subject/sender/date.
+2. Validate context by reading body snippet.
+3. Enumerate attachment names.
+4. Locate files in Mail store.
+5. Copy to correct active destination folder.
+6. Verify destination listing.
+7. Report completion with evidence.
+
+Folder discipline:
+- Active working/source files -> active project/report folders
+- Archived materials only -> archive folders
+
+For IIH monthly source reports, default active path:
+- `/Users/clawdia/My Drive/Clawdia Documents/IIH/Reports/Latest-Monthly-Submissions/<YYYY-MM Source Reports>`
+
+---
+
+## 8) Cross-Context Safety Rules
+
+- Never store secrets or credentials in docs/logs.
+- Never mix IIH and personal context in one outbound draft without explicit instruction.
+- Never assume ownership from sender identity; use request context.
+- For high-risk changes (external send, sensitive financial/compliance content), reconfirm scope.
+
+---
+
+## 9) Reference Docs
+
+- Command-level runbook: `EMAIL_ACCESS_RUNBOOK.md`
+- IIH-specific policy overlay: `EMAIL_PROFILE_IIH.md`
+- General/non-IIH policy overlay: `EMAIL_PROFILE_GENERAL.md`
+
+---
+
+## 10) Special Skill Recommendation
+
+Yes — create a dedicated skill to enforce consistency.
+
+Proposed skill name: `email-ops`
+
+Why:
+- Reduces model drift in account selection and fallback handling
+- Standardizes attachment extraction + destination policy
+- Enforces send-approval checks before outbound actions
+- Gives one reusable protocol for IIH and non-IIH workflows
+
+Use profiles inside the skill:
+- `mode=iih`
+- `mode=general`
