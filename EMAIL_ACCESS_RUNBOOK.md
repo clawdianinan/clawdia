@@ -4,6 +4,8 @@ Purpose: Practical, repeatable steps for accessing Temi’s email data and savin
 
 Scope: Read/search/extract workflow only. No sending.
 
+See also: EMAIL_OPERATIONS_MASTER.md (single source for rules, accounts, guardrails, and fallback policy).
+
 ---
 
 ## Quick Start (10-command cheat sheet)
