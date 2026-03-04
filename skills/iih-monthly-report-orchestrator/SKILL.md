@@ -40,9 +40,16 @@ Generate:
 - `reports_status/<YYYY-MM>/risk_flags.json`
 - `reports_status/<YYYY-MM>/sender_match_log.json`
 
+## Trigger Enforcement
+Use `references/monthly-process.md` trigger schedule as authoritative.
+- Run trigger checks at defined day/time windows.
+- On each trigger, update progress via `scripts/calc_progress.py` and write `reports_status/<YYYY-MM>/progress.json`.
+- If progress falls below target for current day, append risk + recovery actions.
+
 ## Execution Order
 1. Intake scan + sender classification.
 2. Deadline-driven reminder draft generation.
 3. Finance gate validation.
-4. Report assembly and QA.
-5. MD review pack generation.
+4. Progress % recomputation.
+5. Report assembly and QA.
+6. MD review pack generation.
