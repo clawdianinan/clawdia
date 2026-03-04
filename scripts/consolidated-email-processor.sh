@@ -2,6 +2,15 @@
 # Consolidated Email Processor
 # Replaces: Email Auto-Processor, Temi Email Processor, Email Priority Monitor
 # Runs every 10 minutes during business hours (8 AM - 6 PM)
+#
+# POLICY SOURCE OF TRUTH (do not fork policy here):
+# - EMAIL_OPERATIONS_MASTER.md (global)
+# - EMAIL_PROFILE_IIH.md (IIH overlay)
+# - EMAIL_PROFILE_GENERAL.md (general overlay)
+# - skills/email-ops/SKILL.md (execution protocol)
+#
+# This script is an automation runner only; policy and fallback behavior must stay
+# aligned with the email-ops skill and master docs above.
 
 set -e
 
@@ -12,6 +21,11 @@ PROCESSED_IDS_FILE="$OPENCLAW_WORKSPACE/.processed-email-ids"
 CACHE_DIR="$OPENCLAW_WORKSPACE/.email-cache"
 BATCH_SIZE=5
 MODEL="deepseek/deepseek-chat"  # Lower cost model for initial processing
+EMAIL_CONTEXT_MODE="${EMAIL_CONTEXT_MODE:-iih}"  # iih|general
+MASTER_EMAIL_DOC="$OPENCLAW_WORKSPACE/EMAIL_OPERATIONS_MASTER.md"
+PROFILE_IIH_DOC="$OPENCLAW_WORKSPACE/EMAIL_PROFILE_IIH.md"
+PROFILE_GENERAL_DOC="$OPENCLAW_WORKSPACE/EMAIL_PROFILE_GENERAL.md"
+EMAIL_SKILL_DOC="$OPENCLAW_WORKSPACE/skills/email-ops/SKILL.md"
 
 # Priority configuration
 PRIORITY_DOMAINS=("ihstowers.com" "iih.ng")
@@ -42,6 +56,29 @@ log() {
     esac
     
     echo "[$timestamp] [$level] $message" >> "$LOG_FILE"
+}
+
+policy_guard_check() {
+    local missing=0
+    [[ -f "$MASTER_EMAIL_DOC" ]] || { log "WARN" "Missing policy doc: $MASTER_EMAIL_DOC"; missing=1; }
+    [[ -f "$EMAIL_SKILL_DOC" ]] || { log "WARN" "Missing skill doc: $EMAIL_SKILL_DOC"; missing=1; }
+
+    if [[ "$EMAIL_CONTEXT_MODE" != "iih" && "$EMAIL_CONTEXT_MODE" != "general" ]]; then
+        log "WARN" "Invalid EMAIL_CONTEXT_MODE=$EMAIL_CONTEXT_MODE; defaulting to iih"
+        EMAIL_CONTEXT_MODE="iih"
+    fi
+
+    if [[ "$EMAIL_CONTEXT_MODE" == "iih" ]]; then
+        [[ -f "$PROFILE_IIH_DOC" ]] || { log "WARN" "Missing IIH profile: $PROFILE_IIH_DOC"; missing=1; }
+    else
+        [[ -f "$PROFILE_GENERAL_DOC" ]] || { log "WARN" "Missing general profile: $PROFILE_GENERAL_DOC"; missing=1; }
+    fi
+
+    if [[ $missing -eq 0 ]]; then
+        log "INFO" "Policy guard OK (mode=$EMAIL_CONTEXT_MODE)"
+    else
+        log "WARN" "Policy docs partially missing; continue in safe read-only processing mode"
+    fi
 }
 
 # Check if email ID has been processed
@@ -273,7 +310,10 @@ cleanup_cache() {
 # Main execution
 main() {
     log "INFO" "Starting consolidated email processor at $(date)"
-    
+    policy_guard_check
+    log "INFO" "Policy source: $MASTER_EMAIL_DOC"
+    log "INFO" "Skill source: $EMAIL_SKILL_DOC"
+
     # Check quiet hours
     if check_quiet_hours; then
         # Only check IHS Towers during quiet hours

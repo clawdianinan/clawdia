@@ -121,15 +121,29 @@ For IIH monthly source reports, default active path:
 
 ---
 
-## 9) Reference Docs
+## 9) Automation Integration (No Duplicate Systems)
+
+- Canonical automation script: `scripts/consolidated-email-processor.sh`
+- This script must NOT maintain separate policy logic.
+- Script behavior should reference this master doc + profile overlays + `skills/email-ops`.
+- Allowed mode switch via env var:
+  - `EMAIL_CONTEXT_MODE=iih`
+  - `EMAIL_CONTEXT_MODE=general`
+
+Rule: If policy changes, update this master/profile docs first; script should only execute those rules.
+
+---
+
+## 10) Reference Docs
 
 - Command-level runbook: `EMAIL_ACCESS_RUNBOOK.md`
 - IIH-specific policy overlay: `EMAIL_PROFILE_IIH.md`
 - General/non-IIH policy overlay: `EMAIL_PROFILE_GENERAL.md`
+- Skill protocol: `skills/email-ops/SKILL.md`
 
 ---
 
-## 10) Special Skill Recommendation
+## 11) Special Skill Recommendation
 
 Yes — create a dedicated skill to enforce consistency.
 
