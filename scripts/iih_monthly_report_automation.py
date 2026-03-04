@@ -143,6 +143,69 @@ def trigger_actions(month_dir, wd):
         statef.write_text(json.dumps(state, indent=2))
 
 
+def target_for_day(wd:int)->float:
+    if wd >= 25:
+        return 100.0
+    if wd >= 20:
+        return 80.0
+    if wd >= 15:
+        return 65.0
+    if wd >= 10:
+        return 50.0
+    if wd >= 5:
+        return 35.0
+    return 0.0
+
+
+def apply_target_alerts(month_dir, wd, progress_pct):
+    target = target_for_day(wd)
+    riskf = month_dir / 'risk_flags.json'
+    planf = month_dir / 'recovery_plan.md'
+    escf = month_dir / 'escalation_md_draft.md'
+
+    risk = {'reportMonth': month_dir.name, 'risks': []}
+    if riskf.exists():
+        try:
+            risk = json.loads(riskf.read_text())
+        except Exception:
+            pass
+
+    # clear prior progress lag risk entries
+    risks = [r for r in risk.get('risks',[]) if r.get('code')!='PROGRESS_BELOW_TARGET']
+
+    if progress_pct < target:
+        gap = round(target - progress_pct, 2)
+        risks.append({
+            'code': 'PROGRESS_BELOW_TARGET',
+            'severity': 'high' if gap >= 15 else 'medium',
+            'workingDay': wd,
+            'targetPct': target,
+            'actualPct': progress_pct,
+            'gapPct': gap,
+            'timestamp': now_lagos().isoformat()
+        })
+        planf.write_text(
+            f"# Recovery Plan (Auto)\n\n"
+            f"- Working day: {wd}\n"
+            f"- Target: {target}%\n"
+            f"- Actual: {progress_pct}%\n"
+            f"- Gap: {gap}%\n\n"
+            f"## Immediate Actions\n"
+            f"1. Send missing department reminders (drafts).\n"
+            f"2. Escalate finance gate blockers if any.\n"
+            f"3. Prioritize incomplete sections for same-day closure.\n"
+        )
+        escf.write_text(
+            f"Subject: Monthly Report Progress Escalation ({month_dir.name})\n\n"
+            f"MD,\nCurrent progress is {progress_pct}% vs target {target}% on working day {wd}.\n"
+            f"Gap is {gap}%. Draft recovery actions have been generated in recovery_plan.md.\n"
+            f"\n(Generated automatically; draft only, not sent.)\n"
+        )
+
+    risk['risks'] = risks
+    riskf.write_text(json.dumps(risk, indent=2))
+
+
 def main():
     dt = now_lagos()
     month = target_report_month(dt)
@@ -153,10 +216,11 @@ def main():
     prog = calc_progress(month_dir, sub, gates)
     wd = working_day_of_month(dt)
     trigger_actions(month_dir, wd)
+    apply_target_alerts(month_dir, wd, prog['overallProgressPct'])
     LOG.parent.mkdir(parents=True, exist_ok=True)
     with LOG.open('a') as f:
-        f.write(f"{dt.isoformat()} month={month} wd={wd} progress={prog['overallProgressPct']}\n")
-    print(json.dumps({'ok':True,'month':month,'workingDay':wd,'progress':prog['overallProgressPct']}))
+        f.write(f"{dt.isoformat()} month={month} wd={wd} progress={prog['overallProgressPct']} target={target_for_day(wd)}\n")
+    print(json.dumps({'ok':True,'month':month,'workingDay':wd,'progress':prog['overallProgressPct'],'target':target_for_day(wd)}))
 
 
 if __name__ == '__main__':
