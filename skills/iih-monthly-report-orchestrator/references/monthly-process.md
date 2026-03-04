@@ -1,14 +1,12 @@
 # Monthly Process Reference (with Triggers + Progress)
 
 ## Trigger Schedule (Africa/Lagos)
-- Day 1 09:00: open cycle, initialize status files
-- Day 3 17:00: submission deadline check snapshot
-- Day 5 10:00: generate first reminder drafts for missing departments
-- Day 7 10:00: generate second/urgent reminder drafts
-- Day 10 10:00: finance gate 10 check + escalation draft if failed
-- Day 15 10:00: finance gate 15 check + escalation draft if failed
-- Day 20 10:00: finance gate 20 check + block/allow assembly
-- Day 25 12:00: compile report draft + MD review pack + missing items
+- Day 1 09:00: open cycle, initialize status files for previous month report
+- Day 3 17:00: departmental submission deadline snapshot + missing list
+- Day 5 10:00: first escalation drafts for missing departments
+- Day 6 10:00: finance gate check + blocker escalation draft
+- Day 7 12:00: compile full report draft + QA + MD review pack (internal completion target)
+- Day 8 09:00: final submission-readiness confirmation (hard deadline)
 
 ## Progress % Model
 Store in: `reports_status/<YYYY-MM>/progress.json`
@@ -28,12 +26,12 @@ Where:
 - `assembly_pct = 1 if draft exists else 0`
 - `review_pct = 1 if QA pass + MD pack exists else 0`
 
-## State Targets by Day
-- By Day 5: target >= 35%
-- By Day 10: target >= 50%
-- By Day 15: target >= 65%
-- By Day 20: target >= 80%
-- By Day 25: target = 100%
+## State Targets by Day (Calendar Day of New Month)
+- By Day 3: target >= 40%
+- By Day 5: target >= 65%
+- By Day 6: target >= 80%
+- By Day 7: target >= 95%
+- By Day 8: target = 100%
 
 ## Failure Handling
 If progress is below target for the day:

@@ -19,14 +19,8 @@ def target_report_month(dt: datetime) -> str:
     return prev.strftime('%Y-%m')
 
 
-def working_day_of_month(dt: datetime) -> int:
-    d = dt.replace(day=1)
-    c = 0
-    while d.date() <= dt.date():
-        if d.weekday() < 5:
-            c += 1
-        d += timedelta(days=1)
-    return c
+def day_of_month(dt: datetime) -> int:
+    return dt.day
 
 
 def run(cmd):
@@ -133,32 +127,32 @@ def calc_progress(month_dir, sub, gates):
     return out
 
 
-def trigger_actions(month_dir, wd):
+def trigger_actions(month_dir, day):
     statef = month_dir / 'trigger_state.json'
     state = json.loads(statef.read_text()) if statef.exists() else {'executed': []}
-    due = [1,3,5,7,10,15,20,25]
-    if wd in due and wd not in state['executed']:
-        (month_dir / f'trigger_day_{wd}.md').write_text(f'Trigger day {wd} executed at {now_lagos().isoformat()}')
-        state['executed'].append(wd)
+    due = [1,3,5,6,7,8]
+    if day in due and day not in state['executed']:
+        (month_dir / f'trigger_day_{day}.md').write_text(f'Trigger day {day} executed at {now_lagos().isoformat()}')
+        state['executed'].append(day)
         statef.write_text(json.dumps(state, indent=2))
 
 
-def target_for_day(wd:int)->float:
-    if wd >= 25:
+def target_for_day(day:int)->float:
+    if day >= 8:
         return 100.0
-    if wd >= 20:
+    if day >= 7:
+        return 95.0
+    if day >= 6:
         return 80.0
-    if wd >= 15:
+    if day >= 5:
         return 65.0
-    if wd >= 10:
-        return 50.0
-    if wd >= 5:
-        return 35.0
+    if day >= 3:
+        return 40.0
     return 0.0
 
 
-def apply_target_alerts(month_dir, wd, progress_pct):
-    target = target_for_day(wd)
+def apply_target_alerts(month_dir, day, progress_pct):
+    target = target_for_day(day)
     riskf = month_dir / 'risk_flags.json'
     planf = month_dir / 'recovery_plan.md'
     escf = month_dir / 'escalation_md_draft.md'
@@ -178,7 +172,7 @@ def apply_target_alerts(month_dir, wd, progress_pct):
         risks.append({
             'code': 'PROGRESS_BELOW_TARGET',
             'severity': 'high' if gap >= 15 else 'medium',
-            'workingDay': wd,
+            'calendarDay': day,
             'targetPct': target,
             'actualPct': progress_pct,
             'gapPct': gap,
@@ -186,7 +180,7 @@ def apply_target_alerts(month_dir, wd, progress_pct):
         })
         planf.write_text(
             f"# Recovery Plan (Auto)\n\n"
-            f"- Working day: {wd}\n"
+            f"- Calendar day: {day}\n"
             f"- Target: {target}%\n"
             f"- Actual: {progress_pct}%\n"
             f"- Gap: {gap}%\n\n"
@@ -197,7 +191,7 @@ def apply_target_alerts(month_dir, wd, progress_pct):
         )
         escf.write_text(
             f"Subject: Monthly Report Progress Escalation ({month_dir.name})\n\n"
-            f"MD,\nCurrent progress is {progress_pct}% vs target {target}% on working day {wd}.\n"
+            f"MD,\nCurrent progress is {progress_pct}% vs target {target}% on calendar day {day}.\n"
             f"Gap is {gap}%. Draft recovery actions have been generated in recovery_plan.md.\n"
             f"\n(Generated automatically; draft only, not sent.)\n"
         )
@@ -214,13 +208,13 @@ def main():
     sub = update_from_emails(month_dir, subf, addr)
     gates = json.loads(gatef.read_text())
     prog = calc_progress(month_dir, sub, gates)
-    wd = working_day_of_month(dt)
-    trigger_actions(month_dir, wd)
-    apply_target_alerts(month_dir, wd, prog['overallProgressPct'])
+    day = day_of_month(dt)
+    trigger_actions(month_dir, day)
+    apply_target_alerts(month_dir, day, prog['overallProgressPct'])
     LOG.parent.mkdir(parents=True, exist_ok=True)
     with LOG.open('a') as f:
-        f.write(f"{dt.isoformat()} month={month} wd={wd} progress={prog['overallProgressPct']} target={target_for_day(wd)}\n")
-    print(json.dumps({'ok':True,'month':month,'workingDay':wd,'progress':prog['overallProgressPct'],'target':target_for_day(wd)}))
+        f.write(f"{dt.isoformat()} month={month} day={day} progress={prog['overallProgressPct']} target={target_for_day(day)}\n")
+    print(json.dumps({'ok':True,'month':month,'calendarDay':day,'progress':prog['overallProgressPct'],'target':target_for_day(day)}))
 
 
 if __name__ == '__main__':
