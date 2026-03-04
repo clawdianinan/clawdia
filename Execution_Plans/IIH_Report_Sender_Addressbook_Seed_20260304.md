@@ -9,6 +9,7 @@ Purpose: Seed directory for skill auto-matching (who sends which monthly report)
 | Department | Staff Name | Primary Email | Typical Report Subject Patterns | Confidence |
 |---|---|---|---|---|
 | Programs | Adebola Oladipo | adebola.oladipo@iih.ng | `Programs Report`, `December 2025 Programs Report`, program summary threads | Medium |
+| Programs | Zumah Yahaya | zumah.yahaya@iih.ng | programs governance/KPI and program proposal threads, partner program correspondence | Medium |
 | Finance | Khadijat Bello | khadijat.bello@iih.ng | `JANUARY 2026 FINANCIAL STATEMENT`, `IIH Bank Statement`, financial statements | High |
 | Administration | Maureen Okey | maureen.okey@iih.ng | `Administrative Report – January 2026`, `Administrative Report December 2025` | High |
 | Human Resources | Sinachi Onuchukwu | sinachi@iih.ng | `January HR Report`, payroll/NSITF approval/report threads | High |

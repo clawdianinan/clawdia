@@ -89,7 +89,7 @@ check_ihs_towers_emails() {
 
 # Select best available account by priority
 select_active_email_account() {
-    local accounts=(iih_clawdia zoho gmail icloud)
+    local accounts=(iih_clawdia iih_temi gmail icloud)
     for acc in "${accounts[@]}"; do
         if himalaya envelope list --account "$acc" --page-size 1 --output json >/dev/null 2>&1; then
             echo "$acc"

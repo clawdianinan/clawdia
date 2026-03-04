@@ -111,8 +111,9 @@ Behavior:
 1. On each monthly cycle, classify incoming report emails against this addressbook.
 2. If matched, mark submission to the mapped department automatically.
 3. If unmatched, add a candidate entry with `needs_review` status.
-4. Do not auto-reassign canonical sender mapping without explicit confirmation.
-5. Keep a monthly snapshot in `reports_status/<YYYY-MM>/sender_match_log.json`.
+4. Support multiple approved senders per department (primary + delegates, e.g., Programs).
+5. Do not auto-reassign canonical sender mapping without explicit confirmation.
+6. Keep a monthly snapshot in `reports_status/<YYYY-MM>/sender_match_log.json`.
 
 ### 11.1 Trigger Phrases (for SKILL.md description)
 Use this skill when the user asks to:

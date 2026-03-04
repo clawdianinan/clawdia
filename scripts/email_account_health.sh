@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Checks configured Himalaya accounts and prints concise status lines.
-ACCOUNTS=(iih_clawdia zoho gmail icloud)
+ACCOUNTS=(iih_clawdia iih_temi gmail icloud)
 
 for a in "${ACCOUNTS[@]}"; do
   if himalaya account doctor "$a" >/tmp/him_doc_${a}.log 2>&1; then
