@@ -26,6 +26,10 @@ MASTER_EMAIL_DOC="$OPENCLAW_WORKSPACE/EMAIL_OPERATIONS_MASTER.md"
 PROFILE_IIH_DOC="$OPENCLAW_WORKSPACE/EMAIL_PROFILE_IIH.md"
 PROFILE_GENERAL_DOC="$OPENCLAW_WORKSPACE/EMAIL_PROFILE_GENERAL.md"
 EMAIL_SKILL_DOC="$OPENCLAW_WORKSPACE/skills/email-ops/SKILL.md"
+OPENCLAW_BIN="/opt/homebrew/bin/openclaw"
+ALERT_TARGET="temikolawole@icloud.com"
+ALERT_STATE_FILE="$OPENCLAW_WORKSPACE/.cache/last_email_alert"
+ALERT_DEDUPE_SECONDS=900
 
 # Priority configuration
 PRIORITY_DOMAINS=("ihstowers.com" "iih.ng")
@@ -81,6 +85,27 @@ policy_guard_check() {
     fi
 }
 
+send_imessage_alert() {
+    local message="$1"
+
+    [[ -x "$OPENCLAW_BIN" ]] || return 0
+
+    local now epoch_last=0
+    now=$(date +%s)
+
+    if [[ -f "$ALERT_STATE_FILE" ]]; then
+        epoch_last=$(cat "$ALERT_STATE_FILE" 2>/dev/null || echo 0)
+    fi
+
+    if [[ $((now - epoch_last)) -lt "$ALERT_DEDUPE_SECONDS" ]]; then
+        return 0
+    fi
+
+    if "$OPENCLAW_BIN" message send --channel imessage --target "$ALERT_TARGET" --best-effort --message "⚠️ EMAIL ALERT: $message" >/dev/null 2>&1; then
+        echo "$now" > "$ALERT_STATE_FILE"
+    fi
+}
+
 # Check if email ID has been processed
 is_processed() {
     local email_id="$1"
@@ -106,20 +131,16 @@ check_quiet_hours() {
 # Check for IHS Towers emails (highest priority)
 check_ihs_towers_emails() {
     log "INFO" "Checking for IHS Towers emails..."
-    
-    # This would integrate with actual email client
-    # For now, simulate check
-    local ihs_emails=0
-    
-    # Check if any IHS Towers emails exist
-    # In production: himalaya search "from:@ihstowers.com"
-    
-    if [[ $ihs_emails -gt 0 ]]; then
-        log "WARN" "Found $ihs_emails IHS Towers emails - immediate escalation required"
-        # Trigger emergency alert
+
+    local ihs_unread=0
+    ihs_unread=$(himalaya envelope list --account iih_temi --page-size 200 --output json 2>/dev/null | jq '[.[] | select((.from.addr // "") | test("ihstowers.com";"i")) | select((.flags|join(",")) | contains("Seen") | not)] | length' 2>/dev/null || echo 0)
+
+    if [[ "$ihs_unread" -gt 0 ]]; then
+        log "WARN" "Found $ihs_unread unread IHS Towers email(s) - immediate escalation required"
+        send_imessage_alert "$ihs_unread unread email(s) from @ihstowers.com require immediate triage."
         return 1
     else
-        log "SUCCESS" "No IHS Towers emails found"
+        log "SUCCESS" "No unread IHS Towers emails found"
         return 0
     fi
 }
