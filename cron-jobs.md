@@ -3,6 +3,16 @@
 ## Purpose
 Automated scheduling for OpenClaw maintenance, QMD operations, and business processes.
 
+## Active Baseline (Implemented)
+Current live crontab follows this consolidated baseline:
+- Unified health monitor: every 15 minutes
+- Email processor: hourly (business hours, weekdays)
+- Heartbeat + maintenance: every 30 minutes
+- Daily cleanup/config backup, weekly backup, monthly log rotation
+- Skill update check daily at noon
+
+Note: legacy/older examples below are reference patterns; use live crontab as source of truth.
+
 ## Job Categories
 
 ### 1. System Maintenance
