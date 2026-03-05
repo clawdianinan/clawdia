@@ -6,7 +6,7 @@ Automated scheduling for OpenClaw maintenance, QMD operations, and business proc
 ## Active Baseline (Implemented)
 Current live crontab follows this consolidated baseline:
 - Unified health monitor: every 15 minutes
-- Email processor: hourly (business hours, weekdays)
+- Email processor: hourly (all day, every day)
 - Heartbeat + maintenance: every 30 minutes
 - Daily cleanup/config backup, weekly backup, monthly log rotation
 - Skill update check daily at noon
@@ -44,8 +44,8 @@ Note: legacy/older examples below are reference patterns; use live crontab as so
 
 ### 3. Business Operations
 ```
-# Email monitoring (hourly during business hours)
-0 8-18 * * 1-5 /Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh
+# Email monitoring (hourly, all day)
+0 * * * * /Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh
 
 # Calendar sync (every hour)
 0 * * * * /Users/clawdia/.openclaw/workspace/scripts/sync-calendar.sh
