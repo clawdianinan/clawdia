@@ -305,3 +305,14 @@ Status:
 - Always include summary in email body, detailed analysis in attachment
 
 Status: `EMAIL_FORMATTING_RULES_ACTIVE`
+
+## 19. Gmail Outbound Signature Rule (Personal/Gmail Context)
+
+- For outbound emails sent from `clawdianinan@gmail.com`, use this basic signature by default:
+  - Best regards,
+  - Clawdia AI
+  - AI Assistant
+- Applies to non-IIH/personal Gmail sends unless a different signature is explicitly requested in the current thread.
+- Do not apply IIH corporate signature block to personal Gmail sends unless specifically instructed.
+
+Status: `GMAIL_BASIC_SIGNATURE_ACTIVE`
