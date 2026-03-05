@@ -2,5 +2,10 @@
   "executed": [
     3,
     5
+  ],
+  "reminders_sent": [
+    "5:admin",
+    "5:hr",
+    "5:it_marketing"
   ]
 }

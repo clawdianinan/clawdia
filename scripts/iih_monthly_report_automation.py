@@ -188,12 +188,99 @@ def calc_progress(month_dir, sub, gates):
 
 def trigger_actions(month_dir, day):
     statef = month_dir / 'trigger_state.json'
-    state = json.loads(statef.read_text()) if statef.exists() else {'executed': []}
-    due = [1,3,5,6,7,8]
+    state = json.loads(statef.read_text()) if statef.exists() else {'executed': [], 'reminders_sent': []}
+    state.setdefault('executed', [])
+    state.setdefault('reminders_sent', [])
+    due = [1, 3, 5, 6, 7, 8]
     if day in due and day not in state['executed']:
         (month_dir / f'trigger_day_{day}.md').write_text(f'Trigger day {day} executed at {now_lagos().isoformat()}')
         state['executed'].append(day)
         statef.write_text(json.dumps(state, indent=2))
+
+
+def send_deadline_reminders(month_dir, sub, day, progress_pct):
+    """Automatically send reminders to pending departments when deadline target is missed.
+
+    Sends once per department per calendar day to avoid duplicates.
+    """
+    target = target_for_day(day)
+    if progress_pct >= target:
+        return
+
+    if day < 5:
+        return
+
+    statef = month_dir / 'trigger_state.json'
+    state = json.loads(statef.read_text()) if statef.exists() else {'executed': [], 'reminders_sent': []}
+    state.setdefault('executed', [])
+    state.setdefault('reminders_sent', [])
+
+    recipient_by_dep = {
+        'admin': ('maureen.okey@iih.ng', 'Administration'),
+        'hr': ('sinachi@iih.ng', 'Human Resources'),
+        'it_marketing': ('nasiru.muhammed@iih.ng', 'IT & Marketing'),
+        'programs': ('zumah.yahaya@iih.ng', 'Programs'),
+        'finance': ('khadijat.bello@iih.ng', 'Finance'),
+        'facility': ('kamil.ahmed@iih.ng', 'Facility Management'),
+    }
+
+    sig_plain = (
+        "Clawdia AI\n"
+        "AI Assistant | Ilorin Innovation Hub\n"
+        "https://iih.ng\n"
+        "Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria"
+    )
+
+    sent = []
+    for dep_key_name, rec in recipient_by_dep.items():
+        dep = sub['departments'].get(dep_key_name, {})
+        if dep.get('status') == 'received':
+            continue
+
+        to_email, dept_label = rec
+        dedupe_key = f"{day}:{dep_key_name}"
+        if dedupe_key in state['reminders_sent']:
+            continue
+
+        html = (
+            f"<html><body>"
+            f"<p>Dear {dept_label} Team,</p>"
+            f"<p>This is an automated reminder that your {month_dir.name} monthly report is still pending. "
+            f"Please submit immediately with all relevant attachments for IIH monthly report consolidation.</p>"
+            f"<p>Please copy the Managing Director (temi@iih.ng) in your response.</p>"
+            f"<p>Thank you.</p>"
+            f"<p>{sig_plain.replace(chr(10), '<br>')}</p>"
+            f"</body></html>"
+        )
+
+        plain = (
+            f"Dear {dept_label} Team,\n\n"
+            f"This is an automated reminder that your {month_dir.name} monthly report is still pending. "
+            f"Please submit immediately with all relevant attachments for IIH monthly report consolidation.\n\n"
+            f"Please copy the Managing Director (temi@iih.ng) in your response.\n\n"
+            f"Thank you.\n\n{sig_plain}"
+        )
+
+        cmd = [
+            'python3', str(BASE / 'send_html_email.py'),
+            '--to', to_email,
+            '--cc', 'temi@iih.ng',
+            '--subject', f'Reminder: {month_dir.name} {dept_label} Monthly Report Submission',
+            '--html', html,
+            '--plain', plain,
+            '--account', 'zoho_iih',
+        ]
+
+        proc = subprocess.run(cmd, capture_output=True, text=True)
+        if proc.returncode == 0:
+            state['reminders_sent'].append(dedupe_key)
+            sent.append({'department': dep_key_name, 'to': to_email, 'status': 'sent'})
+        else:
+            sent.append({'department': dep_key_name, 'to': to_email, 'status': 'failed', 'error': proc.stderr.strip()})
+
+    statef.write_text(json.dumps(state, indent=2))
+    if sent:
+        (month_dir / 'auto_reminder_log.json').write_text(json.dumps(sent, indent=2))
 
 
 def target_for_day(day:int)->float:
@@ -270,6 +357,7 @@ def main():
     day = day_of_month(dt)
     trigger_actions(month_dir, day)
     apply_target_alerts(month_dir, day, prog['overallProgressPct'])
+    send_deadline_reminders(month_dir, sub, day, prog['overallProgressPct'])
     LOG.parent.mkdir(parents=True, exist_ok=True)
     with LOG.open('a') as f:
         f.write(f"{dt.isoformat()} month={month} day={day} progress={prog['overallProgressPct']} target={target_for_day(day)}\n")
