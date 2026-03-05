@@ -29,11 +29,48 @@ def run(cmd):
 
 
 def parse_himalaya_json(raw: str):
-    i = raw.find('[')
-    if i == -1:
+    m = re.search(r'\[\s*\{', raw)
+    if not m:
         return []
+    i = m.start()
+
+    # Himalaya may append warning lines after JSON; extract only the first
+    # complete top-level JSON array.
+    depth = 0
+    start = None
+    end = None
+    in_str = False
+    escape = False
+
+    for idx, ch in enumerate(raw[i:], start=i):
+        if in_str:
+            if escape:
+                escape = False
+            elif ch == '\\':
+                escape = True
+            elif ch == '"':
+                in_str = False
+            continue
+
+        if ch == '"':
+            in_str = True
+            continue
+
+        if ch == '[':
+            if start is None:
+                start = idx
+            depth += 1
+        elif ch == ']':
+            depth -= 1
+            if depth == 0 and start is not None:
+                end = idx + 1
+                break
+
+    if start is None or end is None:
+        return []
+
     try:
-        return json.loads(raw[i:])
+        return json.loads(raw[start:end])
     except Exception:
         return []
 
@@ -83,25 +120,47 @@ def dep_key(dep):
 
 
 def update_from_emails(month_dir, sub_path, addrmap):
-    q = 'subject report or subject monthly or subject financial or subject hr or subject facility or subject "IT & Marketing"'
-    raw = run(f"himalaya envelope list -a iih_temi -s 300 -o json {q}")
-    raw2 = run(f"himalaya envelope list -a iih_clawdia -s 200 -o json {q}")
+    raw = run("himalaya envelope list -a iih_temi -s 400 -o json")
+    raw2 = run("himalaya envelope list -a iih_clawdia -s 300 -o json")
     emails = parse_himalaya_json(raw) + parse_himalaya_json(raw2)
 
     sub = json.loads(sub_path.read_text())
     matched = []
+
+    keywords = [
+        'report', 'monthly report', 'financial report', 'department report',
+        'facility department report', 'hr report', 'it & marketing report'
+    ]
+
     for e in emails:
-        sender = (e.get('from',{}) or {}).get('addr','').lower()
+        subject = (e.get('subject') or '').lower()
+        has_attachment = bool(e.get('has_attachment'))
+        if not has_attachment:
+            continue
+        if not any(k in subject for k in keywords):
+            continue
+
+        sender = (e.get('from', {}) or {}).get('addr', '').lower()
         dep = addrmap.get(sender)
         if not dep:
             continue
+
         k = dep_key(dep)
         if not k:
             continue
+
         s = sub['departments'][k]
         s['status'] = 'received'
-        s['receivedAt'] = e.get('date')
-        matched.append({'id':e.get('id'),'sender':sender,'department':dep,'subject':e.get('subject'),'date':e.get('date')})
+        dt = e.get('date')
+        if not s.get('receivedAt') or (dt and dt > s.get('receivedAt')):
+            s['receivedAt'] = dt
+        matched.append({
+            'id': e.get('id'),
+            'sender': sender,
+            'department': dep,
+            'subject': e.get('subject'),
+            'date': e.get('date')
+        })
 
     sub_path.write_text(json.dumps(sub, indent=2))
     (month_dir / 'sender_match_log.json').write_text(json.dumps(matched, indent=2))

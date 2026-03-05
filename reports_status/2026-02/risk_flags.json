@@ -1,0 +1,14 @@
+{
+  "reportMonth": "2026-02",
+  "risks": [
+    {
+      "code": "PROGRESS_BELOW_TARGET",
+      "severity": "high",
+      "calendarDay": 5,
+      "targetPct": 65.0,
+      "actualPct": 20.0,
+      "gapPct": 45.0,
+      "timestamp": "2026-03-05T15:16:22.077517"
+    }
+  ]
+}
