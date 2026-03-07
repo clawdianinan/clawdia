@@ -281,12 +281,16 @@ Cc: Temi Kolawole <temi@iih.ng>
 
 ## Mandatory Finalization Standard (Effective 2026-03-07)
 1. Every monthly report must be finalized in Microsoft Word format (`.docx`) using the January report structure/format as the baseline.
-2. The final Word report must include the official IIH letterhead/header (logo + institution identity) consistent with prior monthly report delivery format.
-3. Markdown drafts are working files only; delivery file is always `.docx`.
-3. File naming standard for final report:
+2. Start from the latest approved previous-month report file by duplicating it, then edit content for the current month to preserve structure and formatting consistency.
+3. The final Word report must include the official IIH letterhead/header (logo + institution identity) consistent with prior monthly report delivery format.
+4. Markdown drafts are working files only; delivery file is always `.docx`.
+5. Financial section must be embedded inside the main report as readable summary tables (not attachment-only/embedded references).
+6. Consolidated narrative must include complete departmental submission content, rephrased into a unified professional report tone (not sparse bullet extracts).
+7. Executive Summary and Conclusion must be expanded with strategic context, cross-department synthesis, and forward priorities.
+8. File naming standard for final report:
    - `IIH_Monthly_Report_[Month]_[Year]_v[Version]_[YYYYMMDD].docx`
-4. After finalization, send the report to the Managing Director’s IIH email (`temi@iih.ng`) with the `.docx` attached.
-5. Copy of the sent email must be retained in Sent mailbox and report path logged in workspace notes.
+9. After finalization, send the report to the Managing Director’s IIH email (`temi@iih.ng`) with the `.docx` attached.
+10. Copy of the sent email must be retained in Sent mailbox and report path logged in workspace notes.
 
 ## NEW FINANCIAL REPORTING SYSTEM (Effective February 2026)
 
