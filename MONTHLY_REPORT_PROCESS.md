@@ -284,13 +284,19 @@ Cc: Temi Kolawole <temi@iih.ng>
 2. Start from the latest approved previous-month report file by duplicating it, then edit content for the current month to preserve structure and formatting consistency.
 3. The final Word report must include the official IIH letterhead/header (logo + institution identity) consistent with prior monthly report delivery format.
 4. Markdown drafts are working files only; delivery file is always `.docx`.
-5. Financial section must be embedded inside the main report as readable summary tables (not attachment-only/embedded references).
+5. Financial section must be embedded inside the main report as readable summary tables (not attachment-only or separate-financial-document dependence).
 6. Consolidated narrative must include complete departmental submission content, rephrased into a unified professional report tone (not sparse bullet extracts).
 7. Executive Summary and Conclusion must be expanded with strategic context, cross-department synthesis, and forward priorities.
 8. File naming standard for final report:
    - `IIH_Monthly_Report_[Month]_[Year]_v[Version]_[YYYYMMDD].docx`
 9. After finalization, send the report to the Managing Director’s IIH email (`temi@iih.ng`) with the `.docx` attached.
 10. Copy of the sent email must be retained in Sent mailbox and report path logged in workspace notes.
+
+### MD Revision Directives (Applied to February 2026 and onward)
+- Duplicate the latest approved previous-month report first, then edit from that copy to preserve established formatting/structure.
+- Keep financials visible as in-report summary tables; do not leave finance as attachment-only narrative.
+- Integrate all material points from departmental submissions into the final report body, reworded for professional consistency.
+- Expand both Executive Summary and Conclusion beyond minimal recap; include interpretation, cross-functional synthesis, and next-cycle priorities.
 
 ## NEW FINANCIAL REPORTING SYSTEM (Effective February 2026)
 
