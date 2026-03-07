@@ -295,8 +295,9 @@ Cc: Temi Kolawole <temi@iih.ng>
 ### MD Revision Directives (Applied to February 2026 and onward)
 - Duplicate the latest approved previous-month report first, then edit from that copy to preserve established formatting/structure.
 - Keep financials visible as in-report summary tables; do not leave finance as attachment-only narrative.
-- Integrate all material points from departmental submissions into the final report body, reworded for professional consistency.
-- Expand both Executive Summary and Conclusion beyond minimal recap; include interpretation, cross-functional synthesis, and next-cycle priorities.
+- Financial section presentation rule: use embedded tables (SCI, SFP, income composition, and major expense lines) inside the main report body.
+- Integrate all material points from departmental submissions into the final report body, fully rephrased into unified report tone (not pasted raw and not reduced to sparse bullets only).
+- Expand both Executive Summary and Conclusion beyond minimal recap; include interpretation, cross-functional synthesis, performance signal, and next-cycle priorities.
 
 ## NEW FINANCIAL REPORTING SYSTEM (Effective February 2026)
 
