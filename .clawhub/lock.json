@@ -19,7 +19,7 @@
     },
     "zoho-mail": {
       "version": "1.0.4",
-      "installedAt": 1771718206346
+      "installedAt": 1772134462570
     },
     "zoho-crm": {
       "version": "1.0.4",
@@ -32,6 +32,106 @@
     "n8n-workflow-automation": {
       "version": "1.0.0",
       "installedAt": 1771718211571
+    },
+    "office-document-specialist-suite": {
+      "version": "1.0.2",
+      "installedAt": 1772084809249
+    },
+    "todo-management": {
+      "version": "1.1.3",
+      "installedAt": 1772084836289
+    },
+    "graphic-design": {
+      "version": "1.0.0",
+      "installedAt": 1772084868991
+    },
+    "apple-mail-search-safe": {
+      "version": "5.0.4",
+      "installedAt": 1772134597798
+    },
+    "commune": {
+      "version": "1.0.1",
+      "installedAt": 1772134818443
+    },
+    "mail": {
+      "version": "1.2.0",
+      "installedAt": 1772134919277
+    },
+    "snail-mail": {
+      "version": "1.0.2",
+      "installedAt": 1772134940215
+    },
+    "openai-image-gen": {
+      "version": "1.0.1",
+      "installedAt": 1773495960873
+    },
+    "xurl": {
+      "version": "1.0.0",
+      "installedAt": 1773495979029
+    },
+    "agent-team-orchestration": {
+      "version": "1.0.0",
+      "installedAt": 1773499011539
+    },
+    "agent-evaluation": {
+      "version": "1.0.0",
+      "installedAt": 1773499020546
+    },
+    "code-review": {
+      "version": "1.0.0",
+      "installedAt": 1773499030175
+    },
+    "test-case-generator": {
+      "version": "1.0.0",
+      "installedAt": 1773499069699
+    },
+    "documentation": {
+      "version": "1.0.0",
+      "installedAt": 1773499077276
+    },
+    "code-documenter": {
+      "version": "0.1.0",
+      "installedAt": 1773499086500
+    },
+    "runesleo-systematic-debugging": {
+      "version": "3.0.0",
+      "installedAt": 1773499094785
+    },
+    "performance-profiler": {
+      "version": "1.0.0",
+      "installedAt": 1773499103389
+    },
+    "security-scanner": {
+      "version": "1.0.0",
+      "installedAt": 1773499110936
+    },
+    "ci-cd": {
+      "version": "1.0.0",
+      "installedAt": 1773499119264
+    },
+    "coding": {
+      "version": "1.0.3",
+      "installedAt": 1773499126945
+    },
+    "agentic-coding": {
+      "version": "1.0.0",
+      "installedAt": 1773499135035
+    },
+    "vibe-coding": {
+      "version": "1.0.0",
+      "installedAt": 1773499143447
+    },
+    "google-drive": {
+      "version": "1.0.6",
+      "installedAt": 1773499549591
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1773499604137
+    },
+    "actual-self-improvement": {
+      "version": "1.0.0",
+      "installedAt": 1773528803079
     }
   }
 }
