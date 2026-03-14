@@ -63,3 +63,57 @@ When it becomes a reusable skill:
 **Status**: promoted_to_skill
 **Skill-Path**: skills/skill-name
 ```
+
+## [LRN-20260315-001] best_practice
+
+**Logged**: 2026-03-15T00:31:00+01:00
+**Priority**: high
+**Status**: pending
+**Area**: config
+
+### Summary
+Merged legacy `LEARNING.md` operational rules into the new `.learnings` system as durable guidance.
+
+### Details
+Legacy learnings included channel routing rules, execution reliability checkpoints, and workflow guardrails. To avoid split-brain memory, these were migrated into structured `.learnings` entries and linked to existing system files (`AGENTS.md`, `TOOLS.md`, `SOUL.md`) where applicable.
+
+### Suggested Action
+Use `.learnings/*` as the single active capture system for new lessons; treat `LEARNING.md` as legacy source material.
+
+### Metadata
+- Source: docs
+- Related Files: LEARNING.md, .learnings/LEARNINGS.md, AGENTS.md, TOOLS.md, SOUL.md
+- Tags: migration, self-improvement, memory-hygiene
+- Pattern-Key: learning.system.unification
+- Recurrence-Count: 1
+- First-Seen: 2026-03-15
+- Last-Seen: 2026-03-15
+
+---
+
+## [LRN-20260315-002] best_practice
+
+**Logged**: 2026-03-15T00:31:00+01:00
+**Priority**: high
+**Status**: pending
+**Area**: docs
+
+### Summary
+Delegated-task updates must include evidence-backed completion status before declaring done.
+
+### Details
+A prior failure mode was premature success reporting in delegated runs. Durable rule: only report completion when one of these exists — explicit completion artifacts, explicit sub-agent completion, or checkpoint proof with file-level evidence.
+
+### Suggested Action
+Apply evidence-first status checks in all delegated workflows and keep update format consistent (assigned agent, done, remaining, blockers, next check).
+
+### Metadata
+- Source: docs
+- Related Files: LEARNING.md, AGENTS.md
+- Tags: delegation, reliability, reporting
+- Pattern-Key: delegation.completion.evidence_gate
+- Recurrence-Count: 1
+- First-Seen: 2026-03-15
+- Last-Seen: 2026-03-15
+
+---

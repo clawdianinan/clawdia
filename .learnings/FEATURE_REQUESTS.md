@@ -45,3 +45,31 @@ Concrete starting point for building it
 
 ---
 ```
+
+## [FEAT-20260315-001] context-manager-skill
+
+**Logged**: 2026-03-15T00:31:00+01:00
+**Priority**: high
+**Status**: pending
+**Area**: config
+
+### Requested Capability
+Intelligent context compression system that preserves critical memory while preventing token overflow.
+
+### Summary
+Need a `context-manager` capability for model-aware history compaction and tool-output bloat control.
+
+### User Context
+Long-running operational sessions can exceed context limits, causing failures and delivery interruptions.
+
+### Complexity Estimate
+medium
+
+### Suggested Implementation
+Create/maintain a `context-manager` skill with importance scoring, model-aware token thresholds, summary checkpoints, and optional `/compact` workflow integration.
+
+### Metadata
+- Frequency: recurring
+- Related Features: self-improvement, session-management
+
+---

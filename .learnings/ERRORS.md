@@ -33,6 +33,34 @@ One-line description of what failed
 Raw error message or representative output
 ```
 
+## [ERR-20260315-001] context-overflow-prompt-too-large
+
+**Logged**: 2026-03-15T00:31:00+01:00
+**Priority**: high
+**Status**: pending
+**Area**: config
+
+### Summary
+Session failures occurred when prompt/context exceeded model limits.
+
+### Error
+```
+prompt too large for the model
+```
+
+### Context
+Large accumulated conversation + tool output caused context overflow and degraded delivery reliability.
+
+### Suggested Fix
+Use context compaction strategies early (`/new`, `/reset`, compact summaries, scoped snippets), and reduce tool-output bloat before long multi-step runs.
+
+### Metadata
+- Reproducible: yes
+- Related Files: LEARNING.md
+- See Also: LRN-20260315-001
+
+---
+
 ### Context
 What command, tool, API, or workflow was involved
 

@@ -1,5 +1,7 @@
 # LEARNING.md — Ongoing Instruction & System Evolution
 
+> Legacy file: merged into `.learnings/LEARNINGS.md`, `.learnings/ERRORS.md`, and `.learnings/FEATURE_REQUESTS.md` on 2026-03-15. Use `.learnings/` as the active system of record.
+
 Purpose: Store evolving preferences, new rules, and system improvements without bloating core config files. This file captures what we're learning and implementing in real-time.
 
 ---
