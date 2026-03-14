@@ -1,0 +1,73 @@
+{
+  "video_type": "explainer",
+  "duration_seconds": 30,
+  "aspect_ratio": "16:9",
+  "platform": "social_media",
+  "script": {
+    "title": "Product Launch Video",
+    "content": "Introducing our revolutionary new product. Designed for efficiency and ease of use. Join thousands of satisfied customers. Get started today with our special offer.",
+    "duration_seconds": 30,
+    "visual_style": "modern tech",
+    "platform": "social_media",
+    "voiceover_type": "friendly_female",
+    "music": "upbeat electronic"
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "duration_seconds": 5,
+      "visual": "Scene showing: Introducing our revolutionary new product",
+      "audio": "Introducing our revolutionary new product",
+      "transition": "cut"
+    },
+    {
+      "scene_number": 2,
+      "duration_seconds": 5,
+      "visual": "Scene showing: Designed for efficiency and ease of use",
+      "audio": "Designed for efficiency and ease of use",
+      "transition": "fade"
+    },
+    {
+      "scene_number": 3,
+      "duration_seconds": 5,
+      "visual": "Scene showing: Join thousands of satisfied customers",
+      "audio": "Join thousands of satisfied customers",
+      "transition": "fade"
+    },
+    {
+      "scene_number": 4,
+      "duration_seconds": 5,
+      "visual": "Scene showing: Get started today with our special offer.",
+      "audio": "Get started today with our special offer.",
+      "transition": "fade"
+    }
+  ],
+  "visual_descriptions": {
+    "style": "modern tech",
+    "color_palette": [
+      "blue",
+      "white",
+      "black"
+    ],
+    "mood": "professional",
+    "camera_style": "dynamic cuts",
+    "text_overlay_style": "clean sans-serif"
+  },
+  "audio_plan": {
+    "voiceover": "friendly_female",
+    "background_music": "upbeat electronic",
+    "sound_effects": [
+      "transition_swish",
+      "button_click"
+    ],
+    "audio_mix": "voiceover: -3dB, music: -12dB"
+  },
+  "editing_notes": {
+    "pace": "medium",
+    "transition_style": "smooth cuts",
+    "text_animation": "fade_in",
+    "color_grading": "vibrant",
+    "output_format": "mp4_h264"
+  },
+  "generated_at": "2026-03-14T16:45:10.729302"
+}
