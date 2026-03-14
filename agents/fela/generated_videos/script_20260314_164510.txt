@@ -1,0 +1,9 @@
+{
+  "title": "Product Launch Video",
+  "content": "Introducing our revolutionary new product. Designed for efficiency and ease of use. Join thousands of satisfied customers. Get started today with our special offer.",
+  "duration_seconds": 30,
+  "visual_style": "modern tech",
+  "platform": "social_media",
+  "voiceover_type": "friendly_female",
+  "music": "upbeat electronic"
+}

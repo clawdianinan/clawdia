@@ -1,0 +1,15 @@
+
+        GRAPHIC DESIGN: SOCIAL_MEDIA_POST
+        STYLE: modern
+        DIMENSIONS: 1080x1080
+        
+        CONTENT:
+        {
+  "title": "Spring Campaign 2026",
+  "subtitle": "Limited Time Offer - 50% Off",
+  "body": "Join our exclusive spring promotion with special discounts.",
+  "cta": "Shop Now"
+}
+        
+        [This is a placeholder. Install ImageMagick or connect Canva API for actual graphics.]
+        
