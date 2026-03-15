@@ -326,4 +326,6 @@ Status: `GMAIL_BASIC_SIGNATURE_ACTIVE`
 - Do **not** use OpenClaw workspace as default storage for user-requested deliverables unless explicitly requested.
 - Workspace may be used only as temporary processing/cache area; final outputs must be copied/synced to organized My Drive folders.
 
+- Save files into relevant project folders under `Clawdia Documents` based on project context (for example: `IIH/`, `STREAMS/`, `LandLink/`, etc.) instead of mixed/general dumping.
+
 Status: `MY_DRIVE_GLOBAL_DEFAULT_ACTIVE`
