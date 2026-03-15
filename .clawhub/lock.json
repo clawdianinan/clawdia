@@ -148,6 +148,14 @@
     "incident-commander": {
       "version": "2.1.1",
       "installedAt": 1773535383831
+    },
+    "clawops": {
+      "version": "1.0.0",
+      "installedAt": 1773535584902
+    },
+    "production-readiness": {
+      "version": "1.0.0",
+      "installedAt": 1773535584906
     }
   }
 }
