@@ -156,6 +156,18 @@
     "production-readiness": {
       "version": "1.0.0",
       "installedAt": 1773535584906
+    },
+    "remotion-video-toolkit": {
+      "version": "1.4.0",
+      "installedAt": 1773536129865
+    },
+    "remotion": {
+      "version": "1.0.1",
+      "installedAt": 1773536130429
+    },
+    "lb-motion-skill": {
+      "version": "0.1.0",
+      "installedAt": 1773536136273
     }
   }
 }
