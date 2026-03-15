@@ -1,9 +1,9 @@
 # Recovery Plan (Auto)
 
-- Calendar day: 5
-- Target: 65.0%
+- Calendar day: 9
+- Target: 100.0%
 - Actual: 20.0%
-- Gap: 45.0%
+- Gap: 80.0%
 
 ## Immediate Actions
 1. Send missing department reminders (drafts).

@@ -1,133 +1,3 @@
-#!/bin/bash
-# Consolidated Email Processor
-# Replaces: Email Auto-Processor, Temi Email Processor, Email Priority Monitor
-# Runs every 10 minutes during business hours (8 AM - 6 PM)
-#
-# POLICY SOURCE OF TRUTH (do not fork policy here):
-# - EMAIL_OPERATIONS_MASTER.md (global)
-# - EMAIL_PROFILE_IIH.md (IIH overlay)
-# - EMAIL_PROFILE_GENERAL.md (general overlay)
-# - skills/email-ops/SKILL.md (execution protocol)
-#
-# This script is an automation runner only; policy and fallback behavior must stay
-# aligned with the email-ops skill and master docs above.
-
-set -e
-
-# Configuration
-OPENCLAW_WORKSPACE="/Users/clawdia/.openclaw/workspace"
-LOG_FILE="$OPENCLAW_WORKSPACE/logs/email-processor-$(date +%Y%m%d).log"
-PROCESSED_IDS_FILE="$OPENCLAW_WORKSPACE/.processed-email-ids"
-CACHE_DIR="$OPENCLAW_WORKSPACE/.email-cache"
-BATCH_SIZE=5
-MODEL="deepseek/deepseek-chat"  # Lower cost model for initial processing
-EMAIL_CONTEXT_MODE="${EMAIL_CONTEXT_MODE:-iih}"  # iih|general
-MASTER_EMAIL_DOC="$OPENCLAW_WORKSPACE/EMAIL_OPERATIONS_MASTER.md"
-PROFILE_IIH_DOC="$OPENCLAW_WORKSPACE/EMAIL_PROFILE_IIH.md"
-PROFILE_GENERAL_DOC="$OPENCLAW_WORKSPACE/EMAIL_PROFILE_GENERAL.md"
-EMAIL_SKILL_DOC="$OPENCLAW_WORKSPACE/skills/email-ops/SKILL.md"
-OPENCLAW_BIN="/opt/homebrew/bin/openclaw"
-ALERT_TARGET="temikolawole@icloud.com"
-ALERT_STATE_FILE="$OPENCLAW_WORKSPACE/.cache/last_email_alert"
-ALERT_DEDUPE_SECONDS=900
-
-# Priority configuration
-PRIORITY_DOMAINS=("ihstowers.com" "iih.ng")
-VIP_SENDERS=("HE" "Darwish" "Oladepo")
-
-# Colors for logging
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m'
-
-# Ensure directories exist
-mkdir -p "$(dirname "$LOG_FILE")"
-mkdir -p "$CACHE_DIR"
-touch "$PROCESSED_IDS_FILE"
-
-log() {
-    local level="$1"
-    local message="$2"
-    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-    
-    case "$level" in
-        INFO) echo -e "${BLUE}[INFO]${NC} $message" ;;
-        WARN) echo -e "${YELLOW}[WARN]${NC} $message" ;;
-        ERROR) echo -e "${RED}[ERROR]${NC} $message" ;;
-        SUCCESS) echo -e "${GREEN}[SUCCESS]${NC} $message" ;;
-    esac
-    
-    echo "[$timestamp] [$level] $message" >> "$LOG_FILE"
-}
-
-policy_guard_check() {
-    local missing=0
-    [[ -f "$MASTER_EMAIL_DOC" ]] || { log "WARN" "Missing policy doc: $MASTER_EMAIL_DOC"; missing=1; }
-    [[ -f "$EMAIL_SKILL_DOC" ]] || { log "WARN" "Missing skill doc: $EMAIL_SKILL_DOC"; missing=1; }
-
-    if [[ "$EMAIL_CONTEXT_MODE" != "iih" && "$EMAIL_CONTEXT_MODE" != "general" ]]; then
-        log "WARN" "Invalid EMAIL_CONTEXT_MODE=$EMAIL_CONTEXT_MODE; defaulting to iih"
-        EMAIL_CONTEXT_MODE="iih"
-    fi
-
-    if [[ "$EMAIL_CONTEXT_MODE" == "iih" ]]; then
-        [[ -f "$PROFILE_IIH_DOC" ]] || { log "WARN" "Missing IIH profile: $PROFILE_IIH_DOC"; missing=1; }
-    else
-        [[ -f "$PROFILE_GENERAL_DOC" ]] || { log "WARN" "Missing general profile: $PROFILE_GENERAL_DOC"; missing=1; }
-    fi
-
-    if [[ $missing -eq 0 ]]; then
-        log "INFO" "Policy guard OK (mode=$EMAIL_CONTEXT_MODE)"
-    else
-        log "WARN" "Policy docs partially missing; continue in safe read-only processing mode"
-    fi
-}
-
-send_imessage_alert() {
-    local message="$1"
-
-    [[ -x "$OPENCLAW_BIN" ]] || return 0
-
-    local now epoch_last=0
-    now=$(date +%s)
-
-    if [[ -f "$ALERT_STATE_FILE" ]]; then
-        epoch_last=$(cat "$ALERT_STATE_FILE" 2>/dev/null || echo 0)
-    fi
-
-    if [[ $((now - epoch_last)) -lt "$ALERT_DEDUPE_SECONDS" ]]; then
-        return 0
-    fi
-
-    if "$OPENCLAW_BIN" message send --channel imessage --target "$ALERT_TARGET" --best-effort --message "⚠️ EMAIL ALERT: $message" >/dev/null 2>&1; then
-        echo "$now" > "$ALERT_STATE_FILE"
-    fi
-}
-
-# Check if email ID has been processed
-is_processed() {
-    local email_id="$1"
-    grep -q "^$email_id$" "$PROCESSED_IDS_FILE" && return 0 || return 1
-}
-
-# Mark email as processed
-mark_processed() {
-    local email_id="$1"
-    echo "$email_id" >> "$PROCESSED_IDS_FILE"
-}
-
-# Check quiet hours (23:00-08:00)
-check_quiet_hours() {
-    local current_hour=$(date +%H)
-    if [[ $current_hour -ge 23 ]] || [[ $current_hour -lt 8 ]]; then
-        log "INFO" "Quiet hours (23:00-08:00) - only checking IHS Towers emails"
-        return 0
-    fi
-    return 1
-}
-
 # Check for IHS Towers emails (highest priority)
 check_ihs_towers_emails() {
     log "INFO" "Checking for IHS Towers emails..."
@@ -258,65 +128,117 @@ email_gate() {
     fi
 }
 
-# Process external email (create todo)
-process_external_email() {
-    local email_id="$1"
-    local email_content="$2"
-
-    log "INFO" "Processing external email (Email ID: $email_id)"
-
-    # Extract key information for todo
-    local subject=$(echo "$email_content" | head -1)
-    local sender=$(echo "$email_content" | grep -i "from:" | head -1)
-
-    # Apply confidence/sensitivity gate (external emails default to conservative mode)
-    local gate_json
-    gate_json=$(email_gate "$subject" "$email_content" true)
-    local action
-    action=$(echo "$gate_json" | jq -r '.recommended_action // "draft_only"' 2>/dev/null || echo "draft_only")
-    local conf
-    conf=$(echo "$gate_json" | jq -r '.confidence // 0' 2>/dev/null || echo "0")
-
-    if [[ "$action" == "draft_only" ]]; then
-        log "WARN" "Gate enforced draft-only (confidence=$conf) for $sender"
-        log "INFO" "Created todo: Draft response for review (external email from $sender)"
-    else
-        log "INFO" "Created todo: Follow up on email from $sender (confidence=$conf)"
-    fi
-
-    mark_processed "$email_id"
-}
-
-# Process emails in batch
+# Process emails in batch with intelligent filtering
 process_emails_batch() {
-    log "INFO" "Starting batch email processing"
+    log "INFO" "Starting batch email processing with intelligent filtering"
     
     # Get unread emails
     local emails_json=$(get_unread_emails_batch $BATCH_SIZE)
     
     # Parse and process each email
-    local email_count=0
+    local email_count=$(echo "$emails_json" | jq 'length' 2>/dev/null || echo 0)
     local processed_count=0
+    local todos_created=0
+    local emails_filtered=0
     
-    # In production: Parse JSON and iterate
-    # For now, simulate processing
+    log "INFO" "Found $email_count unread emails to process"
     
-    log "INFO" "Processed $processed_count/$email_count emails in batch"
+    if [[ "$email_count" -eq 0 ]]; then
+        log "INFO" "No unread emails to process"
+        return 0
+    fi
+    
+    for i in $(seq 0 $((email_count - 1))); do
+        local email=$(echo "$emails_json" | jq -r ".[$i]" 2>/dev/null)
+        if [[ -z "$email" ]]; then
+            continue
+        fi
+        
+        local email_id=$(echo "$email" | jq -r '.id' 2>/dev/null)
+        local subject=$(echo "$email" | jq -r '.subject' 2>/dev/null)
+        local from=$(echo "$email" | jq -r '.from' 2>/dev/null)
+        
+        if [[ -z "$email_id" ]] || [[ "$email_id" == "null" ]]; then
+            continue
+        fi
+        
+        # Skip if already processed
+        if is_processed "$email_id"; then
+            log "INFO" "Email $email_id already processed, skipping"
+            continue
+        fi
+        
+        log "INFO" "Processing email $email_id: $subject"
+        
+        # Get email content
+        local email_content=""
+        if command -v himalaya >/dev/null 2>&1; then
+            email_content=$(himalaya read "$email_id" --output text 2>/dev/null || echo "")
+        fi
+        
+        if [[ -z "$email_content" ]]; then
+            log "WARN" "Could not read email $email_id content"
+            mark_processed "$email_id"
+            continue
+        fi
+        
+        # Classify and process
+        local email_type=$(classify_email "$email")
+        
+        case "$email_type" in
+            temi_instruction)
+                process_temi_instruction "$email_id" "$email_content"
+                processed_count=$((processed_count + 1))
+                ;;
+            iih_internal)
+                # For IIH internal emails, apply filtering
+                if should_create_todo "$subject" "$from" "$email_content"; then
+                    log "INFO" "Creating todo for IIH internal email: $subject"
+                    # Similar to external but with different group
+                    local todo_text="IIH Internal: $subject (from $from)"
+                    if [[ -x "$OPENCLAW_WORKSPACE/scripts/todo.sh" ]]; then
+                        bash "$OPENCLAW_WORKSPACE/scripts/todo.sh" entry add --group "IIH" --text "$todo_text" >/dev/null 2>&1
+                        todos_created=$((todos_created + 1))
+                    fi
+                else
+                    log "INFO" "Filtered out IIH internal email: $subject"
+                    emails_filtered=$((emails_filtered + 1))
+                fi
+                mark_processed "$email_id"
+                processed_count=$((processed_count + 1))
+                ;;
+            external)
+                process_external_email "$email_id" "$email_content"
+                processed_count=$((processed_count + 1))
+                todos_created=$((todos_created + 1))
+                ;;
+            *)
+                log "WARN" "Unknown email type: $email_type"
+                mark_processed "$email_id"
+                processed_count=$((processed_count + 1))
+                ;;
+        esac
+    done
+    
+    log "INFO" "Batch processing complete: $processed_count emails processed, $todos_created todos created, $emails_filtered emails filtered out"
 }
 
 # Generate summary report
 generate_summary_report() {
     local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-    local processed_count=$(wc -l < "$PROCESSED_IDS_FILE" | tr -d ' ')
+    local processed_count=$(wc -l < "$PROCESSED_IDS_FILE" 2>/dev/null | tr -d ' ' || echo 0)
+    local thread_count=$(wc -l < "$EMAIL_THREAD_TRACKER" 2>/dev/null | tr -d ' ' || echo 0)
     
     cat > "$CACHE_DIR/summary-$(date +%Y%m%d-%H%M).txt" << EOF
-Email Processing Summary
-=======================
+Email Processing Summary (Enhanced)
+==================================
 Timestamp: $timestamp
-Total Processed: $processed_count
+Total Emails Processed: $processed_count
+Active Threads Tracked: $thread_count
 IHS Towers Check: $(check_ihs_towers_emails >/dev/null 2>&1 && echo "Clear" || echo "ALERT")
 Batch Size: $BATCH_SIZE
 Model Used: $MODEL
+Filtering: ACTIVE (intelligent pre-filtering)
 EOF
     
     log "INFO" "Summary report generated"
@@ -328,12 +250,80 @@ cleanup_cache() {
     log "INFO" "Cleaned up old cache files"
 }
 
+# Test the filtering logic
+test_filtering_logic() {
+    log "INFO" "Testing filtering logic with sample emails..."
+    
+    # Test cases that should NOT create todos
+    local test_cases_no_todo=(
+        "Subject: Undelivered Mail Returned to Sender|From: mailer-daemon@mail.zoho.com|Body: Your message was not delivered"
+        "Subject: Delivery Status Notification (Failure)|From: postmaster@example.com|Body: Delivery failed"
+        "Subject: Weekly Newsletter|From: newsletter@company.com|Body: Check out our latest updates"
+        "Subject: Security Alert|From: security@google.com|Body: New sign-in detected"
+        "Subject: Invoice #12345|From: invoices@service.com|Body: Your invoice is attached"
+        "Subject: Meeting Invitation|From: calendar@outlook.com|Body: You're invited to a meeting"
+    )
+    
+    # Test cases that SHOULD create todos
+    local test_cases_todo=(
+        "Subject: Action Required: Project Review|From: client@company.com|Body: Please review the attached proposal"
+        "Subject: Urgent: Budget Approval Needed|From: finance@iih.ng|Body: Kindly approve the budget by EOD"
+        "Subject: Follow up on our discussion|From: partner@org.com|Body: Can you please send the documents we discussed?"
+        "Subject: Issue with the system|From: user@domain.com|Body: I'm having a problem with the login"
+        "Subject: Proposal for collaboration|From: potential@partner.com|Body: I'd like to discuss a partnership opportunity"
+    )
+    
+    local passed_tests=0
+    local total_tests=0
+    
+    # Test NO_TODO cases
+    for test_case in "${test_cases_no_todo[@]}"; do
+        IFS='|' read -r subject from body <<< "$test_case"
+        total_tests=$((total_tests + 1))
+        
+        if ! should_create_todo "$subject" "$from" "$body"; then
+            log "SUCCESS" "Test PASSED: Correctly filtered out: $subject"
+            passed_tests=$((passed_tests + 1))
+        else
+            log "ERROR" "Test FAILED: Should have filtered out: $subject"
+        fi
+    done
+    
+    # Test TODO cases
+    for test_case in "${test_cases_todo[@]}"; do
+        IFS='|' read -r subject from body <<< "$test_case"
+        total_tests=$((total_tests + 1))
+        
+        if should_create_todo "$subject" "$from" "$body"; then
+            log "SUCCESS" "Test PASSED: Correctly allowed: $subject"
+            passed_tests=$((passed_tests + 1))
+        else
+            log "ERROR" "Test FAILED: Should have allowed: $subject"
+        fi
+    done
+    
+    log "INFO" "Filtering test complete: $passed_tests/$total_tests tests passed"
+    
+    if [[ "$passed_tests" -eq "$total_tests" ]]; then
+        log "SUCCESS" "All filtering tests passed!"
+        return 0
+    else
+        log "ERROR" "Some filtering tests failed"
+        return 1
+    fi
+}
+
 # Main execution
 main() {
-    log "INFO" "Starting consolidated email processor at $(date)"
+    log "INFO" "Starting enhanced email processor with intelligent filtering at $(date)"
     policy_guard_check
     log "INFO" "Policy source: $MASTER_EMAIL_DOC"
     log "INFO" "Skill source: $EMAIL_SKILL_DOC"
+    
+    # Run filtering logic test
+    if ! test_filtering_logic; then
+        log "ERROR" "Filtering logic test failed - proceeding with caution"
+    fi
 
     # Check quiet hours
     if check_quiet_hours; then
@@ -349,7 +339,10 @@ main() {
         exit 1
     fi
     
-    # Process emails in batch
+    # Clean up old thread tracking
+    cleanup_thread_tracking
+    
+    # Process emails in batch with intelligent filtering
     process_emails_batch
     
     # Generate summary
@@ -358,7 +351,7 @@ main() {
     # Cleanup
     cleanup_cache
     
-    log "SUCCESS" "Email processing completed successfully"
+    log "SUCCESS" "Enhanced email processing completed successfully"
 }
 
 # Run main function

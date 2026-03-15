@@ -1,53 +1,45 @@
-# Product Requirements Document (PRD)
+# PRDForge — QA/UAT and Go-No-Go Framework
 
-## 1. Overview
-- Product:
-- Version:
-- Owner:
+## 1. Testing Objective
+Verify that launch-critical user journeys and monetization paths perform reliably under real usage conditions.
+
+## 2. Coverage Matrix
+### Functional
+- Auth lifecycle
+- Project creation and retrieval
+- PRD generation and updates
+- Export and share actions
+
+### Reliability
+- API/network interruptions
+- Timeout handling
+- Retry behavior and state integrity
+
+### Compatibility
+- Browser matrix
+- Device responsiveness
+- Session persistence and recovery
+
+### Billing
+- Checkout success and failure
+- Subscription activation and sync
+- Cancellation, downgrade, and refund flow
+
+## 3. UAT Severity Model
+- P0: launch-blocking failure
+- P1: serious degradation with workaround
+- P2: minor issue, non-blocking
+
+## 4. Go-No-Go Criteria
+- [ ] Zero P0
+- [ ] P1 within accepted threshold and documented mitigation
+- [ ] Payment lifecycle verified end-to-end
+- [ ] Analytics events visible in dashboard
+- [ ] Incident response owner assigned
+
+## 5. Decision Sheet
+- Decision: Go / No-Go
 - Date:
-
-## 2. Objective
-Define the business and user objective in measurable terms.
-
-## 3. Users and Jobs-to-be-Done
-### Primary Persona
-- Context:
-- Pain points:
-- Desired outcomes:
-
-### JTBD
-- When ___, I want to ___, so I can ___
-
-## 4. Requirements
-### Functional Requirements
-- FR-001:
-- FR-002:
-- FR-003:
-
-### Non-Functional Requirements
-- Performance:
-- Reliability:
-- Security:
-- Accessibility:
-
-## 5. User Flows
-- Flow A:
-- Flow B:
-
-## 6. Acceptance Criteria
-- [ ] Criteria 1
-- [ ] Criteria 2
-- [ ] Criteria 3
-
-## 7. Dependencies
-- Internal:
-- External:
-
-## 8. Launch Plan
-- Beta date:
-- Launch date:
-- Rollback criteria:
-
-## 9. Open Questions
-- Q1:
-- Q2:
+- Decision owners:
+- Blocking issues:
+- Mitigation commitments:

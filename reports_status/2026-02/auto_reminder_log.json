@@ -2,16 +2,19 @@
   {
     "department": "admin",
     "to": "maureen.okey@iih.ng",
-    "status": "sent"
+    "status": "failed",
+    "error": ""
   },
   {
     "department": "hr",
     "to": "sinachi@iih.ng",
-    "status": "sent"
+    "status": "failed",
+    "error": ""
   },
   {
     "department": "it_marketing",
     "to": "nasiru.muhammed@iih.ng",
-    "status": "sent"
+    "status": "failed",
+    "error": ""
   }
 ]

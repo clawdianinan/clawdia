@@ -1,39 +1,40 @@
-# Delivery Roadmap + Execution Tracker
+# PRDForge — Launch Operations and KPI Tracker
 
-## 1) Milestone Plan
-### M1: Discovery + Validation
+## Milestone Plan
+### M1: Stabilization Complete
 - Target date:
-- Deliverables:
-- Exit criteria:
+- Exit criteria: P0 = 0, core flow stable
 
-### M2: MVP Build
+### M2: QA/UAT Complete
 - Target date:
-- Deliverables:
-- Exit criteria:
+- Exit criteria: UAT signed, Go/No-Go draft ready
 
-### M3: Pilot Launch
+### M3: Commercial Readiness Complete
 - Target date:
-- Deliverables:
-- Exit criteria:
+- Exit criteria: billing and webhooks verified
 
-### M4: Production Launch
+### M4: Launch + Monitoring Window
 - Target date:
-- Deliverables:
-- Exit criteria:
+- Exit criteria: stable first 72 hours, no critical incidents
 
-## 2) Sprint Tracker (Current)
+## Execution Tracker
 | Task ID | Task | Owner | Priority | Status | Due Date |
 |---|---|---|---|---|---|
-| PF-001 |  |  | High | Todo |  |
-| PF-002 |  |  | High | Todo |  |
-| PF-003 |  |  | Medium | Todo |  |
+| LF-001 | Resolve all P0/P1 defects |  | High | Todo |  |
+| LF-002 | Complete full QA matrix run |  | High | Todo |  |
+| LF-003 | Validate billing lifecycle E2E |  | High | Todo |  |
+| LF-004 | Finalize launch assets and copy |  | Medium | Todo |  |
+| LF-005 | Confirm dashboards and alerting |  | High | Todo |  |
 
-## 3) Decision Log
-| Date | Decision | Rationale | Impact |
-|---|---|---|---|
-|  |  |  |  |
+## KPI Dashboard (Launch Week)
+- Activation rate:
+- Day-1 retention:
+- PRD completion rate:
+- Export conversion rate:
+- Trial-to-paid conversion:
+- Support ticket volume:
 
-## 4) Blockers
-| Blocker | Owner | Unblock Action | ETA |
-|---|---|---|---|
-|  |  |  |  |
+## Daily Launch Standup Log
+| Date | Status | Key Risks | Decisions | Owner |
+|---|---|---|---|---|
+|  |  |  |  |  |

@@ -26,9 +26,12 @@ find "$STATE_DIR" -type f -mtime +2 -delete 2>/dev/null || true
 if [[ -f "$STAMP_FILE" ]]; then
   LAST="$(cat "$STAMP_FILE" 2>/dev/null || echo 0)"
   if [[ $((NOW - LAST)) -lt $WINDOW ]]; then
+    # Log duplicate detection (to stderr to avoid interfering with pipe)
+    echo "DUPLICATE_DETECTED: Message to $TARGET via $CHANNEL within ${WINDOW}s window" >&2
     exit 2
   fi
 fi
 
 echo "$NOW" > "$STAMP_FILE"
+echo "NEW_MESSAGE: Storing idempotency key $KEY" >&2
 exit 0

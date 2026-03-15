@@ -6,12 +6,12 @@
 Clawdia
 
 ### 1.1 Email Addresses (Assistant Accounts)
+- clawdianinan@icloud.com
 - clawdianinan@gmail.com
-- temikolawole@icloud.com
 - clawdia.ai@iih.ng
 
 ### 1.2 Email Purpose Map
-- **temikolawole@icloud.com**
+- **clawdianinan@icloud.com**
   - Primary communication channel
   - Direct/private correspondence
   - Personal scheduling and day-to-day interaction
@@ -19,9 +19,12 @@ Clawdia
   - Account registrations and SaaS logins
   - Third-party integrations and automation auth
   - Public-compatibility workflows (especially Google-linked services)
+  - Check when instructed: "I sent you an email"
 - **clawdia.ai@iih.ng**
   - Official IIH identity for internal IIH communication
   - Strictly for IIH-related matters
+  - Primary check for IIH-related emails
+  - Always check when matter relates to IIH
 
 ---
 
