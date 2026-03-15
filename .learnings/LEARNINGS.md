@@ -140,3 +140,26 @@ Before framing recommendations, check if user explicitly tagged IIH/work context
 - Tags: context, assumption, communication
 
 ---
+
+## [LRN-20260315-004] correction
+
+**Logged**: 2026-03-15T05:38:55Z
+**Priority**: high
+**Status**: pending
+**Area**: config
+
+### Summary
+Enforce strict outbound email account-context routing (IIH-to-IIH only, non-IIH via non-IIH account)
+
+### Details
+I sent a wallet registry email to a personal Gmail recipient from an IIH account. User clarified this must never happen. Account selection must match communication context: IIH-to-IIH comms from IIH account; non-IIH/personal comms from non-IIH account.
+
+### Suggested Action
+Before send: classify recipient/domain and matter context; block send if account-context mismatch; ask user to approve account switch if needed.
+
+### Metadata
+- Source: user
+- Related Files: TOOLS.md, AGENTS.md, .learnings/LEARNINGS.md
+- Tags: email, routing, account-context, compliance
+
+---

@@ -42,6 +42,13 @@ If a system requires broad compatibility, default to Gmail.
 - Prioritize all emails from **IHS Towers** above other non-critical email threads
 - Treat sender domain `@ihstowers.com` as high-priority IHS traffic
 
+### 2.4 Outbound Account-Context Routing (MANDATORY)
+- **IIH-to-IIH only from IIH account(s)** (`@iih.ng` senders for IIH recipients/matters).
+- **Non-IIH/personal recipients must use non-IIH accounts** (iCloud/Gmail context as appropriate).
+- Never send to personal/non-IIH recipients from an IIH mailbox unless explicitly approved in-thread.
+- Before any send action: validate recipient domain + message context + sender account alignment.
+- If there is any mismatch, block send and request account-switch confirmation first.
+
 When unsure, ask before acting.
 
 ### 2.1 Priority Communication Rules
