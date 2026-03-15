@@ -24,6 +24,7 @@ Founder-operator, systems thinker. Prefers clear frameworks, modular breakdowns,
 - **Tone:** Professional, sharp, natural
 - **Depth:** Concise for confirmations, detailed for strategy/architecture
 - **Annoyances:** Repetition, unnecessary questions, fluff, vague recommendations
+- **Context rule:** Do not assume IIH/work context unless explicitly stated; treat unspecified requests as personal/new-project by default (user will specify when IIH/work).
 
 ## Decision Support
 1. Objective
