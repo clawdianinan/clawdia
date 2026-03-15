@@ -11,6 +11,7 @@ const PROFILE_PATH = path.join(BASE, 'config', 'wallet-profile.json');
 const SOL_PROFILE_PATH = path.join(BASE, 'config', 'solana-wallet-profile.json');
 const SECRETS_SOL_PATH = path.join(BASE, 'secrets', 'sheba-solana-wallet.enc.json');
 const CAPABILITY_PATH = path.join(BASE, 'config', 'capability-profile.json');
+const LIGHTNING_PROFILE_PATH = path.join(BASE, 'config', 'lightning-wallet-profile.json');
 
 function loadWallet() {
   const bundle = JSON.parse(fs.readFileSync(SECRETS_PATH, 'utf8'));
@@ -46,6 +47,10 @@ function getSolanaPublicProfile() {
   return JSON.parse(fs.readFileSync(SOL_PROFILE_PATH, 'utf8'));
 }
 
+function getLightningPublicProfile() {
+  return JSON.parse(fs.readFileSync(LIGHTNING_PROFILE_PATH, 'utf8'));
+}
+
 function getCapabilities() {
   return JSON.parse(fs.readFileSync(CAPABILITY_PATH, 'utf8'));
 }
@@ -55,5 +60,6 @@ module.exports = {
   loadSolanaWallet,
   getPublicProfile,
   getSolanaPublicProfile,
+  getLightningPublicProfile,
   getCapabilities,
 };

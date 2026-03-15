@@ -1,0 +1,13 @@
+{
+  "walletLabel": "sheba-lightning-wallet",
+  "chainType": "Bitcoin+Lightning",
+  "purpose": "autonomous decentralized transactions",
+  "bitcoinNetwork": "mainnet",
+  "onchainReceiveAddress": "bc1q2ttq03uqfvqqwqufrntx4wmr5qpdcu67g6rnlc",
+  "createdAt": "2026-03-15T05:00:25.506Z",
+  "lightningStatus": {
+    "enabled": true,
+    "readyToReceive": false,
+    "reason": "Requires Lightning backend connection (LND/LDK/NWC/LNbits) before invoice generation and inbound payments can settle."
+  }
+}

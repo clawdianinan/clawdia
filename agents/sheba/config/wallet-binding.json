@@ -5,13 +5,19 @@
   "walletProfile": "agents/sheba/config/wallet-profile.json",
   "capabilityProfile": "agents/sheba/config/capability-profile.json",
   "persisted": true,
-  "updatedAt": "2026-03-15T03:49:50.404Z",
+  "updatedAt": "2026-03-15T05:00:25.506Z",
   "additionalWallets": [
     {
       "label": "sheba-solana-wallet",
       "chainType": "Solana",
       "walletProfile": "agents/sheba/config/solana-wallet-profile.json",
       "credentialRef": "agents/sheba/secrets/sheba-solana-wallet.enc.json"
+    },
+    {
+      "label": "sheba-lightning-wallet",
+      "chainType": "Bitcoin+Lightning",
+      "walletProfile": "agents/sheba/config/lightning-wallet-profile.json",
+      "credentialRef": "agents/sheba/secrets/sheba-lightning-wallet.enc.json"
     }
   ]
 }

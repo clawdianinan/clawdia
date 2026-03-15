@@ -30,15 +30,24 @@
     "Arbitrum",
     "Polygon",
     "BNB Smart Chain",
-    "Solana"
+    "Solana",
+    "Bitcoin",
+    "Lightning"
   ],
-  "updatedAt": "2026-03-15T03:49:50.404Z",
+  "updatedAt": "2026-03-15T05:00:25.506Z",
   "additionalWallets": [
     {
       "label": "sheba-solana-wallet",
       "chainType": "Solana",
       "profilePath": "agents/sheba/config/solana-wallet-profile.json",
       "credentialRef": "agents/sheba/secrets/sheba-solana-wallet.enc.json",
+      "persistent": true
+    },
+    {
+      "label": "sheba-lightning-wallet",
+      "chainType": "Bitcoin+Lightning",
+      "profilePath": "agents/sheba/config/lightning-wallet-profile.json",
+      "credentialRef": "agents/sheba/secrets/sheba-lightning-wallet.enc.json",
       "persistent": true
     }
   ]
