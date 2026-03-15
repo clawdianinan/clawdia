@@ -34,7 +34,7 @@
     "Bitcoin",
     "Lightning"
   ],
-  "updatedAt": "2026-03-15T05:00:25.506Z",
+  "updatedAt": "2026-03-15T05:27:36.567Z",
   "additionalWallets": [
     {
       "label": "sheba-solana-wallet",
@@ -48,6 +48,14 @@
       "chainType": "Bitcoin+Lightning",
       "profilePath": "agents/sheba/config/lightning-wallet-profile.json",
       "credentialRef": "agents/sheba/secrets/sheba-lightning-wallet.enc.json",
+      "persistent": true
+    }
+  ],
+  "externalWalletProviders": [
+    {
+      "name": "coinos",
+      "accountRef": "agents/sheba/secrets/sheba-coinos-account.enc.json",
+      "lightningAddress": "shebaagent78641@coinos.io",
       "persistent": true
     }
   ]

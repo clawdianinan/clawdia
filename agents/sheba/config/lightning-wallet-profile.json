@@ -7,7 +7,11 @@
   "createdAt": "2026-03-15T05:00:25.506Z",
   "lightningStatus": {
     "enabled": true,
-    "readyToReceive": false,
-    "reason": "Requires Lightning backend connection (LND/LDK/NWC/LNbits) before invoice generation and inbound payments can settle."
-  }
+    "readyToReceive": true,
+    "mode": "managed",
+    "invoiceGeneration": "coinos"
+  },
+  "provider": "Coinos",
+  "lightningAddress": "shebaagent78641@coinos.io",
+  "updatedAt": "2026-03-15T05:27:36.567Z"
 }
