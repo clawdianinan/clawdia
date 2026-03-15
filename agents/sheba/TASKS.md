@@ -11,6 +11,8 @@
 
 ## Active Startup Tasks
 - [ ] Create opportunity map by venture
+- [ ] Add Notion agent opportunities to monetization watchlist (templates, automations, workspace ops)
+- [ ] Add Polymarket-related opportunities to monetization watchlist (research, analytics, strategy tooling)
 - [ ] Create monetization channel shortlist (ranked)
 - [ ] Draft 10 growth experiments with KPI + owner + timeline
 - [ ] Build competitor signal watchlist
