@@ -316,3 +316,14 @@ Status: `EMAIL_FORMATTING_RULES_ACTIVE`
 - Do not apply IIH corporate signature block to personal Gmail sends unless specifically instructed.
 
 Status: `GMAIL_BASIC_SIGNATURE_ACTIVE`
+
+## 20. Default Save Location Rule (My Drive)
+
+- **Default location for document downloads and working file saves:**
+  `/Users/clawdia/My Drive/`
+- For IIH graphics/design history specifically, default root folder:
+  `/Users/clawdia/My Drive/Clawdia Documents/IIH/`
+- Do **not** use workspace as default storage for user-requested deliverables unless explicitly requested.
+- Workspace may be used only as temporary processing/cache area; final outputs must be copied/synced to My Drive organized folders.
+
+Status: `MY_DRIVE_DEFAULT_SAVE_ACTIVE`
