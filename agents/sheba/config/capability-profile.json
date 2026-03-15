@@ -29,7 +29,17 @@
     "Base",
     "Arbitrum",
     "Polygon",
-    "BNB Smart Chain"
+    "BNB Smart Chain",
+    "Solana"
   ],
-  "updatedAt": "2026-03-15T03:47:13.097Z"
+  "updatedAt": "2026-03-15T03:49:50.404Z",
+  "additionalWallets": [
+    {
+      "label": "sheba-solana-wallet",
+      "chainType": "Solana",
+      "profilePath": "agents/sheba/config/solana-wallet-profile.json",
+      "credentialRef": "agents/sheba/secrets/sheba-solana-wallet.enc.json",
+      "persistent": true
+    }
+  ]
 }

@@ -5,5 +5,13 @@
   "walletProfile": "agents/sheba/config/wallet-profile.json",
   "capabilityProfile": "agents/sheba/config/capability-profile.json",
   "persisted": true,
-  "updatedAt": "2026-03-15T03:47:13.097Z"
+  "updatedAt": "2026-03-15T03:49:50.404Z",
+  "additionalWallets": [
+    {
+      "label": "sheba-solana-wallet",
+      "chainType": "Solana",
+      "walletProfile": "agents/sheba/config/solana-wallet-profile.json",
+      "credentialRef": "agents/sheba/secrets/sheba-solana-wallet.enc.json"
+    }
+  ]
 }

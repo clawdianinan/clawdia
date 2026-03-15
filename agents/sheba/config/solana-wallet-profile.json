@@ -1,0 +1,8 @@
+{
+  "walletLabel": "sheba-solana-wallet",
+  "chainType": "Solana",
+  "purpose": "autonomous decentralized transactions",
+  "publicAddress": "5aLQzMw7Nuh6dyqLG97izUfRZbK5Vp4rKrkq5jwEbbUT",
+  "createdAt": "2026-03-15T03:49:50.404Z",
+  "defaultOnchainIdentity": false
+}
