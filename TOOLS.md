@@ -327,6 +327,7 @@ Status: `GMAIL_BASIC_SIGNATURE_ACTIVE`
 - Workspace may be used only as temporary processing/cache area; final outputs must be copied/synced to organized My Drive folders.
 
 - Save files into relevant project folders under `Clawdia Documents` based on project context (for example: `IIH/`, `STREAMS/`, `LandLink/`, etc.) instead of mixed/general dumping.
-- Folder naming preference: use short, one-word folder names by default where possible (e.g., `Design/Briefs`, `Design/Banners`, `Design/Logos`).
+- Folder naming preference: use short, one-word folder names by default and keep folder depth minimal.
+- Preferred IIH design structure (merged/minimal): `Design/Briefs`, `Design/Banners`, `Design/Assets`, `Design/Data`.
 
 Status: `MY_DRIVE_GLOBAL_DEFAULT_ACTIVE`
