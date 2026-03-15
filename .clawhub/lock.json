@@ -168,6 +168,18 @@
     "lb-motion-skill": {
       "version": "0.1.0",
       "installedAt": 1773536136273
+    },
+    "email-prompt-injection-defense": {
+      "version": "1.0.1",
+      "installedAt": 1773553778954
+    },
+    "claw-prompt-injection-guard": {
+      "version": "1.0.0",
+      "installedAt": 1773553778963
+    },
+    "config-guardian": {
+      "version": "1.0.1",
+      "installedAt": 1773554695435
     }
   }
 }
