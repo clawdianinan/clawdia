@@ -317,13 +317,13 @@ Status: `EMAIL_FORMATTING_RULES_ACTIVE`
 
 Status: `GMAIL_BASIC_SIGNATURE_ACTIVE`
 
-## 20. Default Save Location Rule (My Drive)
+## 20. Global Default Save Location Rule (My Drive)
 
-- **Default location for document downloads and working file saves:**
+- **Global default save location for ALL files (personal + IIH + project files):**
   `/Users/clawdia/My Drive/`
-- For IIH graphics/design history specifically, default root folder:
+- **IIH default root within My Drive:**
   `/Users/clawdia/My Drive/Clawdia Documents/IIH/`
-- Do **not** use workspace as default storage for user-requested deliverables unless explicitly requested.
-- Workspace may be used only as temporary processing/cache area; final outputs must be copied/synced to My Drive organized folders.
+- Do **not** use OpenClaw workspace as default storage for user-requested deliverables unless explicitly requested.
+- Workspace may be used only as temporary processing/cache area; final outputs must be copied/synced to organized My Drive folders.
 
-Status: `MY_DRIVE_DEFAULT_SAVE_ACTIVE`
+Status: `MY_DRIVE_GLOBAL_DEFAULT_ACTIVE`
