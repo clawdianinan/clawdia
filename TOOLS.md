@@ -331,3 +331,26 @@ Status: `GMAIL_BASIC_SIGNATURE_ACTIVE`
 - Preferred IIH design structure (merged/minimal): `Design/Briefs`, `Design/Banners`, `Design/Assets`, `Design/Data`.
 
 Status: `MY_DRIVE_GLOBAL_DEFAULT_ACTIVE`
+
+## 21. Clawdia Account Password Rule (2026-03-15)
+
+### 21.1 Password Generation Pattern
+- **Base password:** Same across all Clawdia-managed accounts
+- **Prefix rule:** First letter of the service name (uppercase) + base password
+- **Example:** Canva → `C[base]`, Figma → `F[base]`, Lovart → `L[base]`
+- **Purpose:** Consistent, memorable, service-distinct passwords for automated account management
+
+### 21.2 Security & Storage Rules
+- **Never store base password in documentation files** (TOOLS.md, MEMORY.md, etc.)
+- **Retrieval method:** Retrieve from Clawdia Mac user account system (secure local storage)
+- **Access logging:** Log password usage for audit trail (service, timestamp, action)
+- **Rotation policy:** Base password rotates quarterly; prefix rule remains constant
+- **Emergency reset:** If password fails, use account recovery flow (email OTP) before manual reset
+
+### 21.3 Implementation Guardrails
+1. **Confirmation before use:** Verify service name prefix matches intended account
+2. **No echo:** Never echo generated password in logs, messages, or tool outputs
+3. **Session isolation:** Password only used in browser automation sessions (not CLI/API unless encrypted)
+4. **Fallback path:** If prefix rule fails, escalate for manual password entry
+
+Status: `CLAWDIA_PASSWORD_RULE_ACTIVE`
