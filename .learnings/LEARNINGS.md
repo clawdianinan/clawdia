@@ -117,3 +117,26 @@ Apply evidence-first status checks in all delegated workflows and keep update fo
 - Last-Seen: 2026-03-15
 
 ---
+
+## [LRN-20260315-003] correction
+
+**Logged**: 2026-03-15T01:41:39Z
+**Priority**: high
+**Status**: pending
+**Area**: docs
+
+### Summary
+Do not assume IIH context unless user explicitly states it
+
+### Details
+User corrected assistant for assuming outputs should be IIH-related without explicit instruction. Default must remain neutral/personal unless the user says IIH/work context.
+
+### Suggested Action
+Before framing recommendations, check if user explicitly tagged IIH/work context; if not, keep neutral context.
+
+### Metadata
+- Source: user_feedback
+- Related Files: MEMORY.md, USER.md
+- Tags: context, assumption, communication
+
+---

@@ -527,7 +527,13 @@ Status:
 
 Status: `OPERATIONAL_RULES_LOADED`
 
-### 8.6 Email Processing System
+### 8.6 Context Assumption Guardrail
+
+- Do not assume any request is IIH-related unless the user explicitly states IIH/work context.
+- Default response framing should be neutral/personal unless context is explicitly provided.
+- If context is ambiguous, ask a short clarifying question before applying IIH-specific rules.
+
+### 8.7 Email Processing System
 
 #### UNIFIED_EMAIL_WATCH Cron Job (Active)
 **Launch Date:** March 2, 2026
