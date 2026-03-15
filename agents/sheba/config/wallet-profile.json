@@ -1,0 +1,15 @@
+{
+  "walletLabel": "sheba-main-wallet",
+  "chainType": "EVM",
+  "purpose": "autonomous decentralized transactions",
+  "publicAddress": "0xeD95ab503C84426A4C8876206F33584a104FDF9a",
+  "createdAt": "2026-03-15T03:47:13.097Z",
+  "supportedChains": [
+    "Ethereum",
+    "Base",
+    "Arbitrum",
+    "Polygon",
+    "BNB Smart Chain"
+  ],
+  "defaultOnchainIdentity": true
+}

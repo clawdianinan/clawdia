@@ -1,0 +1,35 @@
+{
+  "agent": "Sheba",
+  "defaultWallet": {
+    "label": "sheba-main-wallet",
+    "chainType": "EVM",
+    "profilePath": "agents/sheba/config/wallet-profile.json",
+    "credentialRef": "agents/sheba/secrets/sheba-main-wallet.enc.json",
+    "persistent": true
+  },
+  "permissions": {
+    "viewWalletBalance": true,
+    "receiveFunds": true,
+    "generateReceivingAddress": true,
+    "signTransactions": true,
+    "sendTransactions": true,
+    "interactWithSmartContracts": true,
+    "connectToDecentralizedApps": true,
+    "readOnlyOpsRequireApproval": false
+  },
+  "safetyControls": {
+    "maxSingleTransactionUsd": 50,
+    "maxDailyTotalUsd": 200,
+    "approvalRequiredAboveUsd": 25,
+    "requireApprovalForUnlimitedTokenAllowances": true,
+    "blockUnknownContractsByDefault": true
+  },
+  "supportedChains": [
+    "Ethereum",
+    "Base",
+    "Arbitrum",
+    "Polygon",
+    "BNB Smart Chain"
+  ],
+  "updatedAt": "2026-03-15T03:47:13.097Z"
+}
