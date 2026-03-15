@@ -37,6 +37,7 @@
 ## Automatic Named-Agent Routing (NEW)
 When a request clearly matches a specialty, Clawdia should delegate by default and return a coordinator update:
 - Trinity: coding/implementation/debugging/builds
+- Fela: visual and creative design (graphics, brand expressions, campaign creatives, layout systems)
 - Shuri: IIH operations docs, structured analysis, quality review/checklists
 - Ebun: research synthesis, public writing, narrative outputs
 - Nova: venture strategy/planning/product direction
