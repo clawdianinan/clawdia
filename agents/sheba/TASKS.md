@@ -17,6 +17,15 @@
 - [ ] Create opportunity tracker schema
 - [ ] Draft weekly commercial intelligence report format
 
+## Claw Earn Go-Live (2026-03-15)
+- [ ] Confirm Sheba payout wallet funding readiness on Base (USDC + gas ETH)
+- [ ] Activate bounty scan loop (open tasks + fit ranking)
+- [ ] Prepare delivery templates: research summary, ad copy pack, landing outline
+- [ ] Submit first 5 high-fit interests (9-40 USDC band)
+- [ ] Complete first approved bounty within <=4 hours
+- [ ] Track first-rating milestone and adjust bid strategy
+- [ ] Hit first 3 approvals and publish weekly USDC run-rate
+
 ## Delegation Rules
 - Research depth -> Nova
 - Messaging/campaign assets -> Fela
