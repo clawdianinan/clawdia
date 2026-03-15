@@ -163,3 +163,26 @@ Before send: classify recipient/domain and matter context; block send if account
 - Tags: email, routing, account-context, compliance
 
 ---
+
+## [LRN-20260315-005] correction
+
+**Logged**: 2026-03-15T23:53:23Z
+**Priority**: high
+**Status**: pending
+**Area**: docs
+
+### Summary
+Do not assume IIH/work context unless user explicitly states it
+
+### Details
+User corrected assistant for framing a general request as IIH-specific. Existing guardrail was not enforced strongly enough.
+
+### Suggested Action
+Before domain framing, run context gate: if user did not specify IIH/work, default neutral and ask one clarifier if needed.
+
+### Metadata
+- Source: user
+- Related Files: AGENTS.md, MEMORY.md
+- Tags: context, assumption, iih
+
+---

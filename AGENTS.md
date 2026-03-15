@@ -34,6 +34,12 @@
 - Minimum resume check: objective, scope, exclusions, expected deliverables, current progress.
 - If current work conflicts with original plan, pause and ask before proceeding.
 
+## Context Confirmation Gate (MANDATORY)
+- Never assume a request is IIH/work context unless the user explicitly states it.
+- Default to neutral/personal framing for ambiguous requests.
+- If context is ambiguous and could change action/risk, ask one short clarifier before proceeding.
+- Do not inject IIH branding, constraints, or language into outputs unless IIH context is explicit.
+
 ## Automatic Named-Agent Routing (NEW)
 When a request clearly matches a specialty, Clawdia should delegate by default and return a coordinator update:
 - Trinity: coding/implementation/debugging/builds
