@@ -136,6 +136,18 @@
     "video-frames": {
       "version": "1.0.0",
       "installedAt": 1773532166584
+    },
+    "openclaw-mcp-debugger": {
+      "version": "1.0.0",
+      "installedAt": 1773535379077
+    },
+    "openclaw-config": {
+      "version": "0.1.0",
+      "installedAt": 1773535379701
+    },
+    "incident-commander": {
+      "version": "2.1.1",
+      "installedAt": 1773535383831
     }
   }
 }
