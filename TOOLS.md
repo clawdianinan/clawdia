@@ -313,7 +313,65 @@ Status:
 
 Status: `EMAIL_FORMATTING_RULES_ACTIVE`
 
-## 19. Gmail Outbound Signature Rule (Personal/Gmail Context)
+## 19. DOCX Document Formatting & Creation Rules (2026-03-16)
+
+### 19.1 Core Principle: No Markdown Traces
+- **Never** simply save markdown (.md) as DOCX - this leaves markdown syntax visible
+- **Always** convert markdown to proper Word formatting with clean styling
+- **Eliminate all markdown syntax:** Remove `**bold**`, `*italic*`, `# headings`, `- lists`, `[links]()`, etc.
+- **Replace with native Word formatting:** Use actual bold/italic styles, proper headings, bulleted/numbered lists, hyperlinks
+
+### 19.2 Required Formatting Standards
+1. **Headings:** Use Word's built-in heading styles (Heading 1, Heading 2, etc.)
+2. **Text Formatting:** Apply bold/italic through Word's formatting toolbar, not markdown syntax
+3. **Lists:** Use Word's bulleted or numbered list features
+4. **Tables:** Create proper Word tables with formatting, not markdown table syntax
+5. **Hyperlinks:** Insert as clickable links with descriptive text
+6. **Page Layout:** Set proper margins, page size, orientation
+7. **Fonts:** Use consistent font families (Calibri, Arial, Times New Roman)
+8. **Spacing:** Use paragraph spacing, not manual line breaks
+
+### 19.3 Quality Assurance Checklist
+Before finalizing any DOCX document:
+- [ ] No visible markdown syntax (`**`, `*`, `#`, `-`, `[]()`, etc.)
+- [ ] All headings use Word heading styles
+- [ ] All lists are proper Word lists
+- [ ] All tables are Word tables
+- [ ] All links are clickable hyperlinks
+- [ ] Consistent font usage throughout
+- [ ] Proper paragraph spacing
+- [ ] Page numbers if document is multi-page
+- [ ] Table of contents for documents >5 pages
+- [ ] Document properties filled (author, title, subject)
+
+### 19.4 Tools & Methods for Conversion
+1. **Primary Method:** Use Word's native formatting capabilities
+2. **Alternative:** Use `pandoc` with proper DOCX template: `pandoc input.md -o output.docx --reference-doc=template.docx`
+3. **Manual Review:** Always open and review DOCX in Word to verify formatting
+4. **Template Usage:** Create and reuse DOCX templates for consistency
+5. **Style Application:** Apply and modify Word styles rather than direct formatting
+
+### 19.5 Common Markdown-to-Word Conversion Issues to Fix
+- `**text**` → Apply bold formatting
+- `*text*` → Apply italic formatting  
+- `# Heading` → Apply Heading 1 style
+- `## Subheading` → Apply Heading 2 style
+- `- item` → Convert to bulleted list
+- `1. item` → Convert to numbered list
+- `[link](url)` → Insert hyperlink with display text
+- `| table |` → Create proper Word table
+- `> quote` → Apply quote/blockquote style
+- `\`code\`` → Apply code/monospace font
+
+### 19.6 Professional Presentation Standards
+- **Executive Documents:** Include cover page, table of contents, page numbers
+- **Reports:** Use section breaks, headers/footers, consistent numbering
+- **Agreements:** Use legal formatting, signature blocks, defined terms
+- **Presentations:** Use slide masters, consistent theme, speaker notes
+
+Status: `DOCX_FORMATTING_RULES_ACTIVE`
+
+## 20. Gmail Outbound Signature Rule (Personal/Gmail Context)
 
 - For outbound emails sent from `clawdianinan@gmail.com`, use this basic signature by default:
   - Best regards,
@@ -324,7 +382,7 @@ Status: `EMAIL_FORMATTING_RULES_ACTIVE`
 
 Status: `GMAIL_BASIC_SIGNATURE_ACTIVE`
 
-## 20. Global Default Save Location Rule (My Drive)
+## 21. Global Default Save Location Rule (My Drive)
 
 - **Global default save location for ALL files (personal + IIH + project files):**
   `/Users/clawdia/My Drive/`
@@ -339,7 +397,7 @@ Status: `GMAIL_BASIC_SIGNATURE_ACTIVE`
 
 Status: `MY_DRIVE_GLOBAL_DEFAULT_ACTIVE`
 
-## 21. Clawdia Account Password Rule (2026-03-15)
+## 22. Clawdia Account Password Rule (2026-03-15)
 
 ### 21.1 Password Generation Pattern
 - **Base password:** Same across all Clawdia-managed accounts
@@ -354,7 +412,7 @@ Status: `MY_DRIVE_GLOBAL_DEFAULT_ACTIVE`
 - **Rotation policy:** Base password rotates quarterly; prefix rule remains constant
 - **Emergency reset:** If password fails, use account recovery flow (email OTP) before manual reset
 
-### 21.3 Implementation Guardrails
+### 22.3 Implementation Guardrails
 1. **Confirmation before use:** Verify service name prefix matches intended account
 2. **No echo:** Never echo generated password in logs, messages, or tool outputs
 3. **Session isolation:** Password only used in browser automation sessions (not CLI/API unless encrypted)

@@ -28,6 +28,7 @@
 - **WhatsApp VIP:** HE, Darwish, Oladepo - emergency alerts
 - **Email sending:** Never without explicit instruction
 - **IIH communications:** Use title, copy temi@iih.ng
+- **DOCX formatting:** Never save markdown as DOCX - always convert to proper Word formatting with no markdown traces
 
 ## Task Resume Guardrail (NEW)
 - For any previously started/aborted task: first re-open the source plan/instruction file before continuing.
