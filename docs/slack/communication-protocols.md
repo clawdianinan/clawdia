@@ -3,6 +3,16 @@
 ## Overview
 This document establishes standardized communication protocols for the PRDForge project team within Slack, ensuring efficient, clear, and consistent information flow across all agents.
 
+## PRDForge Launch Communication Protocol
+
+### Established Protocols for PRDForge Launch:
+- **Daily Standup Format**: In `#prdforge-launch` channel
+- **Approval Workflow**: `@temikolawole` for Jira approvals
+- **Update Frequency**: Real-time for major milestones
+- **Email Format**: `clawdianinan+agentname@gmail.com`
+- **Final Approver**: `temikolawole@gmail.com` in Jira
+- **Remaining Work**: Continuous Testing (Morpheus - 4-5 hours remaining)
+
 ## Daily Communication Structure
 
 ### 1. Daily Standup (8:00 AM WAT)
