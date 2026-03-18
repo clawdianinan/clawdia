@@ -1,0 +1,165 @@
+[0;32m[2026-03-09 00:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 00:00:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 00:00:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 00:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 00:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 00:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 00:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 00:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 00:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 00:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 00:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 00:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 01:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 01:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 01:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 01:15:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 01:15:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 01:15:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 09:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 09:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 09:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 09:30:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 09:30:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 09:30:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 09:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 09:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 09:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 10:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 10:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 10:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 10:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 10:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 10:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 10:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 10:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 10:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 10:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 10:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 10:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 11:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 11:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 11:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 11:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 11:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 11:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 11:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 11:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 11:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 11:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 11:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 11:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 12:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 12:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 12:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 12:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 12:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 12:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 12:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 12:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 12:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 12:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 12:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 12:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 13:00:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 13:00:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 13:00:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 13:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 13:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 13:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 13:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 13:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 13:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 13:45:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 13:45:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 13:45:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 14:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 14:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 14:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 14:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 14:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 14:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 14:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 14:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 14:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 14:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 14:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 14:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 15:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 15:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 15:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 15:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 15:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 15:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 15:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 15:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 15:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 15:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 15:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 15:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 16:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 16:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 16:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 16:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 16:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 16:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 16:30:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 16:30:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 16:30:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 16:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 16:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 16:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 17:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 17:00:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 17:00:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 17:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 17:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 17:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 17:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 17:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 17:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 17:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 17:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 17:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 18:00:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 18:00:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 18:00:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 18:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 18:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 18:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 18:30:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 18:30:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 18:30:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 18:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 18:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 18:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 19:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 19:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 19:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 19:15:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 19:15:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 19:15:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 19:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 19:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 19:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 19:45:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 19:45:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 19:45:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 20:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 20:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 20:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 20:15:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 20:15:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 20:15:01] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 20:30:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 20:30:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 20:30:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 20:45:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 20:45:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 20:45:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 21:00:00] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 21:00:00] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 21:00:00] ERROR: OpenClaw CLI not found[0m
+[0;32m[2026-03-09 21:15:01] INFO: === Starting Unified Health Monitor ===[0m
+[0;32m[2026-03-09 21:15:01] INFO: Checking OpenClaw gateway status...[0m
+[0;31m[2026-03-09 21:15:01] ERROR: OpenClaw CLI not found[0m

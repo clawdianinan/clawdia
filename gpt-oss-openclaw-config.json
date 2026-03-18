@@ -1,0 +1,185 @@
+# OpenClaw Configuration for GPT-OSS:20B
+
+## Configuration Summary
+
+### 1. Ollama Provider Configuration
+```json
+"ollama": {
+  "baseUrl": "http://127.0.0.1:11434/v1",
+  "apiKey": "ollama",
+  "api": "openai-completions",
+  "models": [
+    {
+      "id": "gpt-oss:20b",
+      "name": "gpt-oss-20b"
+    },
+    {
+      "id": "llama3.2:3b", 
+      "name": "llama3.2-3b"
+    }
+  ]
+}
+```
+
+### 2. Fallback Order Update
+Current fallbacks in `agents.defaults.model.fallbacks`:
+1. `deepseek/deepseek-chat`
+2. `ollama/gpt-oss:20b`  ← NEW
+3. `litellm/auto`
+4. `litellm/coding`
+5. `openrouter/auto`
+
+### 3. Model Selection Logic
+- **Primary:** `openai-codex/gpt-5.3-codex` (as configured)
+- **Fallback 1:** `deepseek/deepseek-chat` (cloud, cheap)
+- **Fallback 2:** `ollama/gpt-oss:20b` (local, free after download)
+- **Fallback 3+:** Other local/cloud options
+
+## Installation Steps
+
+### Step 1: Wait for Download Completion
+```bash
+# Check download progress
+ollama list | grep gpt-oss
+
+# Expected output when complete:
+# gpt-oss:20b    xxxxxxxxxx    13 GB    Just now
+```
+
+### Step 2: Test Model Locally
+```bash
+# Basic test
+ollama run gpt-oss:20b "Hello, what are your capabilities?"
+
+# Tool calling test
+ollama run gpt-oss:20b "You are Clawdia, an AI assistant. Read the file SOUL.md and tell me about your identity."
+```
+
+### Step 3: Apply OpenClaw Configuration
+```bash
+# Backup current config
+cp ~/.openclaw/openclaw.json ~/.openclaw/openclaw.json.backup.$(date +%s)
+
+# Apply configuration (run this Python script)
+python3 -c "
+import json
+import sys
+
+with open('/Users/clawdia/.openclaw/openclaw.json', 'r') as f:
+    config = json.load(f)
+
+# Add Ollama provider
+config['models']['providers']['ollama'] = {
+    'baseUrl': 'http://127.0.0.1:11434/v1',
+    'apiKey': 'ollama',
+    'api': 'openai-completions',
+    'models': [
+        {
+            'id': 'gpt-oss:20b',
+            'name': 'gpt-oss-20b'
+        },
+        {
+            'id': 'llama3.2:3b',
+            'name': 'llama3.2-3b'
+        }
+    ]
+}
+
+# Update fallbacks
+if 'agents' in config and 'defaults' in config['agents']:
+    fallbacks = config['agents']['defaults']['model']['fallbacks']
+    new_fallbacks = []
+    for fb in fallbacks:
+        new_fallbacks.append(fb)
+        if fb == 'deepseek/deepseek-chat':
+            new_fallbacks.append('ollama/gpt-oss:20b')
+    config['agents']['defaults']['model']['fallbacks'] = new_fallbacks
+
+# Write back
+with open('/Users/clawdia/.openclaw/openclaw.json', 'w') as f:
+    json.dump(config, f, indent=2)
+
+print('Configuration updated successfully')
+"
+
+# Restart OpenClaw gateway
+openclaw gateway restart
+```
+
+### Step 4: Test OpenClaw Integration
+```bash
+# Test with model override
+openclaw chat --model ollama/gpt-oss:20b "Hello, I'm testing GPT-OSS integration"
+
+# Check if it appears in available models
+openclaw models list | grep -i gpt
+```
+
+## Expected Benefits
+
+### Cost Savings
+- **Current:** DeepSeek @ ~$0.14/1M tokens
+- **GPT-OSS:** Free after download (local)
+- **Estimated savings:** $0.30-0.50/day (50-70% reduction)
+
+### Performance
+- **Latency:** Local inference ~2-5 seconds vs API call ~1-3 seconds
+- **Availability:** Works offline
+- **Privacy:** No data leaves your machine
+
+### Capabilities
+- ✅ Function calling (per Ollama page)
+- ✅ Agentic tasks
+- ✅ Tool calling
+- ✅ Structured outputs
+- ✅ Chain-of-thought reasoning
+
+## Monitoring Commands
+
+```bash
+# Check download progress
+ps aux | grep "ollama pull"
+
+# Check model availability
+ollama list
+
+# Test model response
+ollama run gpt-oss:20b "What is 2+2?"
+
+# Monitor OpenClaw logs
+tail -f ~/.openclaw/logs/gateway.log | grep -i ollama
+```
+
+## Troubleshooting
+
+### Issue: Model not appearing in OpenClaw
+```bash
+# Check Ollama is running
+curl http://127.0.0.1:11434/api/tags
+
+# Check OpenClaw config
+grep -A5 -B5 ollama ~/.openclaw/openclaw.json
+
+# Restart services
+ollama serve &
+openclaw gateway restart
+```
+
+### Issue: Poor tool calling performance
+1. Test with simpler prompts first
+2. Check if model supports OpenClaw's agent format
+3. Consider using as fallback only, not primary
+
+## Next Steps After Configuration
+
+1. **Monitor for 24 hours** - Check cost savings and reliability
+2. **Adjust fallback order** - Based on performance
+3. **Test agent workflows** - Sub-agents, tool chains
+4. **Consider 120B version** - If 20B works well and more power needed
+
+## Current Download Status
+- **Model:** `gpt-oss:20b`
+- **Size:** 13GB total
+- **Progress:** ~10-15% (estimated)
+- **ETA:** ~45-60 minutes from start (4:30 PM)
+- **Process ID:** 41355

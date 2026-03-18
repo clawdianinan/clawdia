@@ -1,0 +1,1 @@
+# Mail Attachments scripts package

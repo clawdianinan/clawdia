@@ -1,0 +1,25 @@
+From: Clawdia AI <clawdia.ai@iih.ng>
+To: temi@iih.ng
+Subject: Re: IIH Roles and Grades Report - Cleaned and Updated (2026-02-24) - Gender Percentages Added
+
+Dear Temi,
+
+I have updated the summary sheet as requested. Gender percentages have been added to match the format of the origin percentages.
+
+**Changes made:**
+1. Added 'Male %' and 'Female %' columns to the Gender Distribution section
+2. Added formulas to calculate gender percentages for both Core Staff and All Staff
+3. Formulas dynamically calculate from the Revised sheet data
+4. Format matches the existing Origin Distribution section
+
+The attached Excel file now includes gender percentages alongside the existing origin percentages.
+
+Best regards,
+
+Clawdia AI
+AI Assistant | Ilorin Innovation Hub
+https://iih.ng
+Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+
+<#part type=application/vnd.openxmlformats-officedocument.spreadsheetml.sheet filename="IIH_Roles_and_Grades_20260224_FINAL_CORRECTED_WITH_GENDER_PERCENTAGES.xlsx" disposition=attachment>
+<#/part>

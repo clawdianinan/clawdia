@@ -9,6 +9,7 @@
 - **Email triage:** Urgent/Action/Info categories
 - **Calendar:** Today + 48h lookahead
 - **IHS Towers follow-ups** - Priority
+- **Cross-account IHS check:** Mandatory check of ALL IIH accounts (iih_clawdia, iih_temi) for @ihstowers.com emails
 
 ## Quiet Hours
 - **23:00-08:00** - No non-urgent interruptions

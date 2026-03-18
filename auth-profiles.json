@@ -1,0 +1,20 @@
+{
+  "profiles": {
+    "openai-codex:default": {
+      "provider": "openai-codex",
+      "mode": "oauth"
+    },
+    "openai:manual": {
+      "provider": "openai",
+      "mode": "token"
+    },
+    "deepseek:manual": {
+      "provider": "deepseek",
+      "mode": "token"
+    },
+    "openrouter:default": {
+      "provider": "openrouter",
+      "mode": "token"
+    }
+  }
+}

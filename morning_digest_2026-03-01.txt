@@ -1,0 +1,102 @@
+🌅 MORNING DIGEST — 2026-03-01 15:20 WAT
+
+📅 CALENDAR
+• Google Calendar access not configured (gog requires setup)
+
+📧 EMAIL SUMMARY
+• Running email check...
+[0;34m[INFO][0m Checking for IHS Towers emails...
+[0;32m[SUCCESS][0m No IHS Towers emails detected in recent memory
+[1;33m[WARN][0m EMAIL ALERT: Message from HE detected in /Users/clawdia/.openclaw/workspace/memory/2026-02-21-2232.md (2026-02-21 23:32)
+[1;33m[WARN][0m EMAIL ALERT: Message from HE detected in /Users/clawdia/.openclaw/workspace/memory/2026-02-22-0257.md (2026-02-22 03:57)
+[1;33m[WARN][0m EMAIL ALERT: Message from HE detected in /Users/clawdia/.openclaw/workspace/memory/2026-02-22-0330.md (2026-02-22 04:30)
+[1;33m[WARN][0m EMAIL ALERT: Message from HE detected in /Users/clawdia/.openclaw/workspace/memory/2026-02-22.md (2026-02-22 17:02)
+[1;33m[WARN][0m EMAIL ALERT: Message from Darwish detected in /Users/clawdia/.openclaw/workspace/memory/2026-02-22.md (2026-02-22 17:02)
+[1;33m[WARN][0m EMAIL ALERT: Message from Oladepo detected in /Users/clawdia/.openclaw/workspace/memory/2026-02-22.md (2026-02-22 17:02)
+[1;33m[WARN][0m EMAIL ALERT: Message from Suleman Ibrahim detected in /Users/clawdia/.openclaw/workspace/memory/2026-02-24.md (2026-02-24 05:24)
+[1;33m[WARN][0m EMAIL ALERT: Message from Mathias Amuta detected in /Users/clawdia/.openclaw/workspace/memory/2026-02-25.md (2026-02-26 01:16)
+
+✅ TODO LIST
+• Current todos:
+2 | in_progress | System | Configure Google Calendar access
+3 | pending | System | Set up iMessage delivery for updates
+4 | in_progress | System | Configure gog with Google Calendar access
+7 | pending | Temi | Update organizational charts
+10 | pending | Temi | Update organizational charts
+13 | pending | Temi | Update organizational charts
+14 | pending | Temi | Process email: Program KPIs
+15 | pending | Temi | Process email: Fwd: RE: IIH FINANCIALS
+16 | pending | Temi | Process email: Re: IIH Job Descriptions — 3 New Leadership Roles
+17 | pending | Temi | Review Fwd: FACILITY MANAGEMENT -MONTLY REPORT FOR THE (JANUARY) 2026
+18 | pending | Temi | Extract action items from report
+20 | pending | External | External inquiry: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026)
+21 | pending | External | External inquiry: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025
+22 | pending | Temi | From Temi: Program KPIs
+23 | pending | Temi | From Temi: Fwd: RE: IIH FINANCIALS
+24 | pending | Temi | From Temi: Re: IIH Job Descriptions — 3 New Leadership Roles
+25 | pending | External | External: Partnership inquiry from Saving African Youths Dream
+26 | pending | IIH | IIH: Venue request from Maureen
+27 | pending | IIH | IIH: Program KPIs review
+28 | pending | IIH | IIH: Financial report review
+29 | pending | IIH | IIH: Job descriptions review
+30 | pending | IIH | IIH: Facility management report
+31 | pending | IIH | IIH: Bank statement review
+32 | pending | Temi | Process email: Fwd: RE: IIH FINANCIALS
+33 | pending | Temi | Process email: Re: IIH Job Descriptions — 3 New Leadership Roles
+34 | pending | Temi | Review Fwd: FACILITY MANAGEMENT -MONTLY REPORT FOR THE (JANUARY) 2026
+35 | pending | Temi | Extract action items from report
+36 | pending | External | Review email: Mail Delivery Status Notification (Delay)
+37 | pending | External | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026)
+38 | pending | External | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025
+39 | pending | IIH | Confirm with Temi: Zoe Choosers Sex Education Conference venue request (Sept 2025) - from Maureen Okey email
+40 | pending | IIH | Respond to SAYDI hall quotation request for Build-Tech Project (March-April 2026)
+41 | pending | IIH | Review SAYDI hall quotation request for Build-Tech Project (March-April 2026) - Email from contact@saydi.org
+42 | pending | IIH | Confirm with Temi about hosting Zoe Choosers Sex Education Conference in September 2026 - Email from maureen.okey@iih.ng
+43 | pending | IIH | Save and process attachments from New Roles for Hiring email from Temi - need to download attachments first
+44 | pending | IIH | Process Build-Tech Project partnership request from Saydi.org (March-April 2026)
+45 | pending | IIH | Follow up on Zoe Choosers Sex Education Conference venue request (Maureen Okey)
+46 | pending | IIH | Review NJFP (Nigeria Jubilee Fellows Programme) host portal setup
+49 | pending | IIH | Review mail delivery delay notification from Zoho (email ID 292)
+50 | pending | Personal | Review co-founder proposal for US business opportunity (non-IIH work) - Email ID 152
+51 | pending | IIH | Review SAYDI hall quotation & partnership request for Build-Tech Project (March 9-11 workshop, April 3 exhibition)
+52 | pending | IIH | Review: SAYDI Build-Tech Project hall quotation request (March 9-11 workshop, April 3 exhibition) - Email from contact@saydi.org
+53 | pending | Temi | Confirm with Temi: Zoe Choosers Sex Education Conference venue request for September 2026 - Forwarded by Maureen Okey
+54 | pending | System | Check mail delivery delay notification from Zoho - Possible email delivery issue
+55 | in_progress | IIH | Review IHS Towers consent agreement for Maiduguri Hub logo usage and draft email response with feedback
+56 | pending | IIH Partnerships | Follow up on SAYDI Build-Tech Project hall quotation request (March 9-11 workshop, April 3 exhibition)
+57 | pending | IIH Partnerships | Review Zoe Choosers Sex Education Conference venue request (Sept 2025) - confirm with Temi if this program type can be hosted
+58 | pending | IIH Programs | NJFP Host Portal account verified - review dashboard and explore fellow hosting opportunities
+59 | pending | IIH Business | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+60 | pending | IIH Business | Follow up on NJFP (Nigeria Jubilee Fellows Programme) host account verification and explore fellowship hosting opportunities
+61 | pending | IIH IT Infrastructure | Follow up on WiFi router config - Item 6.3 outstanding (MTN technical support for API restrictions)
+62 | pending | IIH | Respond to Saydi.org partnership request for Build-Tech Project (March-April 2026)
+63 | pending | IIH | Review and document WIFI Router Config Instructions from Nasiru Muhammed
+64 | pending | IIH | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+65 | pending | IIH | Review Maidguri Hub logo design from forwarded email
+66 | pending | IIH HR | Process new roles for hiring requirements from Temi email
+67 | pending | IIH | Follow up with Temi on Zoe Choosers Sex Education Conference venue request (September 2026) - from Maureen Okey
+68 | pending | IIH | Respond to SAYDI hall quotation & partnership request for Build-Tech Project (March-April 2026)
+69 | pending | IIH | Follow up on WIFI Router Config status with Nasiru Muhammed (MTN technical support needed for API restrictions)
+70 | pending | IIH Operations | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+
+⏰ REMINDERS
+• Today's reminders:
+[1] [ ] Complete Paystack Registration [Tasks] — 18 Jun 2025 at 00:00 priority=medium
+[2] [ ] Register for MoniePoint [Tasks] — 19 Jun 2025 at 00:00 priority=medium
+[3] [ ] Address Roof Leakage with MCT & Geniserve [Tasks] — 21 Jun 2025 at 00:00 priority=high
+[4] [ ] Prepare Staff Training Material [Tasks] — 22 Jun 2025 at 00:00 priority=medium
+
+• Overdue reminders:
+[1] [ ] Complete Paystack Registration [Tasks] — 18 Jun 2025 at 00:00 priority=medium
+[2] [ ] Register for MoniePoint [Tasks] — 19 Jun 2025 at 00:00 priority=medium
+[3] [ ] Address Roof Leakage with MCT & Geniserve [Tasks] — 21 Jun 2025 at 00:00 priority=high
+[4] [ ] Prepare Staff Training Material [Tasks] — 22 Jun 2025 at 00:00 priority=medium
+
+🚨 ACTION ITEMS
+1. Review priority emails
+2. Address overdue reminders
+3. Check calendar for today's events
+4. Update todo list as needed
+
+📱 Delivery: iMessage
+⏰ Generated: 2026-03-01 15:20 WAT

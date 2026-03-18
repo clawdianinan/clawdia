@@ -1,0 +1,93 @@
+URGENT: IHS Logo Rights Proposal - Legal Risk Analysis
+
+Date: March 2, 2026
+To: Temi Kolawole, Managing Director, Ilorin Innovation Hub
+From: Clawdia AI Assistant
+Priority: HIGH
+
+EXECUTIVE SUMMARY
+=================
+
+IHS Towers has proposed adopting the IIH (Ilorin Innovation Hub) logo for their planned Maiduguri Innovation Hub. The attached "Consent Agreement" grants IHS UNLIMITED, EXCLUSIVE, PERPETUAL RIGHTS to use, modify, license, and register IIH's intellectual property nationwide. This proposal presents SIGNIFICANT LEGAL AND STRATEGIC RISKS to KWSG/IIH and requires immediate, careful negotiation.
+
+1. CRITICAL LEGAL RISKS
+=======================
+
+IMMEDIATE CONCERNS:
+• IP Ownership Conflict: IIH logo is KWSG "Pre-Existing Intellectual Property" per Clause 19.7 of KWSG-IHS Agreement
+• Scope Violation: Original agreement is for Ilorin hub only, not nationwide
+• Excessive Rights: IHS seeks exclusive, perpetual rights to modify and register KWSG's IP
+• No Consideration: KWSG receives no benefits in return
+
+2. AGREEMENT COMPARISON
+=======================
+
+CLAUSE              KWSG-IHS AGREEMENT (2025)          IHS CONSENT AGREEMENT          RISK
+------------------  ---------------------------------  -----------------------------  -----
+IP Ownership        Clause 19.7: IIH logo is KWSG      Grants IHS rights to           HIGH
+                    "Pre-Existing Intellectual         use/modify/register KWSG IP
+                    Property"
+
+Branding Rights     Clause 4: IHS has exclusive        Nationwide rights for all      HIGH
+                    physical branding for Ilorin       IHS hubs
+                    hub ONLY
+
+Approval Required   KWSG approval needed for           No approval mechanism for      HIGH
+                    third-party branding               future use
+
+Scope               Specific to Ilorin hub project     Nationwide, all IHS            HIGH
+                                                       innovation hubs
+
+3. RECOMMENDED ACTION PLAN
+==========================
+
+IMMEDIATE ACTIONS (Today):
+1. DO NOT SIGN current agreement
+2. Formal response to IHS requesting 2-3 week review period
+3. Engage KWSG legal team for proper review
+4. Prepare negotiation position with protected terms
+
+NEGOTIATION POSITION:
+
+Non-Negotiable:
+• Limited to Maiduguri only (not nationwide)
+• Non-exclusive license (KWSG retains all rights)
+• 3-5 year term (not perpetual)
+• No modification rights to IIH logo
+• KWSG approval required for all uses
+
+Negotiable:
+• Annual license fee to KWSG/IIH
+• Quality standards and usage guidelines
+• "In partnership with Ilorin Innovation Hub" attribution
+• Annual review mechanism
+
+4. NEXT STEPS
+=============
+
+TIMELINE    ACTIONS                                  RESPONSIBLE
+---------  ----------------------------------------  -------------
+Today      Formal response to IHS; Legal            IIH Management
+           consultation initiation
+
+This Week  Stakeholder alignment; Negotiation       IIH + KWSG Legal
+           preparation
+
+Next Week  Draft alternative agreement;             Negotiation Team
+           Negotiation meetings
+
+2-3 Weeks  Finalize protective agreement;           All stakeholders
+           KWSG approval
+
+5. ATTACHMENTS
+==============
+
+• IHS_Consent_Agreement.pdf - Original IHS proposal
+• IHS_Proposed_Logo.png - Proposed "Derivative Marks"
+• KWSG-IHS_Agreement_Excerpts.pdf - Relevant clauses from collaboration agreement
+
+---
+Clawdia AI Assistant
+AI Assistant | Ilorin Innovation Hub
+https://iih.ng
+Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria

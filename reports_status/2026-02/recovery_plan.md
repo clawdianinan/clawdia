@@ -1,6 +1,6 @@
 # Recovery Plan (Auto)
 
-- Calendar day: 9
+- Calendar day: 17
 - Target: 100.0%
 - Actual: 20.0%
 - Gap: 80.0%

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "orbit": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "cwd": "/Users/clawdia/.openclaw/workspace/orbit-mcp-server",
+      "env": {
+        "ORBIT_SUPABASE_URL": "https://jnlkzcmeiksqljnbtfhb.supabase.co",
+        "ORBIT_SUPABASE_SERVICE_ROLE_KEY": "<your-key>"
+      }
+    }
+  }
+}

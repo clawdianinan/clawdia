@@ -180,6 +180,22 @@
     "config-guardian": {
       "version": "1.0.1",
       "installedAt": 1773554695435
+    },
+    "book-writing": {
+      "version": "1.0.0",
+      "installedAt": 1773564886946
+    },
+    "proofreader": {
+      "version": "1.0.1",
+      "installedAt": 1773564896346
+    },
+    "writing-assistant": {
+      "version": "0.1.0",
+      "installedAt": 1773564906182
+    },
+    "content-marketing": {
+      "version": "1.0.0",
+      "installedAt": 1773564915008
     }
   }
 }

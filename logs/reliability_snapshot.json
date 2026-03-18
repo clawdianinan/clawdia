@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-03-17T22:55:35",
+  "memory": {
+    "status": "degraded",
+    "retrieval_mode": "keyword-fallback",
+    "memory_file_count": 115,
+    "index_file_count": 9,
+    "latest_memory_age_minutes": 1122.77,
+    "latest_index_age_minutes": 2694.15,
+    "notes": [
+      "index-stale"
+    ]
+  },
+  "model_resilience": {
+    "status": "warning",
+    "output": "MODEL_RESILIENCE_CHECK: Running model availability test\nTesting model connectivity...\nMODEL_RESILIENCE_WARN: Gateway health check failed - models may be unavailable\nFALLBACK_RECOMMENDATION: Switch to ",
+    "timestamp": "2026-03-17T22:55:35"
+  },
+  "messaging": {
+    "queue_mode": "collect",
+    "inbound_debounce_ms": 1800,
+    "imessage_inbound_debounce_ms": 2000
+  },
+  "email": {
+    "policy_file": "/Users/clawdia/.openclaw/workspace/config/email_classification_policy.json",
+    "confidence_gating": "enabled-via-script"
+  }
+}

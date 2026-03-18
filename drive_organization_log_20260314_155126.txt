@@ -1,0 +1,724 @@
+Starting Google Drive organization at Sat Mar 14 15:51:26 WAT 2026
+==============================================
+Processing markdown files...
+Processing: organogram_update_summary_20260302_130118.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_104306.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: OPENCLAW_TEAM_OPERATING_PLAN_2026-03-01.md
+  Category: IIH Strategic Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/
+  ---
+Processing: instruction_response_process.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_130904.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_111006.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: GOOGLE_DRIVE_DEFAULT_RULE.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_091550.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_024409.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: IHS_Logo_Strategic_Independence_Analysis.md
+  Category: IIH Strategic Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/
+  ---
+Processing: organogram_update_summary_20260302_103806.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: zoho_mail_config.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: EMAIL_ADDRESS_MAPPING.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_054244.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_021946.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_095603.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: MODEL_REPORT_TEMPLATE.md
+  Category: OpenClaw System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: organogram_update_summary_20260302_060228.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_035152.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: EMAIL_PROFILE_GENERAL.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_045929.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: AGENT_DEMONSTRATION_TASKS.md
+  Category: Agent Skills
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Agent_Skills/
+  ---
+Processing: rules_priority_assessment.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_071814.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_062537.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: corrected_email_processor_deployment_summary.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_052501.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: llama-3.2-3b-test-plan.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: EMAIL_NOTIFICATION_FIX.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_050430.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_040849.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: config_files_analysis.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_024957.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_074129.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: IIH_January_2026_Report_Draft.md
+  Category: IIH Financial Reports
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Financial_Reports/
+  ---
+Processing: OPENCLAW_STABILIZATION_PLAN_2026-03-01.md
+  Category: OpenClaw System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: organogram_update_summary_20260302_063522.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_082459.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: LOCAL_MODEL_FIX_PLAN_2026-03-02.md
+  Category: OpenClaw System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: cron-jobs.md
+  Category: Workflows
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Workflows/
+  ---
+Processing: organogram_update_summary_20260302_035652.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: IDENTITY.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: organogram_update_summary_20260302_020744.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: MONTHLY_REPORT_PROCESS.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_065457.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_014340.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_025938.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_061813.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_085349.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: email_processing_summary_2026-03-02_0441.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: EMAIL_OPERATIONS_MASTER.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_083907.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: Facility_Condition_Report_Summary_20260227.md
+  Category: IIH Facility Management
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Facility_Management/
+  ---
+Processing: organogram_update_summary_20260302_093315.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_064509.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: memory_optimization_process.md
+  Category: Memory System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Memory_System/
+  ---
+Processing: EMAIL_PROFILE_IIH.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: LEARNING.md
+  Category: Personal Planning
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/Personal_Projects/Planning/
+  ---
+Processing: organogram_update_summary_20260302_111914.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: evening_wrap_up_20260302.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: HEARTBEAT.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: organogram_update_summary_20260302_073628.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_081258.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: EMAIL_ACCESS_RUNBOOK.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_032639.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_080120.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: AGENT_UPSKILLING_REFERENCE.md
+  Category: Agent Skills
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Agent_Skills/
+  ---
+Processing: organogram_update_summary_20260302_100817.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_114729.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_122546.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: ENHANCED_EMAIL_SYSTEM.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_085850.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_102606.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: LESSONS.md
+  Category: Personal Planning
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/Personal_Projects/Planning/
+  ---
+Processing: organogram_update_summary_20260302_113600.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_095104.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: IHS_Logo_Proposal_Analysis.md
+  Category: IIH Strategic Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/
+  ---
+Processing: organogram_update_summary_20260302_072349.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: Facility_Report_Email_Response_Draft.md
+  Category: IIH Facility Management
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Facility_Management/
+  ---
+Processing: organogram_update_summary_20260302_131621.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_094452.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: email_todos_20260227_0940.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_123728.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_114100.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: MEMORY.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: OLLAMA_MODEL_OPTIONS.md
+  Category: OpenClaw System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: organogram_update_summary_20260302_124746.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: AGENT_ROUTING_PROFILE_2026-03-01.md
+  Category: Agent Skills
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Agent_Skills/
+  ---
+Processing: organogram_update_summary_20260302_043653.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_041855.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_131640.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: OPTIMIZATION_SUMMARY.md
+  Category: Memory System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Memory_System/
+  ---
+Processing: email_processing_summary_1553.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_031557.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: EMAIL_PRODUCTIVITY_OPTIMIZATION_PLAN_2026-03-01.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_014316.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: BUILD.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: organogram_update_summary_20260302_055459.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: JANUARY_2026_FINANCIAL_PROCESSING_COMPLETE.md
+  Category: IIH Financial Reports
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Financial_Reports/
+  ---
+Processing: BOOTSTRAP.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: OpenClaw_Cost_Optimization_Plan.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: PROGRESS_SUMMARY.md
+  Category: Personal Planning
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/Personal_Projects/Planning/
+  ---
+Processing: EMAIL_PROCESSING_SETUP.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_021136.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: MEMORY_SYSTEM_OPTIMIZATION_PLAN_2026-03-01.md
+  Category: Memory System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Memory_System/
+  ---
+Processing: organogram_update_summary_20260302_014302.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_115228.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: USER.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: email_processor_implementation_summary.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: organogram_update_summary_20260302_034547.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: UPDATE_SYSTEM_DOCUMENTATION.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_121646.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_070322.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_105722.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: SOUL.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: local-models-log.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_051416.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_061310.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_053329.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: qdrant-memory-setup.md
+  Category: Memory System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Memory_System/
+  ---
+Processing: organogram_update_summary_20260302_120351.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_025510.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: email_auto_processor_execution_summary_20260227_0940.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: AGENTS.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: corrected_email_auto_processor_status.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: corrected_email_processor_status_20260302.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: WORKFLOW_AUTO.md
+  Category: OpenClaw System
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: organogram_update_summary_20260302_021834.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_083123.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: IIH_KNOWLEDGE_SUMMARY.md
+  Category: IIH Strategic Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/
+  ---
+Processing: organogram_update_summary_20260302_070819.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_060727.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: Program_KPI_Update_Requirements_20260227.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_074959.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_092050.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_030502.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: corrected_email_processor_execution_summary_20260302_0250.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_103108.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: Zaradeen_Employment_Letter_Edited_20260227.md
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: fix_email_logic.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: organogram_update_summary_20260302_072849.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: organogram_update_summary_20260302_045325.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: FINANCIAL_PROCESSING_STATUS.md
+  Category: IIH Financial Reports
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Financial_Reports/
+  ---
+Processing: JANUARY_2026_FINANCIAL_PROCESSING_PLAN.md
+  Category: IIH Financial Reports
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Financial_Reports/
+  ---
+Processing: organogram_update_summary_20260302_042951.md
+  Category: IIH Program Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Program_Documents/
+  ---
+Processing: January_2026_Financial_Processing.md
+  Category: Uncategorized (default)
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Uncategorized/
+  ---
+Processing: TOOLS.md
+  Category: OpenClaw Configuration
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/
+  ---
+Processing: TODAY_IMPLEMENTATION_PLAN.md
+  Category: Personal Planning
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/Personal_Projects/Planning/
+  ---
+Processing text files...
+Processing: email_plain.txt
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: morning_digest_2026-03-08.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing: email_auto_processor_cron_summary.txt
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: email_to_send.txt
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: optimized-cron-config.txt
+  Category: Workflows
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Workflows/
+  ---
+Processing: morning_digest_2026-02-27.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing: consent_agreement.txt
+  Category: Agreements/Legal
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/Agreements/
+  ---
+Processing: agreement_text.txt
+  Category: Agreements/Legal
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/Agreements/
+  ---
+Processing: agreement_excerpts.txt
+  Category: Agreements/Legal
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/Agreements/
+  ---
+Processing: morning_digest_2026-03-02.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing: email_template.txt
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: drive_organization_log_20260314_155126.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing: morning_digest_2026-03-01.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing: evening_wrapup_2026-03-01.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing: morning_digest_2026-03-07.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing: email_to_temi.txt
+  Category: Correspondence
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Correspondence/
+  ---
+Processing: maureen_response.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing: IHS_Logo_Proposal_Analysis.docx.txt
+  Category: IIH Strategic Documents
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/
+  ---
+Processing: morning_digest_2026-03-06.txt
+  Category: Text Files
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace/Configuration/Text_Files/
+  ---
+Processing PDF files...
+Processing: Consent Agreement (2)-1.pdf
+  Category: Agreements/Legal
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/Agreements/
+  ---
+Processing: Collaboration Agreement_KWSG_IHS_(Execution).pdf
+  Category: Agreements/Legal
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/Agreements/
+  ---
+Processing: IIH Report February 2026.pdf
+  Category: Agreements/Legal
+  Copied to: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations/Strategic_Documents/Agreements/
+  ---
+
+Organization Complete!
+======================
+Files organized into: /Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror
+
+Folder sizes:
+  0B	/Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/Archives
+1.6M	/Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/IIH_Operations
+908K	/Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/OpenClaw_Workspace
+ 28K	/Users/clawdia/.openclaw/workspace/GoogleDrive_Mirror/Personal_Projects
+
+File counts by category:
+   1 zoho_mail_config.md
+   1 rules_priority_assessment.md
+   1 qdrant-memory-setup.md
+   1 organogram_update_summary_20260302_131640.md
+   1 organogram_update_summary_20260302_131621.md
+   1 organogram_update_summary_20260302_130904.md
+   1 organogram_update_summary_20260302_130118.md
+   1 organogram_update_summary_20260302_124746.md
+   1 organogram_update_summary_20260302_123728.md
+   1 organogram_update_summary_20260302_122546.md
+   1 organogram_update_summary_20260302_121646.md
+   1 organogram_update_summary_20260302_120351.md
+   1 organogram_update_summary_20260302_115228.md
+   1 organogram_update_summary_20260302_114729.md
+   1 organogram_update_summary_20260302_114100.md
+   1 organogram_update_summary_20260302_113600.md
+   1 organogram_update_summary_20260302_111914.md
+   1 organogram_update_summary_20260302_111006.md
+   1 organogram_update_summary_20260302_105722.md
+   1 organogram_update_summary_20260302_104306.md
+
+Next steps:
+1. Fix gog OAuth authentication
+2. Upload organized files to Google Drive
+3. Update GOOGLE_DRIVE_DEFAULT_RULE.md with actual folder IDs
+4. Set up automatic sync for new files
+Log saved to: /Users/clawdia/.openclaw/workspace/drive_organization_log_20260314_155126.txt

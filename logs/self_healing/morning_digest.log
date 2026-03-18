@@ -1,0 +1,12 @@
+[2026-03-17 08:00:00] morning_digest: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/morning_digest.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 08:00:02] morning_digest: Command failed with exit code: 127
+[2026-03-17 08:00:02] morning_digest: Attempting automatic fix for morning_digest
+[2026-03-17 08:00:02] morning_digest: Retry attempt 1/2 after 30 seconds
+[2026-03-17 08:00:36] morning_digest: Command failed with exit code: 127
+[2026-03-17 08:00:36] morning_digest: Attempting automatic fix for morning_digest
+[2026-03-17 08:00:36] morning_digest: Retry attempt 2/2 after 30 seconds
+[2026-03-17 08:01:09] morning_digest: Command failed with exit code: 127
+[2026-03-17 08:01:09] morning_digest: Attempting automatic fix for morning_digest
+[2026-03-17 08:01:09] morning_digest: 🚨 HITL ALERT: morning_digest failed 3 consecutive times
+[2026-03-17 08:01:09] morning_digest: Error: 
+[2026-03-17 08:01:09] morning_digest: Max retries exceeded. Giving up.

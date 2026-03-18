@@ -1,0 +1,55 @@
+{
+  "masterMnemonic": "miss gate chair end track dinner concert report woman journey matrix miracle math aspect inquiry sketch merry shaft casual index couple vacant small million",
+  "masterSeed": "6953eed8c33d85d2980de022704aef2e9658e52ae9b0c5834c6df4e4988061e874f77e59f066dde1d0521d6ac15651ef7e23366b7882093fe4dad1cc5d97a079",
+  "generatedAt": "2026-03-15T03:44:48.481Z",
+  "system": "Clawdia AI Wallet System v1.0",
+  "wallets": {
+    "operational": {
+      "name": "Operational Wallet",
+      "description": "For daily AI operations and transactions",
+      "type": "ethereum",
+      "derivationPath": "m/44'/60'/0'/0/0",
+      "address": "0xE535B9D812609b354db0f4cF46fdA00Ebb9A84E0",
+      "publicKey": "0x0346121786d9f86983bd72160dc2ef0a9d15cacba9a30c33697925868ffe6d4e64",
+      "privateKey": "0x9a020e9a886c12838f98b54c9e1102bdc4d5f57d2a61de228c74440a8716e9cf"
+    },
+    "treasury": {
+      "name": "Treasury Wallet",
+      "description": "For storing significant assets",
+      "type": "ethereum",
+      "derivationPath": "m/44'/60'/0'/0/1",
+      "address": "0xEEF0bc32C299C5Cd24c5609Ffca0635a2808f311",
+      "publicKey": "0x029b7c465e6612d525c4bdc4e0824c976bc30a673c030da3e13679e5df08635cd9",
+      "privateKey": "0xb53cd866fefed2d0bb5a3a9ad2a573e9b2aae6a807a75186f04934f6e0a2966f"
+    },
+    "development": {
+      "name": "Development Wallet",
+      "description": "For testing and development purposes",
+      "type": "ethereum",
+      "derivationPath": "m/44'/60'/0'/0/2",
+      "address": "0xEAeD681304cBE037A1bC389bB336A7ECD80ca256",
+      "publicKey": "0x03f17d0a85072f89d868790fd82b602a18288ac9b77b9f499466069fe3840b0ccd",
+      "privateKey": "0x0ca05fc5d1bb2fc2c091643e96c277d204802badd9da788ae97f5b6e58c55c67"
+    },
+    "bitcoin_operational": {
+      "name": "Bitcoin Operational",
+      "description": "Bitcoin wallet for AI operations",
+      "type": "bitcoin",
+      "derivationPath": "m/44'/0'/0'/0/0",
+      "address": "bc1qm9zhpdt3m90rcqtx8vlu3njhsc8e0vu7pzehnx",
+      "publicKey": "3,84,207,14,118,57,194,151,253,209,199,16,176,139,149,67,156,246,210,242,135,153,154,249,91,208,89,150,128,18,163,164,41",
+      "wif": "L48wm7HRonvsPAvBHa4mkXLM6c3Fhpr2zRYiLB3ha9oHKpgcpBRv",
+      "xpub": "xpub661MyMwAqRbcFnc7yXvDEXW9FPuafYEtSmvJi8ofkPTq5F7F1EqybiJ5N6aPfiytanqUhciYrY4AJpisfCtdYLzJkTVmNVpzyLE2Z8g246w"
+    },
+    "bitcoin_treasury": {
+      "name": "Bitcoin Treasury",
+      "description": "Bitcoin cold storage",
+      "type": "bitcoin",
+      "derivationPath": "m/44'/0'/0'/0/1",
+      "address": "bc1qy5r6eh2xs09vt6nz6k94al4umw9epaez4agsfe",
+      "publicKey": "2,117,74,121,84,42,63,9,11,13,26,16,100,113,75,244,14,132,52,58,204,185,68,248,149,133,232,170,240,75,116,85,124",
+      "wif": "Ky9CbYozNQkbUCK2X2JzHV9MyNcrCparD5xP8cPeLBasCt7mVVGb",
+      "xpub": "xpub661MyMwAqRbcFnc7yXvDEXW9FPuafYEtSmvJi8ofkPTq5F7F1EqybiJ5N6aPfiytanqUhciYrY4AJpisfCtdYLzJkTVmNVpzyLE2Z8g246w"
+    }
+  }
+}

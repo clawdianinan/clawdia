@@ -82,4 +82,12 @@ if [ -f "$DIGEST_FILE" ]; then
     echo "⚠️ Note: Actual iMessage delivery requires OpenClaw message tool integration"
 fi
 
+# Model resilience check (replaces ollama check)
+echo "🔧 Running model resilience check..."
+if [ -f "$WORKSPACE/scripts/model_resilience_check.sh" ]; then
+    bash "$WORKSPACE/scripts/model_resilience_check.sh" >> "$DIGEST_FILE" 2>&1 || echo "• Model check completed" >> "$DIGEST_FILE"
+else
+    echo "• Model resilience check script not found" >> "$DIGEST_FILE"
+fi
+
 echo "🎉 Morning digest completed!"

@@ -1,0 +1,927 @@
+========================================
+Daily Config Backup - Mon Mar  2 04:00:00 WAT 2026
+========================================
+✓ Found: openclaw.json
+✓ Found: email_config.json
+✓ Found: exec-approvals.json
+✓ Found: .env
+✓ Found: models.json
+✓ Found: auth.json
+✓ Found: auth-profiles.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: jobs.json
+✓ Found: paired.json
+✓ Found: device.json
+✓ Found: device-auth.json
+✓ Found: imessage-default-allowFrom.json
+✓ Found: imessage-pairing.json
+✓ Found: telegram-default-allowFrom.json
+✓ Found: telegram-pairing.json
+✓ Found: whatsapp-default-allowFrom.json
+✓ Found: whatsapp-pairing.json
+✓ Found: runs.json
+✓ Found: TOOLS.md
+✓ Found: HEARTBEAT.md
+✓ Found: AGENTS.md
+✓ Found: SOUL.md
+✓ Found: USER.md
+✓ Found: IDENTITY.md
+✓ Found: MEMORY.md
+✓ Found: auth-profiles.json
+✓ Found: workspace-state.json
+✓ Found: email_classification_policy.json
+✓ Found: zoho_mail_config.md
+✓ Found: optimized-cron-config.txt
+✓ Found: CORE_RULES.md
+✓ Found: ROUTING.md
+✓ Found: TEAM_POLICY.md
+✓ Found: update-check.json
+----------------------------------------
+Backing up 38 config files...
+tar: Removing leading '/' from member names
+✅ Backup created: /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-02.tar.gz
+   Size:  28K
+   Files: 38
+   Contents:
+     - Users/clawdia/.openclaw/openclaw.json
+     - Users/clawdia/.openclaw/email_config.json
+     - Users/clawdia/.openclaw/exec-approvals.json
+     - Users/clawdia/.openclaw/.env
+     - Users/clawdia/.openclaw/agents/main/agent/models.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth-profiles.json
+     - Users/clawdia/.openclaw/agents/Ebun/agent/models.json
+     - Users/clawdia/.openclaw/agents/Nova/agent/models.json
+     - Users/clawdia/.openclaw/agents/Shuri/agent/models.json
+     - Users/clawdia/.openclaw/agents/Trinity/agent/models.json
+     - Users/clawdia/.openclaw/cron/jobs.json
+     - Users/clawdia/.openclaw/devices/paired.json
+     - Users/clawdia/.openclaw/identity/device.json
+     - Users/clawdia/.openclaw/identity/device-auth.json
+     - Users/clawdia/.openclaw/credentials/imessage-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/imessage-pairing.json
+     - Users/clawdia/.openclaw/credentials/telegram-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/telegram-pairing.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-pairing.json
+     - Users/clawdia/.openclaw/subagents/runs.json
+     - Users/clawdia/.openclaw/workspace/TOOLS.md
+     - Users/clawdia/.openclaw/workspace/HEARTBEAT.md
+     - Users/clawdia/.openclaw/workspace/AGENTS.md
+     - Users/clawdia/.openclaw/workspace/SOUL.md
+     - Users/clawdia/.openclaw/workspace/USER.md
+     - Users/clawdia/.openclaw/workspace/IDENTITY.md
+     - Users/clawdia/.openclaw/workspace/MEMORY.md
+     - Users/clawdia/.openclaw/workspace/auth-profiles.json
+     - Users/clawdia/.openclaw/workspace/.openclaw/workspace-state.json
+     - Users/clawdia/.openclaw/workspace/config/email_classification_policy.json
+     - Users/clawdia/.openclaw/workspace/zoho_mail_config.md
+     - Users/clawdia/.openclaw/workspace/optimized-cron-config.txt
+     - Users/clawdia/.openclaw/policies/CORE_RULES.md
+     - Users/clawdia/.openclaw/policies/ROUTING.md
+     - Users/clawdia/.openclaw/policies/TEAM_POLICY.md
+     - Users/clawdia/.openclaw/update-check.json
+----------------------------------------
+Cleaning up old backups (keeping 30 days)...
+   Before: 1 backups
+   After:  1 backups
+   Removed: 0 old backups
+----------------------------------------
+Current backups in /Users/clawdia/.openclaw/backups/configs:
+-rw-r--r--  1 clawdia  staff    28K Mar  2 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-02.tar.gz
+========================================
+Config backup completed successfully!
+========================================
+========================================
+Daily Config Backup - Sat Mar  7 04:00:01 WAT 2026
+========================================
+✓ Found: openclaw.json
+✓ Found: email_config.json
+✓ Found: exec-approvals.json
+✓ Found: .env
+✓ Found: models.json
+✓ Found: auth.json
+✓ Found: auth-profiles.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: jobs.json
+✓ Found: paired.json
+✓ Found: device.json
+✓ Found: device-auth.json
+✓ Found: imessage-default-allowFrom.json
+✓ Found: imessage-pairing.json
+✓ Found: telegram-default-allowFrom.json
+✓ Found: telegram-pairing.json
+✓ Found: whatsapp-default-allowFrom.json
+✓ Found: whatsapp-pairing.json
+✓ Found: runs.json
+✓ Found: TOOLS.md
+✓ Found: HEARTBEAT.md
+✓ Found: AGENTS.md
+✓ Found: SOUL.md
+✓ Found: USER.md
+✓ Found: IDENTITY.md
+✓ Found: MEMORY.md
+✓ Found: auth-profiles.json
+✓ Found: workspace-state.json
+✓ Found: email_classification_policy.json
+✓ Found: zoho_mail_config.md
+✓ Found: optimized-cron-config.txt
+✓ Found: config.json
+✓ Found: vector_metadata.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: sending.md
+✓ Found: himalaya.md
+✓ Found: apple-mail.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: README.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: runbook-template.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✗ Missing: _meta.json
+✗ Missing: origin.json
+✓ Found: configuration.md
+✓ Found: CORE_RULES.md
+✓ Found: ROUTING.md
+✓ Found: TEAM_POLICY.md
+✓ Found: update-check.json
+----------------------------------------
+Backing up 70 config files...
+tar: Removing leading '/' from member names
+✅ Backup created: /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-07.tar.gz
+   Size: 308K
+   Files: 70
+   Contents:
+     - Users/clawdia/.openclaw/openclaw.json
+     - Users/clawdia/.openclaw/email_config.json
+     - Users/clawdia/.openclaw/exec-approvals.json
+     - Users/clawdia/.openclaw/.env
+     - Users/clawdia/.openclaw/agents/main/agent/models.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth-profiles.json
+     - Users/clawdia/.openclaw/agents/Ebun/agent/models.json
+     - Users/clawdia/.openclaw/agents/Nova/agent/models.json
+     - Users/clawdia/.openclaw/agents/Shuri/agent/models.json
+     - Users/clawdia/.openclaw/agents/Trinity/agent/models.json
+     - Users/clawdia/.openclaw/cron/jobs.json
+     - Users/clawdia/.openclaw/devices/paired.json
+     - Users/clawdia/.openclaw/identity/device.json
+     - Users/clawdia/.openclaw/identity/device-auth.json
+     - Users/clawdia/.openclaw/credentials/imessage-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/imessage-pairing.json
+     - Users/clawdia/.openclaw/credentials/telegram-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/telegram-pairing.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-pairing.json
+     - Users/clawdia/.openclaw/subagents/runs.json
+     - Users/clawdia/.openclaw/workspace/TOOLS.md
+     - Users/clawdia/.openclaw/workspace/HEARTBEAT.md
+     - Users/clawdia/.openclaw/workspace/AGENTS.md
+     - Users/clawdia/.openclaw/workspace/SOUL.md
+     - Users/clawdia/.openclaw/workspace/USER.md
+     - Users/clawdia/.openclaw/workspace/IDENTITY.md
+     - Users/clawdia/.openclaw/workspace/MEMORY.md
+     - Users/clawdia/.openclaw/workspace/auth-profiles.json
+     - Users/clawdia/.openclaw/workspace/.openclaw/workspace-state.json
+     - Users/clawdia/.openclaw/workspace/config/email_classification_policy.json
+     - Users/clawdia/.openclaw/workspace/zoho_mail_config.md
+     - Users/clawdia/.openclaw/workspace/optimized-cron-config.txt
+     - Users/clawdia/.openclaw/workspace/skills/qmd/config.json
+     - Users/clawdia/.openclaw/workspace/skills/qmd/vector_metadata.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/sending.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/himalaya.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/apple-mail.md
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/github/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/github/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/README.md
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/assets/runbook-template.md
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/.clawhub/origin.json
+     - opt/homebrew/lib/node_modules/openclaw/skills/himalaya/references/configuration.md
+     - Users/clawdia/.openclaw/policies/CORE_RULES.md
+     - Users/clawdia/.openclaw/policies/ROUTING.md
+     - Users/clawdia/.openclaw/policies/TEAM_POLICY.md
+     - Users/clawdia/.openclaw/update-check.json
+----------------------------------------
+Cleaning up old backups (keeping 30 days)...
+   Before: 2 backups
+   After:  2 backups
+   Removed: 0 old backups
+----------------------------------------
+Current backups in /Users/clawdia/.openclaw/backups/configs:
+-rw-r--r--  1 clawdia  staff   298K Mar  2 04:05 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-02.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  7 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-07.tar.gz
+========================================
+Config backup completed successfully!
+========================================
+========================================
+Daily Config Backup - Sun Mar  8 04:00:00 WAT 2026
+========================================
+✓ Found: openclaw.json
+✓ Found: email_config.json
+✓ Found: exec-approvals.json
+✓ Found: .env
+✓ Found: models.json
+✓ Found: auth.json
+✓ Found: auth-profiles.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: jobs.json
+✓ Found: paired.json
+✓ Found: device.json
+✓ Found: device-auth.json
+✓ Found: imessage-default-allowFrom.json
+✓ Found: imessage-pairing.json
+✓ Found: telegram-default-allowFrom.json
+✓ Found: telegram-pairing.json
+✓ Found: whatsapp-default-allowFrom.json
+✓ Found: whatsapp-pairing.json
+✓ Found: runs.json
+✓ Found: TOOLS.md
+✓ Found: HEARTBEAT.md
+✓ Found: AGENTS.md
+✓ Found: SOUL.md
+✓ Found: USER.md
+✓ Found: IDENTITY.md
+✓ Found: MEMORY.md
+✓ Found: auth-profiles.json
+✓ Found: workspace-state.json
+✓ Found: email_classification_policy.json
+✓ Found: zoho_mail_config.md
+✓ Found: optimized-cron-config.txt
+✓ Found: config.json
+✓ Found: vector_metadata.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: sending.md
+✓ Found: himalaya.md
+✓ Found: apple-mail.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: README.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: runbook-template.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✗ Missing: _meta.json
+✗ Missing: origin.json
+✓ Found: configuration.md
+✓ Found: CORE_RULES.md
+✓ Found: ROUTING.md
+✓ Found: TEAM_POLICY.md
+✓ Found: update-check.json
+----------------------------------------
+Backing up 70 config files...
+tar: Removing leading '/' from member names
+✅ Backup created: /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-08.tar.gz
+   Size: 308K
+   Files: 70
+   Contents:
+     - Users/clawdia/.openclaw/openclaw.json
+     - Users/clawdia/.openclaw/email_config.json
+     - Users/clawdia/.openclaw/exec-approvals.json
+     - Users/clawdia/.openclaw/.env
+     - Users/clawdia/.openclaw/agents/main/agent/models.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth-profiles.json
+     - Users/clawdia/.openclaw/agents/Ebun/agent/models.json
+     - Users/clawdia/.openclaw/agents/Nova/agent/models.json
+     - Users/clawdia/.openclaw/agents/Shuri/agent/models.json
+     - Users/clawdia/.openclaw/agents/Trinity/agent/models.json
+     - Users/clawdia/.openclaw/cron/jobs.json
+     - Users/clawdia/.openclaw/devices/paired.json
+     - Users/clawdia/.openclaw/identity/device.json
+     - Users/clawdia/.openclaw/identity/device-auth.json
+     - Users/clawdia/.openclaw/credentials/imessage-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/imessage-pairing.json
+     - Users/clawdia/.openclaw/credentials/telegram-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/telegram-pairing.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-pairing.json
+     - Users/clawdia/.openclaw/subagents/runs.json
+     - Users/clawdia/.openclaw/workspace/TOOLS.md
+     - Users/clawdia/.openclaw/workspace/HEARTBEAT.md
+     - Users/clawdia/.openclaw/workspace/AGENTS.md
+     - Users/clawdia/.openclaw/workspace/SOUL.md
+     - Users/clawdia/.openclaw/workspace/USER.md
+     - Users/clawdia/.openclaw/workspace/IDENTITY.md
+     - Users/clawdia/.openclaw/workspace/MEMORY.md
+     - Users/clawdia/.openclaw/workspace/auth-profiles.json
+     - Users/clawdia/.openclaw/workspace/.openclaw/workspace-state.json
+     - Users/clawdia/.openclaw/workspace/config/email_classification_policy.json
+     - Users/clawdia/.openclaw/workspace/zoho_mail_config.md
+     - Users/clawdia/.openclaw/workspace/optimized-cron-config.txt
+     - Users/clawdia/.openclaw/workspace/skills/qmd/config.json
+     - Users/clawdia/.openclaw/workspace/skills/qmd/vector_metadata.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/sending.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/himalaya.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/apple-mail.md
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/github/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/github/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/README.md
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/assets/runbook-template.md
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/.clawhub/origin.json
+     - opt/homebrew/lib/node_modules/openclaw/skills/himalaya/references/configuration.md
+     - Users/clawdia/.openclaw/policies/CORE_RULES.md
+     - Users/clawdia/.openclaw/policies/ROUTING.md
+     - Users/clawdia/.openclaw/policies/TEAM_POLICY.md
+     - Users/clawdia/.openclaw/update-check.json
+----------------------------------------
+Cleaning up old backups (keeping 30 days)...
+   Before: 3 backups
+   After:  3 backups
+   Removed: 0 old backups
+----------------------------------------
+Current backups in /Users/clawdia/.openclaw/backups/configs:
+-rw-r--r--  1 clawdia  staff   298K Mar  2 04:05 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-02.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  7 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-07.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  8 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-08.tar.gz
+========================================
+Config backup completed successfully!
+========================================
+========================================
+Daily Config Backup - Sun Mar 15 04:00:00 WAT 2026
+========================================
+✓ Found: openclaw.json
+✓ Found: email_config.json
+✓ Found: exec-approvals.json
+✓ Found: .env
+✓ Found: models.json
+✓ Found: auth.json
+✓ Found: auth-profiles.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: jobs.json
+✓ Found: paired.json
+✓ Found: device.json
+✓ Found: device-auth.json
+✓ Found: imessage-default-allowFrom.json
+✓ Found: imessage-pairing.json
+✓ Found: telegram-default-allowFrom.json
+✓ Found: telegram-pairing.json
+✓ Found: whatsapp-default-allowFrom.json
+✓ Found: whatsapp-pairing.json
+✓ Found: runs.json
+✓ Found: TOOLS.md
+✓ Found: HEARTBEAT.md
+✓ Found: AGENTS.md
+✓ Found: SOUL.md
+✓ Found: USER.md
+✓ Found: IDENTITY.md
+✓ Found: MEMORY.md
+✓ Found: auth-profiles.json
+✓ Found: workspace-state.json
+✓ Found: email_classification_policy.json
+✓ Found: zoho_mail_config.md
+✓ Found: optimized-cron-config.txt
+✓ Found: config.json
+✓ Found: vector_metadata.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: sending.md
+✓ Found: himalaya.md
+✓ Found: apple-mail.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: README.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: runbook-template.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✗ Missing: _meta.json
+✗ Missing: origin.json
+✓ Found: configuration.md
+✓ Found: CORE_RULES.md
+✓ Found: ROUTING.md
+✓ Found: TEAM_POLICY.md
+✓ Found: update-check.json
+----------------------------------------
+Backing up 70 config files...
+tar: Removing leading '/' from member names
+✅ Backup created: /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-15.tar.gz
+   Size: 312K
+   Files: 70
+   Contents:
+     - Users/clawdia/.openclaw/openclaw.json
+     - Users/clawdia/.openclaw/email_config.json
+     - Users/clawdia/.openclaw/exec-approvals.json
+     - Users/clawdia/.openclaw/.env
+     - Users/clawdia/.openclaw/agents/main/agent/models.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth-profiles.json
+     - Users/clawdia/.openclaw/agents/Ebun/agent/models.json
+     - Users/clawdia/.openclaw/agents/Nova/agent/models.json
+     - Users/clawdia/.openclaw/agents/Shuri/agent/models.json
+     - Users/clawdia/.openclaw/agents/Trinity/agent/models.json
+     - Users/clawdia/.openclaw/cron/jobs.json
+     - Users/clawdia/.openclaw/devices/paired.json
+     - Users/clawdia/.openclaw/identity/device.json
+     - Users/clawdia/.openclaw/identity/device-auth.json
+     - Users/clawdia/.openclaw/credentials/imessage-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/imessage-pairing.json
+     - Users/clawdia/.openclaw/credentials/telegram-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/telegram-pairing.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-pairing.json
+     - Users/clawdia/.openclaw/subagents/runs.json
+     - Users/clawdia/.openclaw/workspace/TOOLS.md
+     - Users/clawdia/.openclaw/workspace/HEARTBEAT.md
+     - Users/clawdia/.openclaw/workspace/AGENTS.md
+     - Users/clawdia/.openclaw/workspace/SOUL.md
+     - Users/clawdia/.openclaw/workspace/USER.md
+     - Users/clawdia/.openclaw/workspace/IDENTITY.md
+     - Users/clawdia/.openclaw/workspace/MEMORY.md
+     - Users/clawdia/.openclaw/workspace/auth-profiles.json
+     - Users/clawdia/.openclaw/workspace/.openclaw/workspace-state.json
+     - Users/clawdia/.openclaw/workspace/config/email_classification_policy.json
+     - Users/clawdia/.openclaw/workspace/zoho_mail_config.md
+     - Users/clawdia/.openclaw/workspace/optimized-cron-config.txt
+     - Users/clawdia/.openclaw/workspace/skills/qmd/config.json
+     - Users/clawdia/.openclaw/workspace/skills/qmd/vector_metadata.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/sending.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/himalaya.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/apple-mail.md
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/github/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/github/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/README.md
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/assets/runbook-template.md
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/.clawhub/origin.json
+     - opt/homebrew/lib/node_modules/openclaw/skills/himalaya/references/configuration.md
+     - Users/clawdia/.openclaw/policies/CORE_RULES.md
+     - Users/clawdia/.openclaw/policies/ROUTING.md
+     - Users/clawdia/.openclaw/policies/TEAM_POLICY.md
+     - Users/clawdia/.openclaw/update-check.json
+----------------------------------------
+Cleaning up old backups (keeping 30 days)...
+   Before: 4 backups
+   After:  4 backups
+   Removed: 0 old backups
+----------------------------------------
+Current backups in /Users/clawdia/.openclaw/backups/configs:
+-rw-r--r--  1 clawdia  staff   298K Mar  2 04:05 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-02.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  7 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-07.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  8 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-08.tar.gz
+-rw-r--r--  1 clawdia  staff   312K Mar 15 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-15.tar.gz
+========================================
+Config backup completed successfully!
+========================================
+========================================
+Daily Config Backup - Mon Mar 16 04:00:00 WAT 2026
+========================================
+✓ Found: openclaw.json
+✓ Found: email_config.json
+✓ Found: exec-approvals.json
+✓ Found: .env
+✓ Found: models.json
+✓ Found: auth.json
+✓ Found: auth-profiles.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: jobs.json
+✓ Found: paired.json
+✓ Found: device.json
+✓ Found: device-auth.json
+✓ Found: imessage-default-allowFrom.json
+✓ Found: imessage-pairing.json
+✓ Found: telegram-default-allowFrom.json
+✓ Found: telegram-pairing.json
+✓ Found: whatsapp-default-allowFrom.json
+✓ Found: whatsapp-pairing.json
+✓ Found: runs.json
+✓ Found: TOOLS.md
+✓ Found: HEARTBEAT.md
+✓ Found: AGENTS.md
+✓ Found: SOUL.md
+✓ Found: USER.md
+✓ Found: IDENTITY.md
+✓ Found: MEMORY.md
+✓ Found: auth-profiles.json
+✓ Found: workspace-state.json
+✓ Found: email_classification_policy.json
+✓ Found: zoho_mail_config.md
+✓ Found: optimized-cron-config.txt
+✓ Found: config.json
+✓ Found: vector_metadata.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: sending.md
+✓ Found: himalaya.md
+✓ Found: apple-mail.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: README.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: runbook-template.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✗ Missing: _meta.json
+✗ Missing: origin.json
+✓ Found: configuration.md
+✓ Found: CORE_RULES.md
+✓ Found: ROUTING.md
+✓ Found: TEAM_POLICY.md
+✓ Found: update-check.json
+----------------------------------------
+Backing up 70 config files...
+tar: Removing leading '/' from member names
+✅ Backup created: /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-16.tar.gz
+   Size: 320K
+   Files: 70
+   Contents:
+     - Users/clawdia/.openclaw/openclaw.json
+     - Users/clawdia/.openclaw/email_config.json
+     - Users/clawdia/.openclaw/exec-approvals.json
+     - Users/clawdia/.openclaw/.env
+     - Users/clawdia/.openclaw/agents/main/agent/models.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth-profiles.json
+     - Users/clawdia/.openclaw/agents/Ebun/agent/models.json
+     - Users/clawdia/.openclaw/agents/Nova/agent/models.json
+     - Users/clawdia/.openclaw/agents/Shuri/agent/models.json
+     - Users/clawdia/.openclaw/agents/Trinity/agent/models.json
+     - Users/clawdia/.openclaw/cron/jobs.json
+     - Users/clawdia/.openclaw/devices/paired.json
+     - Users/clawdia/.openclaw/identity/device.json
+     - Users/clawdia/.openclaw/identity/device-auth.json
+     - Users/clawdia/.openclaw/credentials/imessage-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/imessage-pairing.json
+     - Users/clawdia/.openclaw/credentials/telegram-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/telegram-pairing.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-pairing.json
+     - Users/clawdia/.openclaw/subagents/runs.json
+     - Users/clawdia/.openclaw/workspace/TOOLS.md
+     - Users/clawdia/.openclaw/workspace/HEARTBEAT.md
+     - Users/clawdia/.openclaw/workspace/AGENTS.md
+     - Users/clawdia/.openclaw/workspace/SOUL.md
+     - Users/clawdia/.openclaw/workspace/USER.md
+     - Users/clawdia/.openclaw/workspace/IDENTITY.md
+     - Users/clawdia/.openclaw/workspace/MEMORY.md
+     - Users/clawdia/.openclaw/workspace/auth-profiles.json
+     - Users/clawdia/.openclaw/workspace/.openclaw/workspace-state.json
+     - Users/clawdia/.openclaw/workspace/config/email_classification_policy.json
+     - Users/clawdia/.openclaw/workspace/zoho_mail_config.md
+     - Users/clawdia/.openclaw/workspace/optimized-cron-config.txt
+     - Users/clawdia/.openclaw/workspace/skills/qmd/config.json
+     - Users/clawdia/.openclaw/workspace/skills/qmd/vector_metadata.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/sending.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/himalaya.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/apple-mail.md
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/github/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/github/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/README.md
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/assets/runbook-template.md
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/.clawhub/origin.json
+     - opt/homebrew/lib/node_modules/openclaw/skills/himalaya/references/configuration.md
+     - Users/clawdia/.openclaw/policies/CORE_RULES.md
+     - Users/clawdia/.openclaw/policies/ROUTING.md
+     - Users/clawdia/.openclaw/policies/TEAM_POLICY.md
+     - Users/clawdia/.openclaw/update-check.json
+----------------------------------------
+Cleaning up old backups (keeping 30 days)...
+   Before: 5 backups
+   After:  5 backups
+   Removed: 0 old backups
+----------------------------------------
+Current backups in /Users/clawdia/.openclaw/backups/configs:
+-rw-r--r--  1 clawdia  staff   298K Mar  2 04:05 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-02.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  7 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-07.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  8 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-08.tar.gz
+-rw-r--r--  1 clawdia  staff   312K Mar 15 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-15.tar.gz
+-rw-r--r--  1 clawdia  staff   318K Mar 16 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-16.tar.gz
+========================================
+Config backup completed successfully!
+========================================
+========================================
+Daily Config Backup - Tue Mar 17 04:00:00 WAT 2026
+========================================
+✓ Found: openclaw.json
+✓ Found: email_config.json
+✓ Found: exec-approvals.json
+✓ Found: .env
+✓ Found: models.json
+✓ Found: auth.json
+✓ Found: auth-profiles.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: models.json
+✓ Found: jobs.json
+✓ Found: paired.json
+✓ Found: device.json
+✓ Found: device-auth.json
+✓ Found: imessage-default-allowFrom.json
+✓ Found: imessage-pairing.json
+✓ Found: telegram-default-allowFrom.json
+✓ Found: telegram-pairing.json
+✓ Found: whatsapp-default-allowFrom.json
+✓ Found: whatsapp-pairing.json
+✓ Found: runs.json
+✓ Found: TOOLS.md
+✓ Found: HEARTBEAT.md
+✓ Found: AGENTS.md
+✓ Found: SOUL.md
+✓ Found: USER.md
+✓ Found: IDENTITY.md
+✓ Found: MEMORY.md
+✓ Found: auth-profiles.json
+✓ Found: workspace-state.json
+✓ Found: email_classification_policy.json
+✓ Found: zoho_mail_config.md
+✓ Found: optimized-cron-config.txt
+✓ Found: config.json
+✓ Found: vector_metadata.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: sending.md
+✓ Found: himalaya.md
+✓ Found: apple-mail.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: README.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: runbook-template.md
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✓ Found: _meta.json
+✓ Found: origin.json
+✗ Missing: _meta.json
+✗ Missing: origin.json
+✓ Found: configuration.md
+✓ Found: CORE_RULES.md
+✓ Found: ROUTING.md
+✓ Found: TEAM_POLICY.md
+✓ Found: update-check.json
+----------------------------------------
+Backing up 70 config files...
+tar: Removing leading '/' from member names
+✅ Backup created: /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-17.tar.gz
+   Size: 316K
+   Files: 70
+   Contents:
+     - Users/clawdia/.openclaw/openclaw.json
+     - Users/clawdia/.openclaw/email_config.json
+     - Users/clawdia/.openclaw/exec-approvals.json
+     - Users/clawdia/.openclaw/.env
+     - Users/clawdia/.openclaw/agents/main/agent/models.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth.json
+     - Users/clawdia/.openclaw/agents/main/agent/auth-profiles.json
+     - Users/clawdia/.openclaw/agents/Ebun/agent/models.json
+     - Users/clawdia/.openclaw/agents/Nova/agent/models.json
+     - Users/clawdia/.openclaw/agents/Shuri/agent/models.json
+     - Users/clawdia/.openclaw/agents/Trinity/agent/models.json
+     - Users/clawdia/.openclaw/cron/jobs.json
+     - Users/clawdia/.openclaw/devices/paired.json
+     - Users/clawdia/.openclaw/identity/device.json
+     - Users/clawdia/.openclaw/identity/device-auth.json
+     - Users/clawdia/.openclaw/credentials/imessage-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/imessage-pairing.json
+     - Users/clawdia/.openclaw/credentials/telegram-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/telegram-pairing.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-default-allowFrom.json
+     - Users/clawdia/.openclaw/credentials/whatsapp-pairing.json
+     - Users/clawdia/.openclaw/subagents/runs.json
+     - Users/clawdia/.openclaw/workspace/TOOLS.md
+     - Users/clawdia/.openclaw/workspace/HEARTBEAT.md
+     - Users/clawdia/.openclaw/workspace/AGENTS.md
+     - Users/clawdia/.openclaw/workspace/SOUL.md
+     - Users/clawdia/.openclaw/workspace/USER.md
+     - Users/clawdia/.openclaw/workspace/IDENTITY.md
+     - Users/clawdia/.openclaw/workspace/MEMORY.md
+     - Users/clawdia/.openclaw/workspace/auth-profiles.json
+     - Users/clawdia/.openclaw/workspace/.openclaw/workspace-state.json
+     - Users/clawdia/.openclaw/workspace/config/email_classification_policy.json
+     - Users/clawdia/.openclaw/workspace/zoho_mail_config.md
+     - Users/clawdia/.openclaw/workspace/optimized-cron-config.txt
+     - Users/clawdia/.openclaw/workspace/skills/qmd/config.json
+     - Users/clawdia/.openclaw/workspace/skills/qmd/vector_metadata.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/mail/sending.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/himalaya.md
+     - Users/clawdia/.openclaw/workspace/skills/mail/apple-mail.md
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/office-document-specialist-suite/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/apple-mail-search-safe/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/calendly-api/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/zoho-crm/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/github/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/github/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/todo-management/README.md
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/n8n-workflow-automation/assets/runbook-template.md
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/frontend-design/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/trello/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/snail-mail/.clawhub/origin.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/_meta.json
+     - Users/clawdia/.openclaw/workspace/skills/graphic-design/.clawhub/origin.json
+     - opt/homebrew/lib/node_modules/openclaw/skills/himalaya/references/configuration.md
+     - Users/clawdia/.openclaw/policies/CORE_RULES.md
+     - Users/clawdia/.openclaw/policies/ROUTING.md
+     - Users/clawdia/.openclaw/policies/TEAM_POLICY.md
+     - Users/clawdia/.openclaw/update-check.json
+----------------------------------------
+Cleaning up old backups (keeping 30 days)...
+   Before: 6 backups
+   After:  6 backups
+   Removed: 0 old backups
+----------------------------------------
+Current backups in /Users/clawdia/.openclaw/backups/configs:
+-rw-r--r--  1 clawdia  staff   298K Mar  2 04:05 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-02.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  7 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-07.tar.gz
+-rw-r--r--  1 clawdia  staff   308K Mar  8 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-08.tar.gz
+-rw-r--r--  1 clawdia  staff   312K Mar 15 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-15.tar.gz
+-rw-r--r--  1 clawdia  staff   318K Mar 16 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-16.tar.gz
+-rw-r--r--  1 clawdia  staff   312K Mar 17 04:00 /Users/clawdia/.openclaw/backups/configs/config-backup-2026-03-17.tar.gz
+========================================
+Config backup completed successfully!
+========================================

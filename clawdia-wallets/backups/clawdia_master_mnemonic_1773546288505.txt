@@ -1,0 +1,23 @@
+=== CLAWDIA AI MASTER MNEMONIC ===
+CRITICAL: This 24-word phrase controls ALL Clawdia wallets.
+Store in maximum security offline storage.
+
+MNEMONIC PHRASE (24 words):
+miss gate chair end track dinner concert report woman journey matrix miracle math aspect inquiry sketch merry shaft casual index couple vacant small million
+
+DERIVATION PATHS:
+- Operational Wallet: m/44'/60'/0'/0/0
+- Treasury Wallet: m/44'/60'/0'/0/1  
+- Development Wallet: m/44'/60'/0'/0/2
+- Bitcoin Operational: m/44'/0'/0'/0/0
+- Bitcoin Treasury: m/44'/0'/0'/0/1
+
+GENERATED: 2026-03-15T03:44:48.505Z
+SYSTEM: Clawdia AI Wallet System v1.0
+
+=== SECURITY PROTOCOL ===
+1. NEVER store digitally
+2. Write on cryptosteel/metal
+3. Store in multiple secure locations
+4. Access requires multi-agent approval
+5. Regular security audits required

@@ -4,11 +4,11 @@
     {
       "code": "PROGRESS_BELOW_TARGET",
       "severity": "high",
-      "calendarDay": 9,
+      "calendarDay": 17,
       "targetPct": 100.0,
       "actualPct": 20.0,
       "gapPct": 80.0,
-      "timestamp": "2026-03-09T16:10:00.513946"
+      "timestamp": "2026-03-17T16:10:00.942628"
     }
   ]
 }

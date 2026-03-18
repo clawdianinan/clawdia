@@ -1,0 +1,33 @@
+PRDForge Documentation Index
+
+This is the canonical index for the current formatted Google Docs set.
+
+Core Starter Docs
+1) Master Execution Plan
+https://docs.google.com/document/d/1xjLRPeQyG4WV_3PiyM4uSwgVYGqIMvBaPSQ8ktrklIY/edit
+
+2) Product Brief Template
+https://docs.google.com/document/d/16luu1_BChWs-mqLfmeTScQrOpn6VOYlccCkUSYlfaq4/edit
+
+3) PRD Template
+https://docs.google.com/document/d/1BibAGYnBFxYpx9sPZDZjf59FWgumcEW-oKM2xjGqhlU/edit
+
+4) Technical Architecture Template
+https://docs.google.com/document/d/1BrQILhGp7lu2gXDn71XY7MUIfjsuQzHBk40lcEC916s/edit
+
+5) Delivery Roadmap and Tracker
+https://docs.google.com/document/d/10DoQXCstmgsEa1mkSxg562oV6xvvRX0HwrxjuKSiJPs/edit
+
+Project Folders
+PRDForge Root: https://drive.google.com/drive/folders/1EdMaOE8AfJzzAFxjZoHM30X_tVVhC0lU
+01_Product: https://drive.google.com/drive/folders/1hkBYsrCQVoMH0-HGivtQ2FPJe3hmbYcW
+02_Tech_QA: https://drive.google.com/drive/folders/1EkDcNrAhyrKn6Ooq1uiYAdbDr8lq_f_A
+03_Payments: https://drive.google.com/drive/folders/1cWAtfL02ubWt-tz0oU0iJM8YEnKT3EDY
+04_Marketing: https://drive.google.com/drive/folders/1XbO16TxSZDRdzIsydCYilv9CfX6pTHBj
+05_Ads: https://drive.google.com/drive/folders/1BqzyqbsRgx-KBkY1M1_xUGq4Lw_dNimX
+06_Reports: https://drive.google.com/drive/folders/1ANo5am9ggNyfPkJbNCBYP9JKqOG_1l8z
+99_Archive: https://drive.google.com/drive/folders/1pliuqVRPMzv2JCF20kdhaLjJggXlVSO0
+
+Notes
+- Use only the documents marked "(Formatted)" as current source of truth.
+- Older docs have been moved to 99_Archive for traceability.

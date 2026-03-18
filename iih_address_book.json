@@ -1,0 +1,65 @@
+{
+  "iih_staff": {
+    "adebola": {
+      "name": "Adebola Oladipo",
+      "department": "Programs",
+      "emails": ["adebola.oladipo@iih.ng"],
+      "titles": ["Programs Department Head", "Programs Manager"]
+    },
+    "khadijat": {
+      "name": "Khadijat Bello",
+      "department": "Finance",
+      "emails": ["khadijat.bello@iih.ng"],
+      "titles": ["Finance Department Head", "Finance Manager"]
+    },
+    "maureen": {
+      "name": "Maureen Okey",
+      "department": "Administration",
+      "emails": ["maureen.okey@iih.ng", "maureen@iih.ng", "admin@iih.ng"],
+      "titles": ["Administration", "Admin Manager"]
+    },
+    "sinachi": {
+      "name": "Sinachi Onuchukwu",
+      "department": "Human Resources",
+      "emails": ["sinachi@iih.ng"],
+      "titles": ["HR Department Head", "Human Resources Manager"]
+    },
+    "kamil": {
+      "name": "Kamil Ahmed",
+      "department": "Facility Management",
+      "emails": ["kamil.ahmed@iih.ng"],
+      "titles": ["Facility Manager", "Facility Management"]
+    },
+    "nas": {
+      "name": "Nasiru Muhammed",
+      "department": "IT Support & Marketing",
+      "emails": ["nas@iih.ng", "nasiru.muhammed@iih.ng"],
+      "titles": ["IT Support", "Marketing", "IT & Marketing Manager"]
+    },
+    "temi": {
+      "name": "Temi Kolawole",
+      "department": "Managing Director's Office",
+      "emails": ["temi@iih.ng", "temi.kolawole@iih.ng"],
+      "titles": ["Managing Director", "MD"]
+    }
+  },
+  "iih_departments": {
+    "programs": ["adebola"],
+    "finance": ["khadijat"],
+    "administration": ["maureen"],
+    "hr": ["sinachi"],
+    "facility": ["kamil"],
+    "it": ["nas"],
+    "marketing": ["nas"],
+    "md": ["temi"]
+  },
+  "iih_email_domains": ["@iih.ng"],
+  "monthly_report_recipients": [
+    "adebola.oladipo@iih.ng",
+    "khadijat.bello@iih.ng",
+    "maureen.okey@iih.ng",
+    "sinachi@iih.ng",
+    "kamil.ahmed@iih.ng",
+    "nas@iih.ng"
+  ]
+}

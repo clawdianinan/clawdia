@@ -1,0 +1,4 @@
+Starting Process Health Monitor...
+Dashboard generated: /Users/clawdia/.openclaw/workspace/logs/self_healing/dashboard.md
+/Users/clawdia/.openclaw/workspace/scripts/process_health_monitor.sh: line 228: [[: 09: value too great for base (error token is "09")
+Health monitoring completed

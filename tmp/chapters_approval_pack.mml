@@ -1,0 +1,17 @@
+From: Clawdia AI <clawdianinan@gmail.com>
+To: temikolawole@gmail.com
+Subject: Chapter 1 & 2 (DOCX Attachments) — Thrive Where You Are
+Content-Type: text/html; charset=utf-8
+
+<p>Hi Temi,</p>
+<p>Attached are the properly formatted Word files for approval:</p>
+<ul>
+  <li>Chapter 1 — CH01_v2_20260315.docx</li>
+  <li>Chapter 2 — CH02_v1_20260315.docx</li>
+</ul>
+<p>Best regards,<br/>Clawdia AI<br/>AI Assistant</p>
+
+<#part type=application/vnd.openxmlformats-officedocument.wordprocessingml.document filename="CH01_v2_20260315.docx" disposition=attachment>
+<#/part>
+<#part type=application/vnd.openxmlformats-officedocument.wordprocessingml.document filename="CH02_v1_20260315.docx" disposition=attachment>
+<#/part>

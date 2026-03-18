@@ -1,0 +1,95 @@
+To: temi@iih.ng
+Subject: IIH January 2026 Monthly Report - Complete with Financial Data
+Content-Type: text/html; charset=utf-8
+
+<html>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px;">
+  
+  <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin-bottom: 20px; border-left: 4px solid #2c3e50;">
+    <h2 style="color: #2c3e50; margin-top: 0;">IIH January 2026 Monthly Report</h2>
+    <p style="margin-bottom: 0;"><strong>Date:</strong> February 26, 2026</p>
+    <p style="margin-bottom: 0;"><strong>Submitted by:</strong> Clawdia AI Assistant</p>
+    <p style="margin-bottom: 0;"><strong>Status:</strong> Complete with January 2026 Financial Data</p>
+  </div>
+
+  <div style="margin-bottom: 25px;">
+    <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 5px;">📋 Report Overview</h3>
+    <p>This email contains the complete January 2026 monthly report for Ilorin Innovation Hub, now updated with actual January 2026 financial data.</p>
+    
+    <div style="background-color: #e8f4fd; padding: 15px; border-radius: 5px; margin: 15px 0;">
+      <h4 style="color: #2c3e50; margin-top: 0;">✅ Key Updates:</h4>
+      <ul style="margin-bottom: 0;">
+        <li><strong>Financial Section Updated:</strong> Placeholder replaced with actual January 2026 financial data</li>
+        <li><strong>Financial Analysis Included:</strong> Based on ILORIN TECH PARK LTD bank statement</li>
+        <li><strong>Supporting Documents:</strong> Complete financial report attached</li>
+        <li><strong>All Departments:</strong> Programs, Administration, HR, Facility, IT/Marketing reports compiled</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 25px;">
+    <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 5px;">💰 January 2026 Financial Summary</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 15px 0;">
+      <div style="background-color: #e7f7ed; padding: 15px; border-radius: 5px; text-align: center;">
+        <div style="font-size: 24px; font-weight: bold; color: #27ae60;">₦9.10M</div>
+        <div style="font-size: 14px; color: #555;">Total Income</div>
+      </div>
+      <div style="background-color: #fde8e8; padding: 15px; border-radius: 5px; text-align: center;">
+        <div style="font-size: 24px; font-weight: bold; color: #e74c3c;">₦13.55M</div>
+        <div style="font-size: 14px; color: #555;">Total Expenses</div>
+      </div>
+      <div style="background-color: #fff3cd; padding: 15px; border-radius: 5px; text-align: center;">
+        <div style="font-size: 24px; font-weight: bold; color: #f39c12;">₦-4.45M</div>
+        <div style="font-size: 14px; color: #555;">Net Balance</div>
+      </div>
+    </div>
+
+    <p><strong>Key Financial Insights:</strong></p>
+    <ul>
+      <li><strong>Income:</strong> 82.6% from facility rentals (₦7.5M), showing strong space utilization</li>
+      <li><strong>Major Expenses:</strong> KWARA AI SUMMIT 2025 final payment (₦6.5M), catering (₦2.9M), equipment rental (₦1.5M)</li>
+      <li><strong>Transactions:</strong> 59 total (9 income, 50 expenses) - high activity month</li>
+      <li><strong>Government Partnership:</strong> Ministry of Housing payment (₦4.8M) received</li>
+    </ul>
+  </div>
+
+  <div style="margin-bottom: 25px;">
+    <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 5px;">📎 Attachments</h3>
+    <ol>
+      <li><strong>FINAL_IIH_January_2026_Complete_Report_WITH_FINANCIALS.docx</strong> - Complete monthly report with updated financial section</li>
+      <li><strong>January_2026_Financial_Report.xlsx</strong> - Detailed financial transaction data + summary</li>
+      <li><strong>January_2026_Financial_Summary.md</strong> - Financial analysis document</li>
+    </ol>
+  </div>
+
+  <div style="margin-bottom: 25px;">
+    <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 5px;">📊 Report Sections</h3>
+    <ul>
+      <li><strong>1. Executive Summary</strong> - Overall January performance</li>
+      <li><strong>2. Programs & Events Report</strong> - 188 participants, 50% female participation</li>
+      <li><strong>3. Operations Report</strong> - Administration, HR, Facility, IT/Marketing</li>
+      <li><strong>4. Financial Report</strong> - Updated with actual January 2026 data</li>
+      <li><strong>5. Strategic Outlook</strong> - February 2026 priorities</li>
+    </ul>
+  </div>
+
+  <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin-top: 30px; border-top: 1px solid #ddd;">
+    <p style="margin-bottom: 10px;"><strong>Next Steps:</strong></p>
+    <ol style="margin-bottom: 0;">
+      <li>Review complete report and financial data</li>
+      <li>Integrate with IHS monthly template when received</li>
+      <li>Submit to IHS as per reporting schedule</li>
+      <li>Schedule financial review meeting if needed</li>
+    </ol>
+  </div>
+
+  <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 14px;">
+    <p style="margin-bottom: 5px;"><strong>Clawdia AI</strong></p>
+    <p style="margin-bottom: 5px;">AI Assistant | Ilorin Innovation Hub</p>
+    <p style="margin-bottom: 5px;"><a href="https://iih.ng" style="color: #3498db;">https://iih.ng</a></p>
+    <p style="margin-bottom: 0;">Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria</p>
+  </div>
+
+</body>
+</html>

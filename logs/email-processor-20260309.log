@@ -1,0 +1,224 @@
+[2026-03-09 00:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 00:00:00 WAT 2026
+[2026-03-09 00:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 00:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 00:00:01] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 00:00:01] [INFO] Quiet hours (23:00-08:00) - only checking IHS Towers emails
+[2026-03-09 00:00:01] [INFO] Checking for IHS Towers emails...
+[2026-03-09 00:00:01] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 00:00:01] [INFO] Quiet hours - skipping regular processing
+[2026-03-09 00:33:53] [INFO] Starting consolidated email processor at Mon Mar  9 00:33:53 WAT 2026
+[2026-03-09 00:33:53] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 00:33:53] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 00:33:53] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 00:33:53] [INFO] Quiet hours (23:00-08:00) - only checking IHS Towers emails
+[2026-03-09 00:33:53] [INFO] Checking for IHS Towers emails...
+[2026-03-09 00:33:59] [WARN] Found 2 unread IHS Towers email(s) - immediate escalation required
+[2026-03-09 00:34:05] [INFO] Starting consolidated email processor at Mon Mar  9 00:34:05 WAT 2026
+[2026-03-09 00:34:05] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 00:34:05] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 00:34:05] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 00:34:05] [INFO] Quiet hours (23:00-08:00) - only checking IHS Towers emails
+[2026-03-09 00:34:05] [INFO] Checking for IHS Towers emails...
+[2026-03-09 00:34:10] [WARN] Found 2 unread IHS Towers email(s) - immediate escalation required
+[2026-03-09 01:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 01:00:00 WAT 2026
+[2026-03-09 01:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 01:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 01:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 01:00:00] [INFO] Quiet hours (23:00-08:00) - only checking IHS Towers emails
+[2026-03-09 01:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 01:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 01:00:00] [INFO] Quiet hours - skipping regular processing
+[2026-03-09 10:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 10:00:00 WAT 2026
+[2026-03-09 10:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 10:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 10:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 10:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 10:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 10:00:00] [INFO] Starting batch email processing
+[2026-03-09 10:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 10:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 10:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 10:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 10:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 10:00:00] [INFO] Summary report generated
+[2026-03-09 10:00:00] [INFO] Cleaned up old cache files
+[2026-03-09 10:00:00] [SUCCESS] Email processing completed successfully
+[2026-03-09 11:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 11:00:00 WAT 2026
+[2026-03-09 11:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 11:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 11:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 11:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 11:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 11:00:00] [INFO] Starting batch email processing
+[2026-03-09 11:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 11:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 11:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 11:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 11:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 11:00:00] [INFO] Summary report generated
+[2026-03-09 11:00:00] [INFO] Cleaned up old cache files
+[2026-03-09 11:00:00] [SUCCESS] Email processing completed successfully
+[2026-03-09 12:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 12:00:00 WAT 2026
+[2026-03-09 12:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 12:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 12:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 12:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 12:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 12:00:00] [INFO] Starting batch email processing
+[2026-03-09 12:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 12:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 12:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 12:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 12:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 12:00:00] [INFO] Summary report generated
+[2026-03-09 12:00:00] [INFO] Cleaned up old cache files
+[2026-03-09 12:00:00] [SUCCESS] Email processing completed successfully
+[2026-03-09 13:00:01] [INFO] Starting consolidated email processor at Mon Mar  9 13:00:00 WAT 2026
+[2026-03-09 13:00:01] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 13:00:01] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 13:00:01] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 13:00:01] [INFO] Checking for IHS Towers emails...
+[2026-03-09 13:00:01] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 13:00:01] [INFO] Starting batch email processing
+[2026-03-09 13:00:01] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 13:00:01] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 13:00:01] [INFO] Processed 0/0 emails in batch
+[2026-03-09 13:00:01] [INFO] Checking for IHS Towers emails...
+[2026-03-09 13:00:01] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 13:00:01] [INFO] Summary report generated
+[2026-03-09 13:00:01] [INFO] Cleaned up old cache files
+[2026-03-09 13:00:01] [SUCCESS] Email processing completed successfully
+[2026-03-09 14:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 14:00:00 WAT 2026
+[2026-03-09 14:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 14:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 14:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 14:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 14:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 14:00:00] [INFO] Starting batch email processing
+[2026-03-09 14:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 14:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 14:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 14:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 14:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 14:00:00] [INFO] Summary report generated
+[2026-03-09 14:00:00] [INFO] Cleaned up old cache files
+[2026-03-09 14:00:00] [SUCCESS] Email processing completed successfully
+[2026-03-09 15:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 15:00:00 WAT 2026
+[2026-03-09 15:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 15:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 15:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 15:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 15:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 15:00:00] [INFO] Starting batch email processing
+[2026-03-09 15:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 15:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 15:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 15:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 15:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 15:00:00] [INFO] Summary report generated
+[2026-03-09 15:00:00] [INFO] Cleaned up old cache files
+[2026-03-09 15:00:00] [SUCCESS] Email processing completed successfully
+[2026-03-09 16:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 16:00:00 WAT 2026
+[2026-03-09 16:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 16:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 16:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 16:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 16:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 16:00:00] [INFO] Starting batch email processing
+[2026-03-09 16:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 16:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 16:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 16:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 16:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 16:00:00] [INFO] Summary report generated
+[2026-03-09 16:00:00] [INFO] Cleaned up old cache files
+[2026-03-09 16:00:00] [SUCCESS] Email processing completed successfully
+[2026-03-09 17:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 17:00:00 WAT 2026
+[2026-03-09 17:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 17:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 17:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 17:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 17:00:01] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 17:00:01] [INFO] Starting batch email processing
+[2026-03-09 17:00:01] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 17:00:01] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 17:00:01] [INFO] Processed 0/0 emails in batch
+[2026-03-09 17:00:01] [INFO] Checking for IHS Towers emails...
+[2026-03-09 17:00:01] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 17:00:01] [INFO] Summary report generated
+[2026-03-09 17:00:01] [INFO] Cleaned up old cache files
+[2026-03-09 17:00:01] [SUCCESS] Email processing completed successfully
+[2026-03-09 18:00:01] [INFO] Starting consolidated email processor at Mon Mar  9 18:00:01 WAT 2026
+[2026-03-09 18:00:01] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 18:00:01] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 18:00:01] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 18:00:01] [INFO] Checking for IHS Towers emails...
+[2026-03-09 18:00:01] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 18:00:01] [INFO] Starting batch email processing
+[2026-03-09 18:00:01] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 18:00:01] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 18:00:01] [INFO] Processed 0/0 emails in batch
+[2026-03-09 18:00:01] [INFO] Checking for IHS Towers emails...
+[2026-03-09 18:00:01] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 18:00:01] [INFO] Summary report generated
+[2026-03-09 18:00:01] [INFO] Cleaned up old cache files
+[2026-03-09 18:00:01] [SUCCESS] Email processing completed successfully
+[2026-03-09 19:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 19:00:00 WAT 2026
+[2026-03-09 19:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 19:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 19:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 19:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 19:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 19:00:00] [INFO] Starting batch email processing
+[2026-03-09 19:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 19:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 19:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 19:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 19:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 19:00:01] [INFO] Summary report generated
+[2026-03-09 19:00:01] [INFO] Cleaned up old cache files
+[2026-03-09 19:00:01] [SUCCESS] Email processing completed successfully
+[2026-03-09 20:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 20:00:00 WAT 2026
+[2026-03-09 20:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 20:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 20:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 20:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 20:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 20:00:00] [INFO] Starting batch email processing
+[2026-03-09 20:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 20:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 20:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 20:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 20:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 20:00:00] [INFO] Summary report generated
+[2026-03-09 20:00:00] [INFO] Cleaned up old cache files
+[2026-03-09 20:00:00] [SUCCESS] Email processing completed successfully
+[2026-03-09 20:53:24] [INFO] Starting consolidated email processor at Mon Mar  9 20:53:24 WAT 2026
+[2026-03-09 20:53:24] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 20:53:24] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 20:53:24] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 20:53:24] [INFO] Checking for IHS Towers emails...
+[2026-03-09 20:53:31] [WARN] Found 4 unread IHS Towers email(s) - immediate escalation required
+[2026-03-09 20:53:31] [ERROR] IHS Towers alert - stopping further processing
+[2026-03-09 20:53:38] [INFO] Starting consolidated email processor at Mon Mar  9 20:53:38 WAT 2026
+[2026-03-09 20:53:38] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 20:53:38] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 20:53:38] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 20:53:38] [INFO] Checking for IHS Towers emails...
+[2026-03-09 20:53:42] [WARN] Found 4 unread IHS Towers email(s) - immediate escalation required
+[2026-03-09 20:53:43] [ERROR] IHS Towers alert - stopping further processing
+[2026-03-09 21:00:00] [INFO] Starting consolidated email processor at Mon Mar  9 21:00:00 WAT 2026
+[2026-03-09 21:00:00] [INFO] Policy guard OK (mode=iih)
+[2026-03-09 21:00:00] [INFO] Policy source: /Users/clawdia/.openclaw/workspace/EMAIL_OPERATIONS_MASTER.md
+[2026-03-09 21:00:00] [INFO] Skill source: /Users/clawdia/.openclaw/workspace/skills/email-ops/SKILL.md
+[2026-03-09 21:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 21:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 21:00:00] [INFO] Starting batch email processing
+[2026-03-09 21:00:00] [INFO] Fetching up to 5 unread emails...
+[2026-03-09 21:00:00] [ERROR] No accessible email account (Himalaya).
+[2026-03-09 21:00:00] [INFO] Processed 0/0 emails in batch
+[2026-03-09 21:00:00] [INFO] Checking for IHS Towers emails...
+[2026-03-09 21:00:00] [SUCCESS] No unread IHS Towers emails found
+[2026-03-09 21:00:00] [INFO] Summary report generated
+[2026-03-09 21:00:00] [INFO] Cleaned up old cache files
+[2026-03-09 21:00:00] [SUCCESS] Email processing completed successfully

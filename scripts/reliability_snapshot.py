@@ -25,9 +25,24 @@ def main():
     cfg = run(['python3', '-c', "import json;print(json.dumps(json.load(open('/Users/clawdia/.openclaw/openclaw.json')).get('messages',{})))"])
     messages_cfg = json.loads(cfg) if cfg else {}
 
+    # Model resilience check (replaces ollama check)
+    model_check = {}
+    if Path(WORKSPACE / 'scripts' / 'model_resilience_check.sh').exists():
+        try:
+            result = subprocess.run([str(WORKSPACE / 'scripts' / 'model_resilience_check.sh')], 
+                                   capture_output=True, text=True, timeout=30)
+            model_check = {
+                'status': 'ok' if result.returncode == 0 else 'warning',
+                'output': result.stdout.strip()[:200],
+                'timestamp': ts
+            }
+        except Exception as e:
+            model_check = {'status': 'error', 'error': str(e)}
+
     report = {
         'timestamp': ts,
         'memory': memory_health,
+        'model_resilience': model_check,
         'messaging': {
             'queue_mode': messages_cfg.get('queue', {}).get('mode'),
             'inbound_debounce_ms': messages_cfg.get('inbound', {}).get('debounceMs'),

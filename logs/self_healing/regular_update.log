@@ -1,0 +1,220 @@
+[2026-03-16 12:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-16 12:00:02] regular_update: Command failed with exit code: 127
+[2026-03-16 12:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 12:00:02] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-16 12:00:36] regular_update: Command failed with exit code: 127
+[2026-03-16 12:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 12:00:36] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-16 12:01:10] regular_update: Command failed with exit code: 127
+[2026-03-16 12:01:10] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 12:01:10] regular_update: 🚨 HITL ALERT: regular_update failed 3 consecutive times
+[2026-03-16 12:01:10] regular_update: Error: 
+[2026-03-16 12:01:10] regular_update: Max retries exceeded. Giving up.
+[2026-03-16 15:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-16 15:00:03] regular_update: Command failed with exit code: 127
+[2026-03-16 15:00:03] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 15:00:03] regular_update: 🚨 HITL ALERT: regular_update failed 4 consecutive times
+[2026-03-16 15:00:03] regular_update: Error: 
+[2026-03-16 15:00:03] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-16 15:00:36] regular_update: Command failed with exit code: 127
+[2026-03-16 15:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 15:00:36] regular_update: 🚨 HITL ALERT: regular_update failed 5 consecutive times
+[2026-03-16 15:00:36] regular_update: Error: 
+[2026-03-16 15:00:36] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-16 15:01:10] regular_update: Command failed with exit code: 127
+[2026-03-16 15:01:10] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 15:01:10] regular_update: 🚨 HITL ALERT: regular_update failed 6 consecutive times
+[2026-03-16 15:01:10] regular_update: Error: 
+[2026-03-16 15:01:10] regular_update: Max retries exceeded. Giving up.
+[2026-03-16 18:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-16 18:00:03] regular_update: Command failed with exit code: 127
+[2026-03-16 18:00:03] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 18:00:03] regular_update: 🚨 HITL ALERT: regular_update failed 7 consecutive times
+[2026-03-16 18:00:03] regular_update: Error: 
+[2026-03-16 18:00:03] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-16 18:00:36] regular_update: Command failed with exit code: 127
+[2026-03-16 18:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 18:00:36] regular_update: 🚨 HITL ALERT: regular_update failed 8 consecutive times
+[2026-03-16 18:00:36] regular_update: Error: 
+[2026-03-16 18:00:37] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-16 18:01:10] regular_update: Command failed with exit code: 127
+[2026-03-16 18:01:10] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 18:01:10] regular_update: 🚨 HITL ALERT: regular_update failed 9 consecutive times
+[2026-03-16 18:01:10] regular_update: Error: 
+[2026-03-16 18:01:10] regular_update: Max retries exceeded. Giving up.
+[2026-03-16 21:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-16 21:00:03] regular_update: Command failed with exit code: 127
+[2026-03-16 21:00:03] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 21:00:03] regular_update: 🚨 HITL ALERT: regular_update failed 10 consecutive times
+[2026-03-16 21:00:03] regular_update: Error: 
+[2026-03-16 21:00:03] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-16 21:00:37] regular_update: Command failed with exit code: 127
+[2026-03-16 21:00:37] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 21:00:37] regular_update: 🚨 HITL ALERT: regular_update failed 11 consecutive times
+[2026-03-16 21:00:37] regular_update: Error: 
+[2026-03-16 21:00:37] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-16 21:01:11] regular_update: Command failed with exit code: 127
+[2026-03-16 21:01:11] regular_update: Attempting automatic fix for regular_update
+[2026-03-16 21:01:11] regular_update: 🚨 HITL ALERT: regular_update failed 12 consecutive times
+[2026-03-16 21:01:11] regular_update: Error: 
+[2026-03-16 21:01:11] regular_update: Max retries exceeded. Giving up.
+[2026-03-17 00:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 00:00:02] regular_update: Command failed with exit code: 127
+[2026-03-17 00:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 00:00:02] regular_update: 🚨 HITL ALERT: regular_update failed 13 consecutive times
+[2026-03-17 00:00:02] regular_update: Error: 
+[2026-03-17 00:00:02] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-17 00:00:36] regular_update: Command failed with exit code: 127
+[2026-03-17 00:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 00:00:36] regular_update: 🚨 HITL ALERT: regular_update failed 14 consecutive times
+[2026-03-17 00:00:36] regular_update: Error: 
+[2026-03-17 00:00:36] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-17 00:01:10] regular_update: Command failed with exit code: 127
+[2026-03-17 00:01:10] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 00:01:10] regular_update: 🚨 HITL ALERT: regular_update failed 15 consecutive times
+[2026-03-17 00:01:10] regular_update: Error: 
+[2026-03-17 00:01:10] regular_update: Max retries exceeded. Giving up.
+[2026-03-17 03:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 03:00:03] regular_update: Command failed with exit code: 127
+[2026-03-17 03:00:03] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 03:00:03] regular_update: 🚨 HITL ALERT: regular_update failed 16 consecutive times
+[2026-03-17 03:00:03] regular_update: Error: 
+[2026-03-17 03:00:03] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-17 03:00:37] regular_update: Command failed with exit code: 127
+[2026-03-17 03:00:37] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 03:00:37] regular_update: 🚨 HITL ALERT: regular_update failed 17 consecutive times
+[2026-03-17 03:00:37] regular_update: Error: 
+[2026-03-17 03:00:37] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-17 03:01:10] regular_update: Command failed with exit code: 127
+[2026-03-17 03:01:10] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 03:01:10] regular_update: 🚨 HITL ALERT: regular_update failed 18 consecutive times
+[2026-03-17 03:01:10] regular_update: Error: 
+[2026-03-17 03:01:10] regular_update: Max retries exceeded. Giving up.
+[2026-03-17 06:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 06:00:02] regular_update: Command failed with exit code: 127
+[2026-03-17 06:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 06:00:02] regular_update: 🚨 HITL ALERT: regular_update failed 19 consecutive times
+[2026-03-17 06:00:02] regular_update: Error: 
+[2026-03-17 06:00:02] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-17 06:00:36] regular_update: Command failed with exit code: 127
+[2026-03-17 06:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 06:00:36] regular_update: 🚨 HITL ALERT: regular_update failed 20 consecutive times
+[2026-03-17 06:00:36] regular_update: Error: 
+[2026-03-17 06:00:36] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-17 06:01:09] regular_update: Command failed with exit code: 127
+[2026-03-17 06:01:09] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 06:01:09] regular_update: 🚨 HITL ALERT: regular_update failed 21 consecutive times
+[2026-03-17 06:01:09] regular_update: Error: 
+[2026-03-17 06:01:09] regular_update: Max retries exceeded. Giving up.
+[2026-03-17 09:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 09:00:02] regular_update: Command failed with exit code: 127
+[2026-03-17 09:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 09:00:02] regular_update: 🚨 HITL ALERT: regular_update failed 22 consecutive times
+[2026-03-17 09:00:02] regular_update: Error: 
+[2026-03-17 09:00:02] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-17 09:00:36] regular_update: Command failed with exit code: 127
+[2026-03-17 09:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 09:00:36] regular_update: 🚨 HITL ALERT: regular_update failed 23 consecutive times
+[2026-03-17 09:00:36] regular_update: Error: 
+[2026-03-17 09:00:36] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-17 09:01:09] regular_update: Command failed with exit code: 127
+[2026-03-17 09:01:09] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 09:01:09] regular_update: 🚨 HITL ALERT: regular_update failed 24 consecutive times
+[2026-03-17 09:01:09] regular_update: Error: 
+[2026-03-17 09:01:09] regular_update: Max retries exceeded. Giving up.
+[2026-03-17 12:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 12:00:02] regular_update: Command failed with exit code: 127
+[2026-03-17 12:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 12:00:02] regular_update: 🚨 HITL ALERT: regular_update failed 25 consecutive times
+[2026-03-17 12:00:02] regular_update: Error: 
+[2026-03-17 12:00:02] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-17 12:00:36] regular_update: Command failed with exit code: 127
+[2026-03-17 12:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 12:00:36] regular_update: 🚨 HITL ALERT: regular_update failed 26 consecutive times
+[2026-03-17 12:00:36] regular_update: Error: 
+[2026-03-17 12:00:36] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-17 12:01:09] regular_update: Command failed with exit code: 127
+[2026-03-17 12:01:09] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 12:01:09] regular_update: 🚨 HITL ALERT: regular_update failed 27 consecutive times
+[2026-03-17 12:01:09] regular_update: Error: 
+[2026-03-17 12:01:09] regular_update: Max retries exceeded. Giving up.
+[2026-03-17 15:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 15:00:02] regular_update: Command failed with exit code: 127
+[2026-03-17 15:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 15:00:02] regular_update: 🚨 HITL ALERT: regular_update failed 28 consecutive times
+[2026-03-17 15:00:02] regular_update: Error: 
+[2026-03-17 15:00:02] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-17 15:00:35] regular_update: Command failed with exit code: 127
+[2026-03-17 15:00:35] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 15:00:35] regular_update: 🚨 HITL ALERT: regular_update failed 29 consecutive times
+[2026-03-17 15:00:35] regular_update: Error: 
+[2026-03-17 15:00:35] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-17 15:01:09] regular_update: Command failed with exit code: 127
+[2026-03-17 15:01:09] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 15:01:09] regular_update: 🚨 HITL ALERT: regular_update failed 30 consecutive times
+[2026-03-17 15:01:09] regular_update: Error: 
+[2026-03-17 15:01:09] regular_update: Max retries exceeded. Giving up.
+[2026-03-17 18:00:01] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 18:00:03] regular_update: Command failed with exit code: 127
+[2026-03-17 18:00:03] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 18:00:03] regular_update: 🚨 HITL ALERT: regular_update failed 31 consecutive times
+[2026-03-17 18:00:03] regular_update: Error: 
+[2026-03-17 18:00:03] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-17 18:00:36] regular_update: Command failed with exit code: 127
+[2026-03-17 18:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 18:00:36] regular_update: 🚨 HITL ALERT: regular_update failed 32 consecutive times
+[2026-03-17 18:00:36] regular_update: Error: 
+[2026-03-17 18:00:36] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-17 18:01:10] regular_update: Command failed with exit code: 127
+[2026-03-17 18:01:10] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 18:01:10] regular_update: 🚨 HITL ALERT: regular_update failed 33 consecutive times
+[2026-03-17 18:01:10] regular_update: Error: 
+[2026-03-17 18:01:10] regular_update: Max retries exceeded. Giving up.
+[2026-03-17 21:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-17 21:00:02] regular_update: Command failed with exit code: 127
+[2026-03-17 21:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 21:00:02] regular_update: 🚨 HITL ALERT: regular_update failed 34 consecutive times
+[2026-03-17 21:00:02] regular_update: Error: 
+[2026-03-17 21:00:03] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-17 21:00:36] regular_update: Command failed with exit code: 127
+[2026-03-17 21:00:36] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 21:00:36] regular_update: 🚨 HITL ALERT: regular_update failed 35 consecutive times
+[2026-03-17 21:00:36] regular_update: Error: 
+[2026-03-17 21:00:36] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-17 21:01:09] regular_update: Command failed with exit code: 127
+[2026-03-17 21:01:09] regular_update: Attempting automatic fix for regular_update
+[2026-03-17 21:01:09] regular_update: 🚨 HITL ALERT: regular_update failed 36 consecutive times
+[2026-03-17 21:01:09] regular_update: Error: 
+[2026-03-17 21:01:09] regular_update: Max retries exceeded. Giving up.
+[2026-03-18 00:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-18 00:00:02] regular_update: Command failed with exit code: 127
+[2026-03-18 00:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-18 00:00:02] regular_update: 🚨 HITL ALERT: regular_update failed 37 consecutive times
+[2026-03-18 00:00:02] regular_update: Error: 
+[2026-03-18 00:00:02] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-18 00:00:35] regular_update: Command failed with exit code: 127
+[2026-03-18 00:00:35] regular_update: Attempting automatic fix for regular_update
+[2026-03-18 00:00:35] regular_update: 🚨 HITL ALERT: regular_update failed 38 consecutive times
+[2026-03-18 00:00:35] regular_update: Error: 
+[2026-03-18 00:00:35] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-18 00:01:09] regular_update: Command failed with exit code: 127
+[2026-03-18 00:01:09] regular_update: Attempting automatic fix for regular_update
+[2026-03-18 00:01:09] regular_update: 🚨 HITL ALERT: regular_update failed 39 consecutive times
+[2026-03-18 00:01:09] regular_update: Error: 
+[2026-03-18 00:01:09] regular_update: Max retries exceeded. Giving up.
+[2026-03-18 03:00:00] regular_update: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/regular_update.sh | /opt/homebrew/bin/openclaw message send --channel imessage --target temikolawole@icloud.com --best-effort
+[2026-03-18 03:00:02] regular_update: Command failed with exit code: 127
+[2026-03-18 03:00:02] regular_update: Attempting automatic fix for regular_update
+[2026-03-18 03:00:02] regular_update: 🚨 HITL ALERT: regular_update failed 40 consecutive times
+[2026-03-18 03:00:02] regular_update: Error: 
+[2026-03-18 03:00:02] regular_update: Retry attempt 1/2 after 30 seconds
+[2026-03-18 03:00:34] regular_update: Command failed with exit code: 127
+[2026-03-18 03:00:34] regular_update: Attempting automatic fix for regular_update
+[2026-03-18 03:00:34] regular_update: 🚨 HITL ALERT: regular_update failed 41 consecutive times
+[2026-03-18 03:00:34] regular_update: Error: 
+[2026-03-18 03:00:34] regular_update: Retry attempt 2/2 after 30 seconds
+[2026-03-18 03:01:06] regular_update: Command failed with exit code: 127
+[2026-03-18 03:01:06] regular_update: Attempting automatic fix for regular_update
+[2026-03-18 03:01:06] regular_update: 🚨 HITL ALERT: regular_update failed 42 consecutive times
+[2026-03-18 03:01:06] regular_update: Error: 
+[2026-03-18 03:01:06] regular_update: Max retries exceeded. Giving up.

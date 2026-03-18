@@ -1,0 +1,1442 @@
+COLLABORATION AGREEMENT
+
+BETWEEN
+
+KWARA STATE GOVERNMENT
+AND
+IHS (NIGERIA) LIMITED
+
+THIS COLLABORATION AGREEMENT IS DATED THIS 1ST DAY OF JANUARY 2025 (“EFFECTIVE
+DATE”).
+BETWEEN
+KWARA STATE GOVERNMENT represented by the Managing Director of Ilorin Innovation Hub whose
+office is located at Ahmadu Bello Way, G.R.A Ilorin, Kwara State (hereinafter referred to as “KWSG”,
+which expression shall where the context so admits, include its successors-in-title and assigns) of the
+first part;
+AND
+IHS (NIGERIA) LIMITED, a limited liability company registered under the laws of Nigeria and having its
+registered office at Plot 934 Idejo Street, Victoria Island, Lagos State (hereinafter referred to as “IHS”,
+which expression shall where the context so admits include its successors-in-title, assigns and Affiliates)
+of the second part.
+IHS and KWSG shall individually be referred to as a “Party” and collectively as the “Parties”.
+WHEREAS:
+a.
+The Parties have entered into a Memorandum of Understanding dated 17th November 2023 (the
+“MoU”) to memorialize their intention to collaborate with respect to the construction of a
+technology innovation facility located at Ilorin, Kwara State (“the Hub”) and the curation and
+execution of programs to stimulate and deepen technology and services innovation,
+entrepreneurship, investment and job creation (“the Programs”) in Kwara State and across
+Nigeria (“the Project”).
+b.
+
+The Parties have agreed to incorporate the Project Company (as hereinafter defined) for the
+implementation of the Project.
+
+c.
+
+The Parties now enter into this Agreement to for the purpose of regulating their respective and
+collective relationships with the Project Company as well as set forth the specific terms and
+conditions on which they will collaborate for the execution of the Project.
+
+NOW THEREFORE, in consideration of the mutual agreements and covenants contained herein and
+intending to be legally bound thereby, the Parties agree as follows:
+1.
+
+DEFINITIONS AND INTERPRETATION
+1.1
+DEFINITIONS
+In this Agreement, the words and expressions defined below shall have the meanings
+ascribed to them, except where the context requires otherwise:
+“Act" shall mean the Companies and Allied Matters Act, 2020 (as amended or replaced
+from time to time).
+“Affiliate” of a Party, means with respect to such Party, an entity that directly or
+indirectly, through one or more intermediaries, controls, is controlled by, or is under
+common control with, such Party; provided, however, that in the case of IHS, the term
+shall mean INT Towers Limited, IHS Towers NG Limited, Global Independent Connect
+Limited and any other Affiliate of IHS duly communicated in writing to KSWG by IHS.
+For the purpose of this definition, “Control” (including the terms “controlled,” “controlled
+by” and “under common control with”) means the possession, directly or indirectly or as
+trustee or executor, of the power to direct or cause the direction of the management
+
+COLLABORATION AGREEMENT
+
+2/24 MLS
+
+policies of a Party, whether through the ownership of stock, as trustee or executor, by
+contract, credit arrangement or otherwise.
+“Agreement” means this collaboration agreement, its annexures, schedules, and
+appendices, and includes any amendments and/or supplements thereto made in
+accordance with the provisions hereof.
+“Anti-Corruption Laws” shall have the meaning ascribed thereto in Clause 9.3.1 of
+this Agreement.
+“Applicable Law” means any statute, law, regulation, ordinance, rule, judgment, rule
+of common law, clearance, order, decree, bye-law, directive, guideline, policy,
+requirement or other governmental restrictions or any similar form of decision or
+determination by, or any interpretation or administrative order having the force of law of
+any of the foregoing by any government authority having jurisdiction over the matter in
+question in Nigeria.
+“Business Day” means any day on which commercial banks are open for business in
+the Federal Republic of Nigeria;
+“Confidential Information” includes without limitation, any technical, commercial,
+scientific information, know-how, trade secrets, business ideas, processes, machinery,
+designs, drawings, technical specifications, and data in whatever form, disclosed that
+concern or relate to a Party, its business, operations, styles of work or any other
+information that may be acquired by the other Party in relation to this Agreement and
+including the existence and terms of this Agreement.
+“Effective Date” shall have the meaning ascribed thereto in the preamble to this
+Agreement.
+“Force Majeure Event” means any event which is beyond a Party's reasonable control
+including by way of indication (but not as an exhaustive list) the events specified below,
+but in all cases insofar as the relevant events reasonably prevent the impacted Party
+from performing all or part of its obligations under this Agreement:
+a.
+any revolution, riot, invasion or war (whether declared or otherwise), act of
+terrorism, uprising, sabotage or action by a public enemy;
+b.
+any act of God (including storm, flood, hurricane, earthquake or other natural
+disaster); and
+c.
+any acts by military, police or civil authorities (whether national, local or foreign),
+provided that in all cases, the Party whose performance is affected has taken all steps
+as may reasonably be expected to have been taken in order to prevent such act or
+event from occurring or impacting the performance of its obligations.
+“Governing Board” shall have the meaning given in Clause 4.5 of this Agreement.
+“Hub” shall have the meaning ascribed thereto in paragraph a of the recitals to this
+Agreement.
+“Hub Construction Cost” shall mean all costs associated with procuring the services
+and materials required for the construction, finishing, and furnishing of the Hub.
+“Hub Programs” shall have the meaning given in Clause 4.42b of this Agreement.
+
+COLLABORATION AGREEMENT
+
+3/24 MLS
+
+“IHS Contribution” shall mean the amount to be contributed by IHS in Clause 4.30(b);
+and, the amount to be contributed by IHS in Clause 4.35(a).
+“IHS Intellectual Property” shall have the meaning ascribed thereto in Clause 19.7 of
+this Agreement.
+“IHS Program” shall have the meaning given in Clause 4.42 (a) of this Agreement.
+“IHS Team” shall have the meaning given in Clause 4.43 of this Agreement.
+“Lock-in-Period” means five (5) years commencing from the Effective Date.
+“Management Budget” shall have the meaning given in Clause 4.33 of this
+Agreement.
+“Management Team” shall have the meaning given in Clause 4.32 of this Agreement.
+“MemArts” shall mean the memorandum and articles of association.
+“Pre-Existing Intellectual Property” shall have the meaning ascribed thereto in
+Clause 19.7 of this Agreement.
+“Project” shall have the meaning ascribed thereto in paragraph a of the recitals to this
+Agreement.
+“Project Company" shall mean Ilorin Innovation Hub Ltd/Gte, a company limited by
+guarantee to be registered under the laws of Nigeria.
+“Project Land" shall mean the property measuring approximately 13,500 square
+metres located at Ahmadu Bello Way, GRA, Ilorin, Kwara State.
+“Project Manager" shall have the meaning given in Clause 4.28 of this Agreement.
+“Specified Period" shall mean an initial period of ten (10) years from the Effective Date
+and such further periods as agreed by the Parties..
+“Tax means all applicable taxes, duties and levies payable to the relevant
+Governmental Authority in respect of this Agreement.
+“Term” shall have the meaning given in Clause 2 of this Agreement.
+“Trade Authority” shall have the meaning ascribed thereto in Clause 8.2.3 of this
+Agreement.
+1.2
+
+INTERPRETATION
+1.2.1. Words importing the singular shall include the plural and vice versa, and words
+denoting natural persons shall include partnerships, firms, companies,
+corporations, unincorporated bodies, joint ventures, trusts, associations,
+organizations or other entities (in each case, whether or not having separate
+legal personality);
+1.2.2. The headings are for convenience of reference only and shall not be used in,
+and shall not affect the meaning, construction, interpretation or scope of this
+Agreement or the provisions it relates to;
+
+COLLABORATION AGREEMENT
+
+4/24 MLS
+
+1.2.3.
+1.2.4.
+
+The words “include” and “including” are to be construed without limitations;
+Any reference to; day, month or year shall mean a reference to a calendar day,
+30 days or 365 days respectively, unless otherwise specified;
+1.2.5. The schedules and appendices to this Agreement form an integral part of this
+Agreement as though they were expressly set out in the body of this
+Agreement. In case of any discrepancy between the schedules and appendices
+and the body of the Agreement, the latter shall prevail;
+1.2.6. Any reference at any time to any agreement, deed, instrument, license or
+document of any description shall be construed as reference to that agreement,
+deed, instrument, license or other document as amended, varied,
+supplemented, modified or suspended at the time of such reference;
+1.2.7. References to recitals, clauses, sub-clauses or schedules in this Agreement
+shall, except where the context otherwise requires, be deemed to be references
+to recitals, clauses, sub-clauses and schedule of or to this Agreement;
+1.2.8. The expression “this Clause” shall, unless followed by reference to a specific
+provision, be deemed to refer to the whole clause and not merely the
+subclause, paragraph or other provision, within which the expression falls;
+1.2.9. The expression “in writing” includes any communication made by letter or email
+to the recipient’s email address;
+1.2.10. Unless otherwise defined, words or terms used in this Agreement shall have
+their literal English meanings. Where any inconsistency between or among
+different language versions of the counterparts exists, the English language
+version shall prevail;
+1.2.11. Any agreement, consent, approval, authorization, notice, communication,
+information or report required under or pursuant to this Agreement from or by
+any Party shall be valid and effectual only if it is in writing under the hands of
+duly authorized representatives of such Party on its behalf and not otherwise;
+1.2.12. Any reference to any period commencing “from” a specified day or date and
+“till” or “until” a specified day or date shall include both such days and dates;
+and
+1.2.13. Any reference to any statute, statutory provision or statutory instrument shall
+include any re-enactment or amendment thereof for the time being in force.
+1.2.14. The terms of this Agreement having been negotiated, no provision herein shall
+be construed against or interpreted to the disadvantage of any Party by reason
+of such Party having or being deemed to have structured, drafted or introduced
+such provision. Accordingly, the rule of interpreting a document or provision
+strictly against the maker shall not apply in this regard.
+1.2.15. If any provision in a definition is a substantive provision conferring rights or
+imposing obligations on any Party, then, notwithstanding that it is only in a
+definition, effect shall be given to that provision as if it were a substantive
+provision in the body of this Agreement.
+1.2.16. Where any term is defined within a particular clause, other than the definition
+or interpretation clause, that term shall bear the meaning ascribed to it in that
+clause wherever it is used in this Agreement.
+1.2.17. Subject to any express provision to the contrary, this Agreement shall be
+binding on and enforceable by or against the successors-in-title, estate, heirs,
+executors, administrators, trustees, permitted assigns or liquidators of the
+Parties as applicable, as fully and effectually as if they had signed this
+Agreement in the first instance and reference to any Party shall be deemed to
+include such Party’s successors-in-title, estate, heirs, executors,
+administrators, trustees, permitted assigns or liquidators, as applicable.
+
+COLLABORATION AGREEMENT
+
+5/24 MLS
+
+2.
+
+COMMENCEMENT AND DURATION
+2.1
+
+Subject to Clause 2.2, this Agreement shall become effective on the Effective Date and
+shall be valid and remain in full force, operation, and effect until either of the following
+events occurs (the “Term”):
+2.1.1 Where the Project Company is dissolved; or
+2.1.2 Where this Agreement is terminated in accordance with clause 16 hereof.
+
+2.2
+
+Notwithstanding the Effective Date, the Parties hereby approve and ratify all the actions
+taken in connection with the construction of the Hub following the execution of the MoU.
+Following the incorporation of the Project Company, the Parties shall procure that the
+Project Company accedes to the terms of this Agreement and fulfils the obligations
+imposed on it thereunder.
+
+2.3
+
+3.
+
+SCOPE OF COLLABORATION
+3.1
+3.2
+
+3.3
+
+4.
+
+The Parties hereby agree to establish a joint venture for the implementation of the
+Project.
+Subject to the terms and conditions of this Agreement, the Parties shall collaborate in
+the manner, and shall perform their respective obligations, as set out below:
+3.2.1 Each Party shall use its best efforts, skill, and dedication to fulfil its obligations
+under this Agreement and shall always be bound by fairness, sound judgment
+and good conscience in the execution of the Project and while dealing with the
+other Party.
+3.2.2 Each Party shall cooperate with the other Party’s reasonable requests for
+assistance and take such further steps and execute such further documents
+necessary to give effect to this Agreement.
+3.2.3 The Parties shall make diligent efforts to identify the cause of any conflict during
+the Term and take such necessary steps to resolve such conflict.
+3.2.4 The Parties shall at all times comply with all Applicable Laws and regulations
+relating to and affecting each of them, and the Project, throughout the Term.
+In furtherance of Clauses 3.1 and 3.2, the Parties agree to put in place the corporate
+structure and commercial arrangements in Clause 4 (and such other transactions
+detailed in this Agreement), subject to the terms and conditions of this Agreement, in
+order to give effect to the joint venture.
+
+PROJECT COMPANY STRUCTURE AND GOVERNANCE
+4.1
+4.2
+4.3
+4.4
+
+Incorporation of Project Company
+The Parties hereby agree to incorporate the Project Company as soon as reasonably
+possible after the Effective Date.
+The sole business of the Project Company will be the ownership and operation of the
+Hub.
+As part of the incorporation process, the MemArts of the Project Company shall be
+prepared in a manner that incorporates the provisions of this Agreement.
+The Parties acknowledge and agree that they will both subscribe to the membership of
+the Project Company at incorporation provided that the Project Company may admit
+additional members if agreed in writing by both Parties.
+
+COLLABORATION AGREEMENT
+
+6/24 MLS
+
+4.5
+
+4.6
+
+4.7
+
+4.8
+
+4.9
+4.10
+
+4.11
+
+4.12
+
+4.13
+4.14
+
+4.15
+
+Governing Board of Project Company
+The Parties agree that the board of directors of the Project Company shall be
+responsible for the operation, maintenance and management of the Hub (“Governing
+Board”).
+The Governing Board shall consist of eleven (11) persons, six (6) of which shall be
+nominated by KWSG (“KWSG Nominees”) and five (5) of which shall be nominated by
+IHS (“IHS Nominees”).
+Each Party shall notify the other of its nominations to the Governing Board in writing
+no later than five (5) days from the Effective Date and shall provide the names and
+contact details of such nominees as well as other information required to complete the
+registration of such nominees as part of the incorporation of the Project Company,
+provided that the Project Company can be incorporated with two or more nominee
+directors representing both Parties with the other directors to be registered upon receipt
+of relevant information.
+The members of the Governing Board shall appoint one of their members as Chairman
+of the Governing Board who shall occupy the position for a single term of three (3) years
+only, following which another person will be appointed.
+The Parties may, subject to compliance with all applicable laws, in their sole discretion
+replace their nominees on the Governing Board by notice to the other Party.
+Notwithstanding the provisions of Clause 4.9, the Parties, as members of the Project
+Company, may remove any director by ordinary resolution. The Party who nominated
+for appointment any director, who has been removed pursuant to this Clause 4.10, shall
+be entitled to nominate another director in his or her place. The other Party shall accept
+and recognize such Party’s replacement nominee as a director, in accordance with the
+provisions of this Agreement.
+Each Party will be entitled to appoint (or remove, if it so desires) an alternate director to
+its directors and such alternate director may (unless he or she is already a full director)
+only be entitled to attend Governing Board meetings in the absence of the director to
+which he or she is an alternate, and the Parties undertake that such alternate directors
+shall participate in proceedings and exercise voting rights which the substantive
+directors would normally exercise/execute.
+The Parties shall ensure that their respective nominees on the Governing Board shall
+facilitate the performance of their respective obligations under this Agreement.
+Proceedings of the Governing Board
+The Governing Board shall hold its meetings at least two (2) times per annum.
+The venue of the meetings of the Governing Board will be at the Hub or such other
+venue as the directors may agree. The directors may, if they think fit, confer by radio,
+telephone, closed circuit television or other electronic means of audio or audio/visual
+communication and a resolution passed by such a conference shall, provided such
+resolution is recorded in writing thereafter. Notwithstanding, where the directors are not
+present together in one place at the time of a conference, any resolution so passed or
+agreement reached, shall be deemed to have been passed or agreed at the meeting of
+the directors held on the day on which and at the time at which the conference was
+held. The provisions of this Agreement relating to the proceedings of directors apply so
+far as they are capable of application and, mutatis mutandis, to such conference.
+Each member of the Governing Board shall be entitled to no less than five (5) Business
+Days’ notice of any meeting of the Governing Board.
+
+COLLABORATION AGREEMENT
+
+7/24 MLS
+
+4.16
+
+4.17
+
+4.18
+
+4.19
+
+4.20
+4.21
+
+4.22
+4.23
+
+4.24
+4.25
+
+4.26
+
+4.27
+4.28
+
+Each meeting of the Governing Board shall require a quorum of at least seven (7)
+persons, consisting of at least three (3) IHS Nominees and four (4) KWSG Nominees,
+present failing which the meeting shall be adjourned to the next Business Day. Those
+present at the adjourned meeting shall be deemed a quorum provided there is at least
+two (2) IHS Nominee and two (2) KWSG Nominee present otherwise, the meeting shall
+be postponed to the next Business Day until such time as there is at least two (2) IHS
+Nominee and two (2) KWSG Nominee present.
+All proceedings at meetings of the Governing Board shall be recorded by the company
+secretary of the Project Company in a minutes book and the company secretary shall
+within a reasonable time after each meeting, deliver to each of the directors a copy of
+the draft minutes of such meeting, setting out in full, any resolutions passed at such
+meetings. Each director shall sign and return to the company secretary a copy thereof.
+If any director does not agree with the draft minutes in respect of any meeting attended
+by him, he shall endorse the minutes with a note that the points are not agreed and
+record his comments with regard thereto on the minutes. The draft minutes will then be
+signed and returned to the company secretary and shall be considered at the next
+meeting of the Governing Board.
+Each director shall have one (1) vote on all matters submitted to the Governing Board.
+The affirmative vote of the majority of directors shall be required to approve any
+proposed resolution.
+A resolution in writing signed by all the members of the Governing Board for the time
+being of the Project Company shall be as valid and effective for all purposes as a
+resolution passed by the directors of the Project Company at a meeting duly convened,
+held and constituted.
+Members Meeting
+The Project Company shall hold meetings of members as required by the Act.
+The quorum at meetings of members of the Project Company will be one (1)
+representative of each of the Parties, present in person, virtually or by proxy and
+provided that due and proper notice of the meeting (which must include an agenda) has
+been given to all the Parties.
+All meetings of the members shall, unless otherwise agreed by the Parties, be held at
+the Hub.
+In any vote by the members of the Project Company, each Party shall be entitled to
+exercise one (1) vote.
+Project Land
+KWSG hereby agrees to donate the Project Land to the Project Company for the
+Project.
+KWSG undertakes that it shall within thirty (30) days following the incorporation of the
+Project issue relevant title documents in relation to the Project Land in the name of the
+Project Company.
+Hub Construction
+The Parties agree and acknowledge that the construction of the Hub on the Project
+Land, in accordance with the specifications set forth in Schedule 1 of this Agreement,
+subject to such changes as may be agreed in writing by the Parties, is near completion.
+The Hub Construction Cost has been jointly determined and approved by the Parties.
+The Parties agree that IHS is entitled to and has appointed a construction project coordinator (“Project Manager”) to facilitate the timely completion of the Hub construction.
+
+COLLABORATION AGREEMENT
+
+8/24 MLS
+
+4.29
+
+4.30
+
+4.31
+
+4.32
+
+4.33
+
+4.34
+4.35
+
+4.36
+
+4.37
+
+4.38
+
+4.39
+
+The Parties shall meet from time to time as required to:
+a.
+review and determine the various elements of the Hub Construction Cost
+including but not limited to matters such as scope of works required, bills of
+quantities, vendor proposals and negotiations; and
+b.
+determine and review the work plan and construction milestones for the
+completion of the Hub.
+The Parties agreed to fund the Hub Construction Cost in the manner set forth below:
+a.
+KWSG shall fund the entire Hub Construction Cost less IHS Contribution; and
+b.
+IHS shall contribute a minimum of N2,000,000,000.00 (Two Billion Naira) only
+toward the Hub Construction Cost which shall be paid as required directly to
+the vendors for the Hub Construction on the recommendation of KWSG subject
+to the approval of the Project Manager
+and it is acknowledged that each Party has complied with its obligation in Clause 4.30.
+Hub Maintenance and Management
+The Parties hereby agree that IHS shall have an exclusive and indefeasible right to
+maintain and manage the Hub for the Specified Period, subject to oversight by the
+Governing Board. The right conferred on IHS in this clause shall be ratified by the
+Governing Board on behalf of the Project Company immediately following the
+registration of the Project Company.
+In furtherance of Clause 4.31, IHS shall be entitled to appoint the management team
+for the Hub who shall (i) be employees of the Project Company; (ii) be responsible for
+the day to day running of the Hub, (iii) handle the accounting and other operational
+matters relating to the Hub; (iv) apply for and manage grants or donations on behalf of
+the Hub; and (v) be responsible for the co-ordination of all key stakeholders for the
+Project within and outside Kwara State (“Management Team”).
+The Management Team shall determine the operational, maintenance and
+management needs of the Hub as well as the budget required to meet such needs on
+an annual basis (“the Management Budget”).
+All Management Budgets shall be prepared by the Management Team subject to the
+approval of the Parties.
+The Parties shall each contribute to fund the Management Budget on an annual basis
+throughout the Term in the manner set forth below:
+a.
+IHS shall contribute up to a maximum of N1,000,000,000 (One Billion Naira)
+only per annum provided that disbursement of the IHS Contribution in this
+Clause shall be made in agreed periodic cycles.
+b.
+KWSG shall contribute the balance of the Management Budget after the
+deduction of IHS Contribution.
+Following the expiration of the Specified Period, the Governing Board shall determine
+whether or not to extend the exclusive management and maintenance rights vested in
+IHS under clause 4.31 and the terms of such extension.
+Nothing in this Agreement shall preclude the Project Company from sourcing for
+grants/funding from domestic and international organizations for the promotion of the
+Project and the Programs.
+The Parties shall have the right throughout the Term to conduct audits of the
+Management Budget and/or the Management Team and may request relevant
+information on a periodic or on-going basis therefore.
+Ownership and Use of the Hub
+The Parties agree that ownership of the Project Land, including the Hub, vests with the
+Project Company.
+
+COLLABORATION AGREEMENT
+
+9/24 MLS
+
+4.40
+
+4.41
+
+4.42
+
+4.43
+
+4.44
+4.45
+
+4.46
+4.47
+
+4.48
+4.49
+
+The Parties agree that throughout the Term of this Agreement, the members of IHS
+team shall be given exclusive and unfettered use of dedicated workspace within the
+Hub comprising office space for administrative activities on the ground floor of the Hub
+and open space and workstations on the top floor of the Hub. The IHS team and IHS
+Program participants shall also have access to all common areas.
+All activities to be undertaken at the Hub shall be in alignment with the general principles
+of this Agreement and subject to advance notice to and collaboration with the
+Management Team.
+The Programs
+The following two streams of programs shall be run at the Hub (the “Programs”):
+a.
+Programs which shall be organized and managed by IHS (“IHS Programs”);
+and
+b.
+Programs which shall be organized and managed by the Management Team
+(“Hub Programs”).
+IHS shall at its cost and in its sole discretion decide on the curriculum of the IHS
+Programs and may appoint such number of persons as it deems necessary to manage
+and facilitate the IHS Programs (“IHS Team”). The schedule for the IHS Programs shall
+be shared with the Management Team annually in advance and any modifications and
+adjustments thereto shared quarterly in advance to optimize the use of available space
+within the Hub.
+KWSG shall at its cost and in its sole discretion decide on the curriculum of the Hub
+Programs.
+The Management Team shall be responsible for scheduling and managing the use of
+the space within the Hub for the Programs.
+Branding and Marketing
+The Parties shall collaborate on all branding and marketing activities for the Project.
+IHS shall have the right on an exclusive basis to provide all physical branding of the
+Hub. Where such branding is in conjunction with a third party, KWSG’s approval shall
+be required provided such approval shall not be unreasonably withheld.
+Any physical branding of the Hub by KWSG shall be subject to the prior receipt of a
+written notice of no objection from IHS.
+The Parties shall agree on all communications pertaining to this Agreement before
+public release.
+
+5.
+
+BENEFICIARIES
+Nothing contained in this Agreement shall give or allow any claim or right of action whatsoever
+by any third person other than as stated in this Agreement. It is the express intention of the
+Parties that any such person or entity other than as referred to in this Agreement receiving any
+services or benefits under this Agreement shall be deemed an incidental beneficiary only and
+as such, no such person shall have any right to enforce any term of this Agreement.
+
+6.
+
+REPRESENTATIONS AND WARRANTIES
+Each Party hereby represents and warrants that:
+6.1
+Each Party validly exists under the laws of the Federal Republic of Nigeria.
+6.2
+It has full capacity and authority to enter into and to execute the provisions of the
+Agreement.
+6.3
+This Agreement is executed by its duly authorised representatives.
+
+COLLABORATION AGREEMENT
+
+10/24 MLS
+
+6.4
+6.5
+6.6
+
+6.7
+
+Once duly executed, this Agreement will constitute a legal, valid, and binding document,
+enforceable upon its terms.
+This Agreement is not in violation of or conflict with the terms of any other agreements
+entered into by it.
+There are no material actions, suits or proceedings or regulatory investigations pending,
+or to the knowledge of such Party, threatened against it or any of its Affiliates that might
+adversely affect the ability of the Party to meet and carry out its obligations under this
+Agreement.
+It has performed and will continue to perform all reasonable and necessary due
+diligence for the purpose of carrying out the Project in this Agreement.
+
+7.
+
+RELATIONSHIP BETWEEN THE PARTIES
+7.1
+Nothing in this Agreement shall be deemed to create any relationship beyond that
+contemplated by the Parties and herein expressly stipulated and agreed. The Parties
+expressly acknowledge that nothing in this Agreement shall be construed as creating a
+partnership or principal-agency relationship in respect of any existing or future business,
+except as expressly provided herein.
+7.2
+IHS shall not, by reason of entering into this Agreement, be precluded by KWSG or any
+of its agents from conducting its normal administrative, commercial, technical or
+operational activities in connection with the general provision of its services to its
+customers.
+
+8.
+
+TRADE LAWS, ANTI-TERRORISM AND ANTI-MONEY LAUNDERING
+8.1. Each Party hereby represents, warrants, and undertakes to the other Party that neither
+the Party nor any of its directors, officers, employees, Affiliates or any third party
+retained by and/or representing it, (a) is the government of, resident in, located in,
+organized under the laws of, or subject to the jurisdiction of, any country or territory that
+is, or whose government is, the target of comprehensive economic or trade sanctions
+or restrictive measures under Applicable Laws, presently including the Crimea Donetsk
+and Luhansk regions of Ukraine, Cuba, Iran, North Korea, Syria, and the Government
+of Venezuela; (b) is designated on any sanctions list promulgated, administered, or
+enforced under Applicable Laws, including but not limited to, the U.S. Treasury
+Department’s Specially Designated Nationals and Blocked Persons List; (c) is owned
+or controlled directly or indirectly by any party described any clauses (a) or (b); (d) is
+subject to a Denial Order by the U.S. Department of Commerce, Bureau of Industry and
+Security; or (e) is subject to any other restrictions that would preclude the Party from
+dealing with the other Party.
+8.2.
+Each Party hereby confirms that:
+8.2.1. It shall not (neither shall any of its directors, employees or agents) directly or
+indirectly engage in, promote or assist and/or facilitate any form of terrorist
+group or person who engages in or promotes or supports, any form of terrorist
+activity whatsoever.
+8.2.2. It shall ensure that it complies with anti-money laundering and anti-terrorism
+laws, laws and regulations on sanctions or embargoes, restricted party lists
+trade controls on the import, export, re-export, transfer or otherwise trade of
+goods, services, software, or technology of Nigeria, including those of any
+jurisdiction in which IHS operates, or where its Affiliate(s) operates, including,
+but not limited to, the European Union, the United Kingdom and the United
+States of America and other Applicable Laws. Each Party further confirms that
+it has in place and undertakes to maintain sufficient internal structures and
+
+COLLABORATION AGREEMENT
+
+11/24 MLS
+
+8.2.3.
+
+8.2.4.
+
+8.2.5.
+
+8.2.6.
+
+9.
+
+processes to ensure such compliance and to track, prevent and detect the
+violations of these laws.
+It shall, if any of the obligation hereunder requires a license, permit, or other
+authorization from any sanctions or export controls governmental or regulatory
+authority, including but not limited to, the Federal Republic of Nigeria, U.S.
+Treasury Department and the U.S. Commerce Department (collectively,
+“Trade Authority”), prior to the direct or indirect obligation, (a) apply for and
+secure all necessary licenses, permits, or other authorizations from the relevant
+Authority; (b) provide written notice to the Party of any end-user, end-use, or
+other applicable conditions issued by a Trade Authority as part of any
+necessary license, permit or other authorization received from a Trade
+Authority; and (c) provide written notice to the other Party to identify all items
+subject to a license, permit, or other authorization.
+It shall ensure that none of its agents, directors or officers (as applicable) has
+been the subject of an investigation, settlement or conviction for applicable antimoney laundering and anti-terrorism, sanctions and export controls laws and
+regulations.
+It shall immediately upon discovery or reasonable suspicion, send the other
+Party a written notification of an incident or suspicion of the involvement of that
+Party, it’s agents, directors, officers, employees , Affiliates, or any third party
+retained by it/representing it is in violation of applicable anti-money laundering
+and anti-terrorism, sanctions and export control laws and regulations in
+connection with the Project that the Party provides to the other Party or vice
+versa.
+Prior to the direct or indirect provision of any hardware (including tooling),
+software, or technology (collectively, “Items”) by either Party to the other Party,
+each Party shall provide a written notice of any Items that are “Restrictively
+Controlled” under any applicable export control laws, including U.S. export
+control laws administered under the U.S. Export Administration Regulations
+(“EAR”) or EU export control laws administered under the EU Dual-Use
+Regulation 428/2009. Items are “Restrictively Controlled” if they are (a) subject
+to the EAR, excluding Items that are classified as EAR99, and further excluding
+Items classified under an export control classification number controlled only
+for anti-terrorism reasons; or (b) Items for which the direct or indirect provision
+to either Party or either Party’s benefit requires a license, permit, or other
+authorization under any applicable export control laws.
+
+ANTI-BRIBERY AND ANTI-CORRUPTION
+9.1.
+Each Party hereby represents, warrants and undertakes that, as at the date of this
+Agreement, neither it nor any of its directors, officers, employees, Affiliates or any third
+party retained by and/or representing it, has offered, promised, given, authorized,
+solicited or accepted any undue pecuniary or other advantage of any kind (or implied
+that they will or might do any such thing at any time in the future) in any way connected
+with this Agreement, and that it has taken reasonable measures to prevent
+subcontractors, agents or any other third parties subject to its control or determining
+influence from doing so.
+9.2.
+Each Party shall comply with all applicable anti-bribery and anti-corruption laws in
+Nigeria any relevant jurisdiction and (including those applicable in its jurisdictions of
+operation, the territory of the Project, the Foreign Corrupt Practices Act of the United
+
+COLLABORATION AGREEMENT
+
+12/24 MLS
+
+9.3.
+
+10.
+
+States of America and the Bribery Act 2010 of the United Kingdom and all applicable
+anti-bribery and anti-corruption regulations and codes of practice.
+Each Party further represents, warrants, and undertakes to the other Party as follows:
+9.3.1. That itself, its Agents and Affiliates, and anyone retained by and/or
+representing it, in each case has and will strictly adhere to and comply with all
+Applicable Laws, rules and regulations against bribery and corruption in the
+Federal Republic of Nigeria (including but not limited to local, regional and
+international anti-bribery and anti-corruption laws, such as the U.S. Foreign
+Corrupt Practices Act, the U.K. Bribery Act and any applicable legislation in any
+country where the Party or its Affiliates operates) (collectively, “AntiCorruption Laws”), and that neither it nor any of its directors, officers,
+employees, Affiliates, agents, representatives or subcontractors have engaged
+in any activity or conduct that has resulted or will result in a violation of any AntiCorruption Law.
+9.3.2. That in connection with the terms of this Agreement, neither of the Party or any
+of its stockholders, employees or agents, representatives or subcontractors
+have offered, paid, promised to pay, or authorized the payment of any money
+or any other thing of value to (a) any Government Official or any one acting
+through a Government Official as that term is defined above, or (b) any other
+person while knowing that all or a portion of such money or anything else of
+value would be offered or given directly or indirectly to any official, political
+party, or to any candidate for political office for any of the prohibited purposes
+listed below.
+9.3.3. For the purposes of Clause 9.3.2 above, the prohibited purposes are:
+a.
+to influence an act or decision of such official, political party, party
+official or candidate in his official capacity:
+b.
+to induce such official, political party, party official or candidate to do or
+omit to do any act in violation of the lawful duty of such party, official or
+candidate; or
+c.
+to induce such official, foreign political party, party official or candidate
+to use his or its influence with a Government Official.
+9.3.4. Each Party hereby confirms that:
+a.
+It shall ensure that none of its agents, directors and officers have been
+subject of an investigation, settlement, or conviction for violations of
+applicable bribery or corruption laws.
+b.
+It shall immediately upon discovery or reasonable suspicion send the
+other Party a written notification of an incident or suspicion of the
+involvement of the Party, its agents, or Affiliates, directors and officers
+or any third party representing it in a violation of applicable bribery or
+corruption laws.
+
+LIMITATION OF LIABILITY AND INDEMNITY
+10.1.
+Nothing in this Agreement shall make either Party liable for any debt or other obligation
+of the Project Company, beyond the liability specified in the Act.
+10.2.
+Neither Party shall be liable for any loss, damage or injury whatsoever and howsoever
+arising, incurred or suffered by the other Party or any third party caused by or arising
+from the other Party’s performance of its obligations in terms of this Agreement,
+including without limitation, all consequential and special losses or damages, caused
+to that Party or any third party including that Party’s directors, employees, agents,
+representatives, customers or to any other person whomsoever.
+
+COLLABORATION AGREEMENT
+
+13/24 MLS
+
+10.3.
+
+Each Party (the “Indemnifying Party‘’) hereby agrees to indemnify, defend, protect
+and hold harmless the other Party, its employees, officers, shareholders, directors,
+agents, contractors and Affiliates (the “Indemnified Party’’) from and against, and
+assumes liability for, any and all claims, demands, actions, losses, damages,
+assessments, charges, limitation, interests, penalties, and attorney’s fees which may
+from time to time be suffered or incurred by, or asserted against the Indemnified Party
+directly or indirectly, on account of or in connection with any injury, death, loss or
+damage to any person, tangible or intangible property or facilities of any person or
+entity (including reasonable attorneys’ fees and costs at trial and appeal) to the extent
+arising out of or resulting from the negligence or willful misconduct of the Indemnifying
+Party, its officers, employees, servants, affiliates, agents or contractors or from any
+other person or entity for whom it is in law responsible. Nothing in Clause 10.2 shall
+be construed as limiting the liability of any Party for personal injury or death resulting
+from the negligence of a Party or its employees.
+
+11.
+
+ASSIGNMENT
+11.1. This Agreement and the discussions between the Parties pursuant thereto are on an
+exclusive basis between the Parties.
+11.2. No Party may assign the benefit under this Agreement or any rights or benefit thereof
+without the written consent of the other Party first having been obtained, such consent
+not to be unreasonably withheld.
+
+12.
+
+FORCE MAJEURE
+12.1. Notice of Force Majeure Event
+As soon as practicable and in any case, within twenty-four (24) hours from the date of
+the occurrence of a Force Majeure event, or the date of knowledge thereof, the affected
+Party shall notify the other Party of the same in writing, setting out inter alia, the following
+in reasonable detail:
+12.1.1 the nature and extent of the Force Majeure Event;
+12.1.2 an estimate of the anticipated Force Majeure period;
+12.1.3 the nature of and the extent to which performance of any of its obligations under
+this Agreement are affected by the Force Majeure Events;
+12.1.4 the measures which the Party has taken or proposes to take to alleviate/
+mitigate the impact of the Force Majeure Event and to resume the performance
+of its obligations thereby affected;
+12.1.5 any other relevant information concerning the Force Majeure event, and/or the
+rights and obligations of the Parties under this Agreement.
+12.2. Performance of Obligations
+If a Party is rendered wholly or partially unable to perform any of its obligations under
+this Agreement due to a Force Majeure event, it shall be excused from the performance
+of such obligations to the extent that it is unable to perform same on account of such
+Force Majeure Event, provided that:
+12.2.1 due notice of the Force Majeure Event has been given to the other Parties as
+required under this Agreement;
+12.2.2 the excuse from performance shall be of no greater scope and of no longer
+duration than is necessitated by the Force Majeure Event;
+12.2.3 the affected Party has taken all reasonable efforts to mitigate or limit any
+damage that may be caused or is likely to be caused in relation to the
+performance of the Project as a result of the Force Majeure Event and to resume
+
+COLLABORATION AGREEMENT
+
+14/24 MLS
+
+the performance of the Project in accordance with Good Industry Practice and
+its obligations under this Agreement;
+12.2.4 when the affected Party is able to resume the performance of its obligations
+under this Agreement, it shall give the other Party written notice to that effect
+and shall promptly resume the implementation of the Project; and
+12.2.5 the affected Party shall continue to perform its obligations which are not affected
+by the Force Majeure Event and which are capable of being performed in
+accordance with the provisions of this Agreement.
+12.3. The Parties hereby agree that where a Force Majeure Event persists for a period of
+thirty (30) days or more, the unaffected Party shall have the right to terminate the
+Agreement immediately upon giving written notice to the affected Party.
+13.
+
+GOVERNING LAW AND DISPUTE RESOLUTION
+13.1. This Agreement (and any non-contractual obligations arising out of or in connection with
+it) shall be construed and governed in accordance with the laws of the Federal Republic
+of Nigeria.
+13.2. In the event of any difference(s) or dispute(s) arising out of the interpretation or
+application of the provisions of this Agreement, the Parties shall immediately consult
+each other with the view to expeditiously resolve such differences or disputes in the
+spirit of mutual understanding and cooperation.
+13.3. If they are unable to resolve the dispute, an aggrieved party may refer the dispute to
+the appropriate court for resolution.
+
+14.
+
+CONFIDENTIALITY
+14.1. The Parties agree that any information exchanged between them, whether or not clearly
+marked as proprietary and/or confidential, shall be kept confidential and shall not be
+disclosed or given to any third party without the prior written permission of the Party that
+supplied the information. This understanding does not apply to information given to
+professional advisers (to whom the same confidentially obligations must be extended),
+information in the public domain, or to information required to be disclosed under any
+written law, an order of court, to a statutory regulator (provided that in all such cases,
+the receiving Party shall, unless where so prohibited by Applicable Law, immediately
+notify the disclosing Party and disclose only to the extent strictly mandated).
+14.2. The provisions of this clause shall survive this Agreement and the Parties shall remain
+bound by the provisions of this clause during the tenure of this Agreement and for a
+period not less than three (3) years following the expiry or termination of this
+Agreement, howsoever occurring.
+
+15.
+
+UTMOST GOOD FAITH
+Each Party understands that by virtue of this Agreement, the position of each Party to the other
+is that of trust and accordingly pledges to demonstrate utmost good faith throughout the duration
+of this Agreement.
+
+16.
+
+TERMINATION
+16.1.
+Subject to Clause 16.3 and 16.4, either Party shall be entitled to terminate this
+Agreement where the other Party materially violates or breaches, or materially fails to
+fully and completely observe, keep, satisfy, perform and comply with, any agreement,
+term, covenant, condition, requirement, restriction or provision of this Agreement, and
+such Party does not cure such violation, breach or failure within ninety (90) days after
+the other Party gives the defaulting Party a written notice of such violation, breach or
+
+COLLABORATION AGREEMENT
+
+15/24 MLS
+
+16.2.
+
+16.3.
+16.4.
+16.5.
+
+17.
+
+failure, or, if such violation, breach or failure is incapable of being cured within ninety
+(90) days.
+Subject to Clauses 16.3, 16.4 and 16.5, either Party shall be entitled to terminate this
+Agreement after the Lock-In-Period by giving the other party at least twelve (12)
+months’ prior written notice. If notice is so given, this Agreement shall terminate upon
+the expiration of the specified period.
+Notwithstanding any provisions of this Agreement, IHS shall be entitled to manage and
+maintain the Hub until the expiration of the Specified Period.
+The termination of this Agreement shall not be interpreted to mean the liquidation of
+the Project Company.
+In the event KWSG or the Project Company takes any steps (in the reasonable
+determination of IHS) to restrict, frustrate or determine the exclusive and indefeasible
+right conferred on IHS under Clause 4.31 to manage and maintain the Hub for the
+duration of the Specified Period (including the revocation of title to any portion of the
+Project Land or restriction of access to the Hub) and IHS decides to surrender its rights
+in this respect by notice to KWSG and the Project Company, the KWSG shall
+(notwithstanding any provision in this Agreement or the constitutional documents of
+the Project Company) refund to IHS the Hub Construction Cost in the sum of
+N2,000,000,000.00 (Two Billion Naira) together with the amounts contributed by IHS
+under clause 4.35 in connection with the Management Budget for the period from the
+Effective Date leading to the date of such notice of surrender.
+
+NOTICES
+17.1. Any notice required under this Agreement must be made in writing (which may include
+email) and in English language, and delivered by hand, email, registered post, or courier
+using an internationally recognized courier company, to the addresses stated below.
+Each Party shall notify the other Party of any changes to its details as set out in this
+clause from time to time:
+IHS (Nigeria) Limited:
+Chief Operating Officer
+Address: Plot 934, Idejo Street, Victoria-Island, Lagos State, Nigeria
+Email: leg_corporatecommercial.ng@ihstowers.com
+Kwara State Government
+represented by the Managing director of Ilorin Innovation Hub
+Address: Ahmadu Bello Way, G.R.A Ilorin, Kwara State, Nigeria
+Email: t.kolawole@kwarastate.gov.ng
+17.2.
+
+18.
+
+A notice shall be effective upon receipt and shall be deemed to have been received (i)
+at the time of delivery, if delivered by hand, registered post or courier or (ii) at the time
+of transmission, if delivered by email, to the extent no delivery failure notification is
+received by the sender within twenty-four (24) hours of such transmission.
+
+ISO 26000 DECLARATION
+IHS recognizes ISO 26000 Social Responsibility Guidance Standard as a reference document
+for the implementation of its obligations under this Agreement and further emphasizes that it is
+actively working to improve the environment and provide sustainable solutions to all relevant
+issues under this Agreement.
+
+COLLABORATION AGREEMENT
+
+16/24 MLS
+
+19.
+
+MISCELLANEOUS PROVISIONS
+19.1. This Agreement supersedes all previous communications, transactions, and
+undertakings, whether oral or written, and constitutes the sole and entire agreement
+between the Parties concerning the Project and may not be amended except by a
+written document agreed and executed by both Parties hereto. Any amendment to this
+Agreement will not be binding on the Parties unless set out in writing, expressed to
+amend, or supplement this Agreement and signed by both Parties.
+19.2. If, at any time, any provision of this Agreement is or becomes illegal, invalid or
+unenforceable in any respect under any jurisdiction, neither the legality, validity or
+enforceability of the remaining provisions nor the legality, validity or enforceability of
+such provision under any other jurisdiction will in any way be affected or impaired.
+19.3. No failure to exercise, or any delay in exercising, on the part of any Party, any right or
+remedy under this Agreement will operate as a waiver, neither will any single or partial
+exercise of any right or remedy prevent any further or the exercise of any other right or
+remedy. The rights and remedies provided in this Agreement are not exclusive of any
+rights or remedies provided by law and same may only be waived in writing and
+specifically.
+19.4. Each Party will be fully responsible for its actions or activities in relation to the Project;
+this includes being responsible for the actions or omissions of their respective staff,
+consultants, and other personnel and contractors. For the avoidance of doubt, in no
+event shall either Party be liable to the other Party for indirect or consequential losses
+or damages.
+19.5. The costs incurred in the negotiation, preparation, and execution of this Agreement,
+including attorneys’ fees, shall be borne solely by the Party incurring such costs.
+19.6. Each Party confirms that (a) it has data protection policies in place that meets all data
+protection standards and legal requirements applicable to it, and (b) it will apply such
+policies in the performance of the activities contemplated under this Agreement. The
+Parties do not intend to share any personal data with each other; if the Parties decide
+to share any personal data with each other, they will agree on any additional data
+protection provisions necessary for such data sharing and set those out in an
+amendment to this Agreement.
+19.7. Each Party will retain all ownership interest in its intellectual property that existed prior
+to this Agreement or was developed by such Party independently of the Agreement,
+including any updates, improvements or derivatives of such intellectual property that
+are developed during the course of the Project (collectively, “Pre-Existing Intellectual
+Property”), and the other Party will not claim any ownership interest in such PreExisting Intellectual Property. Except as otherwise expressly agreed in writing, IHS shall
+own all interest in any intellectual property (including, but not limited to, slogans,
+images, and designs) developed by it, on its own or jointly with the other Party, as part
+of the Project (collectively, “IHS Intellectual Property”), and the other Party will not
+claim any ownership interest in such IHS Intellectual Property.
+
+20.
+
+COUNTERPARTS
+This Agreement may be executed in any number of counterparts, each of which shall be
+deemed an original, but all such counterparts shall together constitute one and the same
+instrument.
+(signature page follows)
+
+COLLABORATION AGREEMENT
+
+17/24 MLS
+
+IN WITNESS WHEREOF the Parties have caused this Agreement to be signed in the manner
+hereinafter appearing the day and year first above written.
+SIGNED, SEALED AND DELIVERED BY
+Title: The Managing Director, Ilorin Innovation Hub
+Temi Kolawole
+
+(____________________________________________)
+For and on behalf of the Kwara State Government
+Signature:______________________________
+May 2, 2025
+
+Date:__________________________________
+
+In the presence of:
+Zumah Yahaya
+
+Name___________________________________
+Address_________________________________
+Director Programs
+Designation______________________________
+
+Signature________________________________
+May 2, 2025
+
+Date_____________________________________
+
+SIGNED FOR AND ON BEHALF OF IHS (NIGERIA) LIMITED:
+
+Authorised Signatory
+Name: Kazeem Oladepo
+
+COLLABORATION AGREEMENT
+
+Authorised Signatory
+Name: Yemisi Diya-Salawu
+
+18/24 MLS
+
+SCHEDULE 1
+OVERVIEW AND SPECIFICATIONS OF THE HUB
+1.
+
+INTRODUCTION
+The Hub is a pioneering initiative aimed at transforming Kwara State into a thriving center for
+technology, entrepreneurship, and innovation. As a state-of-the-art facility, the Hub is designed
+to provide an inspiring environment for creative minds, startups, and established businesses to
+collaborate, innovate, and grow. It is located along Ahmadu Bello Way, beside the prestigious
+Kwara Hotel, in the heart of GRA in Ilorin, Kwara State, Nigeria.
+The architectural and engineering aspects of the Hub have been meticulously planned to
+support its mission of fostering sustainable technological advancement and economic growth.
+This schedule provides a detailed overview of the building’s infrastructure, including its
+architectural layout, electrical and mechanical systems, electronic and IT infrastructure, security
+measures, and support facilities. Each of these components shall be carefully integrated to
+ensure that the Hub operates efficiently, sustainably, and securely, offering a conducive space
+for innovation and creativity.
+The building complex consists of:
+a.
+One (1) main building with two floors - ground floor (2211 sqm) and first floor (714.86
+sqm) amounting to a total of 2925.86 sqm;
+b.
+Two (2) gate houses (in and out);
+c.
+Four (4) utility buildings with three of the buildings being used for maintenance, water
+treatment and generator.
+
+2.
+
+PROJECT ARCHITECTURAL DESCRIPTION
+2.1.
+Total capacity
+The Hub has a total capacity of seven hundred (700) people.
+2.2.
+
+Conference rooms/meeting rooms
+2.2.1. Main hall
+The main hall at the Hub is a versatile space designed for flexible use,
+accommodating up to three hundred (300) persons. It can be utilized in its
+entirety for large events or divided into two separate sections for smaller
+gatherings. This adaptability ensures the hall can host a wide range of
+functions, from full-capacity conferences to more intimate meetings or
+workshops, making it an ideal venue for diverse professional events.
+2.2.2.
+
+Seminar hall
+The Seminar hall at the Hub is designed for workshops, seminars, and smaller
+conferences, accommodating up to eighty-four (84) attendees. The space shall
+offer flexible seating arrangements, modern audiovisual equipment, and highspeed internet, making it ideal for a variety of professional gatherings. Its
+intimate setting and convenient location within the Hub shall provide a
+conducive environment for focused, interactive sessions.
+Both halls shall have wooden step seating and open space for chair
+arrangement.
+
+2.2.3.
+
+Meeting Spaces
+The Hub has one (1) main 11-seater conference/meeting room and three (3)
+open meeting areas in the facility.
+
+COLLABORATION AGREEMENT
+
+19/24 MLS
+
+3.
+
+ELECTRICAL SYSTEMS DESCRIPTION
+3.1.
+Transformer capacity
+500 kVA.
+3.2.
+
+Generator capacity
+500 kVA.
+
+3.3.
+
+Solar energy system
+The Hub shall be powered by a 350kW solar energy system, coupled with a 559kWh
+battery storage solution. This setup will ensure a reliable, grid-independent power
+supply, capable of sustaining over 6000 battery cycles at 80% depth of discharge
+(DoD). The advanced battery management system (BMS) will play a crucial role in
+optimizing battery performance, ensuring efficient energy use, and prolonging battery
+life.
+In addition to its robust performance, the solar battery system shall be equipped with
+comprehensive safety features, including state-of-the-art fire suppression and cooling
+mechanisms. These safety measures are designed to maintain optimal operating
+conditions, protecting both the equipment and the facility, and ensuring uninterrupted
+power during outages or peak usage periods.
+The 350KW/559KWh solar energy system shall consist of the following:
+a.
+b.
+
+3.4.
+
+631 x 555W (mono) solar panels
+16 x 51.2V lithium iron phosphate batteries
+
+Light emitting diode (LED) screens specifications
+The Hub shall be equipped with a high-performance LED screen system, designed to
+provide clear, high-definition visual displays for presentations, events, and collaborative
+work throughout the facility. These LED panels are installed in key areas, including the
+multipurpose hall, conference hall, and lobby/reception area, ensuring maximum
+visibility and enhancing the user experience during various activities.
+3.4.1.
+
+Key elements and specifications of the LED screen system include:
+a.
+24.5 sqm LED screen (7x3.5 meters) for large-scale displays,
+composed of 98 panels. This screen is ideal for use in the multipurpose
+hall, supporting presentations and large events.
+b.
+15 sqm LED screen (5x3 meters), made up of 60 panels, offering
+flexible use for mid-sized spaces such as the conference hall.
+c.
+7 sqm LED screen (3.5x2 meters), consisting of 28 panels,
+strategically placed in the lobby/reception area for welcoming visitors
+and displaying key information.
+d.
+Pixel pitch: 3.91mm, providing a fine resolution that ensures sharp,
+detailed visuals even at close viewing distances, suitable for highquality video and image displays.
+e.
+Panel size and weight: Each panel measures 500x500mm and
+weighs 4.2 kg, allowing for a modular and scalable installation that can
+be easily configured based on the specific requirements of the space.
+f.
+Connectivity: The system includes SDI/HDMI inputs for seamless
+integration with various media sources, ensuring flexibility in
+presentations and content sharing.
+
+COLLABORATION AGREEMENT
+
+20/24 MLS
+
+g.
+
+h.
+
+4.
+
+MECHANICAL SYSTEMS DESCRIPTION
+4.1.
+Cooling systems
+The Hub shall feature a Samsung commercial air conditioning (CAC) system, utilizing
+a hybrid setup of ceiling cassette and ceiling-concealed units. This system shall ensure
+efficient and even cooling across all spaces, maintaining a comfortable environment for
+both large events and smaller gatherings. The following cooling units shall be installed
+within the facility:
+a.
+b.
+c.
+d.
+
+5.
+
+Power and signal cables: The installation includes all necessary
+power and signal cables between panels, ensuring smooth operation
+and minimal setup complexity.
+Video processor: The system is supported by a video processor that
+enhances the quality of content displayed and enables seamless
+transitions between different media inputs.
+
+Eight (8) units of 10HP HSP ducted split air conditioners.
+Fourteen (14) units of 4HP 360 cassette split air conditioners.
+Three (3) units of 4-way 2HP cassette split air conditioners.
+One hundred and four (104) units of 4-way 2.5 HP cassette split air
+conditioners.
+
+ELECTRONIC/IT SYSTEMS DESCRIPTION
+5.1.
+Electrical system capacity
+The electrical system at the Hub is designed for efficiency and reliability, comprising a
+comprehensive lighting, power, and socket outlet layout. This system shall support the
+building's HVAC and extra low voltage systems, all connected to a 500 kVA, 11/0.400
+kV transformer and integrated with the solar energy system. This hybrid configuration
+ensures consistent and sustainable power distribution, enabling smooth operation of all
+electrical components, from basic lighting to advanced technological systems.
+5.2.
+
+Data and voice networking system
+The Hub shall be equipped with a robust data and voice networking infrastructure
+designed for seamless communication and connectivity. The data and voice networking
+system includes the following:
+a.
+b.
+c.
+d.
+e.
+f.
+
+One (1) Panasonic hybrid IP PBX unit, supporting advanced telephone control
+and integration with the Hub's broader data network.
+Three (3) 48-port CAT6 Cisco Gigabit switches for efficient data and voice
+transmission
+Three (3) CAT6 data patch panels which ensures high-speed connections
+across all office spaces.
+Seventy-nine (79) RJ45 data/telephone sockets for distributed connectivity.
+One (1) Cisco integrated service router for stable internet access.
+Seventy-seven (77) CAT6 voice patch cords for voice transmission.
+
+This comprehensive setup enables fast, reliable communication for both voice and data,
+supporting the needs of a dynamic, tech-driven environment.
+5.3.
+
+Wireless LAN system
+Designed for maximum coverage and high performance, the wireless LAN system
+utilizes long-range dual-band wireless access points from Ubiquiti and EnGenius.
+These access points shall be strategically placed to provide seamless Wi-Fi connectivity
+throughout the building, ensuring fast, reliable internet access. Managed through an
+intelligent cloud gateway, the system allows for efficient network management,
+
+COLLABORATION AGREEMENT
+
+21/24 MLS
+
+delivering robust performance for large numbers of users and devices operating
+simultaneously.
+Key elements of the system include:
+a.
+Ten (10) dual-band wireless access points (Ubiquiti/EnGenius) for wide
+coverage.
+b.
+One (1) cloud-managed wireless controller for centralized management.
+c.
+One (1) dual-band intelligent cloud gateway to ensure optimal network
+performance.
+d.
+Two (2) Cisco 48-port gigabit switches for seamless data transmission.
+e.
+One (1) 42U data rack with power distribution units (PDUs) for structured
+cabling and equipment housing.
+5.4.
+
+Public address system
+The Hub shall be equipped with an advanced public address system designed for
+efficient communication across the facility. The system includes an 8x16 audio matrix
+with zone paging capabilities, built-in MP3 and CD players, and a gooseneck
+microphone for announcements. It also features multi-zone amplifiers and strategically
+placed ceiling speakers to ensure clear audio coverage in all areas. This system not
+only supports day-to-day announcements but also integrates with the fire alarm system
+for emergency evacuations, providing a reliable communication tool throughout the
+building.
+Key elements of the system include:
+a.
+One (1) T-6600 8x16 audio matrix with zone paging capabilities.
+b.
+One (1) RMS multizone power amplifier for clear and distributed sound.
+c.
+Forty-three (43) ceiling speakers (29 CP-6 and 14 CP-10) for optimal sound
+coverage.
+d.
+One (1) T-6223(A) multi-voice evacuation panel with built-in MP3 player for
+emergency broadcasts.
+e.
+Two (2) wireless microphones for flexibility in announcements.
+f.
+Two (2) microphone socket outlets.
+
+6.
+
+SAFETY & SECURITY SYSTEMS DESCRIPTION
+6.1.
+Access control systems
+The Hub shall be secured with a comprehensive Salto KS access control system,
+providing cloud-based management and real-time monitoring of all access points
+throughout the facility. The system integrates seamlessly with Spacebring software,
+enabling advanced functionalities such as mobile access, user management, and
+location-based control, while ensuring that only authorized personnel have access to
+specific areas within the Hub.
+Spacebring software further enhances the system with features like mobile app access,
+meeting room display modes, and visitor management. This makes the system not only
+secure but also flexible, ideal for managing shared spaces and multiple users efficiently.
+Key elements of the system include:
+a.
+Twenty-seven 27 Salto KS mini European locks (XS4 mini escutcheon) for
+secure access control throughout the building.
+b.
+Three (3) BLUEnet door controllers to manage multiple doorways seamlessly.
+c.
+Three (3) panel XS readers for turnstiles and additional entry points, equipped
+with MIFARE DESFire, Bluetooth LE, and HSE technology.
+
+COLLABORATION AGREEMENT
+
+22/24 MLS
+
+d.
+e.
+f.
+g.
+
+6.2.
+
+Ten (10) wireless nodes to extend and optimize wireless access control.
+Spacebring SaaS platform for managing 150 monthly active users with mobile
+app integration for Android, iOS, and web-based access.
+Two (2) managed locations for multi-location control and visitor display modes;
+Three (3) onboarding support sessions for smooth implementation and
+operation.
+
+CCTV/Surveillance systems
+A sophisticated IP CCTV system from HIKVISION shall be installed to provide
+comprehensive surveillance across the facility. It features high-resolution fixed and
+dome cameras equipped with tamper-resistant housing, 350-degree view angles, and
+power over ethernet (PoE) technology. It also includes a 32-channel 4K NVR with 16TB
+of storage which supports multi-channel playback and continuous recording. The
+strategic placement of 42-inch LED monitors will ensure real-time monitoring, while a
+3kVA UPS will guarantee uninterrupted operation, enhancing security throughout the
+Hub.
+Key elements of the system include:
+a.
+Two (2) Hikvision PoE fixed internet cameras with tamper-resistant housing.
+b.
+Twenty-two (22) Hikvision PoE dome internet cameras for complete coverage.
+c.
+One (1) 32-channel 4K NVR with 16TB HDD for multi-channel recording and
+playback.
+d.
+Two (2) 24-port PoE managed gigabit switches for data transmission.
+e.
+Three (3) 42-inch LED wall-mounted monitors for real-time monitoring.
+f.
+One (1) 3kVA UPS for uninterrupted surveillance power.
+
+6.3.
+
+Fire alarm systems
+Safety at the Hub will be reinforced with a cutting-edge fire alarm system. The setup
+shall include a 4-loop addressable fire alarm panel, backed by a trickle charger and
+batteries for continuous operation. Smoke and heat detectors shall be strategically
+placed alongside manual call points and loop-powered strobe sounders. In the event of
+an emergency, the system will trigger both visual and audible alarms, ensuring a rapid
+response and safe evacuation from the building.
+Key elements of the system include:
+a.
+One (1) compact 4-loop addressable fire alarm panel with trickle charger and
+batteries.
+b.
+Thirty-eight (38) addressable optical smoke detectors for early fire detection.
+c.
+Two (2) rate-of-rise heat detectors for temperature-based fire detection.
+d.
+Eleven (11) loop-powered strobe sounders for visual and audible fire alarms.
+e.
+One (1) addressable external horn (master blaster) for loud external alerts.
+f.
+Eleven (11) manual call points with resettable keys for manual activation of
+alarms.
+
+7.
+
+SUPPORT INFRASTRUCTURE SYSTEM DESCRIPTION
+7.1.
+Water treatment system
+A 5.0m³ packaged water treatment plant shall be installed to supply a seven thousand
+five hundred (7,500) litre overhead water tank, which will service the main building and
+other ancillary units.
+
+COLLABORATION AGREEMENT
+
+23/24 MLS
+
+8.
+
+PARKING
+8.1.
+Parking capacity
+The premises of the hub have seventy-four (74) designated parking spaces, excluding
+those along the inner roads.
+
+COLLABORATION AGREEMENT
+
+24/24 MLS
+
+

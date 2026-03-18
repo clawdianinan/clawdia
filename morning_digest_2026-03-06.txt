@@ -1,0 +1,1281 @@
+🌅 MORNING DIGEST — 2026-03-06 09:30 WAT
+
+📅 CALENDAR
+• Google Calendar access not configured (gog requires setup)
+
+📧 EMAIL SUMMARY
+• Running email check...
+[0;34m[INFO][0m Policy guard OK (mode=iih)
+[0;34m[INFO][0m Checking for IHS Towers emails...
+[1;33m[WARN][0m Found 3 unread IHS Towers email(s) - immediate escalation required
+[0;31m[ERROR][0m IHS Towers alert - stopping further processing
+
+✅ TODO LIST
+• Current todos:
+2 | in_progress | System | Configure Google Calendar access
+3 | pending | System | Set up iMessage delivery for updates
+4 | in_progress | System | Configure gog with Google Calendar access
+7 | pending | Temi | Update organizational charts
+10 | pending | Temi | Update organizational charts
+13 | pending | Temi | Update organizational charts
+14 | pending | Temi | Process email: Program KPIs
+15 | pending | Temi | Process email: Fwd: RE: IIH FINANCIALS
+17 | pending | Temi | Review Fwd: FACILITY MANAGEMENT -MONTLY REPORT FOR THE (JANUARY) 2026
+18 | pending | Temi | Extract action items from report
+20 | pending | External | External inquiry: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026)
+21 | pending | External | External inquiry: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025
+22 | pending | Temi | From Temi: Program KPIs
+23 | pending | Temi | From Temi: Fwd: RE: IIH FINANCIALS
+25 | pending | External | External: Partnership inquiry from Saving African Youths Dream
+26 | in_progress | IIH | IIH Venue/KWIRS: Hall booking for Mar 7 International Women’s Day event — KWIRS confirmed invoice received and says payment processing is underway; monitor for payment confirmation and lock booking logistics
+27 | in_progress | IIH | IIH: Program KPIs review
+28 | pending | IIH | IIH: Financial report review
+29 | in_progress | IIH | IHS Towers: Tidy IIH Job Descriptions/KRAs pack and confirm MD approval to share with Kazeem (per Suleman request)
+30 | in_progress | IIH | IIH: Review FEBRUARY 2026 Facility Department report from Kamil Ahmed (email received Mar 2, 9:56 AM) - Extract MD action items from monthly operations report
+31 | in_progress | IIH | IIH Finance: Premium Trust statement thread (Acct 0040117676) including MD-forwarded REQUEST FOR STATEMENT (Mar 3). Verify statement completeness, reconcile key transactions, and file in February reporting pack.
+32 | pending | Temi | Process email: Fwd: RE: IIH FINANCIALS
+34 | pending | Temi | Review Fwd: FACILITY MANAGEMENT -MONTLY REPORT FOR THE (JANUARY) 2026
+35 | pending | Temi | Extract action items from report
+36 | pending | External | Review email: Mail Delivery Status Notification (Delay)
+37 | pending | External | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026)
+38 | pending | External | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025
+39 | pending | IIH | Confirm with Temi: Zoe Choosers Sex Education Conference venue request (Sept 2025) - from Maureen Okey email
+40 | pending | IIH | Respond to SAYDI hall quotation request for Build-Tech Project (March-April 2026)
+41 | pending | IIH | Review SAYDI hall quotation request for Build-Tech Project (March-April 2026) - Email from contact@saydi.org
+42 | pending | IIH | Confirm with Temi about hosting Zoe Choosers Sex Education Conference in September 2026 - Email from maureen.okey@iih.ng
+43 | pending | IIH | Save and process attachments from New Roles for Hiring email from Temi - need to download attachments first
+44 | pending | IIH | Process Build-Tech Project partnership request from Saydi.org (March-April 2026)
+45 | pending | IIH | Follow up on Zoe Choosers Sex Education Conference venue request (Maureen Okey)
+46 | pending | IIH | Review NJFP (Nigeria Jubilee Fellows Programme) host portal setup
+49 | pending | IIH | Review mail delivery delay notification from Zoho (email ID 292)
+50 | pending | Personal | Review co-founder proposal for US business opportunity (non-IIH work) - Email ID 152
+51 | in_progress | IIH | SAYDI Build-Tech Project hall booking - Confirmation sent March 2, 12:29 PM. Invoice provided. SAYDI responded at 2:17 PM requesting revised invoices (separate invoices for March 9 & 11 workshop days and April 3 exhibition). Need to prepare revised invoices and respond.
+52 | pending | IIH | Review: SAYDI Build-Tech Project hall quotation request (March 9-11 workshop, April 3 exhibition) - Email from contact@saydi.org
+53 | pending | Temi | Confirm with Temi: Zoe Choosers Sex Education Conference venue request for September 2026 - Forwarded by Maureen Okey
+54 | pending | System | Check mail delivery delay notification from Zoho - Possible email delivery issue
+55 | in_progress | IIH | URGENT: IHS Logo Rights Proposal - Temi responded asking about whether nationwide logo usage would block IIH future independence. Need to provide comprehensive response addressing independence risks vs. brand exposure benefits. Latest email received March 2, 4:30 PM.
+57 | in_progress | IIH Partnerships | Review Zoe Choosers Sex Education Conference venue request (Sept 2025) - confirm with Temi if this program type can be hosted
+58 | pending | IIH Programs | NJFP Host Portal account verified - review dashboard and explore fellow hosting opportunities
+59 | pending | IIH Business | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+60 | pending | IIH Business | Follow up on NJFP (Nigeria Jubilee Fellows Programme) host account verification and explore fellowship hosting opportunities
+61 | pending | IIH IT Infrastructure | Follow up on WiFi router config - Item 6.3 outstanding (MTN technical support for API restrictions)
+62 | pending | IIH | Respond to Saydi.org partnership request for Build-Tech Project (March-April 2026)
+63 | in_progress | IIH | IIH IT Infrastructure: MTN 155MB upgrade ticket follow-up (latest email Mar 3, 7:06 PM) requests customer feedback before closure. Coordinate Nasiru/Temilola to confirm current service stability and send explicit keep-open/close instruction to MTN NSMC.
+64 | pending | IIH | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+65 | pending | IIH | Review Maidguri Hub logo design from forwarded email
+66 | in_progress | IIH HR | Process new roles for hiring requirements from Temi email - New attachment with updated roles document
+67 | pending | IIH | Follow up with Temi on Zoe Choosers Sex Education Conference venue request (September 2026) - from Maureen Okey
+68 | pending | IIH | Respond to SAYDI hall quotation & partnership request for Build-Tech Project (March-April 2026)
+69 | pending | IIH | Follow up on WIFI Router Config status with Nasiru Muhammed (MTN technical support needed for API restrictions)
+70 | pending | IIH Operations | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+72 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+73 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+74 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+76 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+80 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+83 | in_progress | IIH | URGENT: Review IHS Towers November 2025 monthly reports discharge letter - New email from Suleman Ibrahim with attachment
+84 | in_progress | IIH | IHS Towers: Program Governance draft feedback received from Suleman — reinstate/justify removed KPIs (Placement Rate, Instruction Quality Score, Cost per Participant, Incubation Conversion) and prepare final MD-reviewed version for onward sharing
+85 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+86 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+87 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+88 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+89 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+90 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+91 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+92 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+93 | in_progress | IIH | HIGH PRIORITY: Process IIH Archive Prompt - Ingest 13 folders starting with 00-CONTEXT.md and 01-HISTORY.md (new email from Temi)
+94 | in_progress | IIH Partnerships | Review IHS Towers consent agreement for Maiduguri Hub logo usage - draft email response with feedback on branding/IP concerns
+95 | pending | IIH HR | Review HR Tax Compliance Update: Rent allowance documentation & TIN generation requirement (deadline: March 6, 2026)
+97 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+98 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+99 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+100 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+101 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+102 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+103 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+104 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+105 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+106 | pending | Personal | Update Namecheap payment details for tracmemo.com domain renewal (deadline: March 29, 2026) - Credit card disabled alert
+107 | pending | System | Fix GitHub Actions workflow failures for clawdianinan/clawdia repository - Upstream Sync (Clawdia) failing. New notification received March 2, 3:32 PM (email ID 388)
+108 | pending | System | Review Google account security alerts and settings for clawdianinan@gmail.com
+109 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+110 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+111 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+112 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+113 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+114 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+115 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+116 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+117 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+118 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+119 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+120 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+121 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+122 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+123 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+124 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+125 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+126 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+127 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+128 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+129 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+130 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+131 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+132 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+133 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+134 | in_progress | IIH HR | Review Staff Welfare Loan request from Damilare Oloyede (Graphics & Visual Designer)
+135 | in_progress | IIH Operations | URGENT: Review GridCrux ESS Recovery Phase 2 Proposal (proforma valid until March 13, 2026) - New unread email requires attention
+136 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+137 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+138 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+139 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+140 | in_progress | IIH HR | Tax compliance reminder prepared for March 6 deadline. Staff must submit rent allowance docs + tenancy agreement and generate TIN via NIN. Reminder email ready for sending to all staff.
+141 | pending | IIH | High Priority: Process IIH archive ingestion - 13 folders starting with context and history files
+142 | pending | IIH IT Infrastructure | Follow up: WiFi router config - Item 6.3 outstanding, waiting for MTN technical support for API restrictions
+143 | in_progress | IIH Partnerships | Respond to SAYDI partnership request: Build-Tech Project hall usage (March 9-11 workshop, April 3 exhibition)
+144 | in_progress | IIH Finance | IHS Towers / Finance: Review Suleman analysis file IIH 2026 Budget v2 2026 v 2025, extract MD decision points, and prepare response draft with next actions
+145 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+146 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+147 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+148 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+149 | pending | IIH IT Infrastructure | Follow up on WiFi router config - Item 6.3 outstanding (MTN technical support for API restrictions) - Email from Nasiru Muhammed
+151 | pending | IIH Operations | Confirm email signature implementation for all Clawdia emails - Zoho signature test email received from Temi for review
+152 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+153 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+154 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+155 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+156 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+157 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+158 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+159 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+160 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+161 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+162 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+163 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+164 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+165 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+166 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+167 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+168 | in_progress | IIH | Update IIH organogram with latest structure - New email from Temi with attachments (drawio, jpg, pdf)
+169 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+170 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+171 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+172 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+173 | in_progress | IIH Finance | URGENT: Janitorial Services Payment for February 2026 (N1,300,000.00) - Transaction completed via Zenith Bank at 1:23 PM. Payment to SIII Multipurpose Ventures processed. Bank alert received. Confirm with Khadijat Bello that payment was received.
+174 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+175 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+176 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+177 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+178 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+179 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+180 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+181 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+182 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+183 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+184 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+185 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+186 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+187 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+188 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+189 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+190 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+191 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+192 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+193 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+194 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+195 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+196 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+197 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+198 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+199 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+200 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+201 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+202 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+203 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+204 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+205 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+206 | pending | IIH | IHS Towers: Acknowledge receipt of November 2025 monthly reports discharge letter from Suleman Ibrahim
+207 | pending | IIH Finance | IIH Finance: Confirm receipt of Nominal Roll submission to KW-IRS tax authorities (March-December 2025)
+208 | in_progress | IIH Operations | IIH Operations: KW-IRS Hall Booking (Mar 7) — client confirmed invoice received and payment is being processed (email reply Mar 3, 3:20 PM). Track payment confirmation and keep slot reserved until funds reflect.
+209 | pending | IIH IT | IIH IT: Approve moderated email from HR about tax compliance requirements (rent allowance docs & TIN generation by March 6)
+210 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+211 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+212 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+213 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+214 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+215 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+216 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+217 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+218 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+219 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+220 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+221 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+222 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+223 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+224 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+225 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+226 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+227 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+228 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+229 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+230 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+231 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+232 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+233 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+234 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+235 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+236 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+237 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+238 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+239 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+240 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+241 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+242 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+243 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+244 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+245 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+246 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+247 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+248 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+249 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+250 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+251 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+252 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+253 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+254 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+255 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+256 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+257 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+258 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+259 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+260 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+261 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+262 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+263 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+264 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+265 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+266 | in_progress | IIH Finance | Review IIH 2026 Budget (v2.1 final + Mar 4 attachment: 2026 vs 2025 analysis from Suleman/IHS) and prepare MD decision notes
+267 | pending | IIH Operations | Confirm mailbox delegation notification from Temi Kolawole - System email about delegated mailbox access
+268 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+269 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+270 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+271 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+272 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+273 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+274 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+275 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+276 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+277 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+278 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+279 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+280 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+281 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+282 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+283 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+284 | in_progress | IIH Business | IIH Business: Private office inquiry (Matthew Adekola/Landculture) acknowledged by Maureen; keep on waitlist and notify when space opens
+285 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+286 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+287 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+288 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+289 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+290 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+291 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+292 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+293 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+294 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+295 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+296 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+297 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+298 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+299 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+300 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+301 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+302 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+303 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+304 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+305 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+306 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+307 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+308 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+309 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+310 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+311 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+312 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+313 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+314 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+315 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+316 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+317 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+318 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+319 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+320 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+321 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+322 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+323 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+324 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+325 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+326 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+327 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+328 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+329 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+330 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+331 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+332 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+333 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+334 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+335 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+336 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+337 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+338 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+339 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+340 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+341 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+342 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+343 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+344 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+345 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+346 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+347 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+348 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+349 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+350 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+351 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+352 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+353 | pending | IIH Finance | IIH Finance: Track February 2026 bank statement request for Ilorin Tech Park Ltd (Acct 1310169029) sent to Zenith Bank at 10:30 AM - Statement received via email from Temi at 3:05 PM, keep attachment for February IIH report processing
+354 | pending | IIH IT Infrastructure | IIH IT: Review ZeptoMail/SMTP deliverability - hard bounces and undelivered test mail (421 Host not reachable to test@example.com). Validate recipient domains and sending config to avoid account block.
+355 | pending | IIH Business | IIH Business Development: Review Cosine AI coding engineer proposal from Yang Li (co-founder) - SOC 2 Type II compliant, enterprise AI engineer with strong ROI metrics; evaluate for IIH engineering team use
+356 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+357 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+358 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+359 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+360 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+361 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+362 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+363 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+364 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+365 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+366 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+367 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+368 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+369 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+370 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+371 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+372 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+373 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+374 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+375 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+376 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+377 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+378 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+379 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+380 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+381 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+382 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+383 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+384 | in_progress | IIH Finance | Learn2 Earn lunch payment (₦8,850,000) - Approval request prepared for MD review. Payment covers 3540 meals (Feb 16-Mar 13) to BOA Foods 2. Authorization email sent by Khadijat at 1:46 PM. Awaiting MD approval.
+385 | pending | IIH Operations | Review February 2026 Facility Department Report from Kamil Ahmed - Extract MD action items from monthly operations report (PDF attached)
+386 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+387 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+388 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+389 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+390 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+391 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+392 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+393 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+394 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+395 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+396 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+397 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+398 | pending | IIH Partnerships | URGENT: Review CcHUB 2026 Partnership Proposal for IIH - Strategic partnership proposal from Jude Adejuwon (CcHUB). Zumah Yahaya responded asking for more specific outcomes in job creation and economic empowerment across impact states. Call occurred at 2:45 PM today (March 2). Follow up needed on call outcomes and next steps.
+399 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+400 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+401 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+402 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+403 | pending | Email Review | Review email: Fwd: Venue & Partnership Request: Zoe Choosers Sex Education Conference – September 2025 from Maureen Okey
+404 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+405 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+406 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+407 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+408 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+409 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+410 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+411 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+412 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+413 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+414 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+415 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+416 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+417 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+418 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+419 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+420 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+421 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+422 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+423 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+424 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+425 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+426 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+427 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+428 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+429 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+430 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+431 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+432 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+433 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+434 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+435 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+436 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+437 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+438 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+439 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+440 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+441 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+442 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+443 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+444 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+445 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+446 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+447 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+448 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+449 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+450 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+451 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+452 | pending | IIH Operations | URGENT: Temporary Hub Closure March 5-6, 2026 for State Event with Governor - Adebola Oladipo notified Learn2Earn about alternative program days (March 7 & 14). Requires MD confirmation and coordination with all program teams.
+453 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+454 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+455 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+456 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+457 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+458 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+459 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+460 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+461 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+462 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+463 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+464 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+466 | pending | IIH Partnerships | Review InnovatHER STEAM Initiative partnership venue scheduling - Love for Change Women's Foundation requesting alternative dates (Friday June 19 or June 26) for workshop. Adebola Oladipo previously indicated IIH not open weekends, suggested midterm break dates. Requires MD decision on alternative weekday dates.
+467 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+468 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+469 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+470 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+471 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+472 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+473 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+475 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+476 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+477 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+478 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+479 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+480 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+481 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+482 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+483 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+484 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+485 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+486 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+487 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+488 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+489 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+490 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+491 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+492 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+493 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+494 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+495 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+496 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+497 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+498 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+499 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+500 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+501 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+502 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+503 | in_progress | IIH Security | Review security report from Rohi International Guards regarding armored cable theft incident (Jan 26, 2026) - Temi forwarded response at 2:49 PM asking to check if response is adequate (attachments included). Need to analyze security report and provide assessment.
+504 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+505 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+506 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+507 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+508 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+509 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+510 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+511 | in_progress | Temi | Reach Hon Commissioner for Health about MDA website
+512 | pending | Temi | Complete Ministry of Health website content questionnaire
+513 | in_progress | Temi | Call Toba, GM KWASAA back to meet this evening
+514 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+515 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+516 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+517 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+518 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+519 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+520 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+521 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+522 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+523 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+524 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+525 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+526 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+527 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+528 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+529 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+530 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+531 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+532 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+533 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+534 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+535 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+536 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+537 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+538 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+539 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+540 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+541 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+542 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+543 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+544 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+545 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+546 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+547 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+548 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+549 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+550 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+551 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+552 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+553 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+554 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+555 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+556 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+557 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+558 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+559 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+560 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+561 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+562 | pending | IIH Finance | Review and approve landscape maintenance payment request (N400,000) for February 2026 - Benetton Consulting Nig. Ltd (Taj Bank 0011326901)
+563 | pending | IIH Finance | Review and approve security services payment request (N950,000) for February 2026 - Rohi International Guards Ltd (Zenith Bank 1013352605)
+564 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+565 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+566 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+567 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+568 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+569 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+570 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+571 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+572 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+573 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+574 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+575 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+576 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+577 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+578 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+579 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+580 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+581 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+582 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+583 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+584 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+585 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+586 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+587 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+588 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+589 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+590 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+591 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+592 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+593 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+594 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+595 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+596 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+597 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+598 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+599 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+600 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+601 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+602 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+603 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+604 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+605 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+606 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+607 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+608 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+609 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+610 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+611 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+612 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+613 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+614 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+615 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+616 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+617 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+618 | in_progress | IIH Finance | Process Zenith Bank statement for February IIH report - Email from Temi at 3:05 PM with statement attachment. Keep attachment for February IIH report processing.
+619 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+620 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+621 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+622 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+623 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+624 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+625 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+626 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+627 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+628 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+629 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+630 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+631 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+632 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+633 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+634 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+635 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+636 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+637 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+638 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+639 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+640 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+641 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+642 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+643 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+644 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+645 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+646 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+647 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+648 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+650 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+651 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+652 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+653 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+654 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+655 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+656 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+657 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+658 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+659 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+660 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+661 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+662 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+663 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+664 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+665 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+666 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+667 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+668 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+669 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+670 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+671 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+672 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+673 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+675 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+676 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+677 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+678 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+679 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+680 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+681 | in_progress | IIH Operations | Send SAYDi revised invoices (March 9 & 11 workshop, April 3 exhibition) - Invoices ready for review
+682 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+683 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+684 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+685 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+686 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+687 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+688 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+689 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+690 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+691 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+692 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+693 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+695 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+696 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+697 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+698 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+699 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+700 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+701 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+702 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+703 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+704 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+705 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+706 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+707 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+708 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+709 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+710 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+711 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+712 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+713 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+714 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+715 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+716 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+717 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+718 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+720 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+721 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+722 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+723 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+724 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+725 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+726 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+727 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+728 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+729 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+730 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+731 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+732 | pending | IIH Partnerships | DBN Entrepreneurship Training Programme (ETP): Follow up on social media collaboration approval - DBN has approved design materials and requested collaboration on social media posting. Need MD confirmation on coordination approach.
+733 | pending | IIH Finance | Review waste disposal service payment request (N50,000) for February 2026 - Email from Kamil Ahmed marked as Answered but needs MD confirmation of approval
+734 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+735 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+736 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+737 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+738 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+739 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+740 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+741 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+742 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+743 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+744 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+745 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+746 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+747 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+748 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+749 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+750 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+751 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+752 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+753 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+754 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+755 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+756 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+757 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+758 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+759 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+760 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+761 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+762 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+763 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+764 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+765 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+766 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+767 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+768 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+769 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+770 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+771 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+772 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+773 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+774 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+775 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+776 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+777 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+778 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+779 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+780 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+781 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+782 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+783 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+784 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+785 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+786 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+787 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+788 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+789 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+790 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+791 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+792 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+793 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+794 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+795 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+796 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+797 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+798 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+799 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+800 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+801 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+802 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+803 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+804 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+805 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+807 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+808 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+809 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+810 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+811 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+812 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+813 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+814 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+815 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+816 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+817 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+818 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+819 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+820 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+821 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+822 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+823 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+824 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+825 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+826 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+827 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+829 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+830 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+831 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+832 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+833 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+834 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+835 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+837 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+838 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+839 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+840 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+841 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+842 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+843 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+844 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+845 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+846 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+847 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+848 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+849 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+850 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+851 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+852 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+853 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+854 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+855 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+856 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+857 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+858 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+859 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+860 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+861 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+862 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+863 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+864 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+865 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+866 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+867 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+868 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+869 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+870 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+871 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+873 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+874 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+875 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+876 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+877 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+878 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+879 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+880 | in_progress | Email Review | IIH Partnerships: NYSC Digital Literacy Workshop proposal - prepare MD recommendation on venue support terms (date mismatch in mail says 2025; needs clarification), subsidy position, and stakeholder value
+881 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+882 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+883 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+884 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+885 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+887 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+888 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+889 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+890 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+891 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+893 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+894 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+895 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+896 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+897 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+898 | in_progress | IIH Finance | IIH Finance: Review BOA Foods Feb 2026 cafeteria sales and drinks profit-sharing attachments (MD-forwarded Mar 3) and prepare MD decision note on settlement and variance checks.
+899 | pending | IIH Operations | IIH Operations: Approve/decline diesel purchase request for Lens for Good event (250L @ ₦990 = ₦247,500) and, if approved, route payment to Abu Firdaus Enterprise (Polaris 4091321032)
+900 | in_progress | IIH Finance | IIH Compliance/Finance: NSITF Feb 2026 debit (RRR 1914-3858-3895, N123,540.87) — Zenith sent NSITF.pdf proof (Mar 3, 3:39 PM). Verify debit in bank statement, archive signed authorization + proof, then close compliance trail.
+901 | in_progress | IIH Partnerships | IIH Partnerships: Prepare MD brief for Wootlab/Codextel/ILAB consortium contract negotiation meeting (Mar 4, 1:00 PM, Teams) with mandate, red lines, and decision asks
+902 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+903 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+904 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+905 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+906 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+907 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+908 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+909 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+910 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+911 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+912 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+913 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+915 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+916 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+917 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+918 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+919 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+920 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+921 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+922 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+923 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+924 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+925 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+926 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+927 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+928 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+929 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+930 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+931 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+932 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+933 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+934 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+935 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+936 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+937 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+938 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+939 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+940 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+941 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+942 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+943 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+944 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+945 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+946 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+947 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+948 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+949 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+950 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+951 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+952 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+953 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+954 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+955 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+956 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+957 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+958 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+959 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+960 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+961 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+962 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+963 | in_progress | IIH Partnerships | IIH Partnerships: Lens for Good workshop venue (Mar 5-6) — invoice already sent by Maureen on Mar 4; next: track client confirmation/payment and prep MD brief on commercial terms + support commitments (draft only, no outbound send).
+965 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+966 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+967 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+968 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+969 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+970 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+971 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+972 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+973 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+974 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+975 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+976 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+977 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+978 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+979 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+980 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+981 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+982 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+983 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+984 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+985 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+986 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+987 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+988 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+989 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+990 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+991 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+992 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+993 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+994 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+995 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+996 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+997 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+998 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+999 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1000 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1001 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1002 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1003 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1004 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1005 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1006 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1007 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1008 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1009 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1010 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1011 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1012 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1013 | in_progress | IIH Finance | Review and approve Noble Drinks bottled water payment requests (First Bank 3212276555 - OLALUWOYE JUMOKE OLUFUNKE): Cafeteria request (10 packs, ₦17,000) + VIP Lounge request from Maureen (7 packs, ₦11,900, Mar 4). Prepare one MD decision note and finance instruction draft.
+1014 | pending | IIH Operations | IHS: Ilorin Innovation Hub Operations Update meeting for Mar 4 4:00 PM was canceled by Suleman; confirm replacement time/reschedule and update attendance priorities
+1015 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1016 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1017 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1018 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1019 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1020 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1021 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1022 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1023 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1024 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1025 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1026 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1027 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1028 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1029 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1030 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1031 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1032 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1033 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1034 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1035 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1036 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1037 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1038 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1039 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1040 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1041 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1042 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1043 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1044 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1045 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1046 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1047 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1048 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1049 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1050 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1051 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1052 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1053 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1054 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1055 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1056 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1057 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1058 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1059 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1060 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1061 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1062 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1063 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1064 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1065 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1066 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1067 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1068 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1069 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1070 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1071 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1072 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1073 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1074 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1075 | in_progress | IIH HR | IIH HR: Kamil Ahmed leave request (Mar 9-20, Itikaf) now has HR policy response (needs 2 months annual or 3-day/5-day casual). Prepare MD decision: strict policy decline vs exceptional approval with coverage plan.
+1077 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1078 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1079 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1080 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1081 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1082 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1083 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1084 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1085 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1086 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1087 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1088 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1090 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1091 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1092 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1093 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1094 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1095 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1096 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1097 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1098 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1099 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1100 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1101 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1103 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1104 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1105 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1106 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1107 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1108 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1109 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1110 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1111 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1112 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1113 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1114 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1115 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1116 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1117 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1118 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1119 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1120 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1121 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1122 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1123 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1124 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1125 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1126 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1127 | pending | IIH Finance | IIH Finance: Review and approve office supplies fund request for Jan-Feb 2026 (N300,000 to Okey Maureen / Opay 9056138238); validate support docs and issue finance instruction draft
+1128 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1129 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1130 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1131 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1132 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1133 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1134 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1135 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1136 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1137 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1138 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1139 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1140 | pending | IIH Partnerships | IIH Partnerships: Review and propose MD follow-up on Henry Dauphin Web Summit Follow-up email (received Mar 4, 2:10 PM); extract asks, recommend response stance, and prepare draft reply for approval
+1142 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1143 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1144 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1145 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1146 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1147 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1149 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1150 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1151 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1152 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1153 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1154 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1155 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1156 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1157 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1158 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1159 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1160 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1161 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1162 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1163 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1164 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1165 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1166 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1167 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1168 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1169 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1170 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1171 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1172 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1174 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1175 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1176 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1177 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1178 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1179 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1181 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1182 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1183 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1184 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1185 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1186 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1187 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1188 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1189 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1190 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1191 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1192 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1194 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1195 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1196 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1197 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1198 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1199 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1200 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1201 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1202 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1203 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1204 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1205 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1207 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1208 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1209 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1210 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1211 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1212 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1213 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1214 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1215 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1216 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1217 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1218 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1219 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1220 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1221 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1222 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1223 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1224 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1226 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1227 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1228 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1229 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1230 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1231 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1232 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1233 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1234 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1235 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1236 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1237 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1238 | in_progress | IIH Finance | IIH Finance/Compliance: Premium Trust sent successful RRR receipt for Ilorin Tech Park (attachment: 1714-1924-1877---succesful RRR.pdf). Verify transaction reference against internal payment register and file receipt in compliance archive; prepare MD-facing status note (no outbound send).
+1240 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1241 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1242 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1243 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1244 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1245 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1246 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1247 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1248 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1249 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1250 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1251 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1253 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1254 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1255 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1256 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1257 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1258 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1259 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1260 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1261 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1262 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1263 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1264 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1265 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1266 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1267 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1268 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1269 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1270 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1271 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1272 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1273 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1274 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1275 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1276 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1278 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1279 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1280 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1281 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1282 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1283 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1284 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1285 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1286 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1287 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1288 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1289 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+1291 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+1292 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+1293 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+1294 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1295 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+1296 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+
+⏰ REMINDERS
+• Today's reminders:
+[1] [ ] Complete Paystack Registration [Tasks] — 18 Jun 2025 at 00:00 priority=medium
+[2] [ ] Register for MoniePoint [Tasks] — 19 Jun 2025 at 00:00 priority=medium
+[3] [ ] Address Roof Leakage with MCT & Geniserve [Tasks] — 21 Jun 2025 at 00:00 priority=high
+[4] [ ] Prepare Staff Training Material [Tasks] — 22 Jun 2025 at 00:00 priority=medium
+
+• Overdue reminders:
+[1] [ ] Complete Paystack Registration [Tasks] — 18 Jun 2025 at 00:00 priority=medium
+[2] [ ] Register for MoniePoint [Tasks] — 19 Jun 2025 at 00:00 priority=medium
+[3] [ ] Address Roof Leakage with MCT & Geniserve [Tasks] — 21 Jun 2025 at 00:00 priority=high
+[4] [ ] Prepare Staff Training Material [Tasks] — 22 Jun 2025 at 00:00 priority=medium
+
+🚨 ACTION ITEMS
+1. Review priority emails
+2. Address overdue reminders
+3. Check calendar for today's events
+4. Update todo list as needed
+
+📱 Delivery: iMessage
+⏰ Generated: 2026-03-06 09:30 WAT

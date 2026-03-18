@@ -21,6 +21,9 @@ $(python3 "$WS/scripts/memory_health_check.py")
 - Archive low-signal notes older than 90 days.
 - Ensure significant decisions are recorded using TEMPLATE_SIGNIFICANT_DECISION.md.
 - Review duplicate patterns from dedupe report.
+
+## Model Status
+$(bash "$WS/scripts/model_resilience_check.sh" 2>/dev/null || echo "Model check not available")
 EOF
 
 echo "MEMORY_MONTHLY_REVIEW: $OUT"

@@ -1,0 +1,100 @@
+1
+00:00:00,000 --> 00:00:04,360
+I entirely vibe-coded this website for a project I'm working on and here's exactly how I did it.
+
+2
+00:00:04,500 --> 00:00:07,800
+I feel like there's a really big misconception that you can't actually make vibe-coded apps look
+
+3
+00:00:07,800 --> 00:00:10,860
+good or build entire applications with them and while that might have been the case a couple
+
+4
+00:00:10,860 --> 00:00:14,320
+months ago, the models are only going to get better and the only thing you can do is educate
+
+5
+00:00:14,320 --> 00:00:18,120
+yourself on how to use them. So for a little bit of context, my name is Jack, I'm 20 years old,
+
+6
+00:00:18,180 --> 00:00:21,800
+I currently run one of the largest vibe-coding communities in the world and I work at a startup
+
+7
+00:00:21,800 --> 00:00:25,480
+that does over nine million dollars a year in annual revenue. So this personal project I've
+
+8
+00:00:25,480 --> 00:00:29,500
+been working on essentially gives anyone the ability to create a vertical AI tool which is
+
+9
+00:00:29,500 --> 00:00:33,480
+an AI tool that's good at one specific thing in agent form that can do literally anything for
+
+10
+00:00:33,480 --> 00:00:37,440
+you. So the way that this landing page works is it's a demo where anyone can have any sort of tasks
+
+11
+00:00:37,440 --> 00:00:41,400
+they want to do. So maybe they want to start a cookie business or create a newsletter that sends
+
+12
+00:00:41,400 --> 00:00:45,540
+them the news every single morning and then it spins up a team of AI agents that are good at one
+
+13
+00:00:45,540 --> 00:00:49,520
+specific thing that contribute to this task. And then it uses Claude to orchestrate all these agents
+
+14
+00:00:49,520 --> 00:00:53,180
+that are trained on individual knowledge bases. So I'm going to show you exactly how I set this up
+
+15
+00:00:53,180 --> 00:00:57,160
+in my process. I made an entire video yesterday on how I set up my front end but essentially I use
+
+16
+00:00:57,160 --> 00:01:01,640
+Claude code inside of cursor and then I use 21stDev to get design elements that I like. So to
+
+17
+00:01:01,640 --> 00:01:06,220
+incorporate Claude into this project what you need is an anthropic API key. Now what I have is what
+
+18
+00:01:06,220 --> 00:01:10,900
+you call an AI wrapper which is just a website that is wrapped in AI. To give these agents actual skills
+
+19
+00:01:10,900 --> 00:01:15,380
+is I create a vector database in Pinecone for each individual agent that gives them high quality
+
+20
+00:01:15,380 --> 00:01:19,600
+information that isn't just data that you'd pull from the internet. And then I use Composio to give
+
+21
+00:01:19,600 --> 00:01:23,900
+these agents the ability to one-click integrate into pretty much any application. So it can connect to
+
+22
+00:01:23,900 --> 00:01:28,000
+your Gmail, your Slack, really anything you want it to. And then I use Resign to give each one of
+
+23
+00:01:28,000 --> 00:01:32,100
+these agents its own email address so it can email you a newsletter, email you any updates that you
+
+24
+00:01:32,100 --> 00:01:36,560
+want it to. Overall it's a pretty fun project to try out. Comment process and I'll send you my entire
+
+25
+00:01:36,560 --> 00:01:39,640
+process on how I built this as well as the link so you can try it out for yourself.
+

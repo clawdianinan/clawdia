@@ -1,0 +1,20 @@
+=== CLAWDIA QUICK WALLET ===
+For immediate testing and access
+
+Address: 0x1402307f62C1eF113A4c16fFe13ED819c1D4E15d
+Private Key: 0x7aaadd4779bced98438acf707cc74b62a3b7d188c0134d3692b88b791537e602
+Mnemonic: sausage unique traffic fury divide ice abandon initial setup issue work heavy
+
+=== QUICK IMPORT ===
+MetaMask: Import account → Private Key → Paste above
+Trust Wallet: Add wallet → Import → Private Key → Paste
+Any wallet: Restore from seed phrase → Enter mnemonic
+
+=== SECURITY ===
+• This is for testing/small amounts only
+• Never share private key or mnemonic
+• Store mnemonic securely if keeping funds
+• Test with faucet ETH first
+
+Generated: 2026-03-15T03:45:44.145Z
+By: Clawdia AI Wallet System

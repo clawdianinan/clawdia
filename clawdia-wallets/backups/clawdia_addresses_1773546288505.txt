@@ -1,0 +1,38 @@
+=== CLAWDIA AI WALLET ADDRESSES ===
+
+Operational Wallet
+Description: For daily AI operations and transactions
+Type: ETHEREUM
+Address: 0xE535B9D812609b354db0f4cF46fdA00Ebb9A84E0
+Derivation: m/44'/60'/0'/0/0
+──────────────────────────────────────────────────
+
+Treasury Wallet
+Description: For storing significant assets
+Type: ETHEREUM
+Address: 0xEEF0bc32C299C5Cd24c5609Ffca0635a2808f311
+Derivation: m/44'/60'/0'/0/1
+──────────────────────────────────────────────────
+
+Development Wallet
+Description: For testing and development purposes
+Type: ETHEREUM
+Address: 0xEAeD681304cBE037A1bC389bB336A7ECD80ca256
+Derivation: m/44'/60'/0'/0/2
+──────────────────────────────────────────────────
+
+Bitcoin Operational
+Description: Bitcoin wallet for AI operations
+Type: BITCOIN
+Address: bc1qm9zhpdt3m90rcqtx8vlu3njhsc8e0vu7pzehnx
+Derivation: m/44'/0'/0'/0/0
+──────────────────────────────────────────────────
+
+Bitcoin Treasury
+Description: Bitcoin cold storage
+Type: BITCOIN
+Address: bc1qy5r6eh2xs09vt6nz6k94al4umw9epaez4agsfe
+Derivation: m/44'/0'/0'/0/1
+──────────────────────────────────────────────────
+
+Generated: 2026-03-15T03:44:48.505Z
