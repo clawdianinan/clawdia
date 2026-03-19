@@ -1,0 +1,9 @@
+{
+  "id": "code-reviewer",
+  "name": "Code Reviewer",
+  "description": "Comprehensive code review for TypeScript, JavaScript, Python, Swift, Kotlin, Go",
+  "trigger": "code review, review this code, check code quality",
+  "version": "1.0.0",
+  "created": "2026-03-19T05:40:08.806Z",
+  "author": "OpenClaw Integration"
+}

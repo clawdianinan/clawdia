@@ -1,0 +1,45 @@
+{
+  "name": "prdforge-intro-tour",
+  "version": "1.0.0",
+  "description": "Intro Tour implementation for PRDForge signup flow",
+  "main": "src/components/onboarding/Tour.tsx",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "@sentry/browser": "^10.44.0",
+    "@sentry/react": "^10.44.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "react-joyride": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "keywords": [
+    "tour",
+    "onboarding",
+    "walkthrough",
+    "react",
+    "joyride",
+    "prdforge"
+  ],
+  "author": "PRDForge Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prdforge/intro-tour.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prdforge/intro-tour/issues"
+  },
+  "homepage": "https://github.com/prdforge/intro-tour#readme"
+}

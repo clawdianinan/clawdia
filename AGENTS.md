@@ -31,6 +31,7 @@
 - **IIH communications:** Use title, copy temi@iih.ng
 - **DOCX formatting:** Never save markdown as DOCX - always convert to proper Word formatting with no markdown traces
 - **Config changes:** ALWAYS backup before editing any config file (see CONFIG_CHANGE_PROTOCOL.md)
+- **PRDForge Project Rules:** **MANDATORY** - Read `/Users/clawdia/.openclaw/workspace/PRDFORGE_PROJECT_RULES.md` before any PRDForge work
 
 ## Task Resume Guardrail (NEW)
 - For any previously started/aborted task: first re-open the source plan/instruction file before continuing.

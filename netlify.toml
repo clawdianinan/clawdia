@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+  functions = "functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://eflrqvxmqrtbytkxyrze.supabase.co/functions/v1/prdforge-api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/functions/v1/*"
+  to = "https://eflrqvxmqrtbytkxyrze.supabase.co/functions/v1/:splat"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Authorization, Content-Type"

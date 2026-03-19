@@ -1,0 +1,155 @@
+/* Global accessibility styles for info buttons system */
+
+/* Screen reader only class for hidden content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles for keyboard navigation */
+.accessibility-info-button:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .accessibility-info-button {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+  }
+
+  .accessibility-info-button:hover,
+  .accessibility-info-button:focus {
+    background-color: black;
+    color: white;
+  }
+
+  .accessibility-info-tooltip {
+    background-color: black;
+    border: 2px solid white;
+  }
+
+  .tooltip-arrow {
+    border-color: black transparent transparent transparent;
+  }
+
+  .arrow-top {
+    border-color: black transparent transparent transparent;
+  }
+
+  .arrow-bottom {
+    border-color: transparent transparent black transparent;
+  }
+
+  .arrow-left {
+    border-color: transparent transparent transparent black;
+  }
+
+  .arrow-right {
+    border-color: transparent black transparent transparent;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .accessibility-info-button {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #ccc;
+  }
+
+  .accessibility-info-button:hover,
+  .accessibility-info-button:focus {
+    background-color: #3d3d3d;
+    border-color: #555;
+    color: #fff;
+  }
+
+  .accessibility-info-tooltip {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+  }
+
+  .tooltip-hint {
+    color: #888;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .accessibility-info-button {
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .accessibility-info-tooltip {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Show tooltip immediately on touch devices */
+  .accessibility-info-container:active .accessibility-info-tooltip {
+    display: block;
+  }
+}
+
+/* Print styles - hide info buttons when printing */
+@media print {
+  .accessibility-info-container {
+    display: none !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Accessibility info button placement helpers */
+.accessibility-info-inline {
+  display: inline-flex;
+  align-items: center;
+}
+
+.accessibility-info-with-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Documentation link styles */
+.accessibility-doc-link {
+  color: #0066cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.accessibility-doc-link:hover {
+  color: #004499;
+  text-decoration: none;
+}
+
+/* Keyboard navigation indicator */
+.keyboard-navigation .accessibility-info-button:focus {
+  outline: 3px solid #ff6b00;
+  outline-offset: 3px;
+}

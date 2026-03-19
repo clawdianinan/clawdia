@@ -634,3 +634,35 @@
 [2026-03-18 03:01:01] email_processor: 🚨 HITL ALERT: email_processor failed 120 consecutive times
 [2026-03-18 03:01:01] email_processor: Error: 
 [2026-03-18 03:01:01] email_processor: Max retries exceeded. Giving up.
+[2026-03-18 04:00:00] email_processor: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh
+[2026-03-18 04:00:00] email_processor: Command failed with exit code: 64
+[2026-03-18 04:00:00] email_processor: Attempting automatic fix for email_processor
+[2026-03-18 04:00:00] email_processor: 🚨 HITL ALERT: email_processor failed 121 consecutive times
+[2026-03-18 04:00:00] email_processor: Error: 
+[2026-03-18 04:00:01] email_processor: Retry attempt 1/2 after 30 seconds
+[2026-03-18 04:00:31] email_processor: Command failed with exit code: 64
+[2026-03-18 04:00:31] email_processor: Attempting automatic fix for email_processor
+[2026-03-18 04:00:31] email_processor: 🚨 HITL ALERT: email_processor failed 122 consecutive times
+[2026-03-18 04:00:31] email_processor: Error: 
+[2026-03-18 04:00:31] email_processor: Retry attempt 2/2 after 30 seconds
+[2026-03-18 04:01:01] email_processor: Command failed with exit code: 64
+[2026-03-18 04:01:01] email_processor: Attempting automatic fix for email_processor
+[2026-03-18 04:01:01] email_processor: 🚨 HITL ALERT: email_processor failed 123 consecutive times
+[2026-03-18 04:01:01] email_processor: Error: 
+[2026-03-18 04:01:01] email_processor: Max retries exceeded. Giving up.
+[2026-03-18 05:00:01] email_processor: Starting self-healing wrapper for: /Users/clawdia/.openclaw/workspace/scripts/consolidated-email-processor.sh
+[2026-03-18 05:00:01] email_processor: Command failed with exit code: 64
+[2026-03-18 05:00:01] email_processor: Attempting automatic fix for email_processor
+[2026-03-18 05:00:01] email_processor: 🚨 HITL ALERT: email_processor failed 124 consecutive times
+[2026-03-18 05:00:01] email_processor: Error: 
+[2026-03-18 05:00:01] email_processor: Retry attempt 1/2 after 30 seconds
+[2026-03-18 05:00:31] email_processor: Command failed with exit code: 64
+[2026-03-18 05:00:31] email_processor: Attempting automatic fix for email_processor
+[2026-03-18 05:00:31] email_processor: 🚨 HITL ALERT: email_processor failed 125 consecutive times
+[2026-03-18 05:00:31] email_processor: Error: 
+[2026-03-18 05:00:31] email_processor: Retry attempt 2/2 after 30 seconds
+[2026-03-18 05:01:02] email_processor: Command failed with exit code: 64
+[2026-03-18 05:01:02] email_processor: Attempting automatic fix for email_processor
+[2026-03-18 05:01:02] email_processor: 🚨 HITL ALERT: email_processor failed 126 consecutive times
+[2026-03-18 05:01:02] email_processor: Error: 
+[2026-03-18 05:01:02] email_processor: Max retries exceeded. Giving up.

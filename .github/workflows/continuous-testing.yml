@@ -1,0 +1,298 @@
+name: Continuous Testing
+
+on:
+  push:
+    branches: [ main, develop, feature/* ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+
+jobs:
+  test:
+    name: Run Test Suite
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+        browser: [chrome, firefox]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps ${{ matrix.browser }}
+    
+    - name: Run regression tests
+      run: npm test -- tests/regression/regression.spec.ts
+      env:
+        CI: true
+    
+    - name: Run integration tests
+      run: npm test -- tests/integration/integration.spec.ts
+      env:
+        CI: true
+    
+    - name: Run performance tests
+      run: npm test -- tests/performance/performance.spec.ts
+      env:
+        CI: true
+        PERFORMANCE_THRESHOLDS: 'true'
+    
+    - name: Run compatibility tests
+      run: npx playwright test tests/compatibility/compatibility.spec.ts --project=${{ matrix.browser }}
+      env:
+        CI: true
+    
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results-${{ matrix.node-version }}-${{ matrix.browser }}
+        path: |
+          test-results/
+          coverage/
+        retention-days: 7
+    
+    - name: Upload coverage to Codecov
+      if: matrix.node-version == '18.x' && matrix.browser == 'chrome'
+      uses: codecov/codecov-action@v4
+      with:
+        file: ./coverage/lcov.info
+        flags: unittests
+  
+  performance-benchmark:
+    name: Performance Benchmark
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run performance benchmarks
+      run: npm run test:performance
+      env:
+        CI: true
+        PERFORMANCE_BENCHMARK: 'true'
+    
+    - name: Compare with baseline
+      run: npm run test:performance:compare
+      env:
+        CI: true
+        PERFORMANCE_BASELINE: 'main'
+    
+    - name: Upload performance report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: performance-report
+        path: performance-report.json
+        retention-days: 30
+  
+  compatibility-matrix:
+    name: Cross-Browser Compatibility
+    runs-on: ubuntu-latest
+    needs: test
+    
+    strategy:
+      matrix:
+        browser: [chrome, firefox, webkit]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Install Playwright
+      run: npx playwright install --with-deps ${{ matrix.browser }}
+    
+    - name: Run browser compatibility tests
+      run: npx playwright test tests/compatibility/compatibility.spec.ts --project=${{ matrix.browser }}
+      env:
+        CI: true
+    
+    - name: Upload compatibility results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: compatibility-${{ matrix.browser }}
+        path: test-results/
+        retention-days: 7
+  
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Run security audit
+      run: npm audit --audit-level=high
+    
+    - name: Run dependency check
+      uses: dependency-check/Dependency-Check_Action@main
+      with:
+        project: 'PRDForge'
+        path: '.'
+        format: 'HTML'
+        out: 'reports'
+    
+    - name: Upload security report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: security-report
+        path: reports/
+        retention-days: 30
+  
+  accessibility-audit:
+    name: Accessibility Audit
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run accessibility tests
+      run: npm run test:accessibility
+      env:
+        CI: true
+        ACCESSIBILITY_STANDARD: 'WCAG2AA'
+    
+    - name: Upload accessibility report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: accessibility-report
+        path: accessibility-report.json
+        retention-days: 30
+  
+  dashboard-update:
+    name: Update Test Dashboard
+    runs-on: ubuntu-latest
+    needs: [test, performance-benchmark, compatibility-matrix, security-scan, accessibility-audit]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Generate test dashboard
+      run: npm run test:dashboard
+      env:
+        CI: true
+        DASHBOARD_OUTPUT: 'test-dashboard.html'
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./test-dashboard
+        destination_dir: test-dashboard
+  
+  notify:
+    name: Notify on Failure
+    runs-on: ubuntu-latest
+    needs: [test, performance-benchmark, compatibility-matrix, security-scan, accessibility-audit]
+    if: failure()
+    
+    steps:
+    - name: Send Slack notification
+      uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    
+    - name: Create GitHub Issue
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const { data: issues } = await github.rest.issues.listForRepo({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'open',
+            labels: ['test-failure']
+          });
+          
+          // Check if issue already exists for this failure
+          const existingIssue = issues.find(issue => 
+            issue.title.includes('Test Suite Failure') &&
+            issue.body.includes(context.workflow)
+          );
+          
+          if (!existingIssue) {
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Test Suite Failure - ${new Date().toISOString().split('T')[0]}`,
+              body: `## Test Suite Failure\n\n**Workflow:** ${context.workflow}\n**Run ID:** ${context.runId}\n**Branch:** ${context.ref}\n**Commit:** ${context.sha}\n\n### Failed Jobs:\n${Object.keys(needs).filter(job => needs[job].result === 'failure').map(job => `- ${job}`).join('\n')}\n\n[View failed workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`,
+              labels: ['test-failure', 'bug', 'ci']
+            });
+          }
+    
+    - name: Update Jira Ticket
+      if: github.event_name == 'pull_request'
+      run: |
+        # Update Jira ticket DEV-23 with test failure information
+        echo "Updating Jira ticket DEV-23 with test failure..."
+        # This would call Jira API in real implementation
+
+# Workflow-level environment variables
+env:
+  NODE_ENV: test
+  TEST_TIMEOUT: 30000
+  PLAYWRIGHT_SLOWMO: 0
+  PLAYWRIGHT_HEADLESS: true

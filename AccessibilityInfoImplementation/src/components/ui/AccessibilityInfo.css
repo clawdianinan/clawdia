@@ -1,0 +1,200 @@
+.accessibility-info-container {
+  display: inline-block;
+  position: relative;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.accessibility-info-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 1px solid #d0d0d0;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+  outline: none;
+  user-select: none;
+}
+
+.accessibility-info-button:hover,
+.accessibility-info-button:focus {
+  background-color: #e0e0e0;
+  border-color: #b0b0b0;
+  color: #333;
+  transform: scale(1.1);
+}
+
+.accessibility-info-button:active {
+  background-color: #d0d0d0;
+  transform: scale(0.95);
+}
+
+.accessibility-info-icon {
+  line-height: 1;
+}
+
+/* Tooltip styles */
+.accessibility-info-tooltip {
+  position: absolute;
+  z-index: 1000;
+  background-color: #333;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltip-content {
+  position: relative;
+}
+
+.tooltip-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Tooltip positioning */
+.tooltip-top {
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-bottom {
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-left {
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip-right {
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Tooltip arrows */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow-top {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-color: #333 transparent transparent transparent;
+}
+
+.arrow-bottom {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #333 transparent;
+}
+
+.arrow-left {
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #333;
+}
+
+.arrow-right {
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #333 transparent transparent;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .accessibility-info-button {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .accessibility-info-container {
+    margin-left: 12px;
+  }
+
+  .accessibility-info-tooltip {
+    max-width: 250px;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  /* On mobile, always show tooltip on top to avoid off-screen issues */
+  .accessibility-info-tooltip {
+    bottom: calc(100% + 10px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .tooltip-arrow {
+    bottom: -8px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border-width: 8px 8px 0 8px !important;
+    border-color: #333 transparent transparent transparent !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .accessibility-info-button {
+    border: 2px solid #000;
+  }
+
+  .accessibility-info-tooltip {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .accessibility-info-button {
+    transition: none;
+  }
+
+  .accessibility-info-tooltip {
+    animation: none;
+  }
+}

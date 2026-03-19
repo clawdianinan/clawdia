@@ -1,0 +1,148 @@
+🌅 MORNING DIGEST — 2026-03-18 05:30 WAT
+
+📅 CALENDAR
+• Google Calendar access not configured (gog requires setup)
+
+📧 EMAIL SUMMARY
+• Running email check...
+log: Unknown subcommand 'SUCCESS'
+log: Unknown subcommand 'SUCCESS'
+log: Unknown subcommand 'SUCCESS'
+log: Unknown subcommand 'SUCCESS'
+log: Unknown subcommand 'SUCCESS'
+log: Unknown subcommand 'SUCCESS'
+log: Unknown subcommand 'WARN'
+
+✅ TODO LIST
+• Current todos:
+2 | in_progress | System | Configure Google Calendar access
+3 | pending | System | Set up iMessage delivery for updates
+4 | in_progress | System | Configure gog with Google Calendar access
+7 | pending | Temi | Update organizational charts
+14 | pending | Temi | Process email: Program KPIs
+15 | pending | Temi | Process email: Fwd: RE: IIH FINANCIALS
+17 | pending | Temi | Review Fwd: FACILITY MANAGEMENT -MONTLY REPORT FOR THE (JANUARY) 2026
+18 | pending | Temi | Extract action items from report
+20 | pending | External | External inquiry: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026)
+22 | pending | Temi | From Temi: Program KPIs
+23 | pending | Temi | From Temi: Fwd: RE: IIH FINANCIALS
+25 | pending | External | External: Partnership inquiry from Saving African Youths Dream
+26 | in_progress | IIH | IIH Venue/KWIRS: Hall booking for Mar 7 International Women’s Day event — KWIRS confirmed invoice received and says payment processing is underway; monitor for payment confirmation and lock booking logistics
+27 | in_progress | IIH | IIH: Program KPIs review
+28 | pending | IIH | IIH: Financial report review
+29 | in_progress | IIH | IHS Towers: Tidy IIH Job Descriptions/KRAs pack and confirm MD approval to share with Kazeem (per Suleman request)
+30 | in_progress | IIH | IIH: Review FEBRUARY 2026 Facility Department report from Kamil Ahmed (email received Mar 2, 9:56 AM) - Extract MD action items from monthly operations report
+31 | in_progress | IIH | IIH Finance: Premium Trust statement thread (Acct 0040117676) including MD-forwarded REQUEST FOR STATEMENT (Mar 3). Verify statement completeness, reconcile key transactions, and file in February reporting pack.
+32 | pending | Temi | Process email: Fwd: RE: IIH FINANCIALS
+34 | pending | Temi | Review Fwd: FACILITY MANAGEMENT -MONTLY REPORT FOR THE (JANUARY) 2026
+35 | pending | Temi | Extract action items from report
+36 | pending | External | Review email: Mail Delivery Status Notification (Delay)
+37 | pending | External | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026)
+40 | pending | IIH | Respond to SAYDI hall quotation request for Build-Tech Project (March-April 2026)
+41 | pending | IIH | Review SAYDI hall quotation request for Build-Tech Project (March-April 2026) - Email from contact@saydi.org
+42 | pending | IIH | Confirm with Temi about hosting Zoe Choosers Sex Education Conference in September 2026 - Email from maureen.okey@iih.ng
+43 | pending | IIH | Save and process attachments from New Roles for Hiring email from Temi - need to download attachments first
+44 | pending | IIH | Process Build-Tech Project partnership request from Saydi.org (March-April 2026)
+46 | pending | IIH | Review NJFP (Nigeria Jubilee Fellows Programme) host portal setup
+49 | pending | IIH | Review mail delivery delay notification from Zoho (email ID 292)
+50 | pending | Personal | Review co-founder proposal for US business opportunity (non-IIH work) - Email ID 152
+51 | in_progress | IIH | SAYDI Build-Tech Project hall booking - Confirmation sent March 2, 12:29 PM. Invoice provided. SAYDI responded at 2:17 PM requesting revised invoices (separate invoices for March 9 & 11 workshop days and April 3 exhibition). Need to prepare revised invoices and respond.
+52 | pending | IIH | Review: SAYDI Build-Tech Project hall quotation request (March 9-11 workshop, April 3 exhibition) - Email from contact@saydi.org
+54 | pending | System | Check mail delivery delay notification from Zoho - Possible email delivery issue
+58 | pending | IIH Programs | NJFP Host Portal account verified - review dashboard and explore fellow hosting opportunities
+59 | pending | IIH Business | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+60 | pending | IIH Business | Follow up on NJFP (Nigeria Jubilee Fellows Programme) host account verification and explore fellowship hosting opportunities
+61 | pending | IIH IT Infrastructure | Follow up on WiFi router config - Item 6.3 outstanding (MTN technical support for API restrictions)
+62 | pending | IIH | Respond to Saydi.org partnership request for Build-Tech Project (March-April 2026)
+63 | in_progress | IIH | IIH IT Infrastructure: MTN 155MB upgrade ticket follow-up (latest email Mar 3, 7:06 PM) requests customer feedback before closure. Coordinate Nasiru/Temilola to confirm current service stability and send explicit keep-open/close instruction to MTN NSMC.
+64 | pending | IIH | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+65 | pending | IIH | Review Maidguri Hub logo design from forwarded email
+66 | in_progress | IIH HR | Process new roles for hiring requirements from Temi email - New attachment with updated roles document
+68 | pending | IIH | Respond to SAYDI hall quotation & partnership request for Build-Tech Project (March-April 2026)
+69 | pending | IIH | Follow up on WIFI Router Config status with Nasiru Muhammed (MTN technical support needed for API restrictions)
+70 | pending | IIH Operations | Respond to SAYDI hall quotation request for Build-Tech Project (March 9-11 workshop & April 3 exhibition)
+84 | in_progress | IIH | IHS Towers: Program Governance draft feedback received from Suleman — reinstate/justify removed KPIs (Placement Rate, Instruction Quality Score, Cost per Participant, Incubation Conversion) and prepare final MD-reviewed version for onward sharing
+85 | pending | Email Review | Review email: Important Tax Compliance Update: Rent Allowance & TIN Requirement from Human Resources
+93 | in_progress | IIH | HIGH PRIORITY: Process IIH Archive Prompt - Ingest 13 folders starting with 00-CONTEXT.md and 01-HISTORY.md (new email from Temi)
+94 | in_progress | IIH Partnerships | Review IHS Towers consent agreement for Maiduguri Hub logo usage - draft email response with feedback on branding/IP concerns
+106 | pending | Personal | Update Namecheap payment details for tracmemo.com domain renewal (deadline: March 29, 2026) - Credit card disabled alert
+107 | pending | System | Fix GitHub Actions workflow failures for clawdianinan/clawdia repository - Upstream Sync (Clawdia) failing. New notification received March 2, 3:32 PM (email ID 388)
+108 | pending | System | Review Google account security alerts and settings for clawdianinan@gmail.com
+134 | in_progress | IIH HR | Review Staff Welfare Loan request from Damilare Oloyede (Graphics & Visual Designer)
+141 | pending | IIH | High Priority: Process IIH archive ingestion - 13 folders starting with context and history files
+142 | pending | IIH IT Infrastructure | Follow up: WiFi router config - Item 6.3 outstanding, waiting for MTN technical support for API restrictions
+143 | in_progress | IIH Partnerships | Respond to SAYDI partnership request: Build-Tech Project hall usage (March 9-11 workshop, April 3 exhibition)
+144 | in_progress | IIH Finance | IHS Towers / Finance: Review Suleman analysis file IIH 2026 Budget v2 2026 v 2025, extract MD decision points, and prepare response draft with next actions
+149 | pending | IIH IT Infrastructure | Follow up on WiFi router config - Item 6.3 outstanding (MTN technical support for API restrictions) - Email from Nasiru Muhammed
+151 | pending | IIH Operations | Confirm email signature implementation for all Clawdia emails - Zoho signature test email received from Temi for review
+168 | in_progress | IIH | Update IIH organogram with latest structure - New email from Temi with attachments (drawio, jpg, pdf)
+173 | in_progress | IIH Finance | done
+175 | pending | Email Review | Review email: Mail Delivery Status Notification (Delay) from mailer-daemon@mail.zoho.com
+180 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Saving Afican Youths Dream Initiative
+208 | in_progress | IIH Operations | IIH Operations: KW-IRS Hall Booking (Mar 7) — client confirmed invoice received and payment is being processed (email reply Mar 3, 3:20 PM). Track payment confirmation and keep slot reserved until funds reflect.
+266 | in_progress | IIH Finance | Review IIH 2026 Budget (v2.1 final + Mar 4 attachment: 2026 vs 2025 analysis from Suleman/IHS) and prepare MD decision notes
+267 | pending | IIH Operations | Confirm mailbox delegation notification from Temi Kolawole - System email about delegated mailbox access
+284 | in_progress | IIH Business | IIH Business: Private office inquiry (Matthew Adekola/Landculture) acknowledged by Maureen; keep on waitlist and notify when space opens
+353 | pending | IIH Finance | IIH Finance: Track February 2026 bank statement request for Ilorin Tech Park Ltd (Acct 1310169029) sent to Zenith Bank at 10:30 AM - Statement received via email from Temi at 3:05 PM, keep attachment for February IIH report processing
+354 | pending | IIH IT Infrastructure | IIH IT: Review ZeptoMail/SMTP deliverability - hard bounces and undelivered test mail (421 Host not reachable to test@example.com). Validate recipient domains and sending config to avoid account block.
+355 | pending | IIH Business | IIH Business Development: Review Cosine AI coding engineer proposal from Yang Li (co-founder) - SOC 2 Type II compliant, enterprise AI engineer with strong ROI metrics; evaluate for IIH engineering team use
+384 | in_progress | IIH Finance | done
+385 | pending | IIH Operations | Review February 2026 Facility Department Report from Kamil Ahmed - Extract MD action items from monthly operations report (PDF attached)
+398 | pending | IIH Partnerships | URGENT: Review CcHUB 2026 Partnership Proposal for IIH - Strategic partnership proposal from Jude Adejuwon (CcHUB). Zumah Yahaya responded asking for more specific outcomes in job creation and economic empowerment across impact states. Call occurred at 2:45 PM today (March 2). Follow up needed on call outcomes and next steps.
+399 | pending | Email Review | Review email: Re: Request for Hall Quotation & Partnership – Build-Tech Project (March–April 2026) from Admin & Front Desk
+404 | pending | IIH Internal | Internal IIH matter: ORBIT MCP Access — AI Agent Connection Details
+405 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT — Your Super Admin Account
+406 | pending | IIH Internal | Internal IIH matter: Welcome to ORBIT - Please Set Your Password
+452 | pending | IIH Operations | URGENT: Temporary Hub Closure March 5-6, 2026 for State Event with Governor - Adebola Oladipo notified Learn2Earn about alternative program days (March 7 & 14). Requires MD confirmation and coordination with all program teams.
+466 | pending | IIH Partnerships | Review InnovatHER STEAM Initiative partnership venue scheduling - Love for Change Women's Foundation requesting alternative dates (Friday June 19 or June 26) for workshop. Adebola Oladipo previously indicated IIH not open weekends, suggested midterm break dates. Requires MD decision on alternative weekday dates.
+503 | in_progress | IIH Security | Review security report from Rohi International Guards regarding armored cable theft incident (Jan 26, 2026) - Temi forwarded response at 2:49 PM asking to check if response is adequate (attachments included). Need to analyze security report and provide assessment.
+511 | in_progress | Temi | Reach Hon Commissioner for Health about MDA website
+512 | pending | Temi | Complete Ministry of Health website content questionnaire
+513 | in_progress | Temi | Call Toba, GM KWASAA back to meet this evening
+562 | pending | IIH Finance | done
+563 | pending | IIH Finance | done
+618 | in_progress | IIH Finance | Process Zenith Bank statement for February IIH report - Email from Temi at 3:05 PM with statement attachment. Keep attachment for February IIH report processing.
+681 | in_progress | IIH Operations | Send SAYDi revised invoices (March 9 & 11 workshop, April 3 exhibition) - Invoices ready for review
+732 | pending | IIH Partnerships | DBN Entrepreneurship Training Programme (ETP): Follow up on social media collaboration approval - DBN has approved design materials and requested collaboration on social media posting. Need MD confirmation on coordination approach.
+733 | pending | IIH Finance | done
+807 | pending | Email Review | Review email: Undelivered Mail Returned to Sender from mailer-daemon@mail.zoho.com
+880 | in_progress | Email Review | IIH Partnerships: NYSC Digital Literacy Workshop proposal - prepare MD recommendation on venue support terms (date mismatch in mail says 2025; needs clarification), subsidy position, and stakeholder value
+898 | in_progress | IIH Finance | IIH Finance: Review BOA Foods Feb 2026 cafeteria sales and drinks profit-sharing attachments (MD-forwarded Mar 3) and prepare MD decision note on settlement and variance checks.
+899 | pending | IIH Operations | IIH Operations: Approve/decline diesel purchase request for Lens for Good event (250L @ ₦990 = ₦247,500) and, if approved, route payment to Abu Firdaus Enterprise (Polaris 4091321032)
+900 | in_progress | IIH Finance | IIH Compliance/Finance: NSITF Feb 2026 debit (RRR 1914-3858-3895, N123,540.87) — Zenith sent NSITF.pdf proof (Mar 3, 3:39 PM). Verify debit in bank statement, archive signed authorization + proof, then close compliance trail.
+901 | in_progress | IIH Partnerships | IIH Partnerships: Prepare MD brief for Wootlab/Codextel/ILAB consortium contract negotiation meeting (Mar 4, 1:00 PM, Teams) with mandate, red lines, and decision asks
+902 | pending | Email Review | Review email: Partnership Opportunity - NYSC Digital Literacy Workshop at Ilorin Innovation Hub from Digital Literacy CDS Group Ilorin South Zone
+963 | in_progress | IIH Partnerships | IIH Partnerships: Lens for Good workshop venue (Mar 5-6) — invoice already sent by Maureen on Mar 4; next: track client confirmation/payment and prep MD brief on commercial terms + support commitments (draft only, no outbound send).
+1013 | in_progress | IIH Finance | Review and approve Noble Drinks bottled water payment requests (First Bank 3212276555 - OLALUWOYE JUMOKE OLUFUNKE): Cafeteria request (10 packs, ₦17,000) + VIP Lounge request from Maureen (7 packs, ₦11,900, Mar 4). Prepare one MD decision note and finance instruction draft.
+1014 | pending | IIH Operations | IHS: Ilorin Innovation Hub Operations Update meeting for Mar 4 4:00 PM was canceled by Suleman; confirm replacement time/reschedule and update attendance priorities
+1075 | in_progress | IIH HR | IIH HR: Kamil Ahmed leave request (Mar 9-20, Itikaf) now has HR policy response (needs 2 months annual or 3-day/5-day casual). Prepare MD decision: strict policy decline vs exceptional approval with coverage plan.
+1127 | pending | IIH Finance | IIH Finance: Review and approve office supplies fund request for Jan-Feb 2026 (N300,000 to Okey Maureen / Opay 9056138238); validate support docs and issue finance instruction draft
+1140 | pending | IIH Partnerships | IIH Partnerships: Review and propose MD follow-up on Henry Dauphin Web Summit Follow-up email (received Mar 4, 2:10 PM); extract asks, recommend response stance, and prepare draft reply for approval
+1238 | in_progress | IIH Finance | IIH Finance/Compliance: Premium Trust sent successful RRR receipt for Ilorin Tech Park (attachment: 1714-1924-1877---succesful RRR.pdf). Verify transaction reference against internal payment register and file receipt in compliance archive; prepare MD-facing status note (no outbound send).
+
+⏰ REMINDERS
+• Today's reminders:
+[1] [ ] Complete Paystack Registration [Tasks] — 18 Jun 2025 at 00:00 priority=medium
+[2] [ ] Register for MoniePoint [Tasks] — 19 Jun 2025 at 00:00 priority=medium
+[3] [ ] Address Roof Leakage with MCT & Geniserve [Tasks] — 21 Jun 2025 at 00:00 priority=high
+[4] [ ] Prepare Staff Training Material [Tasks] — 22 Jun 2025 at 00:00 priority=medium
+
+• Overdue reminders:
+[1] [ ] Complete Paystack Registration [Tasks] — 18 Jun 2025 at 00:00 priority=medium
+[2] [ ] Register for MoniePoint [Tasks] — 19 Jun 2025 at 00:00 priority=medium
+[3] [ ] Address Roof Leakage with MCT & Geniserve [Tasks] — 21 Jun 2025 at 00:00 priority=high
+[4] [ ] Prepare Staff Training Material [Tasks] — 22 Jun 2025 at 00:00 priority=medium
+
+🚨 ACTION ITEMS
+1. Review priority emails
+2. Address overdue reminders
+3. Check calendar for today's events
+4. Update todo list as needed
+
+📱 Delivery: iMessage
+⏰ Generated: 2026-03-18 05:30 WAT
+MODEL_RESILIENCE_CHECK: Running model availability test
+Testing model connectivity...
+MODEL_RESILIENCE_WARN: Gateway health check failed - models may be unavailable
+FALLBACK_RECOMMENDATION: Switch to deepseek/deepseek-chat or openrouter/auto
+• Model check completed

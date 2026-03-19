@@ -1,5 +1,5 @@
 # Process Health Dashboard
-**Last Updated:** 2026-03-18 03:00:00
+**Last Updated:** 2026-03-18 05:00:01
 
 ## 📊 System Status
 
@@ -7,33 +7,33 @@
 | Job | Status | Last Run | Consecutive Failures | Notes |
 |-----|--------|----------|---------------------|-------|
 | Morning Digest | failed | No log | 3 | 🚨 CRITICAL: 3 consecutive failures |
-| Email Processor | failed | Never | 117 | 🚨 CRITICAL: 117 consecutive failures |
-| Health Monitor | Unknown | 2026-03-18 03:00:00 | 0 |  |
-| Heartbeat | Unknown | 2026-03-18 03:00:00 | 0 |  |
+| Email Processor | failed | Never | 123 | 🚨 CRITICAL: 123 consecutive failures |
+| Health Monitor | Unknown | 2026-03-18 05:00:01 | 0 |  |
+| Heartbeat | Unknown | 2026-03-18 05:00:01 | 0 |  |
 | Weekly Backup | Unknown | Never | 0 |  |
 
 ## 🔧 Background Processes
 
 | Process | Status | PID | Uptime |
 |---------|--------|-----|--------|
-| OpenClaw Gateway | ✅ Running | 6534,33617,33619,33646,33647,33664,33677,33679 | 22:23:13 |
-| Node.js Processes | ✅ Running | 2439,2440,2453,10312,10313,14359,14476,98023,98065 | 01-00:03:07 |
+| OpenClaw Gateway | ✅ Running | 6534,39334,39355 | 01-00:23:14 |
+| Node.js Processes | ✅ Running | 2439,2440,2453,10312,10313,14359,14476,98023,98065 | 01-02:03:08 |
 | Python Scripts | ❌ Stopped | None |  |
 
 ## 📈 Health Metrics
 
 ### System Resources
 ```
-MemRegions: 725701 total, 6636M resident, 372M private, 1688M shared.
-PhysMem: 15G used (2304M wired, 1546M compressor), 254M unused.
-VM: 325T vsize, 5361M framework vsize, 749593(0) swapins, 1243260(0) swapouts.
-Networks: packets: 28009826/18G in, 64830065/56G out.
-Disks: 12760348/624G read, 7418657/157G written.
+MemRegions: 688071 total, 5905M resident, 312M private, 1584M shared.
+PhysMem: 15G used (2046M wired, 2584M compressor), 85M unused.
+VM: 331T vsize, 5361M framework vsize, 784295(0) swapins, 1243283(0) swapouts.
+Networks: packets: 28734518/18G in, 66004964/57G out.
+Disks: 13850713/653G read, 7764038/162G written.
 ```
 
 ### Disk Usage
 ```
-/dev/disk3s1s1   228Gi    15Gi   100Gi    13%    453k  1.0G    0%   /
+/dev/disk3s1s1   228Gi    15Gi   101Gi    13%    453k  1.1G    0%   /
 ```
 
 ### Memory Usage
@@ -41,37 +41,37 @@ Disks: 12760348/624G read, 7418657/157G written.
 The system has 17179869184 (1048576 pages with a page size of 16384).
 
 Stats: 
-Pages free: 4552 
-Pages purgeable: 10259 
-Pages purged: 2103367 
+Pages free: 5495 
+Pages purgeable: 9087 
+Pages purged: 2182775 
 
 Swap I/O:
-Swapins: 749593 
-Swapouts: 1243260 
+Swapins: 784295 
+Swapouts: 1243283 
 
 Page Q counts:
-Pages active: 381882 
-Pages inactive: 368866 
-Pages speculative: 12478 
+Pages active: 357673 
+Pages inactive: 353958 
+Pages speculative: 315 
 Pages throttled: 0 
-Pages wired down: 147409 
+Pages wired down: 130910 
 
 Compressor Stats:
-Pages used by compressor: 98955 
-Pages decompressed: 33758600 
-Pages compressed: 41545147 
+Pages used by compressor: 165375 
+Pages decompressed: 34825887 
+Pages compressed: 42868896 
 
 File I/O:
-Pageins: 16988136 
-Pageouts: 167690 
+Pageins: 18165961 
+Pageouts: 171817 
 
-System-wide memory free percentage: 75%
+System-wide memory free percentage: 70%
 ```
 
 ## 🚨 Alerts
 
-- **email_processor**: 118 consecutive failures - Requires immediate attention
-- **regular_update**: 39 consecutive failures - Requires immediate attention
+- **email_processor**: 124 consecutive failures - Requires immediate attention
+- **regular_update**: 42 consecutive failures - Requires immediate attention
 - **morning_digest**: 3 consecutive failures - Requires immediate attention
 
 ## 📋 Recommendations

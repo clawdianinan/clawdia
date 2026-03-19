@@ -1,0 +1,259 @@
+{
+  "name": "Invite Missing Slack Agents",
+  "description": "Automate inviting 4 missing agents to Slack workspace via browser",
+  "steps": [
+    {
+      "type": "app",
+      "action": "launch",
+      "app": "Safari",
+      "open": "https://clawdiasagents.slack.com"
+    },
+    {
+      "type": "sleep",
+      "duration": 5000
+    },
+    {
+      "type": "see",
+      "app": "Safari",
+      "annotate": true,
+      "path": "/tmp/slack-login.png"
+    },
+    {
+      "type": "comment",
+      "text": "Step 1: Log into Slack (if not already logged in)"
+    },
+    {
+      "type": "click",
+      "app": "Safari",
+      "on": "email-input",
+      "fallback": {
+        "type": "type",
+        "app": "Safari",
+        "text": "clawdianinan@gmail.com",
+        "target": "first-text-field"
+      }
+    },
+    {
+      "type": "press",
+      "app": "Safari",
+      "key": "tab"
+    },
+    {
+      "type": "type",
+      "app": "Safari",
+      "text": "[PASSWORD_HERE]",
+      "secret": true
+    },
+    {
+      "type": "press",
+      "app": "Safari",
+      "key": "return"
+    },
+    {
+      "type": "sleep",
+      "duration": 3000
+    },
+    {
+      "type": "comment",
+      "text": "Step 2: Navigate to Invite People page"
+    },
+    {
+      "type": "see",
+      "app": "Safari",
+      "annotate": true,
+      "path": "/tmp/slack-workspace.png"
+    },
+    {
+      "type": "click",
+      "app": "Safari",
+      "on": "workspace-menu",
+      "fallback": {
+        "type": "hotkey",
+        "keys": "cmd,k"
+      }
+    },
+    {
+      "type": "type",
+      "app": "Safari",
+      "text": "invite people",
+      "delay": 100
+    },
+    {
+      "type": "press",
+      "app": "Safari",
+      "key": "return"
+    },
+    {
+      "type": "sleep",
+      "duration": 2000
+    },
+    {
+      "type": "comment",
+      "text": "Step 3: Invite 4 missing agents"
+    },
+    {
+      "type": "see",
+      "app": "Safari",
+      "annotate": true,
+      "path": "/tmp/slack-invite.png"
+    },
+    {
+      "type": "click",
+      "app": "Safari",
+      "on": "invite-email-input",
+      "fallback": {
+        "type": "click",
+        "coords": "300,400"
+      }
+    },
+    {
+      "type": "type",
+      "app": "Safari",
+      "text": "clawdianinan+ruth@gmail.com",
+      "delay": 100
+    },
+    {
+      "type": "press",
+      "app": "Safari",
+      "key": "return"
+    },
+    {
+      "type": "type",
+      "app": "Safari",
+      "text": "clawdianinan+ngozi@gmail.com",
+      "delay": 100
+    },
+    {
+      "type": "press",
+      "app": "Safari",
+      "key": "return"
+    },
+    {
+      "type": "type",
+      "app": "Safari",
+      "text": "clawdianinan+cypher@gmail.com",
+      "delay": 100
+    },
+    {
+      "type": "press",
+      "app": "Safari",
+      "key": "return"
+    },
+    {
+      "type": "type",
+      "app": "Safari",
+      "text": "clawdianinan+morpheus@gmail.com",
+      "delay": 100
+    },
+    {
+      "type": "press",
+      "app": "Safari",
+      "key": "return"
+    },
+    {
+      "type": "sleep",
+      "duration": 1000
+    },
+    {
+      "type": "comment",
+      "text": "Step 4: Send invitations"
+    },
+    {
+      "type": "click",
+      "app": "Safari",
+      "on": "send-invitations-button",
+      "fallback": {
+        "type": "click",
+        "coords": "500,500"
+      }
+    },
+    {
+      "type": "sleep",
+      "duration": 2000
+    },
+    {
+      "type": "comment",
+      "text": "Step 5: Create missing channels"
+    },
+    {
+      "type": "hotkey",
+      "keys": "cmd,k"
+    },
+    {
+      "type": "type",
+      "app": "Safari",
+      "text": "create a channel",
+      "delay": 100
+    },
+    {
+      "type": "press",
+      "app": "Safari",
+      "key": "return"
+    },
+    {
+      "type": "sleep",
+      "duration": 1000
+    }
+  ],
+  "channels": [
+    {
+      "name": "development",
+      "description": "For Trinity, Morpheus, Cypher",
+      "private": false,
+      "steps": [
+        {
+          "type": "type",
+          "app": "Safari",
+          "text": "development",
+          "target": "channel-name-input"
+        },
+        {
+          "type": "click",
+          "app": "Safari",
+          "on": "create-channel-button"
+        },
+        {
+          "type": "sleep",
+          "duration": 1000
+        }
+      ]
+    },
+    {
+      "name": "design",
+      "description": "For Fela",
+      "private": false,
+      "steps": [
+        {
+          "type": "hotkey",
+          "keys": "cmd,k"
+        },
+        {
+          "type": "type",
+          "app": "Safari",
+          "text": "create a channel",
+          "delay": 100
+        },
+        {
+          "type": "press",
+          "app": "Safari",
+          "key": "return"
+        },
+        {
+          "type": "type",
+          "app": "Safari",
+          "text": "design",
+          "target": "channel-name-input"
+        },
+        {
+          "type": "click",
+          "app": "Safari",
+          "on": "create-channel-button"
+        }
+      ]
+    }
+  ],
+  "fallback": {
+    "type": "comment",
+    "text": "If automation fails, manual steps: 1. Log into clawdiasagents.slack.com 2. Click 'Invite people' 3. Add 4 emails 4. Create 7 channels"
+  }
+}

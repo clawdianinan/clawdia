@@ -1,0 +1,41 @@
+--- DEV-27 ---
+Checking ticket...
+❌ Ticket not found or access denied
+
+--- DEV-28 ---
+Checking ticket...
+❌ Ticket not found or access denied
+
+--- DEV-29 ---
+Checking ticket...
+❌ Ticket not found or access denied
+
+--- DEV-30 ---
+Checking ticket...
+❌ Ticket not found or access denied
+
+--- DEV-31 ---
+Checking ticket...
+❌ Ticket not found or access denied
+
+--- DEV-32 ---
+Checking ticket...
+❌ Ticket not found or access denied
+
+--- DEV-33 ---
+Checking ticket...
+❌ Ticket not found or access denied
+
+--- DEV-34 ---
+Checking ticket...
+❌ Ticket not found or access denied
+
+=========================================
+📊 FINAL RESULTS
+   ✅ Success: 0
+   ❌ Failed: 8
+   📋 Total: 8
+=========================================
+❌ NO TICKETS WERE UPDATED
+
+📄 Detailed log: /Users/clawdia/.openclaw/workspace/jira-update-20260318-1900.log

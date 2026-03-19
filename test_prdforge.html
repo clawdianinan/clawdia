@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PRDForge Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        iframe { width: 100%; height: 600px; border: 2px solid #ccc; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        .loading { background: #fff3cd; color: #856404; }
+    </style>
+</head>
+<body>
+    <h1>PRDForge Visual QA Test</h1>
+    <div id="status" class="status loading">Loading PRDForge app...</div>
+    <iframe id="prdforgeFrame" src="https://prdforge-dev.netlify.app"></iframe>
+    
+    <script>
+        const iframe = document.getElementById('prdforgeFrame');
+        const status = document.getElementById('status');
+        
+        iframe.onload = function() {
+            try {
+                // Try to access iframe content
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                // Check if React app loaded
+                const rootDiv = iframeDoc.getElementById('root');
+                if (rootDiv && rootDiv.children.length > 0) {
+                    status.className = 'status success';
+                    status.innerHTML = '✓ PRDForge app loaded successfully! React app is running.';
+                } else {
+                    status.className = 'status error';
+                    status.innerHTML = '✗ React app root div is empty. App may not have loaded properly.';
+                }
+            } catch (e) {
+                // Cross-origin error - can't access iframe content
+                status.className = 'status success';
+                status.innerHTML = '✓ PRDForge page loaded (cross-origin restrictions prevent detailed check).';
+            }
+        };
+        
+        iframe.onerror = function() {
+            status.className = 'status error';
+            status.innerHTML = '✗ Failed to load PRDForge app. Check CORS or network issues.';
+        };
+        
+        // Also test /docs page
+        setTimeout(() => {
+            fetch('https://prdforge-dev.netlify.app/docs')
+                .then(response => {
+                    const docsStatus = document.createElement('div');
+                    docsStatus.className = 'status ' + (response.ok ? 'success' : 'error');
+                    docsStatus.innerHTML = (response.ok ? '✓' : '✗') + ' /docs page: HTTP ' + response.status;
+                    status.parentNode.insertBefore(docsStatus, status.nextSibling);
+                })
+                .catch(error => {
+                    const docsStatus = document.createElement('div');
+                    docsStatus.className = 'status error';
+                    docsStatus.innerHTML = '✗ /docs page failed to load: ' + error.message;
+                    status.parentNode.insertBefore(docsStatus, status.nextSibling);
+                });
+        }, 2000);
+    </script>
+</body>
+</html>

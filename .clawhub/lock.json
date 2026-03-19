@@ -196,6 +196,74 @@
     "content-marketing": {
       "version": "1.0.0",
       "installedAt": 1773564915008
+    },
+    "cli-anything": {
+      "version": "0.1.0",
+      "installedAt": 1773821599771
+    },
+    "accli": {
+      "version": "1.0.0",
+      "installedAt": 1773821895626
+    },
+    "brainz-calendar": {
+      "version": "1.0.0",
+      "installedAt": 1773821898138
+    },
+    "1password": {
+      "version": "1.0.1",
+      "installedAt": 1773821900711
+    },
+    "domain-trust-check": {
+      "version": "1.2.2",
+      "installedAt": 1773821903488
+    },
+    "apple-notes": {
+      "version": "1.0.0",
+      "installedAt": 1773821905948
+    },
+    "apple-health-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773821908047
+    },
+    "apple-find-my-local": {
+      "version": "1.0.2",
+      "installedAt": 1773821914667
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1773821934641
+    },
+    "legaldoc-ai": {
+      "version": "1.0.0",
+      "installedAt": 1773821972701
+    },
+    "academic-deep-research": {
+      "version": "1.0.0",
+      "installedAt": 1773821975687
+    },
+    "security-audit-toolkit": {
+      "version": "1.0.0",
+      "installedAt": 1773821979622
+    },
+    "ai-video-script": {
+      "version": "1.0.0",
+      "installedAt": 1773821981810
+    },
+    "market-research": {
+      "version": "1.0.1",
+      "installedAt": 1773821984229
+    },
+    "meeting-to-action": {
+      "version": "1.0.0",
+      "installedAt": 1773821987468
+    },
+    "python-dataviz": {
+      "version": "1.0.0",
+      "installedAt": 1773822001633
+    },
+    "beancount-skill": {
+      "version": "0.1.0",
+      "installedAt": 1773822017108
     }
   }
 }

@@ -1,0 +1,9 @@
+{
+  "id": "debugging-assistant",
+  "name": "Debugging Assistant",
+  "description": "Systematic debugging methodology for runtime issues",
+  "trigger": "debug, fix error, troubleshooting, why is this broken",
+  "version": "1.0.0",
+  "created": "2026-03-19T05:40:08.807Z",
+  "author": "OpenClaw Integration"
+}

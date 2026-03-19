@@ -1,0 +1,602 @@
+/**
+ * Delightful Moments Animations
+ * 
+ * CSS animations for achievements, milestones, and Easter eggs.
+ */
+
+/* Confetti Animation */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: confetti-fall 2s ease-in forwards;
+}
+
+/* Fireworks Animation */
+@keyframes firework-explode {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100px) scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-200px) scale(0);
+    opacity: 0;
+  }
+}
+
+.firework {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  animation: firework-explode 1.5s ease-out forwards;
+}
+
+/* Stars Animation */
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.star {
+  position: fixed;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  z-index: 9999;
+  pointer-events: none;
+  animation: star-twinkle 2s ease-in-out infinite;
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #ffd700, #ff6b6b);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  animation: sparkle 1s ease-out forwards;
+}
+
+/* Glow Animation */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Progress Bar Animation */
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width, 100%);
+  }
+}
+
+.progress-animation {
+  animation: progress-fill 1s ease-out forwards;
+}
+
+/* Unlock Animation */
+@keyframes unlock {
+  0% {
+    transform: scale(0.5) rotate(-90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.unlock-animation {
+  animation: unlock 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Reveal Animation */
+@keyframes reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.reveal-animation {
+  animation: reveal 0.6s ease-out forwards;
+}
+
+/* Notification Animations */
+@keyframes notification-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes notification-slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.notification {
+  animation: notification-slide-in 0.3s ease-out forwards;
+}
+
+.notification.exiting {
+  animation: notification-slide-out 0.3s ease-in forwards;
+}
+
+/* Achievement Badge Animation */
+@keyframes badge-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.badge-bounce {
+  animation: badge-bounce 0.5s ease-in-out;
+}
+
+/* Milestone Counter Animation */
+@keyframes counter-increment {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    color: var(--color-success);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.counter-increment {
+  animation: counter-increment 0.3s ease-out;
+}
+
+/* Easter Egg Hatch Animation */
+@keyframes egg-hatch {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.egg-hatch {
+  animation: egg-hatch 0.8s ease-out;
+}
+
+/* Celebration Text Animation */
+@keyframes celebration-text {
+  0% {
+    transform: scale(0.5) translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.celebration-text {
+  animation: celebration-text 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Subtle Float Animation */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.subtle-float {
+  animation: subtle-float 3s ease-in-out infinite;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .confetti,
+  .firework,
+  .star,
+  .sparkle,
+  .glow,
+  .progress-animation,
+  .unlock-animation,
+  .reveal-animation,
+  .notification,
+  .badge-bounce,
+  .counter-increment,
+  .egg-hatch,
+  .celebration-text,
+  .subtle-float {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .notification {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Performance Optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Notification Styles */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+}
+
+.notification-item {
+  background: var(--color-surface);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-left: 4px solid;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s var(--motion-easing-standard);
+}
+
+.notification-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: var(--color-text);
+}
+
+.notification-message {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* Achievement Panel */
+.achievement-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: var(--color-surface);
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+  z-index: 9998;
+  transform: translateX(100%);
+  transition: transform 0.3s var(--motion-easing-standard);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.achievement-panel.open {
+  transform: translateX(0);
+}
+
+.achievement-item {
+  background: var(--color-background);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s var(--motion-easing-standard);
+}
+
+.achievement-item.unlocked {
+  border-color: var(--color-success);
+  background: rgba(var(--color-success-rgb), 0.05);
+}
+
+.achievement-item.locked {
+  opacity: 0.6;
+  filter: grayscale(0.5);
+}
+
+.achievement-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.achievement-description {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.achievement-secret {
+  font-size: 10px;
+  color: var(--color-warning);
+  font-style: italic;
+}
+
+/* Milestone Display */
+.milestone-display {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: var(--color-surface);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.milestone-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.milestone-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.milestone-progress {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.milestone-bar {
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.milestone-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 3px;
+  transition: width 0.5s var(--motion-easing-standard);
+}
+
+.milestone-reached .milestone-fill {
+  background: var(--color-success);
+}
+
+/* Easter Egg Display */
+.easter-egg-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  padding: 16px;
+}
+
+.easter-egg-item {
+  background: var(--color-surface);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  border: 2px dashed var(--color-border);
+  transition: all 0.2s var(--motion-easing-standard);
+  cursor: pointer;
+}
+
+.easter-egg-item.found {
+  border-color: var(--color-warning);
+  border-style: solid;
+  background: rgba(var(--color-warning-rgb), 0.05);
+}
+
+.easter-egg-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.easter-egg-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.easter-egg-name {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.easter-egg-status {
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+}
+
+/* Toggle Button */
+.delight-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 5px 20px rgba(var(--color-primary-rgb), 0.3);
+  z-index: 9997;
+  transition: all 0.3s var(--motion-easing-standard);
+}
+
+.delight-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.4);
+}
+
+.delight-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Stats Display */
+.delight-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  background: var(--color-background);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

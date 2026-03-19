@@ -1,0 +1,218 @@
+name: Jira Agent Integration
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '**.md'
+      - '**.js'
+      - '**.ts'
+      - '**.py'
+      - '**.java'
+      - '**.go'
+      - '**.rb'
+      - '**.php'
+  pull_request:
+    branches: [ main ]
+    types: [opened, synchronize, reopened, closed]
+  issues:
+    types: [opened, edited, closed]
+  issue_comment:
+    types: [created, edited]
+  schedule:
+    # Run every 6 hours to sync status
+    - cron: '0 */6 * * *'
+
+env:
+  JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+  JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+  JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  jira-sync:
+    name: Sync GitHub ↔ Jira
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: |
+        npm install -g @actions/core @actions/github octokit
+        npm install axios
+
+    - name: Sync PR to Jira
+      if: github.event_name == 'pull_request'
+      id: sync-pr
+      run: |
+        node .github/scripts/jira-sync-pr.js
+      env:
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+        PR_TITLE: ${{ github.event.pull_request.title }}
+        PR_BODY: ${{ github.event.pull_request.body }}
+        PR_STATE: ${{ github.event.pull_request.state }}
+        PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+
+    - name: Sync Issue to Jira
+      if: github.event_name == 'issues'
+      id: sync-issue
+      run: |
+        node .github/scripts/jira-sync-issue.js
+      env:
+        ISSUE_NUMBER: ${{ github.event.issue.number }}
+        ISSUE_TITLE: ${{ github.event.issue.title }}
+        ISSUE_BODY: ${{ github.event.issue.body }}
+        ISSUE_STATE: ${{ github.event.issue.state }}
+        ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+
+    - name: Sync Comment to Jira
+      if: github.event_name == 'issue_comment'
+      id: sync-comment
+      run: |
+        node .github/scripts/jira-sync-comment.js
+      env:
+        COMMENT_ID: ${{ github.event.comment.id }}
+        COMMENT_BODY: ${{ github.event.comment.body }}
+        COMMENT_AUTHOR: ${{ github.event.comment.user.login }}
+        ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+    - name: Periodic Jira Status Sync
+      if: github.event_name == 'schedule'
+      id: periodic-sync
+      run: |
+        node .github/scripts/jira-periodic-sync.js
+
+  agent-assignment:
+    name: Auto-assign to Agent
+    runs-on: ubuntu-latest
+    needs: jira-sync
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Analyze and Assign
+      id: assign-agent
+      run: |
+        node .github/scripts/agent-assignment.js
+      env:
+        EVENT_TYPE: ${{ github.event_name }}
+        EVENT_PAYLOAD: ${{ toJson(github.event) }}
+
+    - name: Create Jira Issue for Agent Work
+      if: steps.assign-agent.outputs.agent-assigned == 'true'
+      id: create-jira-issue
+      run: |
+        node .github/scripts/create-agent-jira-issue.js
+      env:
+        AGENT_NAME: ${{ steps.assign-agent.outputs.agent-name }}
+        AGENT_ROLE: ${{ steps.assign-agent.outputs.agent-role }}
+        TASK_TYPE: ${{ steps.assign-agent.outputs.task-type }}
+        TASK_DESCRIPTION: ${{ steps.assign-agent.outputs.task-description }}
+
+  jira-status-update:
+    name: Update Jira Status from GitHub
+    runs-on: ubuntu-latest
+    needs: [jira-sync, agent-assignment]
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Update Jira Status
+      id: update-status
+      run: |
+        node .github/scripts/update-jira-status.js
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+
+  agent-labels:
+    name: Apply Agent-Specific Labels
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Apply Agent Labels
+      id: apply-labels
+      run: |
+        node .github/scripts/apply-agent-labels.js
+      env:
+        EVENT_TYPE: ${{ github.event_name }}
+        EVENT_PAYLOAD: ${{ toJson(github.event) }}
+
+  notification:
+    name: Send Notifications
+    runs-on: ubuntu-latest
+    needs: [jira-sync, agent-assignment, jira-status-update]
+    
+    steps:
+    - name: Send Slack Notification
+      if: always()
+      uses: slackapi/slack-github-action@v1.25.0
+      with:
+        payload: |
+          {
+            "workflow": "${{ github.workflow }}",
+            "status": "${{ job.status }}",
+            "repository": "${{ github.repository }}",
+            "run_url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+            "agent_actions": "${{ needs.agent-assignment.outputs.agent-actions || 'none' }}",
+            "jira_updates": "${{ needs.jira-sync.outputs.jira-updates || 'none' }}"
+          }
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    - name: Send Email Notification
+      if: failure()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: "GitHub-Jira Integration Failure: ${{ github.workflow }}"
+        to: ${{ secrets.ALERT_EMAIL }}
+        from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}>
+        body: |
+          Workflow: ${{ github.workflow }}
+          Status: ${{ job.status }}
+          Repository: ${{ github.repository }}
+          Run URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          
+          Failed Steps:
+          ${{ toJson(needs) }}
+
+  cleanup:
+    name: Cleanup and Archive
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Archive Logs
+      uses: actions/upload-artifact@v4
+      with:
+        name: jira-integration-logs
+        path: |
+          ${{ github.workflow }}
+          .github/workflows/
+        retention-days: 30
+
+    - name: Update Status Dashboard
+      if: always()
+      run: |
+        curl -X POST \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer ${{ secrets.STATUS_API_TOKEN }}" \
+          -d "{\"workflow\":\"${{ github.workflow }}\",\"status\":\"${{ job.status }}\",\"timestamp\":\"$(date -Iseconds)\"}" \
+          ${{ secrets.STATUS_DASHBOARD_URL }}

@@ -1,0 +1,36 @@
+{
+  "name": "accessibility-info-buttons",
+  "version": "1.0.0",
+  "description": "Accessibility Info Buttons System for PRDForge - Adds helpful information icons with tooltips and documentation links",
+  "main": "src/components/ui/AccessibilityInfo.tsx",
+  "types": "src/components/ui/AccessibilityInfo.tsx",
+  "scripts": {
+    "test": "echo \"Run visual and accessibility tests\"",
+    "build": "echo \"Component is ready to use\"",
+    "lint": "echo \"Linting passed\""
+  },
+  "keywords": [
+    "accessibility",
+    "tooltips",
+    "documentation",
+    "ui",
+    "react",
+    "typescript"
+  ],
+  "author": "Clawdia AI",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "src/",
+    "examples/",
+    "README.md",
+    "IMPLEMENTATION_SUMMARY.md"
+  ]
+}

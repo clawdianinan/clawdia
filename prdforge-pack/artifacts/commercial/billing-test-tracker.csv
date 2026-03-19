@@ -1,0 +1,47 @@
+Test ID,Test Scenario,Payment Provider,Test Card/Account,Expected Result,Actual Result,Status,Severity,Defect ID,Notes,Execution Time,Tested By
+TC-CF-01,Successful Visa payment,Stripe,4242 4242 4242 4242,Payment success, account upgrade,Pending,P0,,,2026-03-20 09:00,Sheba
+TC-CF-02,Successful MasterCard payment,Stripe,5555 5555 5555 4444,Payment success, account upgrade,Pending,P0,,,2026-03-20 09:15,Sheba
+TC-CF-03,Successful PayPal payment,PayPal,sb-abcde1234567@personal.example.com,Payment success, account upgrade,Pending,P0,,,2026-03-20 09:30,Sheba
+TC-CF-04,Failed payment (insufficient funds),Stripe,4000 0000 0000 0002,Clear error, no charges,Pending,P0,,,2026-03-20 09:45,Sheba
+TC-CF-05,Failed payment (expired card),Stripe,4000 0000 0000 0069,Clear error, no charges,Pending,P0,,,2026-03-20 10:00,Sheba
+TC-CF-06,Failed payment (invalid CVV),Stripe,4242 4242 4242 4242 (wrong CVV),Clear error, no charges,Pending,P0,,,2026-03-20 10:15,Sheba
+TC-CF-07,3D Secure authentication,Stripe,4000 0025 0000 3155,3D Secure flow, successful auth,Pending,P0,,,2026-03-20 10:30,Sheba
+TC-CF-08,Currency conversion (USD),Stripe,4242 4242 4242 4242,Correct USD amount,Pending,P0,,,2026-03-20 10:45,Sheba
+TC-CF-09,Currency conversion (EUR),Stripe,4242 4242 4242 4242,Correct EUR amount,Pending,P0,,,2026-03-20 11:00,Sheba
+TC-CF-10,Currency conversion (NGN),Paystack,4084 0840 8408 4081,Correct NGN amount,Pending,P0,,,2026-03-20 11:15,Sheba
+TC-CF-11,Coupon code application,Stripe,4242 4242 4242 4242,Discount applied correctly,Pending,P0,,,2026-03-20 11:30,Sheba
+TC-CF-12,Mobile checkout experience,Stripe,4242 4242 4242 4242,Mobile-responsive,Pending,P1,,,2026-03-20 11:45,Sheba
+TC-WH-01,Subscription created webhook,Stripe,4242 4242 4242 4242,Account upgraded,Pending,P0,,,2026-03-20 13:00,Sheba
+TC-WH-02,Payment succeeded webhook,Stripe,4242 4242 4242 4242,Subscription active,Pending,P0,,,2026-03-20 13:15,Sheba
+TC-WH-03,Payment failed webhook,Stripe,4000 0000 0000 0002,Grace period/downgrade,Pending,P0,,,2026-03-20 13:30,Sheba
+TC-WH-04,Subscription canceled webhook,Stripe,4242 4242 4242 4242,Access revoked,Pending,P0,,,2026-03-20 13:45,Sheba
+TC-WH-05,Subscription updated webhook,Stripe,4242 4242 4242 4242,Features updated,Pending,P0,,,2026-03-20 14:00,Sheba
+TC-WH-06,Invoice payment succeeded webhook,Stripe,4242 4242 4242 4242,Invoice marked paid,Pending,P0,,,2026-03-20 14:15,Sheba
+TC-WH-07,Invoice payment failed webhook,Stripe,4000 0000 0000 0002,Retry logic triggered,Pending,P0,,,2026-03-20 14:30,Sheba
+TC-WH-08,Webhook retry mechanism,Stripe,4242 4242 4242 4242,Failed webhooks retried,Pending,P1,,,2026-03-20 14:45,Sheba
+TC-WH-09,Webhook signature verification,Stripe,4242 4242 4242 4242,Security verification,Pending,P0,,,2026-03-20 15:00,Sheba
+TC-WH-10,Idempotency handling,Stripe,4242 4242 4242 4242,No duplicate processing,Pending,P0,,,2026-03-20 15:15,Sheba
+TC-BUX-01,Free → Pro upgrade,Stripe,4242 4242 4242 4242,In-app upgrade successful,Pending,P0,,,2026-03-20 15:30,Sheba
+TC-BUX-02,Free → Enterprise upgrade,Stripe,4242 4242 4242 4242,In-app upgrade successful,Pending,P0,,,2026-03-20 15:45,Sheba
+TC-BUX-03,Pro → Free downgrade,Stripe,4242 4242 4242 4242,End of cycle downgrade,Pending,P0,,,2026-03-20 16:00,Sheba
+TC-BUX-04,Immediate cancellation,Stripe,4242 4242 4242 4242,Access termination,Pending,P0,,,2026-03-20 16:15,Sheba
+TC-BUX-05,Cancellation with period end,Stripe,4242 4242 4242 4242,Access until period end,Pending,P0,,,2026-03-20 16:30,Sheba
+TC-BUX-06,Reactivation,Stripe,4242 4242 4242 4242,Subscription reactivated,Pending,P0,,,2026-03-20 16:45,Sheba
+TC-BUX-07,Billing history view,Stripe,4242 4242 4242 4242,History accessible,Pending,P1,,,2026-03-20 17:00,Sheba
+TC-BUX-08,Payment method update,Stripe,4242 4242 4242 4242,Method updated successfully,Pending,P0,,,2026-03-20 17:15,Sheba
+TC-BUX-09,Plan details view,Stripe,4242 4242 4242 4242,Details displayed correctly,Pending,P1,,,2026-03-20 17:30,Sheba
+TC-BUX-10,Plan comparison table,Stripe,4242 4242 4242 4242,Table visible and accurate,Pending,P1,,,2026-03-20 17:45,Sheba
+TC-BUX-11,Pro-rated charges,Stripe,4242 4242 4242 4242,Mid-cycle upgrade charges,Pending,P0,,,2026-03-20 18:00,Sheba
+TC-BUX-12,Cancellation confirmation,Stripe,4242 4242 4242 4242,Clear confirmation,Pending,P1,,,2026-03-20 18:15,Sheba
+TC-INV-01,Invoice generation,Stripe,4242 4242 4242 4242,Invoice generated,Pending,P0,,,2026-03-20 18:30,Sheba
+TC-INV-02,Receipt email delivery,Stripe,4242 4242 4242 4242,Email with PDF sent,Pending,P0,,,2026-03-20 18:45,Sheba
+TC-INV-03,Company details on invoice,Stripe,4242 4242 4242 4242,IIH branding correct,Pending,P0,,,2026-03-20 19:00,Sheba
+TC-INV-04,User details on invoice,Stripe,4242 4242 4242 4242,User info correct,Pending,P0,,,2026-03-20 19:15,Sheba
+TC-INV-05,Itemized charges,Stripe,4242 4242 4242 4242,Charges broken down,Pending,P0,,,2026-03-20 19:30,Sheba
+TC-INV-06,Invoice numbering,Stripe,4242 4242 4242 4242,Sequential numbers,Pending,P1,,,2026-03-20 19:45,Sheba
+TC-INV-07,Credit notes for refunds,Stripe,4242 4242 4242 4242,Credit note generated,Pending,P0,,,2026-03-20 20:00,Sheba
+TC-INV-08,Pro-rated invoice,Stripe,4242 4242 4242 4242,Mid-cycle invoice correct,Pending,P0,,,2026-03-20 20:15,Sheba
+TC-INV-09,Invoice download,Stripe,4242 4242 4242 4242,Download successful,Pending,P1,,,2026-03-20 20:30,Sheba
+TC-INV-10,VAT/GST numbers,Stripe,4242 4242 4242 4242,Tax numbers included,Pending,P1,,,2026-03-20 20:45,Sheba
+TC-INV-11,Multi-language support,Stripe,4242 4242 4242 4242,Language options,Pending,P2,,,2026-03-20 21:00,Sheba
+TC-INV-12,Invoice archiving,Stripe,4242 4242 4242 4242,Archiving working,Pending,P1,,,2026-03-20 21:15,Sheba

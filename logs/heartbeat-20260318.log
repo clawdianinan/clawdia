@@ -78,3 +78,43 @@
 [0;34m[2026-03-18 03:30:01] DEBUG: Checking calendar for next 48 hours...[0m
 [0;34m[2026-03-18 03:30:01] DEBUG: Checking IHS Towers follow-ups...[0m
 [1;33m[2026-03-18 03:30:01] WARN: Found 2 urgent item(s) requiring attention[0m
+[0;32m[2026-03-18 04:00:00] INFO: === Starting Heartbeat + Maintenance ===[0m
+[0;32m[2026-03-18 04:00:00] INFO: Quiet hours (23:00-08:00), running minimal checks only[0m
+[0;32m[2026-03-18 04:00:00] INFO: Checking HEARTBEAT conditions...[0m
+[1;33m[2026-03-18 04:00:00] WARN: Alert triggered: IHS Towers email detected - URGENT[0m
+[1;33m[2026-03-18 04:00:00] WARN: Failed to send iMessage alert to temikolawole@icloud.com[0m
+[1;33m[2026-03-18 04:00:00] WARN: Alert triggered: Deadline within 24 hours[0m
+[1;33m[2026-03-18 04:00:00] WARN: Failed to send iMessage alert to temikolawole@icloud.com[0m
+[0;34m[2026-03-18 04:00:00] DEBUG: Checking calendar for next 48 hours...[0m
+[0;34m[2026-03-18 04:00:00] DEBUG: Checking IHS Towers follow-ups...[0m
+[1;33m[2026-03-18 04:00:00] WARN: Found 2 urgent item(s) requiring attention[0m
+[0;32m[2026-03-18 04:30:00] INFO: === Starting Heartbeat + Maintenance ===[0m
+[0;32m[2026-03-18 04:30:00] INFO: Quiet hours (23:00-08:00), running minimal checks only[0m
+[0;32m[2026-03-18 04:30:00] INFO: Checking HEARTBEAT conditions...[0m
+[1;33m[2026-03-18 04:30:00] WARN: Alert triggered: IHS Towers email detected - URGENT[0m
+[1;33m[2026-03-18 04:30:00] WARN: Failed to send iMessage alert to temikolawole@icloud.com[0m
+[1;33m[2026-03-18 04:30:00] WARN: Alert triggered: Deadline within 24 hours[0m
+[1;33m[2026-03-18 04:30:00] WARN: Failed to send iMessage alert to temikolawole@icloud.com[0m
+[0;34m[2026-03-18 04:30:00] DEBUG: Checking calendar for next 48 hours...[0m
+[0;34m[2026-03-18 04:30:00] DEBUG: Checking IHS Towers follow-ups...[0m
+[1;33m[2026-03-18 04:30:00] WARN: Found 2 urgent item(s) requiring attention[0m
+[0;32m[2026-03-18 05:00:01] INFO: === Starting Heartbeat + Maintenance ===[0m
+[0;32m[2026-03-18 05:00:01] INFO: Quiet hours (23:00-08:00), running minimal checks only[0m
+[0;32m[2026-03-18 05:00:01] INFO: Checking HEARTBEAT conditions...[0m
+[1;33m[2026-03-18 05:00:01] WARN: Alert triggered: IHS Towers email detected - URGENT[0m
+[1;33m[2026-03-18 05:00:01] WARN: Failed to send iMessage alert to temikolawole@icloud.com[0m
+[1;33m[2026-03-18 05:00:01] WARN: Alert triggered: Deadline within 24 hours[0m
+[1;33m[2026-03-18 05:00:01] WARN: Failed to send iMessage alert to temikolawole@icloud.com[0m
+[0;34m[2026-03-18 05:00:01] DEBUG: Checking calendar for next 48 hours...[0m
+[0;34m[2026-03-18 05:00:01] DEBUG: Checking IHS Towers follow-ups...[0m
+[1;33m[2026-03-18 05:00:01] WARN: Found 2 urgent item(s) requiring attention[0m
+[0;32m[2026-03-18 05:30:00] INFO: === Starting Heartbeat + Maintenance ===[0m
+[0;32m[2026-03-18 05:30:00] INFO: Quiet hours (23:00-08:00), running minimal checks only[0m
+[0;32m[2026-03-18 05:30:00] INFO: Checking HEARTBEAT conditions...[0m
+[1;33m[2026-03-18 05:30:00] WARN: Alert triggered: IHS Towers email detected - URGENT[0m
+[1;33m[2026-03-18 05:30:00] WARN: Failed to send iMessage alert to temikolawole@icloud.com[0m
+[1;33m[2026-03-18 05:30:00] WARN: Alert triggered: Deadline within 24 hours[0m
+[1;33m[2026-03-18 05:30:00] WARN: Failed to send iMessage alert to temikolawole@icloud.com[0m
+[0;34m[2026-03-18 05:30:00] DEBUG: Checking calendar for next 48 hours...[0m
+[0;34m[2026-03-18 05:30:00] DEBUG: Checking IHS Towers follow-ups...[0m
+[1;33m[2026-03-18 05:30:00] WARN: Found 2 urgent item(s) requiring attention[0m

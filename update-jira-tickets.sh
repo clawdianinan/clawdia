@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "🎯 Updating Jira tickets DEV-27 to DEV-34..."
+echo "Run after setting up API token in .jira.env"
+echo ""
+echo "This will update:"
+echo "DEV-27: Accessibility Info Buttons (Trinity)"
+echo "DEV-28: Motion Design System (Fela)"
+echo "DEV-29: Documentation Expansion (Ebun)"
+echo "DEV-30: Intro Tour Implementation (Trinity)"
+echo "DEV-31: Security Improvements (Cypher)"
+echo "DEV-32: Advanced Accessibility Features (Shuri)"
+echo "DEV-33: Micro-interactions Optimization (Fela)"
+echo "DEV-34: Dark Mode Polish (Fela)"

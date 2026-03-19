@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-03-19T15:56:41.429Z",
+  "baseUrl": "https://prdforge-dev.netlify.app",
+  "usersToTest": [
+    {
+      "email": "drsamhappiness@gmail.com",
+      "provider": "Google"
+    },
+    {
+      "email": "kolapoimam1@gmail.com",
+      "provider": "Google"
+    },
+    {
+      "email": "okeymaureen1996@gmail.com",
+      "provider": "Google"
+    },
+    {
+      "email": "temikolawole@gmail.com",
+      "provider": "Google & GitHub"
+    }
+  ],
+  "tests": {
+    "loginPage": {
+      "success": true,
+      "status": 200,
+      "hasContent": true
+    },
+    "oauthEndpoints": [
+      {
+        "endpoint": "/auth/google",
+        "status": 200,
+        "accessible": true
+      },
+      {
+        "endpoint": "/auth/github",
+        "status": 200,
+        "accessible": true
+      },
+      {
+        "endpoint": "/api/auth/callback/google",
+        "status": 200,
+        "accessible": true
+      },
+      {
+        "endpoint": "/api/auth/callback/github",
+        "status": 200,
+        "accessible": true
+      }
+    ],
+    "databaseConnectivity": [
+      {
+        "endpoint": "/api/projects",
+        "status": 200,
+        "hasData": true,
+        "dataCount": 2,
+        "contentType": "application/json"
+      },
+      {
+        "endpoint": "/api/users/me",
+        "status": 200,
+        "hasData": true,
+        "dataCount": 2,
+        "contentType": "application/json"
+      },
+      {
+        "endpoint": "/api/dashboard/stats",
+        "status": 200,
+        "hasData": true,
+        "dataCount": 2,
+        "contentType": "application/json"
+      }
+    ],
+    "userExistence": [
+      {
+        "user": "drsamhappiness@gmail.com",
+        "provider": "Google",
+        "apiAccessible": true,
+        "status": 200,
+        "note": "Accessible (may have active session)"
+      },
+      {
+        "user": "kolapoimam1@gmail.com",
+        "provider": "Google",
+        "apiAccessible": true,
+        "status": 200,
+        "note": "Accessible (may have active session)"
+      },
+      {
+        "user": "okeymaureen1996@gmail.com",
+        "provider": "Google",
+        "apiAccessible": true,
+        "status": 200,
+        "note": "Accessible (may have active session)"
+      },
+      {
+        "user": "temikolawole@gmail.com",
+        "provider": "Google & GitHub",
+        "apiAccessible": true,
+        "status": 200,
+        "note": "Accessible (may have active session)"
+      }
+    ],
+    "projectData": {
+      "success": true,
+      "projectCount": 0,
+      "hasProjects": false,
+      "projects": []
+    }
+  }
+}

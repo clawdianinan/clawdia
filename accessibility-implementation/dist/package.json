@@ -1,0 +1,30 @@
+{
+  "name": "accessibility-implementation",
+  "version": "1.0.0",
+  "description": "Comprehensive accessibility features for React applications",
+  "main": "index.ts",
+  "types": "index.ts",
+  "files": [
+    "components/**/*",
+    "hooks/**/*",
+    "utils/**/*",
+    "styles/**/*",
+    "examples/**/*",
+    "*.ts",
+    "*.md"
+  ],
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "react",
+    "screen-reader",
+    "keyboard-navigation",
+    "wcag"
+  ],
+  "author": "Clawdia AI",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

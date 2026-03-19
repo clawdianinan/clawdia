@@ -1,0 +1,9 @@
+{
+  "id": "react-best-practices",
+  "name": "React Best Practices",
+  "description": "Vercel-optimized React/Next.js performance and best practices",
+  "trigger": "react, nextjs, performance, optimization, best practices",
+  "version": "1.0.0",
+  "created": "2026-03-19T05:40:08.807Z",
+  "author": "OpenClaw Integration"
+}

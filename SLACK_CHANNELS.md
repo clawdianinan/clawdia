@@ -1,0 +1,11 @@
+C0AMDJ38EN8 | social | Member: false | Type: Public
+C0AM41CFBV1 | prdforge-launch | Member: true | Type: Public
+C0AN4LPC2V6 | phase4-gtm | Member: true | Type: Public
+C0AM707FWPP | phase3-commercial | Member: true | Type: Public
+C0AMACNCSR0 | phase2-qa-uat | Member: true | Type: Public
+C0AM41C50JF | phase1-stabilization | Member: true | Type: Public
+C0AMDJ6RPB6 | new-channel | Member: false | Type: Public
+C0AM41CCK0T | decisions | Member: true | Type: Public
+C0AM41E3SQ3 | blockers | Member: true | Type: Public
+C0AMNTGNUAV | all-clawdias-agents | Member: false | Type: Public
+C0AMPA397SM | agent-coordination | Member: true | Type: Public
