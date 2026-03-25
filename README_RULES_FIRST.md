@@ -24,7 +24,10 @@
 ## **QUICK REFERENCE:**
 
 ```bash
-# CORRECT COMMAND for coding work (launches interactive Claude Code):
+# OPTION 1: Use standardized skill (RECOMMENDED):
+./skills/claude-qwen-dev/scripts/launch-claude.sh "task description"
+
+# OPTION 2: Direct command (launches interactive Claude Code):
 ollama launch claude --model qwen3.5:9b
 
 # Then use Claude Code interactively for task description
@@ -33,7 +36,7 @@ ollama launch claude --model qwen3.5:9b
 sessions_spawn({
   runtime: "acp",
   agentId: "claude-code",
-  task: "Use ollama launch claude --model qwen3.5:9b for interactive coding"
+  task: "Use claude-qwen-dev skill for development"
 })
 
 # IMPORTANT: `claude --model qwen3.5:9b` does NOT work

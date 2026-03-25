@@ -5,9 +5,13 @@
 ### **1. DEVELOPMENT MODEL RULE (STRICT)**
 - **OpenClaw Level:** Uses `openai-codex/gpt-5.3-codex` (API models only)
 - **Claude Code Level:** **STRICTLY** uses Qwen3.5:9b via Ollama
-- **Invocation Command (MANDATORY - CORRECTED):**
+- **Standardized Skill:** Use `/Users/clawdia/.openclaw/workspace/skills/claude-qwen-dev/` skill
+- **Invocation Options:**
   ```bash
-  # CORRECT COMMAND (launches interactive Claude Code with Qwen):
+  # Option 1: Use standardized skill script
+  ./skills/claude-qwen-dev/scripts/launch-claude.sh "coding task"
+  
+  # Option 2: Direct command (launches interactive Claude Code with Qwen):
   ollama launch claude --model qwen3.5:9b
   
   # Then use Claude Code interactively for coding tasks

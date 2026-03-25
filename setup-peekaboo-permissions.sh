@@ -1,0 +1,37 @@
+#!/bin/bash
+# Helper script to check and guide Peekaboo permissions
+
+echo "=== PEEKABOO PERMISSIONS HELPER ==="
+echo ""
+echo "Peekaboo requires two permissions:"
+echo "1. Screen Recording"
+echo "2. Accessibility"
+echo ""
+echo "To grant these permissions:"
+echo ""
+echo "macOS Ventura/Sonoma:"
+echo "  1. Open System Settings"
+echo "  2. Go to Privacy & Security → Screen Recording"
+echo "  3. Turn ON permission for your terminal app (Terminal/iTerm2/VS Code)"
+echo "  4. Also: Privacy & Security → Accessibility"
+echo "  5. Add your terminal app if needed and enable"
+echo ""
+echo "After granting, you may need to restart your terminal."
+echo ""
+echo "=== CHECKING CURRENT STATUS ==="
+echo ""
+if command -v peekaboo &> /dev/null; then
+    echo "Peekaboo installed: ✅"
+    echo ""
+    echo "Current permission status:"
+    peekaboo permissions 2>&1 || echo "Cannot check (permissions not granted yet)"
+else
+    echo "Peekaboo not installed ❌"
+fi
+echo ""
+echo "=== AFTER GRANTING PERMISSIONS ==="
+echo "Once permissions are granted, run:"
+echo "  peekaboo see --annotate"
+echo "to verify it works, then:"
+echo "  peckaboo image --mode frontmost --path /tmp/screenshot.png"
+echo "to capture the PRDForge hero."

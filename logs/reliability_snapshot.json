@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-03-19T14:55:38",
+  "timestamp": "2026-03-24T22:57:08",
   "memory": {
     "status": "degraded",
     "retrieval_mode": "keyword-fallback",
-    "memory_file_count": 139,
-    "index_file_count": 10,
-    "latest_memory_age_minutes": 40.12,
-    "latest_index_age_minutes": 2214.31,
+    "memory_file_count": 175,
+    "index_file_count": 6,
+    "latest_memory_age_minutes": 1853.94,
+    "latest_index_age_minutes": 2695.82,
     "notes": [
       "index-stale"
     ]
@@ -14,7 +14,7 @@
   "model_resilience": {
     "status": "warning",
     "output": "MODEL_RESILIENCE_CHECK: Running model availability test\nTesting model connectivity...\nMODEL_RESILIENCE_WARN: Gateway health check failed - models may be unavailable\nFALLBACK_RECOMMENDATION: Switch to ",
-    "timestamp": "2026-03-19T14:55:38"
+    "timestamp": "2026-03-24T22:57:08"
   },
   "messaging": {
     "queue_mode": "collect",

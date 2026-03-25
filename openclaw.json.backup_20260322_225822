@@ -1,0 +1,466 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-22T00:13:58.652Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-21T22:38:05.401Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  },
+  "secrets": {
+    "providers": {
+      "localenv": {
+        "source": "env"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      },
+      "deepseek:manual": {
+        "provider": "deepseek",
+        "mode": "token"
+      },
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    },
+    "cooldowns": {
+      "billingBackoffHoursByProvider": {
+        "deepseek": 0.02
+      }
+    }
+  },
+  "acp": {
+    "enabled": true,
+    "dispatch": {
+      "enabled": true
+    },
+    "backend": "acpx",
+    "defaultAgent": "claude",
+    "allowedAgents": [
+      "claude"
+    ],
+    "maxConcurrentSessions": 4,
+    "stream": {
+      "coalesceIdleMs": 300,
+      "maxChunkChars": 1200
+    },
+    "runtime": {
+      "ttlMinutes": 120
+    }
+  },
+  "models": {
+    "providers": {
+      "openai-codex": {
+        "baseUrl": "https://api.openai.com/v1",
+        "apiKey": {
+          "source": "env",
+          "provider": "localenv",
+          "id": "OPENAI_API_KEY"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "gpt-5.3-codex",
+            "name": "openai-codex-gpt-5.3-codex"
+          }
+        ]
+      },
+      "deepseek": {
+        "baseUrl": "https://api.deepseek.com/v1",
+        "apiKey": {
+          "source": "env",
+          "provider": "localenv",
+          "id": "DEEPSEEK_API_KEY"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-chat",
+            "name": "deepseek-chat"
+          }
+        ]
+      },
+      "openrouter": {
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "apiKey": {
+          "source": "env",
+          "provider": "localenv",
+          "id": "OPENROUTER_API_KEY"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "stepfun/step-3.5-flash",
+            "name": "openrouter-stepfun-3.5-flash"
+          },
+          {
+            "id": "minimax/minimax-m2.5",
+            "name": "openrouter-minimax-m2.5"
+          }
+        ]
+      },
+      "llama-cpp": {
+        "baseUrl": "http://127.0.0.1:31857",
+        "apiKey": "llama-cpp-local",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "llama3.1:8b",
+            "name": "llama3.1:8b",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 2048,
+            "maxTokens": 1024
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "deepseek/deepseek-chat",
+        "fallbacks": [
+          "openai/gpt-5.4",
+          "openrouter/stepfun/step-3.5-flash",
+          "openrouter/minimax/minimax-m2.5",
+          "llama-cpp/llama3.1:8b"
+        ]
+      },
+      "models": {
+        "deepseek/deepseek-chat": {},
+        "openai/gpt-5.4": {},
+        "openrouter/stepfun/step-3.5-flash": {},
+        "openrouter/minimax/minimax-m2.5": {},
+        "llama-cpp/llama3.1:8b": {}
+      },
+      "workspace": "/Users/clawdia/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 2,
+      "subagents": {
+        "maxConcurrent": 4
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "identity": {
+          "name": "Clawdia",
+          "emoji": "🐾"
+        },
+        "subagents": {
+          "allowAgents": [
+            "main",
+            "shuri",
+            "trinity",
+            "nova",
+            "ebun",
+            "fela",
+            "sheba",
+            "ngozi",
+            "ruth",
+            "chimamanda",
+            "morpheus",
+            "neo",
+            "oracle",
+            "cypher",
+            "seun",
+            "femi",
+            "oprah",
+            "ade"
+          ]
+        }
+      },
+      {
+        "id": "shuri",
+        "identity": {
+          "name": "Shuri",
+          "emoji": "📋"
+        }
+      },
+      {
+        "id": "trinity",
+        "identity": {
+          "name": "Trinity",
+          "emoji": "⚡"
+        },
+        "tools": {
+          "profile": "coding"
+        }
+      },
+      {
+        "id": "nova",
+        "identity": {
+          "name": "Nova",
+          "emoji": "🚀"
+        }
+      },
+      {
+        "id": "ebun",
+        "identity": {
+          "name": "Ebun",
+          "emoji": "📖"
+        }
+      },
+      {
+        "id": "fela",
+        "identity": {
+          "name": "Fela",
+          "emoji": "🛠️"
+        }
+      },
+      {
+        "id": "sheba",
+        "identity": {
+          "name": "Sheba",
+          "emoji": "🧭"
+        }
+      },
+      {
+        "id": "ngozi",
+        "identity": {
+          "name": "Ngozi",
+          "emoji": "💰"
+        }
+      },
+      {
+        "id": "ruth",
+        "identity": {
+          "name": "Ruth",
+          "emoji": "⚖️"
+        }
+      },
+      {
+        "id": "chimamanda",
+        "identity": {
+          "name": "Chimamanda",
+          "emoji": "📧"
+        }
+      },
+      {
+        "id": "morpheus",
+        "identity": {
+          "name": "Morpheus",
+          "emoji": "🔍"
+        }
+      },
+      {
+        "id": "neo",
+        "identity": {
+          "name": "Neo",
+          "emoji": "⚙️"
+        }
+      },
+      {
+        "id": "oracle",
+        "identity": {
+          "name": "Oracle",
+          "emoji": "🔮"
+        }
+      },
+      {
+        "id": "cypher",
+        "identity": {
+          "name": "Cypher",
+          "emoji": "🛡️"
+        }
+      },
+      {
+        "id": "seun",
+        "identity": {
+          "name": "Seun",
+          "emoji": "🎬"
+        }
+      },
+      {
+        "id": "femi",
+        "identity": {
+          "name": "Femi",
+          "emoji": "🎨"
+        }
+      },
+      {
+        "id": "oprah",
+        "identity": {
+          "name": "Oprah",
+          "emoji": "🤝"
+        }
+      },
+      {
+        "id": "ade",
+        "identity": {
+          "name": "Ade",
+          "emoji": "📊"
+        }
+      },
+      {
+        "id": "claude",
+        "identity": {
+          "name": "Claude Code",
+          "emoji": "🤖"
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "BSAxvHVOb4QzGG3a1gUY_ByRTXLK8Qb"
+      }
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true
+    }
+  },
+  "messages": {
+    "queue": {
+      "mode": "collect",
+      "byChannel": {
+        "imessage": "collect"
+      },
+      "debounceMs": 2500
+    },
+    "inbound": {
+      "debounceMs": 1800,
+      "byChannel": {
+        "imessage": 2000
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": false,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "debounceMs": 0,
+      "mediaMaxMb": 50
+    },
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8265855959:AAFablkTZ7VCLJ_gLIqVI-rBLU6YKzD6rRY",
+      "groupPolicy": "allowlist",
+      "streaming": "off"
+    },
+    "imessage": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "accounts": {
+        "custom-1": {
+          "enabled": true,
+          "cliPath": "imsg",
+          "dmPolicy": "pairing",
+          "allowFrom": [
+            "temikolawole@icloud.com",
+            "temikolawole@gmail.com",
+            "t+2348155555222",
+            "+2349160009272"
+          ],
+          "groupPolicy": "allowlist"
+        },
+        "default": {
+          "enabled": false,
+          "cliPath": "imsg",
+          "dmPolicy": "pairing",
+          "groupPolicy": "allowlist"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "e028a532ec0f7200ab3ee8a4829cef43e6d52df6b866a1ef"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "plugins": {
+    "entries": {
+      "acpx": {
+        "enabled": true,
+        "config": {
+          "mcpServers": {
+            "canva": {
+              "args": [
+                "-y",
+                "mcp-remote@latest",
+                "https://mcp.canva.com/mcp"
+              ],
+              "command": "npx"
+            },
+            "canva-dev": {
+              "args": [
+                "-y",
+                "@canva/cli@latest",
+                "mcp"
+              ],
+              "command": "npx"
+            }
+          }
+        }
+      }
+    }
+  }
+}

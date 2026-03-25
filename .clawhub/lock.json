@@ -264,6 +264,10 @@
     "beancount-skill": {
       "version": "0.1.0",
       "installedAt": 1773822017108
+    },
+    "google-maps-search-api": {
+      "version": "0.1.0",
+      "installedAt": 1774066158920
     }
   }
 }
