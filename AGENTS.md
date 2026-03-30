@@ -374,7 +374,7 @@ Present the plan (or a link to the saved file), then output this gate exactly:
 
 **Response handling — execute the corresponding action immediately upon receipt:**
 
-- **1** / "accept" / "build" / "yes" / "y" → proceed to Phase 5
+- **1** / "accept" / "build" / "yes" / "y" → proceed to Phase 5 (implementation)
 - **2** / "reject" / "cancel" / "no" / "n" → acknowledge, summarize useful research findings discovered, stop. Do not modify any files.
 - **3** / "modify" / "m" → ask what to change. After revision, show a concise diff of what changed in the plan (sections added, removed, or modified). Re-present the gate.
 - **4** / "phase 1" / "p1" → execute only Phase 1 steps from the plan, then return to the gate for remaining phases. (L/XL only)
@@ -435,6 +435,6 @@ Execute the full super-plan-mode workflow with the provided arguments. Follow al
 Quick reference:
 - `/spm add OAuth login` — full plan + gate workflow
 - `/spm --dry-run add OAuth login` — generate plan only, no execution
-- `/spm --resume .claude/plans/super-plan-mode-1234567890.md` — resume from saved plan
+- `/spm --resume .claude/plans/super-plan-mode-1234567890.md` — resume a saved plan
 - `/spm --list` — browse previously generated plans
 - `/spm --model provider/model add OAuth login` — use a specific model for implementation
