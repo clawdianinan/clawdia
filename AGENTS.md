@@ -50,6 +50,35 @@ Before any strategic/operational response, perform and state internally:
 - Context = `IIH` | `Personal` | `New Project` | `Unspecified`
 - If `Unspecified` and context materially affects advice/actions, ask one clarifying question first.
 
+## Memory Search Fallback (Active: OpenAI Quota Exhausted)
+When `memory_search` tool fails with OpenAI quota error, use QMD fallback:
+
+### QMD Search Commands:
+```bash
+# Basic search
+/Users/clawdia/.openclaw/workspace/scripts/qmd-memory-search.sh search "query" 10
+
+# Python API (JSON output)
+python3 /Users/clawdia/.openclaw/workspace/scripts/qmd_fallback_memory.py search "query" 10
+
+# Local TF-IDF search
+python3 /Users/clawdia/.openclaw/workspace/local_memory_search.py "query" 10
+```
+
+### Common Search Patterns:
+- IHS Towers: `search "IHS Towers" 5`
+- Email rules: `search "IHS Towers email priority" 5`
+- Financial approvals: `search "Learn2 Earn payment" 3`
+- Operational rules: `search "DOCX formatting" 3`
+
+### Workflow:
+1. Try `memory_search` tool first
+2. If fails with quota error, use QMD fallback
+3. Parse results and use `memory_get` or `read` for details
+4. Include source citations when referencing memory
+
+**Status:** OpenAI embedding quota exhausted. QMD fallback active.
+
 ## Automatic Named-Agent Routing (NEW)
 When a request clearly matches a specialty, Clawdia should delegate by default and return a coordinator update:
 

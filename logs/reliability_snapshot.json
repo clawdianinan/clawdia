@@ -1,18 +1,20 @@
 {
-  "timestamp": "2026-03-29T14:01:43",
+  "timestamp": "2026-04-01T22:01:46",
   "memory": {
-    "status": "ok",
-    "retrieval_mode": "hybrid",
-    "memory_file_count": 226,
-    "index_file_count": 8,
-    "latest_memory_age_minutes": 28.45,
-    "latest_index_age_minutes": 721.38,
-    "notes": []
+    "status": "degraded",
+    "retrieval_mode": "keyword-fallback",
+    "memory_file_count": 237,
+    "index_file_count": 9,
+    "latest_memory_age_minutes": 619.2,
+    "latest_index_age_minutes": 2638.56,
+    "notes": [
+      "index-stale"
+    ]
   },
   "model_resilience": {
     "status": "ok",
     "output": "MODEL_RESILIENCE_CHECK: Running model availability test\nTesting model connectivity...\nMODEL_RESILIENCE_OK: Gateway health check passed",
-    "timestamp": "2026-03-29T14:01:43"
+    "timestamp": "2026-04-01T22:01:46"
   },
   "messaging": {
     "queue_mode": "collect",
