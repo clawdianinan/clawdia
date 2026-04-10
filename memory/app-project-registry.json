@@ -1,0 +1,178 @@
+{
+  "root": "/Users/clawdia/apps",
+  "projects": [
+    {
+      "name": "admin-shared",
+      "path": "/Users/clawdia/apps/admin-shared",
+      "aliases": [
+        "admin-shared",
+        "adminshared"
+      ]
+    },
+    {
+      "name": "apes-of-zamoonda",
+      "path": "/Users/clawdia/apps/apes-of-zamoonda",
+      "aliases": [
+        "apes-of-zamoonda",
+        "apesofzamoonda"
+      ]
+    },
+    {
+      "name": "build-with-claude-showcase",
+      "path": "/Users/clawdia/apps/build-with-claude-showcase",
+      "aliases": [
+        "build-with-claude-showcase",
+        "buildwithclaudeshowcase"
+      ]
+    },
+    {
+      "name": "iih",
+      "path": "/Users/clawdia/apps/iih",
+      "aliases": [
+        "iih"
+      ]
+    },
+    {
+      "name": "iih-space",
+      "path": "/Users/clawdia/apps/iih-space",
+      "aliases": [
+        "iih-space",
+        "iihspace"
+      ]
+    },
+    {
+      "name": "jira-devops-automation",
+      "path": "/Users/clawdia/apps/jira-devops-automation",
+      "aliases": [
+        "jira-devops-automation",
+        "jiradevopsautomation"
+      ]
+    },
+    {
+      "name": "kwasaa",
+      "path": "/Users/clawdia/apps/kwasaa",
+      "aliases": [
+        "kwasaa"
+      ]
+    },
+    {
+      "name": "kwsgai",
+      "path": "/Users/clawdia/apps/kwsgai",
+      "aliases": [
+        "kwsgai"
+      ]
+    },
+    {
+      "name": "landlink",
+      "path": "/Users/clawdia/apps/landlink",
+      "aliases": [
+        "landlink"
+      ]
+    },
+    {
+      "name": "prdforge",
+      "path": "/Users/clawdia/apps/prdforge",
+      "aliases": [
+        "prdforge"
+      ]
+    },
+    {
+      "name": "prdforge-cli",
+      "path": "/Users/clawdia/apps/prdforge-cli",
+      "aliases": [
+        "prdforge-cli",
+        "prdforgecli"
+      ]
+    },
+    {
+      "name": "quaride",
+      "path": "/Users/clawdia/apps/quaride",
+      "aliases": [
+        "quaride"
+      ]
+    },
+    {
+      "name": "residentmd",
+      "path": "/Users/clawdia/apps/residentmd",
+      "aliases": [
+        "residentmd"
+      ]
+    },
+    {
+      "name": "sabify",
+      "path": "/Users/clawdia/apps/sabify",
+      "aliases": [
+        "sabify"
+      ]
+    },
+    {
+      "name": "space-platform",
+      "path": "/Users/clawdia/apps/space-platform",
+      "aliases": [
+        "space-platform",
+        "spaceplatform"
+      ]
+    },
+    {
+      "name": "streams-billing",
+      "path": "/Users/clawdia/apps/streams-billing",
+      "aliases": [
+        "streams-billing",
+        "streamsbilling"
+      ]
+    },
+    {
+      "name": "streams-tax",
+      "path": "/Users/clawdia/apps/streams-tax",
+      "aliases": [
+        "streams-tax",
+        "streamstax"
+      ]
+    },
+    {
+      "name": "subscription-platform",
+      "path": "/Users/clawdia/apps/subscription-platform",
+      "aliases": [
+        "subscription-platform",
+        "subscriptionplatform"
+      ]
+    },
+    {
+      "name": "super-plan-mode",
+      "path": "/Users/clawdia/apps/super-plan-mode",
+      "aliases": [
+        "super-plan-mode",
+        "superplanmode"
+      ]
+    },
+    {
+      "name": "temikolawolecom",
+      "path": "/Users/clawdia/apps/temikolawolecom",
+      "aliases": [
+        "temikolawolecom"
+      ]
+    },
+    {
+      "name": "tracmemo",
+      "path": "/Users/clawdia/apps/tracmemo",
+      "aliases": [
+        "tracmemo"
+      ]
+    },
+    {
+      "name": "trello-automation",
+      "path": "/Users/clawdia/apps/trello-automation",
+      "aliases": [
+        "trello-automation",
+        "trelloautomation"
+      ]
+    },
+    {
+      "name": "visitdesk",
+      "path": "/Users/clawdia/apps/visitdesk",
+      "aliases": [
+        "visitdesk"
+      ]
+    }
+  ]
+}

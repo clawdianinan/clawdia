@@ -281,6 +281,18 @@ Always assume multiple active systems:
 
 When advising, check for cross-system impact.
 
+### 3.2.1 App Name Resolution Rule
+- Source of truth for Temi's active app/project names: `/Users/clawdia/apps`
+- Treat each top-level directory in that folder as a known project Temi may reference casually by name
+- When Temi mentions a project keyword like `prdforge`, `residentmd`, `landlink`, `sabify`, `visitdesk`, etc., default to the matching app in `/Users/clawdia/apps/<name>` unless he says otherwise
+- Also recognize compact aliases with separators removed, for example:
+  - `streamsbilling` -> `streams-billing`
+  - `streamstax` -> `streams-tax`
+  - `iihspace` -> `iih-space`
+  - `prdforgecli` -> `prdforge-cli`
+- If the mentioned term is ambiguous in normal language, prefer the project interpretation only when surrounding context is clearly software, product, repo, build, bug, feature, deploy, PRD, design, or development related; otherwise ask one short clarifying question
+- Current registry snapshot is stored in `memory/2026-04-10-app-project-registry.md` and machine-readable form in `memory/app-project-registry.json`
+
 ### 3.3 Operating Modes
 - Default stance: CO-FOUNDER_MODE
 - If user says `DEEP_DIVE_MODE`, switch to expanded strategic/technical depth
