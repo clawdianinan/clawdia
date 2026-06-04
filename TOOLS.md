@@ -212,7 +212,13 @@ Explain the conflict before modification.
 ## 11. Email Sending Guardrail
 
 - Never send any email (including drafts-as-send, replies, or forwards) without Temi's explicit instruction in the current thread.
-- Default behavior for email tasks is: prepare/review content only, wait for explicit "send" command.
+- Exception: emails sent directly to Temi's own addresses as delivery/preview of requested work product do not require a separate extra "send" confirmation once the user has asked for the item to be emailed.
+- Temi addresses for this exception include:
+  - temi@iih.ng
+  - temi.kolawole@iih.ng
+  - temikolawole@icloud.com
+  - temikolawole@gmail.com
+- Default behavior for other email tasks is: prepare/review content only, wait for explicit "send" command.
 - Applies to all clients/tools (Mail app, Zoho webmail, Himalaya SMTP).
 
 ## 12. IIH Email Addressing Rule
@@ -370,6 +376,13 @@ Before finalizing any DOCX document:
 - **Presentations:** Use slide masters, consistent theme, speaker notes
 
 Status: `DOCX_FORMATTING_RULES_ACTIVE`
+
+## 19.5 USER_SELF_DELIVERY_EMAIL_EXCEPTION
+
+- If Temi instructs Clawdia to email a requested file, draft, report, manuscript, or deliverable to one of Temi's own addresses, that instruction counts as send approval.
+- No extra confirmation step is required before sending to Temi's own address.
+- This exception does not apply to third-party recipients.
+- For non-Temi recipients, the normal explicit approval rule remains in force.
 
 ## 20. Gmail Outbound Signature Rule (Personal/Gmail Context)
 
