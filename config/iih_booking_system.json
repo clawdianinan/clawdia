@@ -46,6 +46,25 @@
       "zoho_books_item_id": "6104627000000151001"
     }
   },
+  "event_policy": {
+    "allowed_event_focus": [
+      "technology",
+      "innovation",
+      "entrepreneurship",
+      "youth development"
+    ],
+    "initial_response_rule": "deduce available details from the enquiry first, then ask only for missing or unclear fields",
+    "external_catering_policy": "external catering is not allowed by default; exceptions attract a NGN 100,000 per day corkage fee"
+  },
+  "keychain_services": {
+    "account": "iih-booking",
+    "ZOHO_CLIENT_ID": "iih-booking-ZOHO_CLIENT_ID",
+    "ZOHO_CLIENT_SECRET": "iih-booking-ZOHO_CLIENT_SECRET",
+    "ZOHO_REFRESH_TOKEN": "iih-booking-ZOHO_REFRESH_TOKEN",
+    "ZOHO_BOOKS_ORG_ID": "iih-booking-ZOHO_BOOKS_ORG_ID",
+    "ZOHO_APP_PASSWORD": "iih-booking-ZOHO_APP_PASSWORD",
+    "ZOHO_CALENDAR_UID": "iih-booking-ZOHO_CALENDAR_UID"
+  },
   "fees": {
     "refundable_security_deposit": {
       "rate_ngn": 100000,

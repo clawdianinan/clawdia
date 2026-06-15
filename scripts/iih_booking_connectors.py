@@ -58,6 +58,9 @@ def load_config() -> dict[str, Any]:
 
 
 def read_secret(name: str, required: bool = True) -> str | None:
+    if name in {"ZOHO_EMAIL", "ZOHO_FROM"}:
+        return EVENTBOOKINGS_EMAIL
+
     value = os.environ.get(name)
     if value:
         return value

@@ -10,3 +10,5 @@
 - Keep credentials in secure runtime environment, macOS Keychain, or approved secret store only.
 - Temi instructed that Aisha and all booking-related email use eventbookings@iih.ng.
 - md@iih.ng is excluded from the IIH Booking System entirely.
+- Temi requested local keychain prompts for required booking credentials.
+- Booking autoresponder should list hall options, mention event eligibility, state catering policy, deduce available details first, and ask only for missing/unclear details.

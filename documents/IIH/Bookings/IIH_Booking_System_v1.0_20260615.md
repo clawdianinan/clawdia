@@ -86,6 +86,14 @@ Rules:
 - Main Hall and Pitch Hall are billed as one full-day unit unless Temi approves a different rule.
 - Meeting Room and Private Office are billed by `duration_hours`.
 
+## 5.1 Event Eligibility and Catering Policy
+
+IIH only accommodates events related to technology, innovation, entrepreneurship, and youth development.
+
+External catering is not allowed by default. If an exception is approved, it attracts a corkage fee of NGN 100,000 per day.
+
+Autoresponses must deduce any clear details from the client's initial email first, then ask only for missing or unclear details.
+
 ## 6. Secret Handling
 
 Do not store credentials in documents or agent memory. Configure these as environment secrets only:
@@ -102,6 +110,13 @@ Do not store credentials in documents or agent memory. Configure these as enviro
 Temi approved using the existing Zoho token set as-is on 2026-06-15. Do not rotate before production unless authentication fails, a token is revoked, or Temi later requests rotation.
 
 The credentials must still remain outside git, documents, committed config, and chat summaries. Use secure runtime environment variables, macOS Keychain, or an approved secret store only.
+
+Keychain prompt:
+
+```bash
+python3 scripts/iih_booking_keychain_setup.py
+python3 scripts/iih_booking_keychain_setup.py --check
+```
 
 ## 7. Workflow
 

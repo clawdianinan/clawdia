@@ -1,13 +1,13 @@
 ---
 name: "iih-booking-system"
-description: "IIH booking workflow using eventbookings identity and Zoho connectors."
+description: "IIH booking workflow with event policy, keychain setup, autoresponder rules."
 ---
 
 # IIH Booking System Skill
 
 ## Purpose
 
-Use this skill for Ilorin Innovation Hub facility booking operations: intake validation, quote/invoice preparation, CRM preparation, tentative calendar hold preparation, and booking status tracking.
+Use this skill for Ilorin Innovation Hub facility booking operations: intake validation, quote/invoice preparation, CRM preparation, tentative calendar hold preparation, autoresponder drafting, and booking status tracking.
 
 ## Owner
 
@@ -23,6 +23,7 @@ Use this skill when the request involves:
 - booking form validation
 - booking invoice/quote preparation
 - tentative calendar hold preparation
+- booking autoresponses
 - booking payment follow-up
 - booking cancellation or refund review
 
@@ -37,6 +38,19 @@ Rules:
 - `events@iih.ng` is copied on invoice and coordination emails.
 - `md@iih.ng` is excluded from the booking system entirely.
 - If the `eventbookings` mailbox is not configured in the active email runtime, prepare drafts only and report the missing mailbox connection.
+- Summary/internal update emails sent by Clawdia AI should use Clawdia AI identity and signature.
+
+## Event Policy
+
+IIH only accommodates events related to:
+- technology
+- innovation
+- entrepreneurship
+- youth development
+
+External catering is not allowed by default. If an exception is approved, it attracts a corkage fee of NGN 100,000 per day.
+
+Autoresponses must deduce all clear details from the initial enquiry first and ask only for missing or unclear fields.
 
 ## Security Rule
 
@@ -44,21 +58,26 @@ Never expose, save, repeat, or transform live credentials, refresh tokens, app p
 
 Temi approved using the existing Zoho token set as-is on 2026-06-15. No pre-production rotation is required unless authentication fails, a token is revoked, or Temi later requests rotation.
 
-Required secret names:
-- `ZOHO_CLIENT_ID`
-- `ZOHO_CLIENT_SECRET`
-- `ZOHO_REFRESH_TOKEN`
-- `ZOHO_BOOKS_ORG_ID`
-- `ZOHO_APP_PASSWORD`
-- `ZOHO_EMAIL`
-- `ZOHO_FROM`
-- `ZOHO_CALENDAR_UID`
+Required secret names/keychain services:
+- `ZOHO_CLIENT_ID` -> `iih-booking-ZOHO_CLIENT_ID`
+- `ZOHO_CLIENT_SECRET` -> `iih-booking-ZOHO_CLIENT_SECRET`
+- `ZOHO_REFRESH_TOKEN` -> `iih-booking-ZOHO_REFRESH_TOKEN`
+- `ZOHO_BOOKS_ORG_ID` -> `iih-booking-ZOHO_BOOKS_ORG_ID`
+- `ZOHO_APP_PASSWORD` -> `iih-booking-ZOHO_APP_PASSWORD`
+- `ZOHO_CALENDAR_UID` -> `iih-booking-ZOHO_CALENDAR_UID`
 
-Credentials may be used from secure runtime environment variables, macOS Keychain, or another approved secret store only. Do not commit or echo values.
+`ZOHO_EMAIL` and `ZOHO_FROM` default to `eventbookings@iih.ng`.
+
+Keychain prompt:
+
+```bash
+python3 scripts/iih_booking_keychain_setup.py
+python3 scripts/iih_booking_keychain_setup.py --check
+```
 
 ## Required Booking Fields
 
-Every booking must include:
+Every booking should eventually include:
 - `full_name`
 - `email`
 - `phone`
@@ -75,18 +94,17 @@ Every booking must include:
 
 If required data is missing, keep status `Draft` and ask only for the missing fields.
 
-## Facility Rates
+## Facility Rates and Options
 
 - Main Hall: NGN 750,000/day
 - Pitch Hall: NGN 400,000/day
 - Meeting Room: NGN 20,000/hour
 - Private Office: NGN 20,000/hour
 - Refundable security deposit: NGN 100,000 on every booking
-- External catering corkage: NGN 100,000/day when external catering is used
+- External catering corkage: NGN 100,000/day when external catering exception is approved
 
 Rules:
 - Always add the refundable security deposit.
-- Add external catering corkage when `external_catering` is true.
 - Main Hall and Pitch Hall are one full-day unit unless Temi approves otherwise.
 - Meeting Room and Private Office use `duration_hours`.
 
@@ -104,14 +122,15 @@ Use these statuses exactly:
 
 ## Workflow
 
-1. Validate intake.
-2. Check facility/date/time conflict before invoice preparation.
-3. Prepare quote and invoice line items.
-4. Prepare Zoho Books contact and invoice payloads.
-5. Prepare Zoho CRM contact update with lead source `IIH Space Booking Form`.
-6. Prepare tentative calendar hold in timezone `Africa/Lagos`.
-7. Send nothing until approval is explicit in the current thread.
-8. Mark booking `Confirmed` only after verified payment evidence, Zoho payment status, or explicit Temi approval.
+1. Validate/deduce intake details from enquiry.
+2. Ask only for missing or unclear details.
+3. Check facility/date/time conflict before invoice preparation.
+4. Prepare quote and invoice line items.
+5. Prepare Zoho Books contact and invoice payloads.
+6. Prepare Zoho CRM contact update with lead source `IIH Space Booking Form`.
+7. Prepare tentative calendar hold in timezone `Africa/Lagos`.
+8. Send nothing until approval is explicit in the current thread.
+9. Mark booking `Confirmed` only after verified payment evidence, Zoho payment status, or explicit Temi approval.
 
 ## Connector Commands
 
@@ -143,38 +162,14 @@ Explicit approval is required for:
 - discounts, waivers, or rate exceptions
 - responding to third-party booking enquiries
 
-## Output Format
-
-For every booking preparation run, return a concise operations bundle:
-
-```json
-{
-  "status": "Tentative",
-  "booking_reference": "IIH-BOOK-YYYYMMDD-CLIENT",
-  "quote": {
-    "currency": "NGN",
-    "line_items": [],
-    "total": 0
-  },
-  "availability": {},
-  "email_identity": {
-    "from": "eventbookings@iih.ng",
-    "reply_to": "eventbookings@iih.ng",
-    "cc": "events@iih.ng",
-    "md_address_excluded": true
-  },
-  "approval_required": [],
-  "next_actions": []
-}
-```
-
 ## Escalation
 
 Escalate to Clawdia/Temi when:
+- event does not appear related to technology, innovation, entrepreneurship, or youth development
+- external catering exception is requested
 - payment evidence is unclear
 - facility/time conflicts exist
 - client requests refund, discount, waiver, or rate exception
-- booking requires external communication
 - eventbookings@iih.ng is not configured
 - integration credentials fail
 - requested action would modify Zoho, calendar, or client-facing state without current approval

@@ -15,6 +15,11 @@
 - Refundable security deposit: NGN 100,000 on every booking.
 - External catering corkage: NGN 100,000/day when external catering is used.
 
+## Event Policy
+- IIH only accommodates technology, innovation, entrepreneurship, and youth development related events.
+- External catering is not allowed by default; exceptions attract a NGN 100,000/day corkage fee.
+- Autoresponses must deduce available details from the initial email first and only request missing or unclear fields.
+
 ## Required Booking Intake Fields
 - full_name
 - email
