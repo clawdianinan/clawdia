@@ -40,6 +40,11 @@ Status: Drafted (ready for execution)
    - Purpose: meeting prep, agenda packs, notes-to-action conversion
    - Focus: convert meetings into executable tasks and owner tracking
 
+4. `aisha` (new, approved for IIH bookings)
+   - Purpose: IIH Space booking operations
+   - Focus: intake validation, quote/invoice preparation, CRM/contact preparation, tentative calendar holds, payment-status follow-up, booking register hygiene
+   - Guardrail: no outbound send, invoice send, calendar invite, payment confirmation, refund, discount, waiver, or exception without Clawdia/Temi approval
+
 ### B. Knowledge & Documentation Layer
 4. `docs-lead` (new)
    - Purpose: document standardization, template governance, publication-ready outputs
@@ -75,6 +80,7 @@ Status: Drafted (ready for execution)
 
 - Email-heavy operational tasks -> `comms-ops`
 - Calendar + meeting prep -> `meeting-ops`
+- IIH Space/facility bookings -> `aisha`
 - Reporting/document production -> `docs-lead`
 - Strategic priority conflicts -> `chief-of-staff`
 - Long-term memory curation -> `memory-curator`

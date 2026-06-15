@@ -111,6 +111,17 @@ This document tracks skill assignments for all agents in the OpenClaw system. Sk
 
 **Verification Status:** ✅ All skills available and accessible
 
+#### Aisha (IIH Booking Operations Specialist)
+**Assigned Skills:**
+- `email-ops` - Booking acknowledgement and follow-up drafting
+- `mail` - IIH mailbox context and message preparation
+- `mail-attachments` - Invoice/document attachment handling
+- `zoho-crm` - CRM contact preparation and updates
+- `documentation` - Booking system records and operating notes
+- `todo-management` - Follow-up and payment-status tracking
+
+**Verification Status:** Pending live workflow test with rotated Zoho secrets
+
 ## Skill Installation Status
 
 ### Already Installed Skills
@@ -145,4 +156,4 @@ The following skills have been assigned for future work and maintenance:
 - Regular skill audits recommended quarterly
 
 ## Last Updated
-2026-03-18
+2026-06-15

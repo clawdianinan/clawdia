@@ -1,0 +1,74 @@
+{
+  "system": "IIH Booking System",
+  "version": "1.0",
+  "owner_agent": "aisha",
+  "timezone": "Africa/Lagos",
+  "status_model": [
+    "Draft",
+    "Pending Availability",
+    "Tentative",
+    "Invoice Sent",
+    "Payment Pending",
+    "Confirmed",
+    "Cancelled",
+    "Refund Review"
+  ],
+  "contacts": {
+    "booking_inbox": "eventbookings@iih.ng",
+    "events_cc": "events@iih.ng",
+    "events_manager": "maureen@iih.ng",
+    "approval_owner": "temi@iih.ng"
+  },
+  "facilities": {
+    "Main Hall": {
+      "billing_mode": "day",
+      "rate_ngn": 750000,
+      "zoho_books_item_id": "6104627000000136098"
+    },
+    "Pitch Hall": {
+      "billing_mode": "day",
+      "rate_ngn": 400000,
+      "zoho_books_item_id": "6104627000000136021"
+    },
+    "Meeting Room": {
+      "billing_mode": "hour",
+      "rate_ngn": 20000,
+      "zoho_books_item_id": "6104627000000250451"
+    },
+    "Private Office": {
+      "billing_mode": "hour",
+      "rate_ngn": 20000,
+      "zoho_books_item_id": "6104627000000151001"
+    }
+  },
+  "fees": {
+    "refundable_security_deposit": {
+      "rate_ngn": 100000,
+      "always_apply": true,
+      "zoho_books_item_id": "6104627000000150065"
+    },
+    "external_catering_corkage": {
+      "rate_ngn": 100000,
+      "billing_mode": "day",
+      "apply_when": "external_catering == true"
+    }
+  },
+  "required_secrets": [
+    "ZOHO_CLIENT_ID",
+    "ZOHO_CLIENT_SECRET",
+    "ZOHO_REFRESH_TOKEN",
+    "ZOHO_BOOKS_ORG_ID",
+    "ZOHO_APP_PASSWORD",
+    "ZOHO_EMAIL",
+    "ZOHO_FROM"
+  ],
+  "approval_gates": [
+    "send_invoice_email",
+    "send_acknowledgement_email",
+    "create_external_calendar_invite",
+    "confirm_payment",
+    "issue_refund",
+    "approve_discount_or_waiver",
+    "respond_to_third_party"
+  ]
+}
