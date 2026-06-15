@@ -41,9 +41,10 @@
       "zoho_books_item_id": "6104627000000250451"
     },
     "Private Office": {
-      "billing_mode": "hour",
-      "rate_ngn": 20000,
-      "zoho_books_item_id": "6104627000000151001"
+      "billing_mode": "day",
+      "rate_ngn": 25000,
+      "zoho_books_item_id": "6104627000000151001",
+      "available": false
     }
   },
   "event_policy": {
@@ -53,7 +54,7 @@
       "entrepreneurship",
       "youth development"
     ],
-    "initial_response_rule": "deduce available details from the enquiry first, then ask only for missing or unclear fields",
+    "initial_response_rule": "deduce available details from the enquiry first, do not list deduced details in the autoresponder, and ask only for missing or unclear fields",
     "external_catering_policy": "external catering is not allowed by default; exceptions attract a NGN 100,000 per day corkage fee"
   },
   "keychain_services": {

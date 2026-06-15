@@ -43,9 +43,10 @@ FACILITIES = {
         "item_id": "6104627000000250451",
     },
     "Private Office": {
-        "billing_mode": "hour",
-        "rate_ngn": 20000,
+        "billing_mode": "day",
+        "rate_ngn": 25000,
         "item_id": "6104627000000151001",
+        "available": False,
     },
 }
 
@@ -82,6 +83,8 @@ def validate_booking(booking: dict[str, Any]) -> list[str]:
     facility = booking.get("facility")
     if facility and facility not in FACILITIES:
         errors.append(f"Unsupported facility: {facility}")
+    elif facility and FACILITIES[facility].get("available") is False:
+        errors.append(f"{facility} is currently unavailable.")
 
     email = str(booking.get("email", ""))
     if email and not re.match(r"^[^@\s]+@[^@\s]+\.[^@\s]+$", email):

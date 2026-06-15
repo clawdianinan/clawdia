@@ -1,6 +1,6 @@
 ---
 name: "iih-booking-system"
-description: "IIH booking workflow with event policy, keychain setup, autoresponder rules."
+description: "IIH booking skill with Private Office unavailable and revised autoresponder."
 ---
 
 # IIH Booking System Skill
@@ -19,7 +19,7 @@ Clawdia remains orchestrator and approval gate. Temi remains final authority for
 
 Use this skill when the request involves:
 - IIH Space or facility booking enquiries
-- Main Hall, Pitch Hall, Meeting Room, or Private Office bookings
+- Main Hall, Pitch Hall, Meeting Room, or Private Office enquiries
 - booking form validation
 - booking invoice/quote preparation
 - tentative calendar hold preparation
@@ -50,7 +50,7 @@ IIH only accommodates events related to:
 
 External catering is not allowed by default. If an exception is approved, it attracts a corkage fee of NGN 100,000 per day.
 
-Autoresponses must deduce all clear details from the initial enquiry first and ask only for missing or unclear fields.
+Autoresponses must deduce all clear details from the initial enquiry first, not list the deduced details, and ask only for missing or unclear fields.
 
 ## Security Rule
 
@@ -99,14 +99,15 @@ If required data is missing, keep status `Draft` and ask only for the missing fi
 - Main Hall: NGN 750,000/day
 - Pitch Hall: NGN 400,000/day
 - Meeting Room: NGN 20,000/hour
-- Private Office: NGN 20,000/hour
+- Private Office: NGN 25,000/day, currently unavailable
 - Refundable security deposit: NGN 100,000 on every booking
 - External catering corkage: NGN 100,000/day when external catering exception is approved
 
 Rules:
 - Always add the refundable security deposit.
 - Main Hall and Pitch Hall are one full-day unit unless Temi approves otherwise.
-- Meeting Room and Private Office use `duration_hours`.
+- Meeting Room uses `duration_hours`.
+- Private Office is currently unavailable and should not be offered as a selectable booking option.
 
 ## Status Model
 
@@ -167,6 +168,7 @@ Explicit approval is required for:
 Escalate to Clawdia/Temi when:
 - event does not appear related to technology, innovation, entrepreneurship, or youth development
 - external catering exception is requested
+- Private Office is requested
 - payment evidence is unclear
 - facility/time conflicts exist
 - client requests refund, discount, waiver, or rate exception

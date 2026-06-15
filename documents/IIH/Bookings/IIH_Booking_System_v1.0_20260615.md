@@ -76,7 +76,7 @@ Use these statuses exactly:
 | Main Hall | Full day | NGN 750,000/day |
 | Pitch Hall | Full day | NGN 400,000/day |
 | Meeting Room | Hourly | NGN 20,000/hour |
-| Private Office | Hourly | NGN 20,000/hour |
+| Private Office | Full day | NGN 25,000/day, currently unavailable |
 | Refundable Security Deposit | Per booking | NGN 100,000 |
 | External Catering Corkage | Conditional | NGN 100,000/day |
 
@@ -84,7 +84,8 @@ Rules:
 - Always add the refundable security deposit.
 - Add external catering corkage when `external_catering` is true.
 - Main Hall and Pitch Hall are billed as one full-day unit unless Temi approves a different rule.
-- Meeting Room and Private Office are billed by `duration_hours`.
+- Meeting Room is billed by `duration_hours`.
+- Private Office is currently unavailable.
 
 ## 5.1 Event Eligibility and Catering Policy
 
@@ -92,7 +93,7 @@ IIH only accommodates events related to technology, innovation, entrepreneurship
 
 External catering is not allowed by default. If an exception is approved, it attracts a corkage fee of NGN 100,000 per day.
 
-Autoresponses must deduce any clear details from the client's initial email first, then ask only for missing or unclear details.
+Autoresponses must deduce any clear details from the client's initial email first, without listing the deduced details in the response, then ask only for missing or unclear details.
 
 ## 6. Secret Handling
 

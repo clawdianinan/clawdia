@@ -12,3 +12,5 @@
 - md@iih.ng is excluded from the IIH Booking System entirely.
 - Temi requested local keychain prompts for required booking credentials.
 - Booking autoresponder should list hall options, mention event eligibility, state catering policy, deduce available details first, and ask only for missing/unclear details.
+- Temi clarified the autoresponder should not list deduced details; it should only ask for missing details.
+- Private Office is NGN 25,000/day but currently unavailable.
