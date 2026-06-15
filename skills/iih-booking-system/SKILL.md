@@ -1,6 +1,6 @@
 ---
 name: "iih-booking-system"
-description: "IIH booking skill with Private Office unavailable and revised autoresponder."
+description: "IIH booking skill with booking form link in autoresponder."
 ---
 
 # IIH Booking System Skill
@@ -39,6 +39,13 @@ Rules:
 - `md@iih.ng` is excluded from the booking system entirely.
 - If the `eventbookings` mailbox is not configured in the active email runtime, prepare drafts only and report the missing mailbox connection.
 - Summary/internal update emails sent by Clawdia AI should use Clawdia AI identity and signature.
+
+## Booking Form
+
+Full booking request form:
+https://forms.gle/psuxSJ4MG1CqQWKD8
+
+Autoresponses should include this link when the sender needs to complete a full booking request.
 
 ## Event Policy
 
@@ -125,13 +132,14 @@ Use these statuses exactly:
 
 1. Validate/deduce intake details from enquiry.
 2. Ask only for missing or unclear details.
-3. Check facility/date/time conflict before invoice preparation.
-4. Prepare quote and invoice line items.
-5. Prepare Zoho Books contact and invoice payloads.
-6. Prepare Zoho CRM contact update with lead source `IIH Space Booking Form`.
-7. Prepare tentative calendar hold in timezone `Africa/Lagos`.
-8. Send nothing until approval is explicit in the current thread.
-9. Mark booking `Confirmed` only after verified payment evidence, Zoho payment status, or explicit Temi approval.
+3. Direct incomplete requests to the booking form where useful.
+4. Check facility/date/time conflict before invoice preparation.
+5. Prepare quote and invoice line items.
+6. Prepare Zoho Books contact and invoice payloads.
+7. Prepare Zoho CRM contact update with lead source `IIH Space Booking Form`.
+8. Prepare tentative calendar hold in timezone `Africa/Lagos`.
+9. Send nothing until approval is explicit in the current thread.
+10. Mark booking `Confirmed` only after verified payment evidence, Zoho payment status, or explicit Temi approval.
 
 ## Connector Commands
 

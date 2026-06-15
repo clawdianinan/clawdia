@@ -95,6 +95,11 @@ External catering is not allowed by default. If an exception is approved, it att
 
 Autoresponses must deduce any clear details from the client's initial email first, without listing the deduced details in the response, then ask only for missing or unclear details.
 
+Full booking request form:
+https://forms.gle/psuxSJ4MG1CqQWKD8
+
+Autoresponses should include this form link when the client needs to complete a full booking request.
+
 ## 6. Secret Handling
 
 Do not store credentials in documents or agent memory. Configure these as environment secrets only:

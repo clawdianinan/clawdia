@@ -57,6 +57,10 @@
     "initial_response_rule": "deduce available details from the enquiry first, do not list deduced details in the autoresponder, and ask only for missing or unclear fields",
     "external_catering_policy": "external catering is not allowed by default; exceptions attract a NGN 100,000 per day corkage fee"
   },
+  "booking_form": {
+    "url": "https://forms.gle/psuxSJ4MG1CqQWKD8",
+    "autoresponder_rule": "include this link when asking clients to complete a full booking request"
+  },
   "keychain_services": {
     "account": "iih-booking",
     "ZOHO_CLIENT_ID": "iih-booking-ZOHO_CLIENT_ID",
