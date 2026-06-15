@@ -8,3 +8,5 @@
 - The source guide included Zoho credentials/OAuth material; do not reproduce them.
 - Temi later approved using those secrets/tokens as-is with no rotation required before production.
 - Keep credentials in secure runtime environment, macOS Keychain, or approved secret store only.
+- Temi instructed that Aisha and all booking-related email use eventbookings@iih.ng.
+- md@iih.ng is excluded from the IIH Booking System entirely.

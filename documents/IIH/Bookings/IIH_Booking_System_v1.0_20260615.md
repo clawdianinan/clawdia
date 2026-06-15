@@ -26,6 +26,16 @@ Aisha owns:
 
 Clawdia remains the orchestrator and approval gate.
 
+## 2.1 Booking Email Identity
+
+Aisha uses `eventbookings@iih.ng` for all booking-related emails and reply handling.
+
+Rules:
+- `eventbookings@iih.ng` is the booking sender/reply-to identity.
+- `events@iih.ng` is copied on invoice and coordination emails.
+- `md@iih.ng` is excluded from the booking system entirely.
+- If the `eventbookings` mailbox is not configured in the active email client/tool, Aisha must prepare drafts only and report the missing mailbox connection.
+
 ## 3. Booking Status Model
 
 Use these statuses exactly:
@@ -87,6 +97,7 @@ Do not store credentials in documents or agent memory. Configure these as enviro
 - `ZOHO_APP_PASSWORD`
 - `ZOHO_EMAIL`
 - `ZOHO_FROM`
+- `ZOHO_CALENDAR_UID`
 
 Temi approved using the existing Zoho token set as-is on 2026-06-15. Do not rotate before production unless authentication fails, a token is revoked, or Temi later requests rotation.
 
@@ -135,6 +146,17 @@ Aisha prepares a tentative calendar hold:
 
 Calendar invites are external communications and require approval before sending.
 
+### Step 5.1 - Connector Runtime
+
+The local connector is:
+
+```bash
+python3 scripts/iih_booking_connectors.py doctor --pretty
+python3 scripts/iih_booking_connectors.py prepare documents/IIH/Bookings/sample_booking.json --pretty
+```
+
+Live Zoho writes require `--confirm-live`. Invoice email sends and external calendar invites additionally require `--confirm-email-send`.
+
 ### Step 6 - Payment Confirmation
 
 Only mark a booking `Confirmed` when one of these is true:
@@ -163,8 +185,10 @@ Use `Warm regards,`.
 For IIH booking emails:
 - keep tone warm and professional
 - include facility, event date, invoice/payment deadline, and booking status
+- send/reply from eventbookings@iih.ng only
 - CC events@iih.ng on invoice emails
 - direct enquiries to eventbookings@iih.ng
+- never use md@iih.ng for booking automation
 
 ## 10. Operational Bundle Output
 
@@ -188,9 +212,11 @@ For each booking, Aisha should return:
 
 - Existing Zoho token set approved by Temi for use as-is.
 - Zoho secrets stored only in secure runtime environment, macOS Keychain, or an approved secret store.
+- eventbookings@iih.ng mailbox configured in Himalaya or approved email runtime.
 - Booking form captures the required schema.
 - Availability source of truth is selected.
 - Aisha has a booking register path or database.
+- Zoho Books/CRM/Calendar connector doctor check passes.
 - Dry-run invoice payload tested.
 - Dry-run calendar payload tested.
 - Explicit approval flow confirmed.

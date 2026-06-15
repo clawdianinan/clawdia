@@ -15,9 +15,14 @@
   ],
   "contacts": {
     "booking_inbox": "eventbookings@iih.ng",
+    "booking_from": "eventbookings@iih.ng",
+    "booking_reply_to": "eventbookings@iih.ng",
     "events_cc": "events@iih.ng",
     "events_manager": "maureen@iih.ng",
-    "approval_owner": "temi@iih.ng"
+    "approval_owner": "temi@iih.ng",
+    "excluded_booking_identities": [
+      "md@iih.ng"
+    ]
   },
   "facilities": {
     "Main Hall": {
@@ -60,8 +65,13 @@
     "ZOHO_BOOKS_ORG_ID",
     "ZOHO_APP_PASSWORD",
     "ZOHO_EMAIL",
-    "ZOHO_FROM"
+    "ZOHO_FROM",
+    "ZOHO_CALENDAR_UID"
   ],
+  "email_runtime": {
+    "required_himalaya_account": "eventbookings",
+    "sender_policy": "all booking-related emails must use eventbookings@iih.ng; md@iih.ng is excluded from this system"
+  },
   "credential_policy": {
     "existing_tokens_approved_by_temi": true,
     "rotation_required_before_production": false,

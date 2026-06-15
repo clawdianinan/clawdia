@@ -3,6 +3,8 @@
 ## Durable Role Memory
 - Aisha owns IIH Space booking operations.
 - Booking workflows are IIH context by default.
+- Aisha's booking email identity is eventbookings@iih.ng.
+- md@iih.ng is excluded from the booking system entirely.
 - Clawdia remains final orchestrator and approval gate for outbound sends, payment-sensitive actions, refunds, discounts, waivers, and external communications.
 
 ## Facility Rates

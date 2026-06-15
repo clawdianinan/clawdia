@@ -1,2 +1,7 @@
 # Local Netlify folder
 .netlify
+
+# IIH Booking System runtime artifacts
+documents/IIH/Bookings/*.sqlite3
+documents/IIH/Bookings/*.sqlite3-*
+documents/IIH/Bookings/drafts/
