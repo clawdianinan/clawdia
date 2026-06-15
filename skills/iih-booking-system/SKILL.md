@@ -1,6 +1,6 @@
 ---
 name: "iih-booking-system"
-description: "IIH Space booking intake, quote, Zoho prep, and approval gates."
+description: "IIH Space booking workflow with approved existing Zoho token use."
 ---
 
 # IIH Booking System Skill
@@ -30,7 +30,9 @@ Do not use this skill for non-IIH venue booking unless the user explicitly asks 
 
 ## Security Rule
 
-Never expose, save, repeat, or transform live credentials, refresh tokens, app passwords, OAuth codes, client secrets, or API keys. Store only secret variable names/placeholders.
+Never expose, save, repeat, or transform live credentials, refresh tokens, app passwords, OAuth codes, client secrets, or API keys. Store only secret variable names/placeholders in documents, committed config, skill text, and chat summaries.
+
+Temi approved using the existing Zoho token set as-is on 2026-06-15. No pre-production rotation is required unless authentication fails, a token is revoked, or Temi later requests rotation.
 
 Required secret names:
 - `ZOHO_CLIENT_ID`
@@ -41,7 +43,7 @@ Required secret names:
 - `ZOHO_EMAIL`
 - `ZOHO_FROM`
 
-If a source document contains live credentials, recommend rotation and continue with placeholders only.
+Credentials may be used from secure runtime environment variables, macOS Keychain, or another approved secret store only. Do not commit or echo values.
 
 ## Required Booking Fields
 

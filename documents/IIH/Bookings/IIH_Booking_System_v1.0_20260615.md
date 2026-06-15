@@ -88,7 +88,9 @@ Do not store credentials in documents or agent memory. Configure these as enviro
 - `ZOHO_EMAIL`
 - `ZOHO_FROM`
 
-The source setup guide exposed live-looking credentials. Rotate the Zoho OAuth client secret, refresh token, and mail app password before production use.
+Temi approved using the existing Zoho token set as-is on 2026-06-15. Do not rotate before production unless authentication fails, a token is revoked, or Temi later requests rotation.
+
+The credentials must still remain outside git, documents, committed config, and chat summaries. Use secure runtime environment variables, macOS Keychain, or an approved secret store only.
 
 ## 7. Workflow
 
@@ -184,7 +186,8 @@ For each booking, Aisha should return:
 
 ## 11. Production Readiness Checklist
 
-- Zoho secrets rotated and stored only as environment secrets.
+- Existing Zoho token set approved by Temi for use as-is.
+- Zoho secrets stored only in secure runtime environment, macOS Keychain, or an approved secret store.
 - Booking form captures the required schema.
 - Availability source of truth is selected.
 - Aisha has a booking register path or database.

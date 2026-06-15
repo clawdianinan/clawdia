@@ -5,4 +5,6 @@
 - Clawdia remains orchestrator and approval gate for outbound emails, invoice sends, calendar invites, payment confirmation, refunds, discounts, waivers, and booking exceptions.
 - Created a secret-safe booking system spec, machine-readable config, and dry-run quote/operations bundle helper.
 - A reusable skill proposal was created through Skill Workshop: `iih-booking-system-20260615-c459874f7a`.
-- The source guide included live-looking Zoho credentials/OAuth material; do not reproduce them. Rotate Zoho client secret, refresh token, and mail app password before production use.
+- The source guide included Zoho credentials/OAuth material; do not reproduce them.
+- Temi later approved using those secrets/tokens as-is with no rotation required before production.
+- Keep credentials in secure runtime environment, macOS Keychain, or approved secret store only.

@@ -30,3 +30,8 @@
 
 ## Sensitive Data Rule
 The source setup guide included sensitive Zoho credential material. Do not reproduce it. Store and reference only secret names/placeholders.
+
+## Credential Policy
+- Temi approved use of the existing Zoho token set as-is on 2026-06-15.
+- No rotation is required before production unless authentication fails, a token is revoked, or Temi later requests rotation.
+- Keep credentials in secure runtime environment, macOS Keychain, or approved secret store only; never commit or echo them.

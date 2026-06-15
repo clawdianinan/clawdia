@@ -62,6 +62,13 @@
     "ZOHO_EMAIL",
     "ZOHO_FROM"
   ],
+  "credential_policy": {
+    "existing_tokens_approved_by_temi": true,
+    "rotation_required_before_production": false,
+    "storage_rule": "secure runtime, keychain, or environment only; never commit secrets",
+    "replacement_trigger": "only if authentication fails, token is revoked, or Temi later requests rotation",
+    "approved_on": "2026-06-15"
+  },
   "approval_gates": [
     "send_invoice_email",
     "send_acknowledgement_email",
