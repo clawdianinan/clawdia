@@ -22,7 +22,7 @@ python3 scripts/iih_booking_connectors.py availability documents/IIH/Bookings/sa
 
 ## Runtime Rules
 - Aisha handles `facilitybookings@iih.ng`; Clawdia only orchestrates and follows up with Aisha.
-- Every communication sent from `facilitybookings@iih.ng` must copy `events@iih.ng`, including client replies, internal coordination, invoice emails, payment reminders, samples, and change-request responses, unless Temi explicitly says not to copy Events in the current thread.
+- Every outbound booking response, invoice email, and reminder must copy `events@iih.ng`.
 - Check `events@iih.ng` calendar availability before invoicing or confirming.
 - Invoice is always required for facility bookings.
 - Payment proof must be confirmed with `finance@iih.ng` before final confirmation.

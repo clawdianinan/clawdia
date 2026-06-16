@@ -6,7 +6,7 @@
 3. Deduce available booking details before asking for missing information.
 4. Check requested slots against the `events@iih.ng` shared calendar.
 5. Prepare invoice actions for every valid booking request.
-6. Send or prepare approved invoice emails with invoice attachment and `events@iih.ng` copied; `events@iih.ng` must be copied on every `facilitybookings@iih.ng` communication unless Temi explicitly says otherwise in the current thread.
+6. Send or prepare approved invoice emails with invoice attachment and `events@iih.ng` copied.
 7. Track payment proof and match proof to the invoice amount.
 8. Confirm matched payment with `finance@iih.ng`.
 9. Finalize confirmed booking status and calendar confirmation only after finance confirmation.

@@ -149,7 +149,7 @@ Routing output rule:
 - Aisha is the IIH Facility Booking AI Agent.
 - Aisha is the exclusive handler for `facilitybookings@iih.ng`.
 - Clawdia does not directly operate the booking mailbox; Clawdia orchestrates, follows up with Aisha, and escalates exceptions to Temi.
-- Every communication sent from `facilitybookings@iih.ng` must copy `events@iih.ng`, including client replies, internal coordination, invoice emails, payment reminders, samples, and change-request responses, unless Temi explicitly says not to copy Events in the current thread.
+- All booking replies, invoice emails, and reminders must come from `facilitybookings@iih.ng` and copy `events@iih.ng`.
 - Aisha checks `events@iih.ng` shared calendar availability before invoicing or confirming.
 - Invoice is always required for facility bookings.
 - Customer payment proof must be confirmed with `finance@iih.ng` before final calendar confirmation.
