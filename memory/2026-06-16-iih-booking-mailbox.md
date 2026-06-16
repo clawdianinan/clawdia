@@ -37,4 +37,7 @@
 - Checked the `Request to use Hall` thread after Temi said a response had been made. No new customer reply was present after the outbound facilitybookings response; latest matching customer-side message remains Dr. Amina's earlier support note.
 - Fixed booking-agent classifier so outbound copies from `facilitybookings@iih.ng` are recorded as `outbound_booking_response`, not payment/customer action.
 - Ministry thread remains `Pending Client Details`; goal remains securing a paid booking via IIH invoice before calendar confirmation.
-- Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.
+- Booking form responses arrive at `facilitybookings@iih.ng` and must be monitored as booking intake.
+- Availability must be checked against the `events@iih.ng` shared group calendar before invoicing/confirmation.
+- Customer payment proof must be confirmed with `finance@iih.ng` before final calendar confirmation.
+- Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-9a49e130b2`.

@@ -59,6 +59,17 @@ SYSTEM_SENDERS = (
     "zoho",
     "mailer-daemon",
 )
+FORM_SENDERS = (
+    "forms-receipts-noreply@google.com",
+    "forms-noreply@google.com",
+    "googleforms-noreply@google.com",
+)
+FORM_TERMS = (
+    "booking form",
+    "facility booking",
+    "new response",
+    "google forms",
+)
 
 
 @dataclass
@@ -182,16 +193,21 @@ def classify(record: MessageRecord, conn: sqlite3.Connection, thread_key: str, t
     status = str(existing[0]) if existing else "New"
     invoice_total = int(existing[1]) if existing and existing[1] is not None else None
 
+    is_form_response = sender in FORM_SENDERS or any(term in text for term in FORM_TERMS)
+
     if sender == BOOKING_ADDRESS:
         classification = "outbound_booking_response"
         next_action = "no_action_record_sent_response"
+    elif is_form_response:
+        classification = "new_booking_request"
+        next_action = "deduce_form_response_check_events_calendar_and_prepare_invoice"
     elif any(term in sender for term in SYSTEM_SENDERS):
         classification = "system_update"
         next_action = "review_system_update"
     elif any(term in text for term in PAYMENT_TERMS) or record.has_attachment:
         classification = "payment_proof" if status in {"Invoice Sent", "Payment Pending"} else "payment_or_attachment"
         if invoice_total and invoice_total in amounts:
-            next_action = "confirm_calendar_with_events_cc"
+            next_action = "email_finance_for_payment_confirmation"
         elif invoice_total:
             next_action = "human_review_payment_amount"
         else:
@@ -547,6 +563,40 @@ def mark_confirmed(args: argparse.Namespace) -> dict[str, Any]:
     }
 
 
+def mark_finance_confirmed(args: argparse.Namespace) -> dict[str, Any]:
+    with ensure_db() as conn:
+        conn.execute(
+            """
+            UPDATE conversations
+            SET status = 'Finance Confirmed',
+                invoice_status = 'finance_confirmed_paid',
+                next_action = 'create_confirmed_calendar_event',
+                events_cc_required = 1,
+                updated_at = ?
+            WHERE thread_key = ?
+            """,
+            (now(), args.thread_key),
+        )
+        if conn.total_changes == 0:
+            raise SystemExit(f"Unknown thread_key: {args.thread_key}")
+        conn.execute(
+            "INSERT INTO action_log (thread_key, action, detail_json, created_at) VALUES (?, ?, ?, ?)",
+            (
+                args.thread_key,
+                "finance_confirmed_payment",
+                json.dumps({"finance_email": "finance@iih.ng", "confirmation_reference": args.reference}, sort_keys=True),
+                now(),
+            ),
+        )
+        conn.commit()
+    return {
+        "ok": True,
+        "thread_key": args.thread_key,
+        "status": "Finance Confirmed",
+        "next_action": "create_confirmed_calendar_event",
+    }
+
+
 def state(limit: int) -> dict[str, Any]:
     with ensure_db() as conn:
         rows = conn.execute(
@@ -602,6 +652,11 @@ def main() -> int:
     confirm_parser.add_argument("--calendar-event-uid", default="")
     confirm_parser.add_argument("--pretty", action="store_true")
 
+    finance_parser = sub.add_parser("mark-finance-confirmed", help="Record finance@iih.ng confirmation of payment.")
+    finance_parser.add_argument("--thread-key", required=True)
+    finance_parser.add_argument("--reference", default="")
+    finance_parser.add_argument("--pretty", action="store_true")
+
     args = parser.parse_args()
     if args.command == "poll":
         output = poll(args.limit)
@@ -611,6 +666,8 @@ def main() -> int:
         output = record_invoice(args)
     elif args.command == "mark-confirmed":
         output = mark_confirmed(args)
+    elif args.command == "mark-finance-confirmed":
+        output = mark_finance_confirmed(args)
     else:
         raise SystemExit(f"Unknown command: {args.command}")
 

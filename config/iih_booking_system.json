@@ -59,7 +59,9 @@
   },
   "booking_form": {
     "url": "https://forms.gle/psuxSJ4MG1CqQWKD8",
-    "autoresponder_rule": "include this link when asking clients to complete a full booking request"
+    "autoresponder_rule": "include this link when asking clients to complete a full booking request",
+    "response_inbox": "facilitybookings@iih.ng",
+    "monitoring_rule": "treat form response emails as booking intake and deduce required fields before replying"
   },
   "keychain_services": {
     "account": "iih-booking",
@@ -115,6 +117,17 @@
       "signature_after_current_booking": "Aisha\nIIH Facility Booking Agent",
       "invoice_policy": "invoice is always required for facility bookings; never ask whether an invoice is required",
       "invoice_payment_goal": "send invoice, wait for matching payment proof, then mark calendar event confirmed with events@iih.ng",
+      "availability_source": "events@iih.ng shared group calendar",
+      "availability_gate": "do not invoice or confirm until the requested slot has been checked against the events@iih.ng shared group calendar or escalated if calendar access is unavailable",
+      "payment_confirmation_gate": "payment proof must be emailed/reviewed with finance@iih.ng and finance confirmation recorded before final calendar confirmation",
+      "payment_details_required": [
+        "payer_name",
+        "amount_paid",
+        "payment_date",
+        "transaction_reference",
+        "proof_of_payment_attachment_or_screenshot",
+        "invoice_number"
+      ],
       "approved_automation_sends": [
         "send_invoice_email_with_attachment",
         "send_payment_reminder"

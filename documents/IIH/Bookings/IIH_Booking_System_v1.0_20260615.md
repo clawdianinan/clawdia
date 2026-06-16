@@ -100,6 +100,8 @@ https://forms.gle/psuxSJ4MG1CqQWKD8
 
 Autoresponses should include this form link when the client needs to complete a full booking request.
 
+Form response emails arrive at `facilitybookings@iih.ng` and must be treated as booking intake.
+
 ## 6. Secret Handling
 
 Do not store credentials in documents or agent memory. Configure these as environment secrets only:
@@ -136,7 +138,9 @@ If required fields are missing, Aisha returns a short missing-fields list and ke
 
 Aisha checks facility/date/time overlap before preparing invoice actions.
 
-If availability cannot be checked from the current system state, Aisha marks the booking `Pending Availability` and asks Clawdia to run or approve the availability check.
+Availability source of truth: `events@iih.ng` shared group calendar.
+
+If availability cannot be checked from the `events@iih.ng` shared group calendar, Aisha marks the booking `Pending Availability` and escalates instead of assuming availability.
 
 ### Step 3 - Quote and Invoice Bundle
 
@@ -191,7 +195,7 @@ Supported live connector steps:
 ### Step 6 - Payment Confirmation
 
 Only mark a booking `Confirmed` when one of these is true:
-- payment evidence has been verified
+- payment evidence has been matched to the invoice amount and confirmed with `finance@iih.ng`
 - Zoho Books payment status confirms payment
 - Temi explicitly approves confirmation
 
@@ -213,6 +217,7 @@ Approved automation path:
 - The booking agent may send payment reminders for recorded unpaid invoices.
 - All invoice and reminder emails must CC `events@iih.ng`.
 - An invoice is always required for facility bookings; never ask whether an invoice is required.
+- Payment proof must be confirmed with `finance@iih.ng` before final calendar confirmation.
 
 ## 9. Client Email Draft Standard
 
