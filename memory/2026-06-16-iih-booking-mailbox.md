@@ -26,4 +26,6 @@
 - Temi approved the booking automation path to send invoice emails as attachments and send payment reminders to customers.
 - Connector supports `invoice-email` and `payment-reminder` steps with an existing `--invoice-id`, always copying `events@iih.ng`.
 - Latest OAuth code attempt returned `invalid_code`, then the hidden prompt was cancelled; CRM scopes still need a fresh final OAuth code if CRM sync is required.
+- A later OAuth exchange succeeded, but Zoho again returned a scope list excluding all `ZohoCRM...` scopes; CRM Contacts search still fails with `OAUTH_SCOPE_MISMATCH`.
+- Likely cause: the authorizing `facilitybookings@iih.ng` account is not enabled as a Zoho CRM user or the authorization link used did not include/accept CRM scopes.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.
