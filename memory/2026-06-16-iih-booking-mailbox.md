@@ -20,5 +20,7 @@
 - Added `calendar-confirmed` connector step to create a confirmed Zoho Calendar event and register the booking as `Confirmed` after verified payment evidence.
 - Added OpenClaw cron job `d5ff536a-db19-4d9f-a4d2-9ef84d18eb72` named "IIH Booking Agent Poll" to run every 10 minutes.
 - First live poll classified current inbox correctly, including `Request to use Hall` from `tosintolufakayode@gmail.com` as `new_booking_request`.
-- Remaining live invoice blocker: `ZOHO_BOOKS_ORG_ID` is still missing and Books org discovery returns zero organizations until the Zoho Books invite/org access is fully active.
+- Zoho Books invitation was accepted by `facilitybookings@iih.ng`; Books org discovery now returns one organization, `Ilorin Innovation Hub Ltd/Gte`, and `ZOHO_BOOKS_ORG_ID` is saved.
+- Read-only Books contacts and invoices API smoke checks pass.
+- Remaining scope blocker: CRM Contacts search still returns `OAUTH_SCOPE_MISMATCH` until a token is generated with `ZohoCRM.modules.search.READ`.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.
