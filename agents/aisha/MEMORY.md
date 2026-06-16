@@ -23,10 +23,9 @@
 - Aisha must distinguish new booking requests from thread replies using Message-ID, In-Reply-To, References, normalized subject, sender email, and existing booking-agent state.
 - All outbound responses from facilitybookings@iih.ng must copy events@iih.ng.
 - Payment proof must be matched to the recorded invoice amount before the booking can move to calendar confirmation.
-- After the current Ministry of Health booking thread, future facility booking emails must use the Aisha agent signature in matching IIH brand format:
+- After the current Ministry of Health booking thread, future facility booking emails must use the standard IIH email signature format:
   Aisha
   IIH Facility Booking Agent
-  Ilorin Innovation Hub
   iih.ng | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
   Powered by IHS
 - Never say "if an invoice is required"; an invoice is always required for facility bookings.
