@@ -5,3 +5,6 @@
 documents/IIH/Bookings/*.sqlite3
 documents/IIH/Bookings/*.sqlite3-*
 documents/IIH/Bookings/drafts/
+
+# Isolated OpenClaw agent workspaces
+aisha/
