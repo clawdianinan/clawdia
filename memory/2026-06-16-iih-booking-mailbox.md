@@ -29,4 +29,7 @@
 - After `facilitybookings@iih.ng` was added to CRM and accepted the invitation, a new OAuth exchange succeeded with CRM scopes included.
 - CRM Contacts search and CRM modules smoke checks now pass.
 - Final smoke checks pass for CRM, Zoho Books org/contacts/invoices, Zoho Calendar, Zoho Mail API, Himalaya mailbox, and connector doctor.
+- Responded to the `Request to use Hall` thread from Oluwatosin Fakayode / Kwara State Ministry of Health on 2026-06-16 from `facilitybookings@iih.ng`.
+- Reply was threaded to the latest `Re: Request to use Hall`, copied `events@iih.ng` and Dr Taoheed, and requested missing booking details for the June 17, 2026 Global Fund visit.
+- Booking-agent state for thread `tosintolufakayode@gmail.com|request to use hall` is now `Pending Client Details` with next action `await_client_missing_booking_details`.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.
