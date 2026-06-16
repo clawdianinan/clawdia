@@ -14,9 +14,9 @@
     "Refund Review"
   ],
   "contacts": {
-    "booking_inbox": "eventbookings@iih.ng",
-    "booking_from": "eventbookings@iih.ng",
-    "booking_reply_to": "eventbookings@iih.ng",
+    "booking_inbox": "facilitybookings@iih.ng",
+    "booking_from": "facilitybookings@iih.ng",
+    "booking_reply_to": "facilitybookings@iih.ng",
     "events_cc": "events@iih.ng",
     "events_manager": "maureen@iih.ng",
     "approval_owner": "temi@iih.ng",
@@ -93,8 +93,8 @@
     "ZOHO_CALENDAR_UID"
   ],
   "email_runtime": {
-    "required_himalaya_account": "eventbookings",
-    "sender_policy": "all booking-related emails must use eventbookings@iih.ng; md@iih.ng is excluded from this system"
+    "required_himalaya_account": "facilitybookings",
+    "sender_policy": "all booking-related emails must use facilitybookings@iih.ng; md@iih.ng is excluded from this system"
   },
   "credential_policy": {
     "existing_tokens_approved_by_temi": true,

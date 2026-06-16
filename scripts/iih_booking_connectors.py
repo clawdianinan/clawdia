@@ -44,7 +44,7 @@ OPTIONAL_SECRET_NAMES = [
     "ZOHO_CALENDAR_UID",
 ]
 
-EVENTBOOKINGS_EMAIL = "eventbookings@iih.ng"
+EVENTBOOKINGS_EMAIL = "facilitybookings@iih.ng"
 EVENTS_CC = "events@iih.ng"
 
 
@@ -236,7 +236,7 @@ def send_invoice_email(token: str, invoice_id: str, booking: dict[str, Any], liv
     payload = invoice_email_payload(booking)
     if not live:
         return {"sent": False, "dry_run_payload": payload}
-    assert_eventbookings_identity()
+    assert_booking_identity()
     sent = request_json(
         "POST",
         books_url(f"invoices/{invoice_id}/email"),
@@ -246,13 +246,13 @@ def send_invoice_email(token: str, invoice_id: str, booking: dict[str, Any], liv
     return {"sent": True, "raw": sent}
 
 
-def assert_eventbookings_identity() -> None:
+def assert_booking_identity() -> None:
     configured_from = read_secret("ZOHO_FROM", required=False)
     configured_email = read_secret("ZOHO_EMAIL", required=False)
     configured_values = [value.lower() for value in (configured_from, configured_email) if value]
     if EVENTBOOKINGS_EMAIL not in configured_values:
         raise ConnectorError(
-            "Booking email sends require ZOHO_FROM or ZOHO_EMAIL to be eventbookings@iih.ng."
+            "Booking email sends require ZOHO_FROM or ZOHO_EMAIL to be facilitybookings@iih.ng."
         )
     if "md@iih.ng" in configured_values:
         raise ConnectorError("md@iih.ng is excluded from the IIH Booking System.")
@@ -494,7 +494,7 @@ def doctor() -> dict[str, Any]:
         "secret_status": secret_status(),
         "himalaya": {
             "installed": bool(shutil.which("himalaya")),
-            "eventbookings_account_configured": himalaya_account_exists("eventbookings"),
+            "facilitybookings_account_configured": himalaya_account_exists("facilitybookings"),
         },
         "gcalcli": {
             "installed": Path(gcalcli_path).exists(),

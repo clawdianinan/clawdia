@@ -38,7 +38,7 @@ PROMPTS = [
     SecretPrompt("ZOHO_CLIENT_SECRET", "Zoho Client Secret"),
     SecretPrompt("ZOHO_REFRESH_TOKEN", "Zoho Refresh Token"),
     SecretPrompt("ZOHO_BOOKS_ORG_ID", "Zoho Books Org ID", hidden=False),
-    SecretPrompt("ZOHO_APP_PASSWORD", "Zoho app password for eventbookings@iih.ng"),
+    SecretPrompt("ZOHO_APP_PASSWORD", "Zoho app password for facilitybookings@iih.ng"),
     SecretPrompt("ZOHO_CALENDAR_UID", "Zoho Calendar UID for booking calendar", required=False, hidden=False),
 ]
 
@@ -80,7 +80,7 @@ def collect(prompt: SecretPrompt) -> str:
 def run_setup(overwrite: bool) -> int:
     print("IIH Booking Keychain Setup")
     print("Values are hidden where possible and will not be printed back.")
-    print("Use eventbookings@iih.ng for the Zoho app password/mailbox identity.")
+    print("Use facilitybookings@iih.ng for the Zoho app password/mailbox identity.")
     print("")
 
     for prompt in PROMPTS:
@@ -105,8 +105,8 @@ def run_setup(overwrite: bool) -> int:
 def run_check() -> int:
     for prompt in PROMPTS:
         print(f"{prompt.name}: {'saved' if keychain_has(prompt.service) else 'missing'}")
-    print("ZOHO_EMAIL: default eventbookings@iih.ng")
-    print("ZOHO_FROM: default eventbookings@iih.ng")
+    print("ZOHO_EMAIL: default facilitybookings@iih.ng")
+    print("ZOHO_FROM: default facilitybookings@iih.ng")
     return 0
 
 

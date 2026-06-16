@@ -28,13 +28,13 @@ Clawdia remains the orchestrator and approval gate.
 
 ## 2.1 Booking Email Identity
 
-Aisha uses `eventbookings@iih.ng` for all booking-related emails and reply handling.
+Aisha uses `facilitybookings@iih.ng` for all booking-related emails and reply handling.
 
 Rules:
-- `eventbookings@iih.ng` is the booking sender/reply-to identity.
+- `facilitybookings@iih.ng` is the booking sender/reply-to identity.
 - `events@iih.ng` is copied on invoice and coordination emails.
 - `md@iih.ng` is excluded from the booking system entirely.
-- If the `eventbookings` mailbox is not configured in the active email client/tool, Aisha must prepare drafts only and report the missing mailbox connection.
+- If the `facilitybookings` mailbox is not configured in the active email client/tool, Aisha must prepare drafts only and report the missing mailbox connection.
 
 ## 3. Booking Status Model
 
@@ -206,9 +206,9 @@ Use `Warm regards,`.
 For IIH booking emails:
 - keep tone warm and professional
 - include facility, event date, invoice/payment deadline, and booking status
-- send/reply from eventbookings@iih.ng only
+- send/reply from facilitybookings@iih.ng only
 - CC events@iih.ng on invoice emails
-- direct enquiries to eventbookings@iih.ng
+- direct enquiries to facilitybookings@iih.ng
 - never use md@iih.ng for booking automation
 
 ## 10. Operational Bundle Output
@@ -233,7 +233,7 @@ For each booking, Aisha should return:
 
 - Existing Zoho token set approved by Temi for use as-is.
 - Zoho secrets stored only in secure runtime environment, macOS Keychain, or an approved secret store.
-- eventbookings@iih.ng mailbox configured in Himalaya or approved email runtime.
+- facilitybookings@iih.ng mailbox configured in Himalaya or approved email runtime.
 - Booking form captures the required schema.
 - Availability source of truth is selected.
 - Aisha has a booking register path or database.
