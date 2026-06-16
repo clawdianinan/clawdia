@@ -350,6 +350,19 @@ def upsert_conversation(
 ) -> None:
     normalized = normalize_subject(record.subject)
     existing = conn.execute("SELECT status FROM conversations WHERE thread_key = ?", (thread_key,)).fetchone()
+    if existing and decision["classification"] == "outbound_booking_response":
+        conn.execute(
+            """
+            UPDATE conversations
+            SET last_message_id = ?,
+                events_cc_required = 1,
+                updated_at = ?
+            WHERE thread_key = ?
+            """,
+            (message_identity(record.headers, record.envelope_id), now(), thread_key),
+        )
+        return
+
     status = existing[0] if existing else ("Draft" if decision["classification"] == "new_booking_request" else "Inbox Review")
     if decision["classification"] == "payment_proof" and decision["next_action"] == "confirm_calendar_with_events_cc":
         status = "Payment Evidence Matched"

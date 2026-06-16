@@ -2,7 +2,7 @@
 ## Complete Agent System - Implemented March 18, 2026
 
 **Implementation Time:** 6:14 AM - 6:22 AM (8 minutes)
-**Total Agents:** 6 → 24 (18 total, 11 new specialized agents created)
+**Total Agents:** 6 → 25 (19 total, 12 new specialized agents created)
 **Status:** ✅ FULLY IMPLEMENTED
 
 ---
@@ -37,6 +37,9 @@
 - **Nova** (Venture Strategy) - Planning & Direction 🚀
 - **Shuri** (Operations Analysis) - Structured Analysis 📋
 - **Clawdia** (Orchestrator) - Central Coordination 🐾
+
+### 7. IIH BOOKING OPERATIONS
+- **Aisha** (IIH Facility Booking Agent) - Exclusive handler for `facilitybookings@iih.ng`, booking intake, invoices, payment follow-up, finance confirmation, and confirmed calendar handoff
 
 ---
 
@@ -88,6 +91,7 @@ Each agent has dedicated skill directory:
 5. **Research/Analysis** → Ebun family (Ade)
 6. **Strategy/Planning** → Nova
 7. **Operations/Analysis** → Shuri
+8. **IIH Facility Booking** → Aisha
 
 ### Clawdia Retains:
 - Final approvals
@@ -123,6 +127,7 @@ Each agent has dedicated skill directory:
 2. **Config files:** `agent.json` for each agent
 3. **Skill directories:** Specialized skill packages
 4. **OpenClaw config:** Updated `openclaw.json`
+5. **Aisha runtime package:** `/Users/clawdia/.openclaw/agents/Aisha/`
 
 ### Configuration Updates:
 1. **Main agent allowAgents:** Added all 11 new agents
@@ -160,6 +165,7 @@ Each agent has dedicated skill directory:
 | **Ngozi** | Financial Ops | Payments, tax compliance | Clawdia |
 | **Ruth** | Contracts | Deadlines, legal issues | Clawdia |
 | **Chimamanda** | Email | IHS emails, responses | Clawdia |
+| **Aisha** | IIH Bookings | facilitybookings@iih.ng, invoices, paid booking follow-up | Clawdia |
 | **Morpheus** | QA/Testing | Bugs, test failures | Trinity |
 | **Neo** | DevOps | Deployments, CI/CD | Trinity |
 | **Oracle** | Infrastructure | APIs, automation | Trinity |

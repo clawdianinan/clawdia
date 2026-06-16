@@ -43,3 +43,7 @@
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-9a49e130b2`.
 - Aisha named-agent setup expanded with IDENTITY, TOOLS, TASKS, and HEARTBEAT files. Aisha is now recorded as the exclusive handler for `facilitybookings@iih.ng`; Clawdia only orchestrates and follows up with Aisha.
 - Mailbox poll on 2026-06-16 detected five new booking-related records: Startup Kwara venue enquiry, Startup Kwara partnership invitation, two `Request for the Use of Innovation Hub` follow-ups, and PMI sports/tech facility support reminder. Ministry of Health hall request still has no new client response and remains pending missing details.
+- Sent a polite Aisha follow-up from `facilitybookings@iih.ng` to the Ministry of Health hall request thread with the booking form link, copying `events@iih.ng`.
+- Fresh mailbox check found Fakayode Tosin replied at 2026-06-16 14:31 with event details: 09:00-13:00, theatre setup, projector/screen and AV, hall for at least 100 guests, security provided, no livestream, IIH tea break/lunch support requested, and inspection requested for the afternoon.
+- Registered Aisha in `openclaw agents list` as `aisha` with identity `Aisha`, runtime dir `~/.openclaw/agents/aisha/agent`, and workspace `~/.openclaw/workspace/aisha`.
+- Fixed booking-agent state handling so outbound booking responses do not overwrite actionable inbound next steps.
