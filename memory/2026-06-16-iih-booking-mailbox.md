@@ -11,4 +11,7 @@
 - Remaining blocker for full Zoho Books/CRM/Calendar connector use: OAuth/client/org/calendar secrets are still missing locally.
 - Zoho OAuth Client ID and Client Secret for "IIH Booking Agent" were saved into Keychain services `iih-booking-ZOHO_CLIENT_ID` and `iih-booking-ZOHO_CLIENT_SECRET`.
 - OAuth authorization URL was generated with scopes for Zoho Books contacts/invoices, Zoho CRM contacts, and Zoho Calendar read/events.
+- Zoho OAuth code exchange succeeded and refresh token was saved into `iih-booking-ZOHO_REFRESH_TOKEN`.
+- Calendar UID was discovered and saved into `iih-booking-ZOHO_CALENDAR_UID`; selected calendar name: `facilitybookings`.
+- Books organization discovery returned code 57 because the first scope set omitted `ZohoBooks.settings.READ`; regenerate OAuth with `ZohoBooks.settings.READ` included.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.
