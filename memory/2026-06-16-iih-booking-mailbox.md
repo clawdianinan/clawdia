@@ -9,4 +9,6 @@
 - IMAP login for `facilitybookings@iih.ng` succeeds after Temi enabled IMAP.
 - Himalaya folder listing works for the `facilitybookings` account.
 - Remaining blocker for full Zoho Books/CRM/Calendar connector use: OAuth/client/org/calendar secrets are still missing locally.
+- Zoho OAuth Client ID and Client Secret for "IIH Booking Agent" were saved into Keychain services `iih-booking-ZOHO_CLIENT_ID` and `iih-booking-ZOHO_CLIENT_SECRET`.
+- OAuth authorization URL was generated with scopes for Zoho Books contacts/invoices, Zoho CRM contacts, and Zoho Calendar read/events.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.
