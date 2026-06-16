@@ -34,4 +34,7 @@
 - Booking-agent state for thread `tosintolufakayode@gmail.com|request to use hall` is now `Pending Client Details` with next action `await_client_missing_booking_details`.
 - Temi instructed that after the current Ministry of Health booking, future booking emails should be signed by `Aisha` / `IIH Facility Booking Agent`, not Clawdia.
 - Temi clarified: never say "if an invoice is required"; an invoice is always required for facility bookings.
+- Checked the `Request to use Hall` thread after Temi said a response had been made. No new customer reply was present after the outbound facilitybookings response; latest matching customer-side message remains Dr. Amina's earlier support note.
+- Fixed booking-agent classifier so outbound copies from `facilitybookings@iih.ng` are recorded as `outbound_booking_response`, not payment/customer action.
+- Ministry thread remains `Pending Client Details`; goal remains securing a paid booking via IIH invoice before calendar confirmation.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.

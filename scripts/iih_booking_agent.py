@@ -74,8 +74,8 @@ class MessageRecord:
     raw: dict[str, Any]
 
 
-def run_cmd(args: list[str]) -> str:
-    result = subprocess.run(args, check=True, capture_output=True, text=True)
+def run_cmd(args: list[str], timeout: int = 30) -> str:
+    result = subprocess.run(args, check=True, capture_output=True, text=True, timeout=timeout)
     return result.stdout
 
 
@@ -182,7 +182,10 @@ def classify(record: MessageRecord, conn: sqlite3.Connection, thread_key: str, t
     status = str(existing[0]) if existing else "New"
     invoice_total = int(existing[1]) if existing and existing[1] is not None else None
 
-    if any(term in sender for term in SYSTEM_SENDERS):
+    if sender == BOOKING_ADDRESS:
+        classification = "outbound_booking_response"
+        next_action = "no_action_record_sent_response"
+    elif any(term in sender for term in SYSTEM_SENDERS):
         classification = "system_update"
         next_action = "review_system_update"
     elif any(term in text for term in PAYMENT_TERMS) or record.has_attachment:
@@ -413,7 +416,19 @@ def store_message(
 
 def process_envelope(conn: sqlite3.Connection, envelope: dict[str, Any]) -> dict[str, Any]:
     envelope_id = str(envelope.get("id") or "")
-    headers, body = read_message(envelope_id)
+    try:
+        headers, body = read_message(envelope_id)
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
+        return {
+            "envelope_id": envelope_id,
+            "inserted": False,
+            "thread_key": "",
+            "subject": str(envelope.get("subject") or ""),
+            "from": sender_parts(envelope)[0],
+            "classification": "read_failed",
+            "next_action": f"retry_or_review_message_read: {type(exc).__name__}",
+            "events_cc_required": True,
+        }
     sender_email, sender_name = sender_parts(envelope)
     record = MessageRecord(
         envelope_id=envelope_id,
