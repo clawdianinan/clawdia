@@ -61,6 +61,12 @@ EXTERNAL_CATERING = {
     "rate_ngn": 100000,
 }
 
+STANDARD_PAYMENT_NOTES = (
+    "Account Name: Ilorin Tech Park Ltd (formerly Ilorin Innovation Hub Ltd) \n"
+    "Account Number: 1310169029\n"
+    "Bank Name: Zenith Bank"
+)
+
 
 class BookingError(ValueError):
     pass
@@ -121,6 +127,22 @@ def validate_booking(booking: dict[str, Any]) -> list[str]:
     if "external_catering" in booking and not isinstance(booking.get("external_catering"), bool):
         errors.append("external_catering must be true or false.")
 
+    if "discount_percentage" in booking:
+        try:
+            dp = float(booking["discount_percentage"])
+            if dp < 0 or dp > 100:
+                errors.append("discount_percentage must be between 0 and 100.")
+        except (TypeError, ValueError):
+            errors.append("discount_percentage must be numeric.")
+
+    if "discount_amount" in booking:
+        try:
+            da = float(booking["discount_amount"])
+            if da < 0:
+                errors.append("discount_amount must be zero or positive.")
+        except (TypeError, ValueError):
+            errors.append("discount_amount must be numeric.")
+
     return errors
 
 
@@ -165,6 +187,30 @@ def build_quote(booking: dict[str, Any]) -> dict[str, Any]:
             }
         )
 
+    # Apply discount if specified — discount applies only to facility/fee items, not to
+    # refundable security deposits.
+    discount_percentage = booking.get("discount_percentage", 0)
+    discount_amount = booking.get("discount_amount", 0)
+    if discount_percentage and not discount_amount:
+        # Calculate discount on non-deposit, non-fee items only
+        chargeable_total = sum(
+            item["amount"]
+            for item in line_items
+            if item["name"] not in {"Refundable Security Deposit"}
+        )
+        discount_amount = round(chargeable_total * discount_percentage / 100)
+    if discount_amount > 0:
+        desc = f"{discount_percentage}% discount" if discount_percentage else "Special discount"
+        line_items.append(
+            {
+                "name": "Discount",
+                "description": desc,
+                "quantity": 1,
+                "rate": -discount_amount,
+                "amount": -discount_amount,
+            }
+        )
+
     return {
         "currency": "NGN",
         "line_items": line_items,
@@ -185,16 +231,8 @@ def build_bundle(booking: dict[str, Any]) -> dict[str, Any]:
         "invoice": {
             "date": invoice_date.isoformat(),
             "due_date": due_date.isoformat(),
-            "notes": (
-                f"Event: {booking['event_name']}\n"
-                f"Facility: {booking['facility']}\n"
-                f"Date: {booking['event_date']} at {booking['start_time']}\n"
-                f"Attendees: {booking['expected_attendance']}"
-            ),
-            "terms": (
-                "Payment is required to confirm your booking. Cancellations must be made "
-                "48 hours in advance for a refund review of the security deposit."
-            ),
+            "notes": STANDARD_PAYMENT_NOTES,
+            "terms": "",
         },
         "crm": {
             "lead_source": "IIH Space Booking Form",

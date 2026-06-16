@@ -137,10 +137,7 @@
       ],
       "approved_automation_sends": [
         "send_invoice_email_with_attachment",
-        "send_payment_reminder",
-        "send_new_enquiry_autoresponse",
-        "send_external_reply_acknowledgement",
-        "send_payment_or_attachment_acknowledgement"
+        "send_payment_reminder"
       ],
       "external_send_gate": "booking agent may send approved invoice emails and payment reminders for validated booking threads; other external sends still require explicit approval",
       "new_enquiry_required_links": {
@@ -148,17 +145,7 @@
         "cafeteria_menu": "https://drive.google.com/file/d/1Tyry0_1a6dNmfruWaXRIA4kE-60iwIIm/view?usp=sharing",
         "rule": "new enquiry replies must include both links; direct clients to complete the booking form and do not ask them to repeat form-captured details in the email; then continue intake, availability check, catering reconciliation, and Zoho Books invoice generation; stay ready for follow-up questions or change requests"
       },
-      "mandatory_events_copy_rule": "events@iih.ng must be copied on every communication sent from facilitybookings@iih.ng, including client replies, internal coordination, invoice emails, payment reminders, samples, and change-request responses, unless Temi explicitly says not to copy Events in the current thread.",
-      "form_submission_policy": "do not reply to Google Form submission emails; treat them as data, link to existing enquiries by respondent email where possible, and continue availability/catering/invoice processing",
-      "external_reply_policy": "external replies may receive conservative acknowledgement templates while Aisha continues the booking workflow; internal IIH replies are recorded/routed without auto-reply unless approved"
-    },
-    "scheduled_processor": {
-      "launch_agent": "ng.iih.booking-agent",
-      "interval_seconds": 600,
-      "command": "python3 scripts/iih_booking_agent.py poll --limit 10 --auto-respond --pretty",
-      "behavior": "poll facilitybookings inbox, classify new messages, auto-respond to external new enquiries/replies with approved templates, record all actions",
-      "page_size": 10,
-      "reason": "limit set to 10 so each scheduled pass completes comfortably before the next 10-minute interval"
+      "mandatory_events_copy_rule": "events@iih.ng must be copied on every communication sent from facilitybookings@iih.ng, including client replies, internal coordination, invoice emails, payment reminders, samples, and change-request responses, unless Temi explicitly says not to copy Events in the current thread."
     }
   },
   "credential_policy": {

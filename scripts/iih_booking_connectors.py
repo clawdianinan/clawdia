@@ -308,7 +308,6 @@ def invoice_email_payload(booking: dict[str, Any], reminder: bool = False) -> di
         "Kindly make payment within 7 days to confirm your booking. "
         "Your calendar slot will be confirmed after payment proof is received and matched to the invoice amount.\n\n"
         f"For questions, contact {EVENTBOOKINGS_EMAIL}.\n\n"
-        "Warm regards,\n"
         f"{BOOKING_SIGNATURE}"
     )
     body_html = (
@@ -319,7 +318,6 @@ def invoice_email_payload(booking: dict[str, Any], reminder: bool = False) -> di
         "<p>Kindly make payment within 7 days to confirm your booking. "
         "Your calendar slot will be confirmed after payment proof is received and matched to the invoice amount.</p>"
         f"<p>For questions, contact <a href=\"mailto:{EVENTBOOKINGS_EMAIL}\">{EVENTBOOKINGS_EMAIL}</a>.</p>"
-        "<p>Warm regards,</p>"
         f"{BOOKING_SIGNATURE_HTML}"
     )
     return {

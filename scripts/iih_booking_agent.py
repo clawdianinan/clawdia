@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Poll and classify IIH facility booking mailbox responses.
+"""Poll, classify, and optionally respond to IIH facility booking mailbox messages.
 
 This processor is intentionally stateful and conservative. It records messages,
 tracks conversation threads, classifies new requests versus replies, and queues
-the next booking action. It does not send external email by itself.
+the next booking action. When --auto-respond is enabled, it sends only approved
+template responses for external booking enquiries/replies and never replies to
+Google Form submissions.
 """
 
 from __future__ import annotations
@@ -11,13 +13,19 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import smtplib
+import ssl
 import sqlite3
 import subprocess
 from dataclasses import dataclass
 from datetime import datetime
+from email.message import EmailMessage
+from email.utils import formatdate, make_msgid
 from email.utils import parseaddr
 from pathlib import Path
 from typing import Any
+
+import iih_booking_connectors as connectors
 
 
 WORKSPACE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +35,9 @@ ACCOUNT = "facilitybookings"
 FOLDER = "INBOX"
 EVENTS_CC = "events@iih.ng"
 BOOKING_ADDRESS = "facilitybookings@iih.ng"
+BOOKING_FORM_URL = "https://forms.gle/psuxSJ4MG1CqQWKD8"
+CAFETERIA_MENU_URL = "https://drive.google.com/file/d/1Tyry0_1a6dNmfruWaXRIA4kE-60iwIIm/view?usp=sharing"
+INTERNAL_DOMAINS = ("@iih.ng",)
 
 BOOKING_TERMS = (
     "book",
@@ -69,6 +80,11 @@ FORM_TERMS = (
     "facility booking",
     "new response",
     "google forms",
+)
+NO_REPLY_DOMAINS = (
+    "@google.com",
+    "@zoho.com",
+    "@zohomail.com",
 )
 
 
@@ -122,6 +138,29 @@ def parse_headers_and_body(text: str) -> tuple[dict[str, str], str]:
     return headers, "\n".join(lines[body_start:]).strip()
 
 
+def extract_email_addresses(text: str) -> list[str]:
+    emails = re.findall(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", text, flags=re.I)
+    cleaned: list[str] = []
+    for email in emails:
+        normalized = email.lower().strip(".,;:<>[]()")
+        if normalized not in cleaned:
+            cleaned.append(normalized)
+    return cleaned
+
+
+def is_external_sender(email: str) -> bool:
+    sender = email.lower()
+    if sender == BOOKING_ADDRESS:
+        return False
+    if any(sender.endswith(domain) for domain in INTERNAL_DOMAINS):
+        return False
+    if any(sender.endswith(domain) for domain in NO_REPLY_DOMAINS):
+        return False
+    if any(term in sender for term in SYSTEM_SENDERS):
+        return False
+    return True
+
+
 def sender_parts(envelope: dict[str, Any]) -> tuple[str, str]:
     raw_from = envelope.get("from") or {}
     if isinstance(raw_from, dict):
@@ -135,6 +174,25 @@ def message_identity(headers: dict[str, str], envelope_id: str) -> str:
 
 
 def thread_key_for(record: MessageRecord, conn: sqlite3.Connection) -> tuple[str, str]:
+    is_form_response = record.sender_email.lower() in FORM_SENDERS or any(
+        term in f"{record.subject}\n{record.body}".lower() for term in FORM_TERMS
+    )
+    if is_form_response:
+        for email in extract_email_addresses(record.body):
+            if email == BOOKING_ADDRESS or email.endswith(INTERNAL_DOMAINS) or email.endswith(NO_REPLY_DOMAINS):
+                continue
+            row = conn.execute(
+                """
+                SELECT thread_key FROM conversations
+                WHERE client_email = ?
+                ORDER BY updated_at DESC
+                LIMIT 1
+                """,
+                (email,),
+            ).fetchone()
+            if row:
+                return str(row[0]), "form_email_match"
+
     refs = " ".join(
         part for part in (record.headers.get("in-reply-to"), record.headers.get("references")) if part
     )
@@ -199,8 +257,8 @@ def classify(record: MessageRecord, conn: sqlite3.Connection, thread_key: str, t
         classification = "outbound_booking_response"
         next_action = "no_action_record_sent_response"
     elif is_form_response:
-        classification = "new_booking_request"
-        next_action = "deduce_form_response_check_events_calendar_and_prepare_invoice"
+        classification = "form_submission_data"
+        next_action = "link_form_submission_to_existing_enquiry_no_reply_prepare_invoice"
     elif any(term in sender for term in SYSTEM_SENDERS):
         classification = "system_update"
         next_action = "review_system_update"
@@ -231,9 +289,104 @@ def classify(record: MessageRecord, conn: sqlite3.Connection, thread_key: str, t
     }
 
 
+def new_enquiry_body() -> tuple[str, str]:
+    plain = f"""Dear Client,
+
+Thank you for reaching out to Ilorin Innovation Hub regarding your facility booking enquiry.
+
+To help us capture the full booking details cleanly, kindly complete the facility booking form here:
+{BOOKING_FORM_URL}
+
+You may also review our cafeteria/catering menu here:
+{CAFETERIA_MENU_URL}
+
+Once we receive the completed booking form, we will check availability, review the most suitable hall option, reconcile any catering requirements, and prepare the applicable Zoho Books invoice for your review and payment.
+
+{connectors.BOOKING_SIGNATURE_TEXT}
+"""
+    html = f"""<!doctype html><html><body style="font-family:Arial,sans-serif;color:#222;line-height:1.5;font-size:14px">
+<p>Dear Client,</p>
+<p>Thank you for reaching out to Ilorin Innovation Hub regarding your facility booking enquiry.</p>
+<p>To help us capture the full booking details cleanly, kindly complete the facility booking form here:<br>
+<a href="{BOOKING_FORM_URL}">{BOOKING_FORM_URL}</a></p>
+<p>You may also review our cafeteria/catering menu here:<br>
+<a href="{CAFETERIA_MENU_URL}">{CAFETERIA_MENU_URL}</a></p>
+<p>Once we receive the completed booking form, we will check availability, review the most suitable hall option, reconcile any catering requirements, and prepare the applicable Zoho Books invoice for your review and payment.</p>
+{connectors.BOOKING_SIGNATURE_HTML}
+</body></html>"""
+    return plain, html
+
+
+def reply_ack_body(decision: dict[str, Any]) -> tuple[str, str]:
+    if decision["classification"] in {"payment_proof", "payment_or_attachment"}:
+        message = (
+            "Thank you. We have received your payment proof/attachment and will review it against the booking record. "
+            "Where payment confirmation is required, we will validate with the appropriate team before final confirmation."
+        )
+    else:
+        message = (
+            "Thank you for the update. We have received your response and will continue processing the booking request."
+        )
+    plain = f"""Dear Client,
+
+{message}
+
+{connectors.BOOKING_SIGNATURE_TEXT}
+"""
+    html = f"""<!doctype html><html><body style="font-family:Arial,sans-serif;color:#222;line-height:1.5;font-size:14px">
+<p>Dear Client,</p>
+<p>{message}</p>
+{connectors.BOOKING_SIGNATURE_HTML}
+</body></html>"""
+    return plain, html
+
+
+def send_template_response(record: MessageRecord, decision: dict[str, Any]) -> str | None:
+    if not is_external_sender(record.sender_email):
+        return None
+    if decision["classification"] == "form_submission_data":
+        return None
+    if decision["classification"] == "new_booking_request":
+        plain, html = new_enquiry_body()
+    elif decision["classification"] in {"thread_reply", "payment_proof", "payment_or_attachment"}:
+        plain, html = reply_ack_body(decision)
+    else:
+        return None
+
+    subject = record.subject if record.subject.lower().startswith("re:") else f"Re: {record.subject}"
+    msg = EmailMessage()
+    msg["From"] = f"Aisha <{BOOKING_ADDRESS}>"
+    msg["To"] = record.sender_email
+    msg["Cc"] = EVENTS_CC
+    msg["Subject"] = subject
+    msg["Date"] = formatdate(localtime=True)
+    msg["Message-ID"] = make_msgid(domain="iih.ng")
+    in_reply_to = record.headers.get("message-id")
+    references = " ".join(
+        part for part in (record.headers.get("references"), record.headers.get("message-id")) if part
+    ).strip()
+    if in_reply_to:
+        msg["In-Reply-To"] = in_reply_to
+    if references:
+        msg["References"] = references
+    msg.set_content(plain)
+    msg.add_alternative(html, subtype="html")
+
+    password = connectors.read_secret("ZOHO_APP_PASSWORD")
+    with smtplib.SMTP("smtp.zoho.com", 587, timeout=45) as smtp:
+        smtp.ehlo()
+        smtp.starttls(context=ssl.create_default_context())
+        smtp.ehlo()
+        smtp.login(BOOKING_ADDRESS, password)
+        smtp.send_message(msg, from_addr=BOOKING_ADDRESS, to_addrs=[record.sender_email, EVENTS_CC])
+    return str(msg["Message-ID"])
+
+
 def ensure_db(path: Path = STATE_PATH) -> sqlite3.Connection:
     BOOKING_DIR.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(path)
+    conn = sqlite3.connect(path, timeout=45)
+    conn.execute("PRAGMA busy_timeout = 45000")
+    conn.execute("PRAGMA journal_mode = WAL")
     conn.execute(
         """
         CREATE TABLE IF NOT EXISTS messages (
@@ -443,7 +596,7 @@ def store_message(
     return True
 
 
-def process_envelope(conn: sqlite3.Connection, envelope: dict[str, Any]) -> dict[str, Any]:
+def process_envelope(conn: sqlite3.Connection, envelope: dict[str, Any], auto_respond: bool = False) -> dict[str, Any]:
     envelope_id = str(envelope.get("id") or "")
     try:
         headers, body = read_message(envelope_id)
@@ -473,6 +626,38 @@ def process_envelope(conn: sqlite3.Connection, envelope: dict[str, Any]) -> dict
     thread_key, reason = thread_key_for(record, conn)
     decision = classify(record, conn, thread_key, reason)
     inserted = store_message(conn, record, thread_key, decision)
+    auto_response_message_id = None
+    if inserted and auto_respond:
+        try:
+            auto_response_message_id = send_template_response(record, decision)
+            if auto_response_message_id:
+                conn.execute(
+                    "INSERT INTO action_log (thread_key, action, detail_json, created_at) VALUES (?, ?, ?, ?)",
+                    (
+                        thread_key,
+                        "auto_response_sent",
+                        json.dumps(
+                            {
+                                "message_id": auto_response_message_id,
+                                "to": record.sender_email,
+                                "cc": EVENTS_CC,
+                                "classification": decision["classification"],
+                            },
+                            sort_keys=True,
+                        ),
+                        now(),
+                    ),
+                )
+        except Exception as exc:  # noqa: BLE001 - log and continue polling other messages.
+            conn.execute(
+                "INSERT INTO action_log (thread_key, action, detail_json, created_at) VALUES (?, ?, ?, ?)",
+                (
+                    thread_key,
+                    "auto_response_failed",
+                    json.dumps({"error": str(exc), "classification": decision["classification"]}, sort_keys=True),
+                    now(),
+                ),
+            )
     return {
         "envelope_id": envelope_id,
         "inserted": inserted,
@@ -482,13 +667,14 @@ def process_envelope(conn: sqlite3.Connection, envelope: dict[str, Any]) -> dict
         "classification": decision["classification"],
         "next_action": decision["next_action"],
         "events_cc_required": True,
+        "auto_response_message_id": auto_response_message_id,
     }
 
 
-def poll(limit: int) -> dict[str, Any]:
+def poll(limit: int, auto_respond: bool = False) -> dict[str, Any]:
     with ensure_db() as conn:
         envelopes = fetch_envelopes(limit)
-        results = [process_envelope(conn, envelope) for envelope in envelopes]
+        results = [process_envelope(conn, envelope, auto_respond=auto_respond) for envelope in envelopes]
         conn.commit()
     inserted = [item for item in results if item["inserted"]]
     return {
@@ -496,6 +682,7 @@ def poll(limit: int) -> dict[str, Any]:
         "folder": FOLDER,
         "checked": len(results),
         "new_records": len(inserted),
+        "auto_respond": auto_respond,
         "actions": inserted,
     }
 
@@ -647,6 +834,7 @@ def main() -> int:
 
     poll_parser = sub.add_parser("poll", help="Poll facilitybookings inbox and classify new messages.")
     poll_parser.add_argument("--limit", type=int, default=25)
+    poll_parser.add_argument("--auto-respond", action="store_true", help="Send approved template responses for external new enquiries/replies.")
     poll_parser.add_argument("--pretty", action="store_true")
 
     state_parser = sub.add_parser("state", help="Show recent booking-agent conversation state.")
@@ -672,7 +860,7 @@ def main() -> int:
 
     args = parser.parse_args()
     if args.command == "poll":
-        output = poll(args.limit)
+        output = poll(args.limit, auto_respond=args.auto_respond)
     elif args.command == "state":
         output = state(args.limit)
     elif args.command == "record-invoice":

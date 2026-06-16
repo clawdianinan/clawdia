@@ -155,10 +155,8 @@
     "scheduled_processor": {
       "launch_agent": "ng.iih.booking-agent",
       "interval_seconds": 600,
-      "command": "python3 scripts/iih_booking_agent.py poll --limit 10 --auto-respond --pretty",
-      "behavior": "poll facilitybookings inbox, classify new messages, auto-respond to external new enquiries/replies with approved templates, record all actions",
-      "page_size": 10,
-      "reason": "limit set to 10 so each scheduled pass completes comfortably before the next 10-minute interval"
+      "command": "python3 scripts/iih_booking_agent.py poll --limit 25 --auto-respond --pretty",
+      "behavior": "poll facilitybookings inbox, classify new messages, auto-respond to external new enquiries/replies with approved templates, record all actions"
     }
   },
   "credential_policy": {
