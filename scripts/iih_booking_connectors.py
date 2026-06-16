@@ -46,6 +46,7 @@ OPTIONAL_SECRET_NAMES = [
 
 EVENTBOOKINGS_EMAIL = "facilitybookings@iih.ng"
 EVENTS_CC = "events@iih.ng"
+BOOKING_SIGNATURE = "Aisha\nIIH Facility Booking Agent"
 
 
 class ConnectorError(RuntimeError):
@@ -239,7 +240,7 @@ def invoice_email_payload(booking: dict[str, Any], reminder: bool = False) -> di
             "Your calendar slot will be confirmed after payment proof is received and matched to the invoice amount.\n\n"
             f"For questions, contact {EVENTBOOKINGS_EMAIL}.\n\n"
             "Warm regards,\n"
-            "IIH Bookings"
+            f"{BOOKING_SIGNATURE}"
         ),
     }
 

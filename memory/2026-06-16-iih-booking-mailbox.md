@@ -32,4 +32,5 @@
 - Responded to the `Request to use Hall` thread from Oluwatosin Fakayode / Kwara State Ministry of Health on 2026-06-16 from `facilitybookings@iih.ng`.
 - Reply was threaded to the latest `Re: Request to use Hall`, copied `events@iih.ng` and Dr Taoheed, and requested missing booking details for the June 17, 2026 Global Fund visit.
 - Booking-agent state for thread `tosintolufakayode@gmail.com|request to use hall` is now `Pending Client Details` with next action `await_client_missing_booking_details`.
+- Temi instructed that after the current Ministry of Health booking, future booking emails should be signed by `Aisha` / `IIH Facility Booking Agent`, not Clawdia.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.

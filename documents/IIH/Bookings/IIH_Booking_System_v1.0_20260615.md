@@ -222,6 +222,9 @@ For IIH booking emails:
 - include facility, event date, invoice/payment deadline, and booking status
 - send/reply from facilitybookings@iih.ng only
 - CC events@iih.ng on every outbound response and invoice email
+- after the current Ministry of Health booking thread, sign future booking emails as:
+  `Aisha`
+  `IIH Facility Booking Agent`
 - direct enquiries to facilitybookings@iih.ng
 - never use md@iih.ng for booking automation
 
