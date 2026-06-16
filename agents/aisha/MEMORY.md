@@ -26,6 +26,7 @@
 - After the current Ministry of Health booking thread, future facility booking emails must use the signature:
   Aisha
   IIH Facility Booking Agent
+- Never say "if an invoice is required"; an invoice is always required for facility bookings.
 
 ## Required Booking Intake Fields
 - full_name

@@ -212,6 +212,7 @@ Approved automation path:
 - The booking agent may send invoice emails with the Zoho Books invoice attached for validated booking threads.
 - The booking agent may send payment reminders for recorded unpaid invoices.
 - All invoice and reminder emails must CC `events@iih.ng`.
+- An invoice is always required for facility bookings; never ask whether an invoice is required.
 
 ## 9. Client Email Draft Standard
 
@@ -225,6 +226,7 @@ For IIH booking emails:
 - after the current Ministry of Health booking thread, sign future booking emails as:
   `Aisha`
   `IIH Facility Booking Agent`
+- never say "if an invoice is required"; billing details are required because an invoice is always required
 - direct enquiries to facilitybookings@iih.ng
 - never use md@iih.ng for booking automation
 
