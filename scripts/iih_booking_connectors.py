@@ -46,20 +46,79 @@ OPTIONAL_SECRET_NAMES = [
 
 EVENTBOOKINGS_EMAIL = "facilitybookings@iih.ng"
 EVENTS_CC = "events@iih.ng"
-BOOKING_SIGNATURE_TEXT = """Aisha
-IIH Facility Booking Agent
-iih.ng | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
-Powered by IHS"""
+BOOKING_SIGNATURE_TEXT = """Warm regards,
+
+Aisha
+IIH Facility Booking AI Agent | Ilorin Innovation Hub
+www.iih.ng
+Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+
+This message and any attachments are confidential and intended only for the recipient."""
 BOOKING_SIGNATURE = BOOKING_SIGNATURE_TEXT
-BOOKING_SIGNATURE_HTML = """<div style="border-top:1px solid #e0e0e0;margin-top:10px;padding-top:10px;font-family:Arial,sans-serif;font-size:12px;color:#333">
-  <div style="margin-bottom:8px">
-    <strong style="font-size:14px;color:#2d5a27">Aisha</strong><br>
-    <span style="color:#555">IIH Facility Booking Agent</span><br>
-    <span style="color:#777"><a href="https://iih.ng" style="color:#2d5a27;text-decoration:none">iih.ng</a> | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria</span><br>
-  </div>
-  <div style="margin-top:4px;padding-top:4px;border-top:1px solid #eee;color:#999;font-size:11px">
-    Powered by IHS
-  </div>
+BOOKING_SIGNATURE_HTML = """<div style="clear: both;">
+ Warm regards,
+ <br>
+ <br>
+</div>
+<div style="font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.5;">
+ <div>
+ <table class="ze_tableView" cellpadding="2" cellspacing="2" border="0" style="font-size: 10pt; font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; border: 0px solid black; color: black;">
+ <tbody>
+ <tr>
+ <td style="vertical-align: top; width: 158.141px;">
+ <div>
+ <img src="/zm/ImageSignature?fileName=1749122382045004_1686933120.png&amp;accountId=3859712000000008002&amp;storeName=709990578&amp;frm=org&amp;zoid=709990578" width="155" height="74" style="float: left;" orig_width="371" orig_height="181">
+ <br>
+ </div>
+ </td>
+ <td style="vertical-align: top; width: 645.859px;">
+ <div style="font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.5;">
+ <div>
+ <div>
+ <b>
+ <span class="size" style="font-size:10.6667px">
+ Aisha
+ <br>
+ </span>
+ </b>
+ <span class="size" style="font-size:10.6667px">
+ IIH Facility Booking AI Agent&nbsp;|
+ <span class="colour" style="color:rgb(0, 204, 0)">
+ Ilorin Innovation Hub
+ </span>
+ <span class="colour" style="color: rgb(106, 168, 79); font-weight: 500;">
+ <br>
+ </span>
+ </span>
+ <a target="_blank" style="color: #1a73e8;" href="https://iih.ng">
+ <span class="size" style="font-size:10.6667px">
+ www.iih.ng
+ </span>
+ </a>
+ <span class="size" style="font-size:10.6667px">
+ <br>
+ Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+ </span>
+ <br>
+ </div>
+ </div>
+ </div>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ <p>
+ <span class="colour" style="color:rgb(153, 153, 153)">
+ <span class="size" style="font-size:10.6667px">
+ This message and any attachments are confidential and intended only for the recipient.&nbsp;
+ </span>
+ </span>
+ <br>
+ </p>
+ </div>
+</div>
+<div style="clear: both;">
+ <br>
 </div>"""
 
 

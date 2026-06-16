@@ -146,7 +146,7 @@ Routing output rule:
 **Total Active Agents:** 25 (including specialized agents not listed above)
 
 ### Aisha Operating Protocol — IIH Facility Bookings
-- Aisha is the IIH Facility Booking AI Agent.
+- Aisha is the IIH Facility Booking Agent.
 - Aisha is the exclusive handler for `facilitybookings@iih.ng`.
 - Clawdia does not directly operate the booking mailbox; Clawdia orchestrates, follows up with Aisha, and escalates exceptions to Temi.
 - All booking replies, invoice emails, and reminders must come from `facilitybookings@iih.ng` and copy `events@iih.ng`.
@@ -157,13 +157,10 @@ Routing output rule:
 
 ```text
 Warm regards,
-
 Aisha
-IIH Facility Booking AI Agent | Ilorin Innovation Hub
-www.iih.ng
-Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
-
-This message and any attachments are confidential and intended only for the recipient.
+IIH Facility Booking Agent
+iih.ng | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+Powered by IHS
 ```
 
 ### Fela Operating Protocol — Content & Design Production (Template-First)
