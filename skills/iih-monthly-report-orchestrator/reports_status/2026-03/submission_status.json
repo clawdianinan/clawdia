@@ -1,0 +1,65 @@
+{
+  "report_month": "2026-03",
+  "cycle_start_date": "2026-04-01",
+  "current_date": "2026-04-04",
+  "deadline_date": "2026-04-03",
+  "deadline_status": "MISSED",
+  "next_action_date": "2026-04-05",
+  "next_action": "First reminder to missing departments",
+  "departments": [
+    {
+      "department": "Programs",
+      "sender": "adebola.oladipo@iih.ng",
+      "status": "pending",
+      "submission_date": null,
+      "email_id": null,
+      "last_reminder": null
+    },
+    {
+      "department": "Finance",
+      "sender": "khadijat.bello@iih.ng",
+      "status": "pending",
+      "submission_date": null,
+      "email_id": null,
+      "last_reminder": null
+    },
+    {
+      "department": "Administration",
+      "sender": "maureen.okey@iih.ng",
+      "status": "pending",
+      "submission_date": null,
+      "email_id": null,
+      "last_reminder": null
+    },
+    {
+      "department": "Human Resources",
+      "sender": "sinachi@iih.ng",
+      "status": "pending",
+      "submission_date": null,
+      "email_id": null,
+      "last_reminder": null
+    },
+    {
+      "department": "Facility Management",
+      "sender": "kamil.ahmed@iih.ng",
+      "status": "pending",
+      "submission_date": null,
+      "email_id": null,
+      "last_reminder": null
+    },
+    {
+      "department": "IT & Marketing",
+      "sender": "nas@iih.ng",
+      "status": "pending",
+      "submission_date": null,
+      "email_id": null,
+      "last_reminder": null
+    }
+  ],
+  "submission_summary": {
+    "total_departments": 6,
+    "submitted": 0,
+    "pending": 6,
+    "submission_rate": "0%"
+  }
+}

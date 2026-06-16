@@ -19,7 +19,7 @@ EOF
 
 # Calendar section
 echo "📅 CALENDAR" >> "$DIGEST_FILE"
-if which gog >/dev/null 2>&1 && gog auth list 2>/dev/null | grep -q "token"; then
+if which gog >/dev/null 2>&1 && gog auth list 2>/dev/null | grep -q "oauth"; then
     echo "• Checking Google Calendar..." >> "$DIGEST_FILE"
     gog calendar events --today --account default 2>/dev/null | head -10 >> "$DIGEST_FILE" || echo "• No calendar events found or error accessing" >> "$DIGEST_FILE"
 else

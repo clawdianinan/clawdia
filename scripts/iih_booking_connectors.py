@@ -46,7 +46,21 @@ OPTIONAL_SECRET_NAMES = [
 
 EVENTBOOKINGS_EMAIL = "facilitybookings@iih.ng"
 EVENTS_CC = "events@iih.ng"
-BOOKING_SIGNATURE = "Aisha\nIIH Facility Booking Agent"
+BOOKING_SIGNATURE_TEXT = "Aisha\nIIH Facility Booking Agent"
+BOOKING_SIGNATURE = """\n-- \nAisha\nIIH Facility Booking Agent\nIlorin Innovation Hub\niih.ng | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria\nPowered by IHS"""
+BOOKING_SIGNATURE_HTML = """<div style="border-top:1px solid #e0e0e0;margin-top:10px;padding-top:10px;font-family:Arial,sans-serif;font-size:12px;color:#333">
+  <div style="margin-bottom:8px">
+    <strong style="font-size:14px;color:#2d5a27">Aisha</strong><br>
+    <span style="color:#555">IIH Facility Booking Agent</span>
+  </div>
+  <div style="color:#777">
+    <strong>Ilorin Innovation Hub</strong><br>
+    <a href="https://iih.ng" style="color:#2d5a27;text-decoration:none">iih.ng</a> | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria<br>
+  </div>
+  <div style="margin-top:6px;padding-top:6px;border-top:1px solid #eee">
+    <span style="color:#999;font-size:11px">Powered by IHS</span>
+  </div>
+</div>"""
 
 
 class ConnectorError(RuntimeError):
@@ -227,21 +241,34 @@ def invoice_email_payload(booking: dict[str, Any], reminder: bool = False) -> di
         if reminder
         else "Please find attached your invoice. "
     )
+    body_text = (
+        f"Dear {booking['full_name']},\n\n"
+        f"{opening}"
+        f"{action_line}"
+        f"The invoice covers the {booking['facility']} on {booking['event_date']}.\n\n"
+        "Kindly make payment within 7 days to confirm your booking. "
+        "Your calendar slot will be confirmed after payment proof is received and matched to the invoice amount.\n\n"
+        f"For questions, contact {EVENTBOOKINGS_EMAIL}.\n\n"
+        "Warm regards,\n"
+        f"{BOOKING_SIGNATURE}"
+    )
+    body_html = (
+        f"<p>Dear {booking['full_name']},</p>"
+        f"<p>{opening.strip()}</p>"
+        f"<p>{action_line.strip()}</p>"
+        f"<p>The invoice covers the <strong>{booking['facility']}</strong> on <strong>{booking['event_date']}</strong>.</p>"
+        "<p>Kindly make payment within 7 days to confirm your booking. "
+        "Your calendar slot will be confirmed after payment proof is received and matched to the invoice amount.</p>"
+        f"<p>For questions, contact <a href=\"mailto:{EVENTBOOKINGS_EMAIL}\">{EVENTBOOKINGS_EMAIL}</a>.</p>"
+        "<p>Warm regards,</p>"
+        f"{BOOKING_SIGNATURE_HTML}"
+    )
     return {
         "to_mail_ids": [booking["email"]],
         "cc_mail_ids": [EVENTS_CC],
         "subject": f"{subject_prefix} for {booking['facility']} Booking - {booking['event_name']} | IIH Space",
-        "body": (
-            f"Dear {booking['full_name']},\n\n"
-            f"{opening}"
-            f"{action_line}"
-            f"The invoice covers the {booking['facility']} on {booking['event_date']}.\n\n"
-            "Kindly make payment within 7 days to confirm your booking. "
-            "Your calendar slot will be confirmed after payment proof is received and matched to the invoice amount.\n\n"
-            f"For questions, contact {EVENTBOOKINGS_EMAIL}.\n\n"
-            "Warm regards,\n"
-            f"{BOOKING_SIGNATURE}"
-        ),
+        "body": body_text,
+        "body_html": body_html,
     }
 
 

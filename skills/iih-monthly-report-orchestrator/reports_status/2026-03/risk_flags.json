@@ -1,0 +1,46 @@
+{
+  "report_month": "2026-03",
+  "assessment_date": "2026-04-04",
+  "flags": [
+    {
+      "flag_id": "RF001",
+      "flag_type": "DEADLINE_MISSED",
+      "severity": "HIGH",
+      "department": "ALL",
+      "issue": "Departmental report submission deadline missed (April 3)",
+      "impact": "Report compilation delayed, final submission to IHS at risk",
+      "mitigation": "Send first reminder tomorrow (April 5), escalate on April 7 if no submissions",
+      "owner": "Clawdia AI",
+      "status": "active"
+    },
+    {
+      "flag_id": "RF002",
+      "flag_type": "PROGRESS_GAP",
+      "severity": "HIGH",
+      "department": "ALL",
+      "issue": "Progress gap of -40% (target: 40%, actual: 0%)",
+      "impact": "March report compilation timeline at risk",
+      "mitigation": "Accelerate reminder schedule, consider direct department follow-up",
+      "owner": "Clawdia AI",
+      "status": "active"
+    },
+    {
+      "flag_id": "RF003",
+      "flag_type": "PROCESS_GAP",
+      "severity": "MEDIUM",
+      "department": "SYSTEM",
+      "issue": "Monthly report process not activated until April 4 (after deadline)",
+      "impact": "Late start increases risk of missing final April 8 compilation deadline",
+      "mitigation": "Implement automated monthly process activation for future months",
+      "owner": "Clawdia AI",
+      "status": "active"
+    }
+  ],
+  "overall_risk_level": "HIGH",
+  "recommendations": [
+    "Activate reminder system for April 5 first reminder",
+    "Prepare escalation draft for MD review if submissions not received by April 7",
+    "Monitor financial document collection starting April 10",
+    "Implement automated monthly report process activation"
+  ]
+}

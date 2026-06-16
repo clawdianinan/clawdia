@@ -1,0 +1,50 @@
+{
+  "schema": "acpx.session.v1",
+  "acpx_record_id": "agent:claude:acp:be67f87c-6372-4e30-894e-acaab2611b58",
+  "acp_session_id": "2c66115f-0173-4437-8e81-117da0d5dc12",
+  "agent_command": "\"/opt/homebrew/Cellar/node/25.8.1_1/bin/node\" \"/Users/clawdia/.openclaw/acpx/claude-agent-acp-wrapper.mjs\"",
+  "cwd": "/Users/clawdia/My Drive/Clawdia Documents/Temi-Projects/Vibe-Coding-for-Builders-in-Africa",
+  "name": "agent:claude:acp:be67f87c-6372-4e30-894e-acaab2611b58",
+  "created_at": "2026-05-04T14:36:52.030Z",
+  "last_used_at": "2026-05-04T14:36:52.030Z",
+  "last_seq": 0,
+  "event_log": {
+    "active_path": "/Users/clawdia/.acpx/sessions/agent%3Aclaude%3Aacp%3Abe67f87c-6372-4e30-894e-acaab2611b58.stream.ndjson",
+    "segment_count": 5,
+    "max_segment_bytes": 67108864,
+    "max_segments": 5,
+    "last_write_error": null
+  },
+  "closed": false,
+  "pid": 79969,
+  "agent_started_at": "2026-05-04T14:36:45.641Z",
+  "protocol_version": 1,
+  "agent_capabilities": {
+    "_meta": {
+      "claudeCode": {
+        "promptQueueing": true
+      }
+    },
+    "promptCapabilities": {
+      "image": true,
+      "embeddedContext": true
+    },
+    "mcpCapabilities": {
+      "http": true,
+      "sse": true
+    },
+    "loadSession": true,
+    "sessionCapabilities": {
+      "fork": {},
+      "list": {},
+      "resume": {},
+      "close": {}
+    }
+  },
+  "title": null,
+  "messages": [],
+  "updated_at": "2026-05-04T14:36:52.030Z",
+  "cumulative_token_usage": {},
+  "request_token_usage": {},
+  "acpx": {}
+}

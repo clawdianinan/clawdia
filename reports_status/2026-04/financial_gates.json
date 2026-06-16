@@ -1,0 +1,11 @@
+{
+  "reportMonth": "2026-04",
+  "gate10_documents_received": true,
+  "gate15_validation_complete": false,
+  "gate20_template_populated": false,
+  "notes": [
+    "Latest April finance workbook received",
+    "Use 202512_IIH_FinancialReport_Reviewed LATEST APRIL 2026.xlsx",
+    "Validation and template population still pending"
+  ]
+}

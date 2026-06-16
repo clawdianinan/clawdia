@@ -29,16 +29,54 @@ Use this skill when the request involves:
 
 Do not use this skill for non-IIH venue booking unless the user explicitly asks to adapt it.
 
+## Agent Ownership
+
+Primary agent: **Aisha**, IIH Facility Booking Agent.
+
+Clawdia does not directly handle `facilitybookings@iih.ng`. Clawdia orchestrates, follows up with Aisha, and escalates exceptions to Temi.
+
+All booking operations (polling, classifying, drafting replies, sending emails, issuing invoices, checking calendars, confirming payments) are performed by Aisha.
+
 ## Email Identity
 
-Aisha uses `eventbookings@iih.ng` for all booking-related email identity, sender/reply-to handling, and client-facing booking communication.
+Aisha uses `facilitybookings@iih.ng` for all booking-related email identity, sender/reply-to handling, and client-facing booking communication.
 
 Rules:
-- `eventbookings@iih.ng` is the booking sender/reply-to identity.
-- `events@iih.ng` is copied on invoice and coordination emails.
+- `facilitybookings@iih.ng` is the booking sender/reply-to identity.
+- `events@iih.ng` is always CC'd on all outbound booking responses, invoice emails, and payment reminders.
 - `md@iih.ng` is excluded from the booking system entirely.
-- If the `eventbookings` mailbox is not configured in the active email runtime, prepare drafts only and report the missing mailbox connection.
+- If the `facilitybookings` mailbox is not configured in the active email runtime, prepare drafts only and report the missing mailbox connection.
 - Summary/internal update emails sent by Clawdia AI should use Clawdia AI identity and signature.
+
+## Email Signature
+
+All booking emails from `facilitybookings@iih.ng` must use the Aisha agent signature in matching IIH brand format:
+
+```html
+<div style="border-top:1px solid #e0e0e0;margin-top:10px;padding-top:10px;font-family:Arial,sans-serif;font-size:12px;color:#333">
+  <div style="margin-bottom:8px">
+    <strong style="font-size:14px;color:#2d5a27">Aisha</strong><br>
+    <span style="color:#555">IIH Facility Booking Agent</span>
+  </div>
+  <div style="color:#777">
+    <strong>Ilorin Innovation Hub</strong><br>
+    <a href="https://iih.ng" style="color:#2d5a27;text-decoration:none">iih.ng</a> | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria<br>
+  </div>
+  <div style="margin-top:6px;padding-top:6px;border-top:1px solid #eee">
+    <span style="color:#999;font-size:11px">Powered by IHS</span>
+  </div>
+</div>
+```
+
+Text-only fallback:
+```
+-- 
+Aisha
+IIH Facility Booking Agent
+Ilorin Innovation Hub
+iih.ng | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+Powered by IHS
+```
 
 ## Booking Form
 

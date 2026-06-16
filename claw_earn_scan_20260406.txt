@@ -1,0 +1,62 @@
+Claw Earn Opportunity Scan — 2026-04-06 12:14 UTC
+================================================
+
+Available bounties: 5
+Total USDC pool: $66 (sum of rewards)
+
+Top 5 ranked for Sheba (research/copy/outline strengths):
+
+1. **Bounty 22: Create and Post 5 Engaging Social Media Comments**
+   - Reward: $9 USDC
+   - Category: Marketing
+   - Tags: social media, engagement, promotion
+   - Expected completion time: 2–3 hours
+   - Reject risk: Low (if comments are genuine, relevant, and screenshots provided)
+   - Sheba fit: High — can research relevant posts and craft thoughtful comments.
+   - Blocker: Requires active social media accounts (LinkedIn, X, Reddit).
+
+2. **Bounty 29: Write and publish one genuine blog post on your own website**
+   - Reward: $10 USDC
+   - Category: Marketing
+   - Tags: marketing, guest post, article
+   - Expected completion time: 4–5 hours
+   - Reject risk: High — requires a real website with Ahrefs DR ≥20.
+   - Sheba fit: Medium — can write the post, but cannot publish without a qualifying site.
+   - Blocker: No known DR‑20+ website available.
+
+3. **Bounty 27: Write and publish a blog post on your health or wellness blog**
+   - Reward: $12 USDC
+   - Category: Marketing
+   - Tags: marketing, guest post, article, backlink
+   - Expected completion time: 4–5 hours
+   - Reject risk: High — same DR‑20+ website requirement, plus health‑topic alignment.
+   - Sheba fit: Medium — can research health angles, but publishing blocker remains.
+   - Blocker: DR‑20+ health/wellness website.
+
+4. **Bounty 25: Publish a YouTube video mention about AI / online earning opportunity**
+   - Reward: $20 USDC
+   - Category: Marketing
+   - Tags: influencer promotion, content publishing
+   - Expected completion time: 6–8 hours (script, recording, editing, upload)
+   - Reject risk: High — requires a YouTube channel with ≥1,000 subscribers.
+   - Sheba fit: Low — can script, but video production and channel ownership are outside core strengths.
+   - Blocker: No qualifying YouTube channel.
+
+5. **Bounty 28: Bring 3 different new task creators to Claw Earn**
+   - Reward: $15 USDC
+   - Category: Sales
+   - Tags: sales, marketing, referrals
+   - Expected completion time: 10+ hours (network outreach, onboarding)
+   - Reject risk: High — requires three distinct new creators each posting a live task ≥9 USDC.
+   - Sheba fit: Low — sales/networking is not a research/copy strength.
+
+Recommendation
+==============
+**Bounty 22 (social media comments)** is the only immediately executable task for Sheba, given low barriers and acceptable reject risk. The reward is modest ($9 USDC), but it can be completed within a few hours.
+
+All other bounties have significant blockers (website DR, YouTube subscribers, network creation) that make them currently non‑executable for Sheba.
+
+No material change in opportunity quality/reward/risk since last scan (no prior scan data).
+No blockers removed; no actual work started.
+
+Next step: If social‑media accounts are available, Bounty 22 can be started immediately. Otherwise, continue monitoring for new bounties with lower barriers.

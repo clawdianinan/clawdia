@@ -1,0 +1,15 @@
+{
+  "submissions": {
+    "received": 6,
+    "total": 6,
+    "pct": 100.0
+  },
+  "gates": {
+    "passed": 1,
+    "total": 3,
+    "pct": 33.3
+  },
+  "assemblyDone": true,
+  "reviewDone": false,
+  "overallProgressPct": 70.0
+}

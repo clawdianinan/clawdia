@@ -7,6 +7,51 @@ description: "Orchestrate multi-agent teams with defined roles, task lifecycles,
 
 Production playbook for running multi-agent teams with clear roles, structured task flow, and quality gates.
 
+## The Team
+
+The named agent team available to clawdia for orchestration:
+
+| Agent | Role | Domain | Tools |
+|-------|------|--------|-------|
+| **clawdia** | Primary orchestrator | Routes, synthesises, arbitrates | Read, Bash, Glob, Grep, Agent |
+| **trinity** | Engineering | Code, architecture, refactors, TDD, PRDs, build errors | Read, Edit, Write, Bash, Glob, Grep |
+| **cypher** | Security | Code security review, threat modelling, OWASP, secrets | Read, Grep, Glob, Bash, Write |
+| **neo** | Operations & automation | Scripts, cron jobs, automation design, glue code | Bash, Read, Write, Edit, Glob, Grep |
+| **fela** | Infrastructure & tooling | Infra config, deployment pipelines, API wiring, env management | Read, Write, Edit, Bash, Glob, Grep |
+| **morpheus** | Research & discovery | Market research, competitive intelligence, fact-checking | WebSearch, WebFetch, Read, Grep, Glob |
+| **shuri** | Operational strategy | Frameworks, delivery planning, org architecture, process design | Read, Write, Grep, Glob, WebFetch, WebSearch |
+| **oracle** | Strategic prediction | Scenario planning, forecasting, risk/opportunity mapping | Read, WebSearch, WebFetch, Grep |
+| **nova** | Personal ventures | Product strategy, monetisation, GTM, ecosystem thinking | Read, WebSearch, WebFetch, Grep, Glob |
+| **ngozi** | Financial intelligence | Financial modelling, projections, unit economics, fundraising | Read, Write, WebFetch, WebSearch |
+| **ade** | Data & analytics | Data analysis, metrics, dashboards, statistical analysis | Read, Write, Bash, Grep, Glob |
+| **chimamanda** | Communications | Email drafting, stakeholder messaging, announcement copy | Read, Write |
+| **seun** | Media & production | Scripts, content planning, audio/video workflows | Read, Write, WebFetch |
+| **ebun** | Voice & thought leadership | Essays, long-form writing, intellectual arguments | Read, Write, WebFetch, WebSearch |
+| **femi** | Creative & design | Visual direction, brand identity, UI/UX framing | Read, Write, WebFetch |
+| **oprah** | Social & networking | Outreach, relationship mapping, community strategy | Read, Write |
+| **ruth** | Legal & compliance | Contract review, regulatory research, ToS drafting | Read, Write, WebFetch, WebSearch |
+| **sheba** | Navigation & guidance | Disambiguation, options mapping, decision framing | Read, WebSearch, WebFetch |
+
+### Routing Shortcuts
+
+Common task → agent mappings for clawdia:
+
+| Task type | Primary agent | Support agent |
+|-----------|--------------|---------------|
+| Build a feature | trinity | fela (infra), cypher (security gate) |
+| Research a market | morpheus | nova (strategic lens), oracle (forecasting) |
+| Write a strategy doc | shuri | oracle (predictions), ngozi (financials) |
+| Security review | cypher | trinity (code context) |
+| Deploy / CI/CD | fela | neo (automation scripts) |
+| Financial model | ngozi | shuri (strategy context) |
+| Investor materials | nova | ngozi (numbers), chimamanda (messaging) |
+| Communication draft | chimamanda | ebun (voice/tone), oprah (relationship context) |
+| Data analysis | ade | morpheus (research context) |
+| Legal review | ruth | shuri (compliance framework) |
+| Content production | seun | ebun (voice), femi (design) |
+
+---
+
 ## Quick Start: Minimal 2-Agent Team
 
 A builder and a reviewer. The simplest useful team.
@@ -14,8 +59,8 @@ A builder and a reviewer. The simplest useful team.
 ### 1. Define Roles
 
 ```
-Orchestrator (you) — Route tasks, track state, report results
-Builder agent     — Execute work, produce artifacts
+Orchestrator (clawdia) — Route tasks, track state, report results
+Builder agent          — Execute work, produce artifacts
 ```
 
 ### 2. Spawn a Task
@@ -37,6 +82,8 @@ Builder produces artifact → Reviewer checks it → Orchestrator ships or retur
 
 That's the core loop. Everything below scales this pattern.
 
+---
+
 ## Core Concepts
 
 ### Roles
@@ -49,8 +96,6 @@ Every agent has one primary role. Overlap causes confusion.
 | **Builder** | Produce artifacts — code, docs, configs | Can use cost-effective models for mechanical work |
 | **Reviewer** | Verify quality, push back on gaps | High-reasoning model (catches what builders miss) |
 | **Ops** | Cron jobs, standups, health checks, dispatching | Cheapest model that's reliable |
-
-→ *Read [references/team-setup.md](references/team-setup.md) when defining a new team or adding agents.*
 
 ### Task States
 
@@ -65,8 +110,6 @@ Inbox → Assigned → In Progress → Review → Done | Failed
 - Every transition gets a comment (who, what, why)
 - Failed is a valid end state — capture why and move on
 
-→ *Read [references/task-lifecycle.md](references/task-lifecycle.md) when designing task flows or debugging stuck tasks.*
-
 ### Handoffs
 
 When work passes between agents, the handoff message includes:
@@ -78,7 +121,7 @@ When work passes between agents, the handoff message includes:
 5. **What's next** — clear next action for the receiving agent
 
 Bad handoff: *"Done, check the files."*
-Good handoff: *"Built auth module at `/shared/artifacts/auth/`. Run `npm test auth` to verify. Known issue: rate limiting not implemented yet. Next: reviewer checks error handling edge cases."*
+Good handoff: *"Built auth module at `/shared/artifacts/auth/`. Run `npm test auth` to verify. Known issue: rate limiting not implemented yet. Next: cypher checks error handling edge cases."*
 
 ### Reviews
 
@@ -88,41 +131,33 @@ Cross-role reviews prevent quality drift:
 - **Reviewers check builds** — "Does this match the spec? Edge cases?"
 - **Orchestrator reviews priorities** — "Is this the right work right now?"
 
-Skip the review step and quality degrades within 3-5 tasks. Every time.
+Skip the review step and quality degrades within 3–5 tasks. Every time.
 
-→ *Read [references/communication.md](references/communication.md) when setting up agent communication channels.*
-→ *Read [references/patterns.md](references/patterns.md) for proven multi-step workflows.*
-
-## Reference Files
-
-| File | Read when... |
-|------|-------------|
-| [team-setup.md](references/team-setup.md) | Defining agents, roles, models, workspaces |
-| [task-lifecycle.md](references/task-lifecycle.md) | Designing task states, transitions, comments |
-| [communication.md](references/communication.md) | Setting up async/sync communication, artifact paths |
-| [patterns.md](references/patterns.md) | Implementing specific workflows (spec→build→test, parallel research, escalation) |
+---
 
 ## Common Pitfalls
 
 ### Spawning without clear artifact output paths
-Agent produces great work, but you can't find it. Always specify the exact output path in the spawn prompt. Use a shared artifacts directory with predictable structure.
+Agent produces great work, but you can't find it. Always specify the exact output path in the spawn prompt.
 
 ### No review step = quality drift
-"It's a small change, skip review." Do this three times and you have compounding errors. Every artifact gets at least one set of eyes that didn't produce it.
+"It's a small change, skip review." Do this three times and you have compounding errors.
 
 ### Agents not commenting on task progress
-Silent agents create coordination blind spots. Require comments at: start, blocker, handoff, completion. If an agent goes silent, assume it's stuck.
+Silent agents create coordination blind spots. Require comments at: start, blocker, handoff, completion.
 
 ### Not verifying agent capabilities before assigning
-Assigning browser-based testing to an agent without browser access. Assigning image work to a text-only model. Check capabilities before routing.
+Check an agent's tools list before routing — chimamanda has no web access, sheba has no write access, trinity has no web access.
 
 ### Orchestrator doing execution work
-The orchestrator routes and tracks — it doesn't build. The moment you start "just quickly doing this one thing," you've lost oversight of the rest of the team.
+clawdia routes and tracks — it doesn't build. The moment you start "just quickly doing this one thing," you've lost oversight of the rest of the team.
+
+---
 
 ## When NOT to Use This Skill
 
-- **Single-agent setups** — Just follow standard AGENTS.md conventions. Team orchestration adds overhead that solo agents don't need.
-- **One-off task delegation** — Use `sessions_spawn` directly. This skill is for sustained workflows with multiple handoffs.
+- **Single-agent setups** — Just follow standard AGENTS.md conventions.
+- **One-off task delegation** — Use the Agent tool directly. This skill is for sustained workflows with multiple handoffs.
 - **Simple question routing** — If you're just forwarding a question to a specialist, that's a message, not a workflow.
 
 This skill is for **sustained team workflows** — recurring collaboration patterns where agents depend on each other's output over multiple tasks.

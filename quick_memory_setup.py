@@ -7,6 +7,7 @@ Simple text-based search without complex dependencies
 import os
 import json
 import re
+import argparse
 from pathlib import Path
 from collections import defaultdict
 import math
@@ -179,7 +180,10 @@ class QuickMemoryIndex:
 
 def main():
     """Main function"""
-    print("=== OpenClaw Quick Memory System ===\n")
+    parser = argparse.ArgumentParser(description="OpenClaw Quick Memory System")
+    parser.add_argument("--index", action="store_true", help="Run indexing non-interactively")
+    parser.add_argument("--non-interactive", action="store_true", help="Non-interactive mode (requires --index)")
+    args = parser.parse_args()
     
     # Initialize indexer
     indexer = QuickMemoryIndex()
@@ -187,7 +191,20 @@ def main():
     # Try to load existing index
     indexer.load_index()
     
-    # Interactive menu
+    if args.index:
+        print("=== OpenClaw Quick Memory System ===\n")
+        print("Running indexing non-interactively...")
+        count = indexer.index_all()
+        if count > 0:
+            print(f"✓ Successfully indexed {count} files")
+            return 0
+        else:
+            print("No new files to index")
+            return 1
+    
+    # Interactive mode
+    print("=== OpenClaw Quick Memory System ===\n")
+    
     while True:
         print("\nOptions:")
         print("  1. Index all memory files")

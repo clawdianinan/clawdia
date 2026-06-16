@@ -22,7 +22,11 @@ def handle_memory_index():
         env['MKL_NUM_THREADS'] = '1'
         
         cmd = [sys.executable, script, "--index", "--non-interactive"]
-        result = subprocess.run(cmd, cwd=workspace, env=env, capture_output=True, text=True)
+        try:
+            result = subprocess.run(cmd, cwd=workspace, env=env, capture_output=True, text=True, timeout=60)
+        except subprocess.TimeoutExpired:
+            print("✗ Memory indexing timed out after 60 seconds")
+            return False
         
         if result.returncode == 0:
             print("✓ Memory indexing completed successfully")

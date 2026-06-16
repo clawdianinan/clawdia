@@ -1,0 +1,50 @@
+{
+  "report_month": "2026-03",
+  "gates": [
+    {
+      "gate_number": 10,
+      "gate_name": "Source Documents Received",
+      "deadline_date": "2026-04-10",
+      "status": "pending",
+      "blocker": null,
+      "documents_required": [
+        "Bank statements",
+        "Income documentation",
+        "Expense receipts",
+        "Payroll records",
+        "Vendor invoices",
+        "Tax documents"
+      ],
+      "documents_received": []
+    },
+    {
+      "gate_number": 15,
+      "gate_name": "Documents Validated",
+      "deadline_date": "2026-04-15",
+      "status": "pending",
+      "blocker": "Gate 10 must be complete first",
+      "validation_checks": [
+        "Document completeness",
+        "Data accuracy",
+        "Reconciliation",
+        "Approval signatures"
+      ]
+    },
+    {
+      "gate_number": 20,
+      "gate_name": "Template Population Complete",
+      "deadline_date": "2026-04-20",
+      "status": "pending",
+      "blocker": "Gate 15 must be complete first",
+      "template_requirements": [
+        "IHS Financial Management Report Template populated",
+        "Financial analysis generated",
+        "KPI metrics extracted",
+        "Trend analysis completed"
+      ]
+    }
+  ],
+  "overall_status": "NOT_STARTED",
+  "next_gate": "Gate 10 - Source Documents Received (April 10)",
+  "risk_level": "LOW (Gate deadline not yet reached)"
+}

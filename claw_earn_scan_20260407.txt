@@ -1,0 +1,21 @@
+Claw Earn Opportunity Scan — 2026-04-07 12:14 UTC
+================================================
+
+Available bounties: 5 (same as previous scan)
+Total USDC pool: $66 (unchanged)
+
+Top 5 ranked for Sheba (research/copy/outline strengths):
+
+1. **Bounty 22: Create and Post 5 Engaging Social Media Comments** ($9 USDC) – Low reject risk, executable within hours. Blocker: Requires active social media accounts.
+
+2. **Bounty 29: Write and publish one genuine blog post on your own website** ($10 USDC) – High reject risk (DR≥20 website). Blocker remains.
+
+3. **Bounty 27: Write and publish a blog post on your health or wellness blog** ($12 USDC) – High reject risk (DR≥20 health website). Blocker remains.
+
+4. **Bounty 25: Publish a YouTube video mention about AI / online earning opportunity** ($20 USDC) – High reject risk (YouTube channel ≥1k subscribers). Blocker remains.
+
+5. **Bounty 28: Bring 3 different new task creators to Claw Earn** ($15 USDC) – High reject risk (need 3 new creators). Blocker remains.
+
+No material change in opportunity quality/reward/risk since last scan (2026-04-06). No blockers removed. No executable work started.
+
+Recommendation: Bounty 22 remains the only immediately executable task for Sheba. If social media accounts are available, consider starting.

@@ -1,0 +1,50 @@
+{
+  "reportMonth": "2026-03",
+  "departments": {
+    "programs": {
+      "owner": "Programs",
+      "status": "received",
+      "receivedAt": "2026-05-04",
+      "sourceFile": "March 2026 Programs Report.pdf"
+    },
+    "finance": {
+      "owner": "Finance",
+      "status": "received",
+      "receivedAt": "2026-05-04",
+      "sourceFile": "202512_IIH_FinancialReport_Reviewed LATEST March 2026.xlsx"
+    },
+    "admin": {
+      "owner": "Administration",
+      "status": "received",
+      "receivedAt": "2026-05-04",
+      "sourceFile": "Administrative Report March 2026.pdf"
+    },
+    "hr": {
+      "owner": "HR",
+      "status": "received",
+      "receivedAt": "2026-05-04",
+      "sourceFile": "March HR Report 2026.pdf"
+    },
+    "facility": {
+      "owner": "Facility",
+      "status": "received",
+      "receivedAt": "2026-05-04",
+      "sourceFile": "IIH_Facility_Report_March2026.pdf"
+    },
+    "it_marketing": {
+      "owner": "IT & Marketing",
+      "status": "pending",
+      "receivedAt": null,
+      "sourceFile": null
+    },
+    "cafeteria": {
+      "owner": "Cafeteria Operations",
+      "status": "received",
+      "receivedAt": "2026-05-04",
+      "sourceFiles": [
+        "IIH_Cafeteria_March_2026_Report.pdf",
+        "BOA_Foods_March_2026_Financial_Summary_Profit_Sharing.pdf"
+      ]
+    }
+  }
+}

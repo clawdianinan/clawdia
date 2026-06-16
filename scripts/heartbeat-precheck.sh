@@ -1,0 +1,127 @@
+#!/bin/bash
+# Heartbeat Precheck Script - Provides JSON output for heartbeat monitoring
+# Called by cron job to check system state before heartbeat assessment
+
+set -e
+
+# Configuration
+OPENCLAW_WORKSPACE="/Users/clawdia/.openclaw/workspace"
+CURRENT_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+TIMESTAMP=$(date +%s)
+
+# Function to check for IHS Towers emails
+check_ihs_emails() {
+    # Try to check for IHS Towers emails using available methods
+    local ihs_count=0
+    local ihs_emails=""
+    
+    # Method 1: Check using fruitmail (Apple Mail search)
+    if command -v fruitmail &>/dev/null; then
+        # Search for @ihstowers.com emails in last 24 hours
+        ihs_emails=$(fruitmail sender "@ihstowers.com" --json 2>/dev/null | grep -c "ihstowers" || echo "0")
+        if [[ "$ihs_emails" =~ ^[0-9]+$ ]]; then
+            ihs_count=$ihs_emails
+        fi
+    fi
+    
+    echo "$ihs_count"
+}
+
+# Function to check system health
+check_system_health() {
+    # Check if OpenClaw gateway is running
+    local gateway_status="unknown"
+    
+    # Try multiple methods to check gateway status
+    if openclaw gateway status 2>/dev/null | grep -q "running"; then
+        gateway_status="running"
+    elif ps aux | grep -q "[o]penclaw-gateway"; then
+        gateway_status="running"
+    else
+        gateway_status="stopped"
+    fi
+    
+    # Check disk space
+    local disk_usage=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
+    
+    # Check memory usage
+    local memory_usage=$(memory_pressure | grep "System-wide memory free percentage:" | awk '{print $5}' | sed 's/%//' 2>/dev/null || echo "unknown")
+    
+    echo "$gateway_status,$disk_usage,$memory_usage"
+}
+
+# Function to check for urgent items
+check_urgent_items() {
+    # Check for deadlines <24h
+    local urgent_deadlines=0
+    local financial_exposure=0
+    local new_blockers=0
+    
+    # Check if tax compliance issue is still active (from earlier investigation)
+    if [[ -f "$OPENCLAW_WORKSPACE/IIH_Compliance/Tax_Compliance_Deadline_Missed_Action_Plan.md" ]]; then
+        # Check if action has been taken (communication sent)
+        if [[ -f "$OPENCLAW_WORKSPACE/IIH_Compliance/tax_compliance_action_taken.txt" ]]; then
+            # Action taken, exposure eliminated (follow-up needed but not urgent)
+            financial_exposure=0
+        else
+            # No action taken, full exposure
+            financial_exposure=1
+        fi
+    fi
+    
+    # Check for Learn2 Earn payment approval
+    # TEMPORARY: Skip this check since payment has been resolved
+    # if [[ -f "$OPENCLAW_WORKSPACE/operations/Learn2Earn-Payment-Approval.md" ]]; then
+    #     financial_exposure=$((financial_exposure + 1))
+    # fi
+    
+    echo "$urgent_deadlines,$financial_exposure,$new_blockers"
+}
+
+# Main execution
+main() {
+    # Get checks
+    local ihs_email_count=$(check_ihs_emails)
+    local system_health=$(check_system_health)
+    local urgent_items=$(check_urgent_items)
+    
+    # Parse system health
+    IFS=',' read -r gateway_status disk_usage memory_usage <<< "$system_health"
+    
+    # Parse urgent items
+    IFS=',' read -r urgent_deadlines financial_exposure new_blockers <<< "$urgent_items"
+    
+    # Generate JSON output
+    cat << EOF
+{
+  "timestamp": "$TIMESTAMP",
+  "current_time": "$CURRENT_TIME",
+  "checks": {
+    "ihs_towers_emails": {
+      "count": $ihs_email_count,
+      "status": "$(if [ $ihs_email_count -gt 0 ]; then echo "new_emails"; else echo "no_new_emails"; fi)"
+    },
+    "system_health": {
+      "gateway_status": "$gateway_status",
+      "disk_usage_percent": $disk_usage,
+      "memory_free_percent": "$memory_usage",
+      "status": "$(if [ "$gateway_status" = "running" ] && [ $disk_usage -lt 90 ]; then echo "healthy"; else echo "issues"; fi)"
+    },
+    "urgent_items": {
+      "deadlines_under_24h": $urgent_deadlines,
+      "financial_contract_exposure": $financial_exposure,
+      "new_blockers_today": $new_blockers,
+      "status": "$(if [ $urgent_deadlines -gt 0 ] || [ $financial_exposure -gt 0 ] || [ $new_blockers -gt 0 ]; then echo "urgent_items_present"; else echo "no_urgent_items"; fi)"
+    }
+  },
+  "metadata": {
+    "script_version": "1.0",
+    "workspace": "$OPENCLAW_WORKSPACE",
+    "check_methods": ["fruitmail", "process_check", "file_check"]
+  }
+}
+EOF
+}
+
+# Run main function
+main

@@ -1,0 +1,17 @@
+{
+  "reportMonth": "2026-04",
+  "risks": [
+    {
+      "code": "MULTIPLE_DEPARTMENT_REPORTS_MISSING",
+      "severity": "high",
+      "missing": ["Programs", "Administration", "HR", "Facility", "IT & Marketing"],
+      "timestamp": "2026-05-04T19:44:00+01:00"
+    },
+    {
+      "code": "FINANCE_LATEST_VERSION_SELECTED",
+      "severity": "info",
+      "details": "Latest April finance workbook identified and selected for use.",
+      "timestamp": "2026-05-04T19:44:00+01:00"
+    }
+  ]
+}

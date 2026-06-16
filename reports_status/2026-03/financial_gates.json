@@ -1,0 +1,11 @@
+{
+  "reportMonth": "2026-03",
+  "gate10_documents_received": true,
+  "gate15_validation_complete": false,
+  "gate20_template_populated": false,
+  "notes": [
+    "Finance workbook received",
+    "Validation and reconciliation still pending",
+    "IHS template population not yet started"
+  ]
+}

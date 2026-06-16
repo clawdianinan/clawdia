@@ -3,7 +3,7 @@
   "skills": {
     "github": {
       "version": "1.0.0",
-      "installedAt": 1771718199328
+      "installedAt": 1776002959245
     },
     "frontend-design": {
       "version": "1.0.0",
@@ -11,11 +11,11 @@
     },
     "trello": {
       "version": "1.0.0",
-      "installedAt": 1771718202796
+      "installedAt": 1776003268335
     },
     "calendly-api": {
       "version": "1.0.3",
-      "installedAt": 1771718204536
+      "installedAt": 1776002747645
     },
     "zoho-mail": {
       "version": "1.0.4",
@@ -23,7 +23,7 @@
     },
     "zoho-crm": {
       "version": "1.0.4",
-      "installedAt": 1771718208001
+      "installedAt": 1776003309672
     },
     "zoho-calendar": {
       "version": "1.0.3",
@@ -31,23 +31,23 @@
     },
     "n8n-workflow-automation": {
       "version": "1.0.0",
-      "installedAt": 1771718211571
+      "installedAt": 1776003087520
     },
     "office-document-specialist-suite": {
       "version": "1.0.2",
-      "installedAt": 1772084809249
+      "installedAt": 1776003105505
     },
     "todo-management": {
       "version": "1.1.3",
-      "installedAt": 1772084836289
+      "installedAt": 1776003260543
     },
     "graphic-design": {
       "version": "1.0.0",
-      "installedAt": 1772084868991
+      "installedAt": 1776002993711
     },
     "apple-mail-search-safe": {
       "version": "5.0.4",
-      "installedAt": 1772134597798
+      "installedAt": 1776002694964
     },
     "commune": {
       "version": "1.0.1",
@@ -55,219 +55,223 @@
     },
     "mail": {
       "version": "1.2.0",
-      "installedAt": 1772134919277
+      "installedAt": 1776003054927
     },
     "snail-mail": {
       "version": "1.0.2",
-      "installedAt": 1772134940215
+      "installedAt": 1776003228761
     },
     "openai-image-gen": {
       "version": "1.0.1",
-      "installedAt": 1773495960873
+      "installedAt": 1776003115471
     },
     "xurl": {
       "version": "1.0.0",
-      "installedAt": 1773495979029
+      "installedAt": 1776003301434
     },
     "agent-team-orchestration": {
       "version": "1.0.0",
-      "installedAt": 1773499011539
+      "installedAt": 1776002643203
     },
     "agent-evaluation": {
       "version": "1.0.0",
-      "installedAt": 1773499020546
+      "installedAt": 1776002634621
     },
     "code-review": {
       "version": "1.0.0",
-      "installedAt": 1773499030175
+      "installedAt": 1776002807456
     },
     "test-case-generator": {
       "version": "1.0.0",
-      "installedAt": 1773499069699
+      "installedAt": 1776003252723
     },
     "documentation": {
       "version": "1.0.0",
-      "installedAt": 1773499077276
+      "installedAt": 1776002870651
     },
     "code-documenter": {
       "version": "0.1.0",
-      "installedAt": 1773499086500
+      "installedAt": 1776002798918
     },
     "runesleo-systematic-debugging": {
       "version": "3.0.0",
-      "installedAt": 1773499094785
+      "installedAt": 1776003201562
     },
     "performance-profiler": {
       "version": "1.0.0",
-      "installedAt": 1773499103389
+      "installedAt": 1776003147324
     },
     "security-scanner": {
       "version": "1.0.0",
-      "installedAt": 1773499110936
+      "installedAt": 1776003220987
     },
     "ci-cd": {
       "version": "1.0.0",
-      "installedAt": 1773499119264
+      "installedAt": 1776002756384
     },
     "coding": {
       "version": "1.0.3",
-      "installedAt": 1773499126945
+      "installedAt": 1776002816384
     },
     "agentic-coding": {
       "version": "1.0.0",
-      "installedAt": 1773499135035
+      "installedAt": 1776002651949
     },
     "vibe-coding": {
       "version": "1.0.0",
-      "installedAt": 1773499143447
+      "installedAt": 1776003273225
     },
     "google-drive": {
       "version": "1.0.6",
-      "installedAt": 1773499549591
+      "installedAt": 1776002976114
     },
     "gog": {
       "version": "1.0.0",
-      "installedAt": 1773499604137
+      "installedAt": 1776002967572
     },
     "actual-self-improvement": {
       "version": "1.0.0",
-      "installedAt": 1773528803079
+      "installedAt": 1776002625850
     },
     "video-frames": {
       "version": "1.0.0",
-      "installedAt": 1773532166584
+      "installedAt": 1776003284779
     },
     "openclaw-mcp-debugger": {
       "version": "1.0.0",
-      "installedAt": 1773535379077
+      "installedAt": 1776003129282
     },
     "openclaw-config": {
       "version": "0.1.0",
-      "installedAt": 1773535379701
+      "installedAt": 1776003123719
     },
     "incident-commander": {
       "version": "2.1.1",
-      "installedAt": 1773535383831
+      "installedAt": 1776003018884
     },
     "clawops": {
       "version": "1.0.0",
-      "installedAt": 1773535584902
+      "installedAt": 1776002777165
     },
     "production-readiness": {
       "version": "1.0.0",
-      "installedAt": 1773535584906
+      "installedAt": 1776003152071
     },
     "remotion-video-toolkit": {
       "version": "1.4.0",
-      "installedAt": 1773536129865
+      "installedAt": 1776003196801
     },
     "remotion": {
       "version": "1.0.1",
-      "installedAt": 1773536130429
+      "installedAt": 1776003188318
     },
     "lb-motion-skill": {
       "version": "0.1.0",
-      "installedAt": 1773536136273
+      "installedAt": 1776003027973
     },
     "email-prompt-injection-defense": {
       "version": "1.0.1",
-      "installedAt": 1773553778954
+      "installedAt": 1776002896657
     },
     "claw-prompt-injection-guard": {
       "version": "1.0.0",
-      "installedAt": 1773553778963
+      "installedAt": 1776002771892
     },
     "config-guardian": {
       "version": "1.0.1",
-      "installedAt": 1773554695435
+      "installedAt": 1776002821464
     },
     "book-writing": {
       "version": "1.0.0",
-      "installedAt": 1773564886946
+      "installedAt": 1776002729774
     },
     "proofreader": {
-      "version": "1.0.1",
-      "installedAt": 1773564896346
+      "version": "2.0.0",
+      "installedAt": 1776003160438
     },
     "writing-assistant": {
       "version": "0.1.0",
-      "installedAt": 1773564906182
+      "installedAt": 1776003293088
     },
     "content-marketing": {
       "version": "1.0.0",
-      "installedAt": 1773564915008
+      "installedAt": 1776002832990
     },
     "cli-anything": {
       "version": "0.1.0",
-      "installedAt": 1773821599771
+      "installedAt": 1776002789589
     },
     "accli": {
       "version": "1.0.0",
-      "installedAt": 1773821895626
+      "installedAt": 1776002617224
     },
     "brainz-calendar": {
       "version": "1.0.0",
-      "installedAt": 1773821898138
+      "installedAt": 1776002738507
     },
     "1password": {
       "version": "1.0.1",
-      "installedAt": 1773821900711
+      "installedAt": 1776002596485
     },
     "domain-trust-check": {
       "version": "1.2.2",
-      "installedAt": 1773821903488
+      "installedAt": 1776002875948
     },
     "apple-notes": {
       "version": "1.0.0",
-      "installedAt": 1773821905948
+      "installedAt": 1776002703663
     },
     "apple-health-skill": {
       "version": "1.0.0",
-      "installedAt": 1773821908047
+      "installedAt": 1776002686328
     },
     "apple-find-my-local": {
       "version": "1.0.2",
-      "installedAt": 1773821914667
+      "installedAt": 1776002677784
     },
     "notion": {
       "version": "1.0.0",
-      "installedAt": 1773821934641
+      "installedAt": 1776003092679
     },
     "legaldoc-ai": {
       "version": "1.0.0",
-      "installedAt": 1773821972701
+      "installedAt": 1776003036567
     },
     "academic-deep-research": {
       "version": "1.0.0",
-      "installedAt": 1773821975687
+      "installedAt": 1776002608753
     },
     "security-audit-toolkit": {
       "version": "1.0.0",
-      "installedAt": 1773821979622
+      "installedAt": 1776003212979
     },
     "ai-video-script": {
       "version": "1.0.0",
-      "installedAt": 1773821981810
+      "installedAt": 1776002668663
     },
     "market-research": {
       "version": "1.0.1",
-      "installedAt": 1773821984229
+      "installedAt": 1776003066688
     },
     "meeting-to-action": {
       "version": "1.0.0",
-      "installedAt": 1773821987468
+      "installedAt": 1776003079298
     },
     "python-dataviz": {
       "version": "1.0.0",
-      "installedAt": 1773822001633
+      "installedAt": 1776003172586
     },
     "beancount-skill": {
       "version": "0.1.0",
-      "installedAt": 1773822017108
+      "installedAt": 1776002720854
     },
     "google-maps-search-api": {
       "version": "0.1.0",
-      "installedAt": 1774066158920
+      "installedAt": 1776002985358
+    },
+    "beads": {
+      "version": "1.0.1",
+      "installedAt": 1776002712136
     }
   }
 }

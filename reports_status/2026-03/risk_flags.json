@@ -1,0 +1,17 @@
+{
+  "reportMonth": "2026-03",
+  "risks": [
+    {
+      "code": "IT_MARKETING_PLACEHOLDER_ACTIVE",
+      "severity": "medium",
+      "details": "Report draft generated with explicit IT & Marketing placeholder pending submission or manual completion.",
+      "timestamp": "2026-05-04T19:33:00+01:00"
+    },
+    {
+      "code": "FINANCIAL_VALIDATION_PENDING",
+      "severity": "medium",
+      "details": "Finance workbook received but reconciliation/validation and template population remain outstanding.",
+      "timestamp": "2026-05-04T19:33:00+01:00"
+    }
+  ]
+}

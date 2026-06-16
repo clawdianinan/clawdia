@@ -29,3 +29,20 @@ if command -v chflags >/dev/null 2>&1; then
 fi
 
 echo "Immutable snapshot created: $SNAP_DIR"
+
+# Keep only last 10 snapshots
+echo "Applying snapshot retention (keep last 10)..."
+snapshot_dirs=($(find "$SNAP_ROOT" -maxdepth 1 -type d -name "20*" | xargs -I {} stat -f "%m %N" {} | sort -rn | cut -d' ' -f2-))
+count=${#snapshot_dirs[@]}
+if [[ $count -gt 10 ]]; then
+    echo "Deleting $((count - 10)) oldest snapshots..."
+    for ((i=10; i<count; i++)); do
+        dir="${snapshot_dirs[$i]}"
+        echo "  Deleting: $(basename \"$dir\")"
+        # Remove immutable flag first (if set)
+        if command -v chflags >/dev/null 2>&1; then
+            chflags -R nouchg "$dir" 2>/dev/null || true
+        fi
+        rm -rf "$dir"
+    done
+fi

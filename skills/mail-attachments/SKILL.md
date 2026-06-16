@@ -144,9 +144,10 @@ for email in emails:
 
 ### Security Settings
 ```bash
-# Grant automation access (required)
-sudo tccutil reset AppleEvents
-# Then manually grant access in System Preferences
+# Grant automation access for Terminal only (scoped — does NOT reset all apps)
+tccutil reset AppleEvents com.apple.Terminal
+# Then re-grant access: System Settings → Privacy & Security → Automation → check Mail under Terminal
+# Note: replace com.apple.Terminal with your terminal bundle ID if using iTerm2 (com.googlecode.iterm2) etc.
 ```
 
 ### Default Paths

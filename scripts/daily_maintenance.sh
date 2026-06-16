@@ -65,6 +65,12 @@ else
     echo "Memory directory not found: $MEMORY_DIR" | tee -a "$MAINTENANCE_LOG"
 fi
 
+# 6. Backup retention enforcement (keep max 10 backups per category)
+echo "" | tee -a "$MAINTENANCE_LOG"
+echo "6. Backup Retention Enforcement" | tee -a "$MAINTENANCE_LOG"
+echo "--------------------------------" | tee -a "$MAINTENANCE_LOG"
+"$SCRIPT_DIR/backup_retention.sh" 2>&1 | tee -a "$MAINTENANCE_LOG"
+
 echo "" | tee -a "$MAINTENANCE_LOG"
 echo "✅ Daily maintenance completed at $(date)" | tee -a "$MAINTENANCE_LOG"
 echo "Log saved to: $MAINTENANCE_LOG" | tee -a "$MAINTENANCE_LOG"

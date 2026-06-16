@@ -1,0 +1,51 @@
+{
+  "reportMonth": "2026-04",
+  "departments": {
+    "programs": {
+      "owner": "Programs",
+      "status": "pending",
+      "receivedAt": null,
+      "sourceFile": null
+    },
+    "finance": {
+      "owner": "Finance",
+      "status": "received",
+      "receivedAt": "2026-05-04",
+      "sourceFile": "202512_IIH_FinancialReport_Reviewed LATEST APRIL 2026.xlsx",
+      "note": "Use latest version"
+    },
+    "admin": {
+      "owner": "Administration",
+      "status": "pending",
+      "receivedAt": null,
+      "sourceFile": null
+    },
+    "hr": {
+      "owner": "HR",
+      "status": "pending",
+      "receivedAt": null,
+      "sourceFile": null
+    },
+    "facility": {
+      "owner": "Facility",
+      "status": "pending",
+      "receivedAt": null,
+      "sourceFile": null
+    },
+    "it_marketing": {
+      "owner": "IT & Marketing",
+      "status": "pending",
+      "receivedAt": null,
+      "sourceFile": null
+    },
+    "cafeteria": {
+      "owner": "Cafeteria Operations",
+      "status": "received",
+      "receivedAt": "2026-05-04",
+      "sourceFiles": [
+        "April_2026_Drinks Report.pdf",
+        "IIH CAFETERIA SALES REPORT FOR APRIL 2026.xlsx"
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "report_month": "2026-03",
+  "calculation_date": "2026-04-04",
+  "calendar_day": 4,
+  "target_progress": 40,
+  "actual_progress": 0,
+  "progress_gap": -40,
+  "milestones": {
+    "department_submissions": {
+      "weight": 0.4,
+      "target": 40,
+      "actual": 0,
+      "status": "behind"
+    },
+    "financial_gates": {
+      "weight": 0.3,
+      "target": 0,
+      "actual": 0,
+      "status": "on_track"
+    },
+    "report_assembly": {
+      "weight": 0.2,
+      "target": 0,
+      "actual": 0,
+      "status": "on_track"
+    },
+    "qa_review_pack": {
+      "weight": 0.1,
+      "target": 0,
+      "actual": 0,
+      "status": "on_track"
+    }
+  },
+  "risk_assessment": "HIGH - Department submissions deadline missed. No submissions received yet.",
+  "recommended_actions": [
+    "Send first reminder to all departments tomorrow (April 5)",
+    "Escalate to MD if submissions not received by April 7",
+    "Activate financial document collection process"
+  ]
+}

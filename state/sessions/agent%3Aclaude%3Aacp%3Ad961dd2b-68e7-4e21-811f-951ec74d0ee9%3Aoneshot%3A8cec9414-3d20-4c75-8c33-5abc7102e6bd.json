@@ -1,0 +1,50 @@
+{
+  "schema": "acpx.session.v1",
+  "acpx_record_id": "agent:claude:acp:d961dd2b-68e7-4e21-811f-951ec74d0ee9:oneshot:8cec9414-3d20-4c75-8c33-5abc7102e6bd",
+  "acp_session_id": "e7774bb1-604c-4f79-9bd8-ce2c15600543",
+  "agent_command": "\"/opt/homebrew/Cellar/node/25.8.1_1/bin/node\" \"/Users/clawdia/.openclaw/acpx/claude-agent-acp-wrapper.mjs\"",
+  "cwd": "/Users/clawdia/.openclaw/workspace",
+  "name": "agent:claude:acp:d961dd2b-68e7-4e21-811f-951ec74d0ee9",
+  "created_at": "2026-05-04T14:37:13.154Z",
+  "last_used_at": "2026-05-04T14:37:13.154Z",
+  "last_seq": 0,
+  "event_log": {
+    "active_path": "/Users/clawdia/.acpx/sessions/agent%3Aclaude%3Aacp%3Ad961dd2b-68e7-4e21-811f-951ec74d0ee9%3Aoneshot%3A8cec9414-3d20-4c75-8c33-5abc7102e6bd.stream.ndjson",
+    "segment_count": 5,
+    "max_segment_bytes": 67108864,
+    "max_segments": 5,
+    "last_write_error": null
+  },
+  "closed": false,
+  "pid": 80538,
+  "agent_started_at": "2026-05-04T14:37:07.659Z",
+  "protocol_version": 1,
+  "agent_capabilities": {
+    "_meta": {
+      "claudeCode": {
+        "promptQueueing": true
+      }
+    },
+    "promptCapabilities": {
+      "image": true,
+      "embeddedContext": true
+    },
+    "mcpCapabilities": {
+      "http": true,
+      "sse": true
+    },
+    "loadSession": true,
+    "sessionCapabilities": {
+      "fork": {},
+      "list": {},
+      "resume": {},
+      "close": {}
+    }
+  },
+  "title": null,
+  "messages": [],
+  "updated_at": "2026-05-04T14:37:13.154Z",
+  "cumulative_token_usage": {},
+  "request_token_usage": {},
+  "acpx": {}
+}

@@ -1,0 +1,48 @@
+{
+  "departments": [
+    {
+      "department": "Programs",
+      "primary_sender": "adebola.oladipo@iih.ng",
+      "sender_name": "Adebola Oladipo",
+      "approved_patterns": ["program", "activity", "participant", "event"],
+      "status": "active"
+    },
+    {
+      "department": "Finance",
+      "primary_sender": "khadijat.bello@iih.ng",
+      "sender_name": "Khadijat Bello",
+      "approved_patterns": ["finance", "financial", "budget", "expense", "revenue"],
+      "status": "active"
+    },
+    {
+      "department": "Administration",
+      "primary_sender": "maureen.okey@iih.ng",
+      "alternate_senders": ["maureen@iih.ng", "admin@iih.ng"],
+      "sender_name": "Maureen Okey",
+      "approved_patterns": ["admin", "administration", "procurement", "facility", "booking"],
+      "status": "active"
+    },
+    {
+      "department": "Human Resources",
+      "primary_sender": "sinachi@iih.ng",
+      "sender_name": "Sinachi Onuchukwu",
+      "approved_patterns": ["hr", "human resources", "staff", "recruitment", "training"],
+      "status": "active"
+    },
+    {
+      "department": "Facility Management",
+      "primary_sender": "kamil.ahmed@iih.ng",
+      "sender_name": "Kamil Ahmed",
+      "approved_patterns": ["facility", "maintenance", "security", "utility", "infrastructure"],
+      "status": "active"
+    },
+    {
+      "department": "IT & Marketing",
+      "primary_sender": "nas@iih.ng",
+      "alternate_senders": ["nasiru.muhammed@iih.ng"],
+      "sender_name": "Nas",
+      "approved_patterns": ["it", "technical", "marketing", "social media", "brand"],
+      "status": "active"
+    }
+  ]
+}

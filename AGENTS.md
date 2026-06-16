@@ -153,12 +153,15 @@ Routing output rule:
 - Aisha checks `events@iih.ng` shared calendar availability before invoicing or confirming.
 - Invoice is always required for facility bookings.
 - Customer payment proof must be confirmed with `finance@iih.ng` before final calendar confirmation.
-- Aisha signs booking emails as:
+- Aisha signs booking emails in the standard IIH brand format:
 
 ```text
 Warm regards,
 Aisha
 IIH Facility Booking Agent
+Ilorin Innovation Hub
+iih.ng | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+Powered by IHS
 ```
 
 ### Fela Operating Protocol — Content & Design Production (Template-First)
