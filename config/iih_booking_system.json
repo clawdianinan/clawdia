@@ -113,7 +113,11 @@
         "events@iih.ng"
       ],
       "invoice_payment_goal": "send invoice, wait for matching payment proof, then mark calendar event confirmed with events@iih.ng",
-      "external_send_gate": "do not send externally unless explicit approval exists or an approved automation path has verified payment/invoice state"
+      "approved_automation_sends": [
+        "send_invoice_email_with_attachment",
+        "send_payment_reminder"
+      ],
+      "external_send_gate": "booking agent may send approved invoice emails and payment reminders for validated booking threads; other external sends still require explicit approval"
     }
   },
   "credential_policy": {

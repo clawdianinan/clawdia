@@ -23,4 +23,7 @@
 - Zoho Books invitation was accepted by `facilitybookings@iih.ng`; Books org discovery now returns one organization, `Ilorin Innovation Hub Ltd/Gte`, and `ZOHO_BOOKS_ORG_ID` is saved.
 - Read-only Books contacts and invoices API smoke checks pass.
 - Remaining scope blocker: CRM Contacts search still returns `OAUTH_SCOPE_MISMATCH` until a token is generated with `ZohoCRM.modules.search.READ`.
+- Temi approved the booking automation path to send invoice emails as attachments and send payment reminders to customers.
+- Connector supports `invoice-email` and `payment-reminder` steps with an existing `--invoice-id`, always copying `events@iih.ng`.
+- Latest OAuth code attempt returned `invalid_code`, then the hidden prompt was cancelled; CRM scopes still need a fresh final OAuth code if CRM sync is required.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.

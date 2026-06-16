@@ -214,17 +214,29 @@ def create_invoice(token: str, contact_id: str, booking: dict[str, Any], live: b
     return {"invoice_id": created["invoice"]["invoice_id"], "raw": created}
 
 
-def invoice_email_payload(booking: dict[str, Any]) -> dict[str, Any]:
+def invoice_email_payload(booking: dict[str, Any], reminder: bool = False) -> dict[str, Any]:
+    subject_prefix = "Payment Reminder" if reminder else "Invoice"
+    opening = (
+        "This is a reminder that payment is required to confirm your booking at Ilorin Innovation Hub. "
+        if reminder
+        else "Thank you for your booking inquiry at Ilorin Innovation Hub. "
+    )
+    action_line = (
+        "Please review the attached invoice and send proof of payment once completed. "
+        if reminder
+        else "Please find attached your invoice. "
+    )
     return {
         "to_mail_ids": [booking["email"]],
         "cc_mail_ids": [EVENTS_CC],
-        "subject": f"Invoice for {booking['facility']} Booking - {booking['event_name']} | IIH Space",
+        "subject": f"{subject_prefix} for {booking['facility']} Booking - {booking['event_name']} | IIH Space",
         "body": (
             f"Dear {booking['full_name']},\n\n"
-            "Thank you for your booking inquiry at Ilorin Innovation Hub. "
-            f"Please find attached your invoice for the {booking['facility']} on {booking['event_date']}.\n\n"
+            f"{opening}"
+            f"{action_line}"
+            f"The invoice covers the {booking['facility']} on {booking['event_date']}.\n\n"
             "Kindly make payment within 7 days to confirm your booking. "
-            "Your calendar slot will be confirmed upon receipt of payment.\n\n"
+            "Your calendar slot will be confirmed after payment proof is received and matched to the invoice amount.\n\n"
             f"For questions, contact {EVENTBOOKINGS_EMAIL}.\n\n"
             "Warm regards,\n"
             "IIH Bookings"
@@ -234,6 +246,20 @@ def invoice_email_payload(booking: dict[str, Any]) -> dict[str, Any]:
 
 def send_invoice_email(token: str, invoice_id: str, booking: dict[str, Any], live: bool) -> dict[str, Any]:
     payload = invoice_email_payload(booking)
+    if not live:
+        return {"sent": False, "dry_run_payload": payload}
+    assert_booking_identity()
+    sent = request_json(
+        "POST",
+        books_url(f"invoices/{invoice_id}/email"),
+        token=token,
+        payload=payload,
+    )
+    return {"sent": True, "raw": sent}
+
+
+def send_payment_reminder(token: str, invoice_id: str, booking: dict[str, Any], live: bool) -> dict[str, Any]:
+    payload = invoice_email_payload(booking, reminder=True)
     if not live:
         return {"sent": False, "dry_run_payload": payload}
     assert_booking_identity()
@@ -521,14 +547,20 @@ def himalaya_account_exists(fragment: str) -> bool:
         return False
 
 
-def execute_steps(booking: dict[str, Any], steps: list[str], confirm_live: bool, confirm_email_send: bool) -> dict[str, Any]:
+def execute_steps(
+    booking: dict[str, Any],
+    steps: list[str],
+    confirm_live: bool,
+    confirm_email_send: bool,
+    existing_invoice_id: str | None = None,
+) -> dict[str, Any]:
     if not confirm_live:
         raise ConnectorError("Live Zoho writes require --confirm-live.")
     token = get_zoho_token()
     result: dict[str, Any] = {"steps": {}}
 
     contact_id: str | None = None
-    invoice_id: str | None = None
+    invoice_id: str | None = existing_invoice_id
 
     if "books-contact" in steps or "invoice" in steps:
         contact = find_or_create_books_contact(token, booking, live=True)
@@ -549,8 +581,15 @@ def execute_steps(booking: dict[str, Any], steps: list[str], confirm_live: bool,
         if not confirm_email_send:
             raise ConnectorError("Invoice email send requires --confirm-email-send.")
         if not invoice_id:
-            raise ConnectorError("Cannot send invoice email without invoice ID from invoice step.")
+            raise ConnectorError("Cannot send invoice email without invoice ID from invoice step or --invoice-id.")
         result["steps"]["invoice-email"] = send_invoice_email(token, invoice_id, booking, live=True)
+
+    if "payment-reminder" in steps:
+        if not confirm_email_send:
+            raise ConnectorError("Payment reminder send requires --confirm-email-send.")
+        if not invoice_id:
+            raise ConnectorError("Cannot send payment reminder without invoice ID from invoice step or --invoice-id.")
+        result["steps"]["payment-reminder"] = send_payment_reminder(token, invoice_id, booking, live=True)
 
     if "calendar-hold" in steps:
         if not confirm_email_send:
@@ -593,9 +632,18 @@ def main() -> int:
     execute_parser.add_argument(
         "--step",
         action="append",
-        choices=["books-contact", "crm-contact", "invoice", "invoice-email", "calendar-hold", "calendar-confirmed"],
+        choices=[
+            "books-contact",
+            "crm-contact",
+            "invoice",
+            "invoice-email",
+            "payment-reminder",
+            "calendar-hold",
+            "calendar-confirmed",
+        ],
         required=True,
     )
+    execute_parser.add_argument("--invoice-id", help="Existing Zoho Books invoice ID for invoice email/reminder steps.")
     execute_parser.add_argument("--confirm-live", action="store_true")
     execute_parser.add_argument("--confirm-email-send", action="store_true")
     execute_parser.add_argument("--pretty", action="store_true")
@@ -616,7 +664,13 @@ def main() -> int:
                     raise ConnectorError("Local register write requires --approve-local-write.")
                 output = register_booking(booking, args.status, args.source)
             elif args.command == "execute":
-                output = execute_steps(booking, args.step, args.confirm_live, args.confirm_email_send)
+                output = execute_steps(
+                    booking,
+                    args.step,
+                    args.confirm_live,
+                    args.confirm_email_send,
+                    existing_invoice_id=args.invoice_id,
+                )
             else:
                 raise ConnectorError(f"Unknown command: {args.command}")
         print(json.dumps(output, indent=2 if getattr(args, "pretty", False) else None))

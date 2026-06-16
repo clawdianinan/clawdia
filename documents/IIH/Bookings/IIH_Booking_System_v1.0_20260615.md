@@ -184,6 +184,7 @@ Supported live connector steps:
 - `crm-contact`
 - `invoice`
 - `invoice-email`
+- `payment-reminder`
 - `calendar-hold`
 - `calendar-confirmed`
 
@@ -200,13 +201,17 @@ Confirmed calendar title format:
 ## 8. Approval Gates
 
 Explicit approval is required for:
-- sending invoice emails
-- sending acknowledgement/follow-up emails
+- sending acknowledgement/follow-up emails outside the approved booking automation path
 - creating external calendar invites
 - marking bookings as confirmed
 - refunds or security deposit decisions
 - discounts, waivers, or rate exceptions
 - responding to third-party booking enquiries
+
+Approved automation path:
+- The booking agent may send invoice emails with the Zoho Books invoice attached for validated booking threads.
+- The booking agent may send payment reminders for recorded unpaid invoices.
+- All invoice and reminder emails must CC `events@iih.ng`.
 
 ## 9. Client Email Draft Standard
 
