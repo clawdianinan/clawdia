@@ -103,7 +103,7 @@
   },
   "agent_runtime": {
     "agent": "aisha",
-    "agent_role": "IIH Facility Booking AI Agent",
+    "agent_role": "IIH Facility Booking Agent",
     "orchestrator": "clawdia",
     "poll_account": "facilitybookings",
     "poll_folder": "INBOX",
@@ -120,8 +120,8 @@
       "all_outbound_responses_cc": [
         "events@iih.ng"
       ],
-      "signature_after_current_booking": "Warm regards,\n\nAisha\nIIH Facility Booking AI Agent | Ilorin Innovation Hub\nwww.iih.ng\nAhmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria\n\nThis message and any attachments are confidential and intended only for the recipient.",
-      "signature_html": "<div style=\"clear: both;\">\n Warm regards,\n <br>\n <br>\n</div>\n<div style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.5;\">\n <div>\n <table class=\"ze_tableView\" cellpadding=\"2\" cellspacing=\"2\" border=\"0\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; border: 0px solid black; color: black;\">\n <tbody>\n <tr>\n <td style=\"vertical-align: top; width: 158.141px;\">\n <div>\n <img src=\"/zm/ImageSignature?fileName=1749122382045004_1686933120.png&amp;accountId=3859712000000008002&amp;storeName=709990578&amp;frm=org&amp;zoid=709990578\" width=\"155\" height=\"74\" style=\"float: left;\" orig_width=\"371\" orig_height=\"181\">\n <br>\n </div>\n </td>\n <td style=\"vertical-align: top; width: 645.859px;\">\n <div style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.5;\">\n <div>\n <div>\n <b>\n <span class=\"size\" style=\"font-size:10.6667px\">\n Aisha\n <br>\n </span>\n </b>\n <span class=\"size\" style=\"font-size:10.6667px\">\n IIH Facility Booking AI Agent&nbsp;|\n <span class=\"colour\" style=\"color:rgb(0, 204, 0)\">\n Ilorin Innovation Hub\n </span>\n <span class=\"colour\" style=\"color: rgb(106, 168, 79); font-weight: 500;\">\n <br>\n </span>\n </span>\n <a target=\"_blank\" style=\"color: #1a73e8;\" href=\"https://iih.ng\">\n <span class=\"size\" style=\"font-size:10.6667px\">\n www.iih.ng\n </span>\n </a>\n <span class=\"size\" style=\"font-size:10.6667px\">\n <br>\n Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria\n </span>\n <br>\n </div>\n </div>\n </div>\n </td>\n </tr>\n </tbody>\n </table>\n <p>\n <span class=\"colour\" style=\"color:rgb(153, 153, 153)\">\n <span class=\"size\" style=\"font-size:10.6667px\">\n This message and any attachments are confidential and intended only for the recipient.&nbsp;\n </span>\n </span>\n <br>\n </p>\n </div>\n</div>\n<div style=\"clear: both;\">\n <br>\n</div>",
+      "signature_after_current_booking": "Aisha\nIIH Facility Booking Agent\niih.ng | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria\nPowered by IHS",
+      "signature_html": "<div style=\"border-top:1px solid #e0e0e0;margin-top:10px;padding-top:10px;font-family:Arial,sans-serif;font-size:12px;color:#333\"><div style=\"margin-bottom:8px\"><strong style=\"font-size:14px;color:#2d5a27\">Aisha</strong><br><span style=\"color:#555\">IIH Facility Booking Agent</span></div><div style=\"color:#777\"><strong>Ilorin Innovation Hub</strong><br><a href=\"https://iih.ng\" style=\"color:#2d5a27;text-decoration:none\">iih.ng</a> | Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria<br></div><div style=\"margin-top:6px;padding-top:6px;border-top:1px solid #eee\"><span style=\"color:#999;font-size:11px\">Powered by IHS</span></div></div>",
       "invoice_policy": "invoice is always required for facility bookings; never ask whether an invoice is required",
       "invoice_payment_goal": "send invoice, wait for matching payment proof, then mark calendar event confirmed with events@iih.ng",
       "availability_source": "events@iih.ng shared group calendar",
