@@ -174,9 +174,18 @@ The local connector is:
 ```bash
 python3 scripts/iih_booking_connectors.py doctor --pretty
 python3 scripts/iih_booking_connectors.py prepare documents/IIH/Bookings/sample_booking.json --pretty
+python3 scripts/iih_booking_agent.py poll --limit 25 --pretty
 ```
 
 Live Zoho writes require `--confirm-live`. Invoice email sends and external calendar invites additionally require `--confirm-email-send`.
+
+Supported live connector steps:
+- `books-contact`
+- `crm-contact`
+- `invoice`
+- `invoice-email`
+- `calendar-hold`
+- `calendar-confirmed`
 
 ### Step 6 - Payment Confirmation
 
@@ -207,7 +216,7 @@ For IIH booking emails:
 - keep tone warm and professional
 - include facility, event date, invoice/payment deadline, and booking status
 - send/reply from facilitybookings@iih.ng only
-- CC events@iih.ng on invoice emails
+- CC events@iih.ng on every outbound response and invoice email
 - direct enquiries to facilitybookings@iih.ng
 - never use md@iih.ng for booking automation
 

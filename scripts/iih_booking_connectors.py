@@ -557,6 +557,12 @@ def execute_steps(booking: dict[str, Any], steps: list[str], confirm_live: bool,
             raise ConnectorError("External calendar invite requires --confirm-email-send.")
         result["steps"]["calendar-hold"] = create_calendar_event(token, booking, live=True)
 
+    if "calendar-confirmed" in steps:
+        if not confirm_email_send:
+            raise ConnectorError("Confirmed external calendar invite requires --confirm-email-send.")
+        result["steps"]["calendar-confirmed"] = create_calendar_event(token, booking, live=True, status="confirmed")
+        result["steps"]["booking-register"] = register_booking(booking, "Confirmed", "payment-proof")
+
     return result
 
 
@@ -587,7 +593,7 @@ def main() -> int:
     execute_parser.add_argument(
         "--step",
         action="append",
-        choices=["books-contact", "crm-contact", "invoice", "invoice-email", "calendar-hold"],
+        choices=["books-contact", "crm-contact", "invoice", "invoice-email", "calendar-hold", "calendar-confirmed"],
         required=True,
     )
     execute_parser.add_argument("--confirm-live", action="store_true")

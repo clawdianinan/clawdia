@@ -16,4 +16,9 @@
 - Books organization discovery returned code 57 because the first scope set omitted `ZohoBooks.settings.READ`; regenerate OAuth with `ZohoBooks.settings.READ` included.
 - Expanded-scope token worked for Calendar and Zoho Mail API, but CRM Contacts search returned `OAUTH_SCOPE_MISMATCH`; add `ZohoCRM.modules.search.READ` for the CRM search endpoint and `ZohoCRM.settings.modules.READ` for module diagnostics.
 - Books organization discovery with expanded scopes returned zero organizations, meaning the authorized Zoho user may not have access to a Zoho Books organization; verify the correct Zoho account/org if this persists after final scope update.
+- Implemented `scripts/iih_booking_agent.py` to poll `facilitybookings`, classify new booking requests vs thread replies, detect payment-proof replies, record invoice metadata, and mark local threads confirmed after matched payment proof.
+- Added `calendar-confirmed` connector step to create a confirmed Zoho Calendar event and register the booking as `Confirmed` after verified payment evidence.
+- Added OpenClaw cron job `d5ff536a-db19-4d9f-a4d2-9ef84d18eb72` named "IIH Booking Agent Poll" to run every 10 minutes.
+- First live poll classified current inbox correctly, including `Request to use Hall` from `tosintolufakayode@gmail.com` as `new_booking_request`.
+- Remaining live invoice blocker: `ZOHO_BOOKS_ORG_ID` is still missing and Books org discovery returns zero organizations until the Zoho Books invite/org access is fully active.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-a88678251c`.

@@ -96,6 +96,26 @@
     "required_himalaya_account": "facilitybookings",
     "sender_policy": "all booking-related emails must use facilitybookings@iih.ng; md@iih.ng is excluded from this system"
   },
+  "agent_runtime": {
+    "poll_account": "facilitybookings",
+    "poll_folder": "INBOX",
+    "recommended_interval_minutes": 10,
+    "state_database": "documents/IIH/Bookings/booking_agent.sqlite3",
+    "thread_detection": [
+      "Message-ID",
+      "In-Reply-To",
+      "References",
+      "normalized_subject",
+      "sender_email"
+    ],
+    "response_policy": {
+      "all_outbound_responses_cc": [
+        "events@iih.ng"
+      ],
+      "invoice_payment_goal": "send invoice, wait for matching payment proof, then mark calendar event confirmed with events@iih.ng",
+      "external_send_gate": "do not send externally unless explicit approval exists or an approved automation path has verified payment/invoice state"
+    }
+  },
   "credential_policy": {
     "existing_tokens_approved_by_temi": true,
     "rotation_required_before_production": false,

@@ -3,7 +3,7 @@
 ## Durable Role Memory
 - Aisha owns IIH Space booking operations.
 - Booking workflows are IIH context by default.
-- Aisha's booking email identity is eventbookings@iih.ng.
+- Aisha's booking email identity is facilitybookings@iih.ng.
 - md@iih.ng is excluded from the booking system entirely.
 - Clawdia remains final orchestrator and approval gate for outbound sends, payment-sensitive actions, refunds, discounts, waivers, and external communications.
 
@@ -20,6 +20,9 @@
 - External catering is not allowed by default; exceptions attract a NGN 100,000/day corkage fee.
 - Autoresponses must deduce available details from the initial email first, not list the deduced details, and only request missing or unclear fields.
 - Full booking request form: https://forms.gle/psuxSJ4MG1CqQWKD8
+- Aisha must distinguish new booking requests from thread replies using Message-ID, In-Reply-To, References, normalized subject, sender email, and existing booking-agent state.
+- All outbound responses from facilitybookings@iih.ng must copy events@iih.ng.
+- Payment proof must be matched to the recorded invoice amount before the booking can move to calendar confirmation.
 
 ## Required Booking Intake Fields
 - full_name
