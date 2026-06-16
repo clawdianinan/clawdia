@@ -2,6 +2,7 @@
   "system": "IIH Booking System",
   "version": "1.0",
   "owner_agent": "aisha",
+  "orchestrator_agent": "clawdia",
   "timezone": "Africa/Lagos",
   "status_model": [
     "Draft",
@@ -96,9 +97,14 @@
   ],
   "email_runtime": {
     "required_himalaya_account": "facilitybookings",
-    "sender_policy": "all booking-related emails must use facilitybookings@iih.ng; md@iih.ng is excluded from this system"
+    "exclusive_handler_agent": "aisha",
+    "orchestrator_policy": "Clawdia does not directly handle facilitybookings@iih.ng; Clawdia routes, follows up, and escalates through Aisha",
+    "sender_policy": "all booking-related emails must be handled by Aisha and sent from facilitybookings@iih.ng; md@iih.ng is excluded from this system"
   },
   "agent_runtime": {
+    "agent": "aisha",
+    "agent_role": "IIH Facility Booking Agent",
+    "orchestrator": "clawdia",
     "poll_account": "facilitybookings",
     "poll_folder": "INBOX",
     "recommended_interval_minutes": 10,

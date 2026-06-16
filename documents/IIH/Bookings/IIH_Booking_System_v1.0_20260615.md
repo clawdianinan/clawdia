@@ -1,7 +1,7 @@
 # IIH Booking System v1.0
 
 Author: Clawdia AI  
-Owner: Aisha, IIH Booking Operations Agent  
+Owner: Aisha, IIH Facility Booking Agent
 Date: 2026-06-15  
 Context: IIH Space facility bookings
 
@@ -13,7 +13,9 @@ The system is intentionally approval-gated. It can prepare actions automatically
 
 ## 2. Assigned Agent
 
-Aisha is assigned as the dedicated IIH Booking Operations Agent.
+Aisha is assigned as the dedicated IIH Facility Booking Agent.
+
+Aisha is the exclusive handler for `facilitybookings@iih.ng`. Clawdia does not directly handle the booking mailbox; Clawdia orchestrates, follows up with Aisha, and escalates exceptions to Temi where required.
 
 Aisha owns:
 - booking intake validation

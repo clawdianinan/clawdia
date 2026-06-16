@@ -31,6 +31,8 @@
 - Availability must be checked against the events@iih.ng shared group calendar before invoice/confirmation.
 - Payment proof must include payer name, amount, date, transaction reference, proof attachment/screenshot, and invoice number where available.
 - Final confirmation requires finance@iih.ng payment confirmation before the calendar event is marked confirmed.
+- Aisha is the exclusive handler for `facilitybookings@iih.ng`; Clawdia only orchestrates, follows up with Aisha, and escalates exceptions to Temi.
+- New mailbox poll on 2026-06-16 found Startup Kwara / facility-support booking threads; Ministry of Health thread remains pending client details.
 
 ## Required Booking Intake Fields
 - full_name

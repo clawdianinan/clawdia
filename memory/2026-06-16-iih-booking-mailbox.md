@@ -41,3 +41,5 @@
 - Availability must be checked against the `events@iih.ng` shared group calendar before invoicing/confirmation.
 - Customer payment proof must be confirmed with `finance@iih.ng` before final calendar confirmation.
 - Skill Workshop update proposal created for the reusable `iih-booking-system` skill: `iih-booking-system-20260616-9a49e130b2`.
+- Aisha named-agent setup expanded with IDENTITY, TOOLS, TASKS, and HEARTBEAT files. Aisha is now recorded as the exclusive handler for `facilitybookings@iih.ng`; Clawdia only orchestrates and follows up with Aisha.
+- Mailbox poll on 2026-06-16 detected five new booking-related records: Startup Kwara venue enquiry, Startup Kwara partnership invitation, two `Request for the Use of Innovation Hub` follow-ups, and PMI sports/tech facility support reminder. Ministry of Health hall request still has no new client response and remains pending missing details.
