@@ -47,3 +47,5 @@
 - Fresh mailbox check found Fakayode Tosin replied at 2026-06-16 14:31 with event details: 09:00-13:00, theatre setup, projector/screen and AV, hall for at least 100 guests, security provided, no livestream, IIH tea break/lunch support requested, and inspection requested for the afternoon.
 - Registered Aisha in `openclaw agents list` as `aisha` with identity `Aisha`, runtime dir `~/.openclaw/agents/aisha/agent`, and workspace `~/.openclaw/workspace/aisha`.
 - Fixed booking-agent state handling so outbound booking responses do not overwrite actionable inbound next steps.
+- OpenClaw cron job `d5ff536a-db19-4d9f-a4d2-9ef84d18eb72` was reassigned to agent `aisha`, still every 10 minutes, with a 300-second timeout.
+- Added macOS LaunchAgent `ng.iih.booking-agent` at `/Users/clawdia/Library/LaunchAgents/ng.iih.booking-agent.plist` as the reliable 10-minute mailbox monitor. It runs the booking poll directly and logs to `logs/iih-booking/`; first verified run exited `0`.
