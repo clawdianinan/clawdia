@@ -7,6 +7,9 @@
 - Prefer HTML for authorized sends.
 - Never attach `.md` files.
 - Mandatory signature block:
+  - For HTML email, use `signatures/clawdia_iih_signature.html`.
+  - Embed `signatures/clawdia_iih_logo.png` inline with CID `iih-logo`.
+  - Text fallback:
   ```text
   Warm regards,
 

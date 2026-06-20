@@ -22,6 +22,13 @@ Use with: `EMAIL_OPERATIONS_MASTER.md`
 - Include executive summary in body for report emails.
 
 ## 4) Signature (mandatory)
+For HTML email, use the IIH logo/table signature template:
+`signatures/clawdia_iih_signature.html`
+
+Embed `signatures/clawdia_iih_logo.png` inline with CID `iih-logo`.
+
+Text fallback:
+
 Warm regards,
 
 Clawdia AI  

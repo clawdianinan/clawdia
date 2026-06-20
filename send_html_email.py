@@ -11,6 +11,7 @@ import argparse
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
+from email.mime.image import MIMEImage
 from email.utils import formatdate
 from pathlib import Path
 
@@ -38,7 +39,22 @@ def load_config():
             return json.load(f)
     return {}
 
-def send_html_email(to, subject, html_body, plain_body, account, cc=None, attachments=None):
+def parse_inline_images(inline_images):
+    parsed = []
+    for item in inline_images or []:
+        if "=" not in item:
+            print(f"  Warning: Inline image must be CID=PATH, got: {item}")
+            continue
+        cid, path = item.split("=", 1)
+        cid = cid.strip().strip("<>")
+        path = path.strip()
+        if not cid or not path:
+            print(f"  Warning: Invalid inline image spec: {item}")
+            continue
+        parsed.append((cid, path))
+    return parsed
+
+def send_html_email(to, subject, html_body, plain_body, account, cc=None, attachments=None, inline_images=None):
     """Send an HTML email with optional plain text fallback"""
     config = load_config()
     
@@ -56,8 +72,9 @@ def send_html_email(to, subject, html_body, plain_body, account, cc=None, attach
         print(f"Or set environment variable: EMAIL_PASSWORD_{account.upper()}")
         return False
     
-    # Create message
-    msg = MIMEMultipart('alternative')
+    # Create message. Use mixed -> related -> alternative so inline images
+    # stay associated with the HTML body while normal files remain attachments.
+    msg = MIMEMultipart('mixed')
     msg['From'] = account_config.get('from_address', account_config['username'])
     msg['To'] = to
     msg['Date'] = formatdate(localtime=True)
@@ -66,9 +83,24 @@ def send_html_email(to, subject, html_body, plain_body, account, cc=None, attach
     if cc:
         msg['Cc'] = cc
     
-    # Add both plain text and HTML versions
-    msg.attach(MIMEText(plain_body, 'plain'))
-    msg.attach(MIMEText(html_body, 'html'))
+    related = MIMEMultipart('related')
+    alternative = MIMEMultipart('alternative')
+    alternative.attach(MIMEText(plain_body, 'plain'))
+    alternative.attach(MIMEText(html_body, 'html'))
+    related.attach(alternative)
+
+    for cid, image_path in parse_inline_images(inline_images):
+        if not os.path.exists(image_path):
+            print(f"  Warning: Inline image not found: {image_path}")
+            continue
+        with open(image_path, 'rb') as f:
+            image = MIMEImage(f.read())
+        image.add_header('Content-ID', f'<{cid}>')
+        image.add_header('Content-Disposition', 'inline', filename=os.path.basename(image_path))
+        related.attach(image)
+        print(f"  Inline image: {cid} -> {os.path.basename(image_path)}")
+
+    msg.attach(related)
     
     # Add attachments if specified
     if attachments:
@@ -135,9 +167,12 @@ def main():
     parser.add_argument('--html-file', help='HTML body file')
     parser.add_argument('--plain', help='Plain text body content (file or text)')
     parser.add_argument('--plain-file', help='Plain text body file')
+    parser.add_argument('--signature-html-file', help='HTML signature file to append')
+    parser.add_argument('--signature-plain-file', help='Plain text signature file to append')
     parser.add_argument('--account', required=True, help='Email account to use (from config)')
     parser.add_argument('--cc', help='CC email address')
     parser.add_argument('--attachments', nargs='+', help='Paths to attachment files')
+    parser.add_argument('--inline-images', nargs='+', help='Inline images as CID=PATH')
     
     args = parser.parse_args()
     
@@ -161,6 +196,14 @@ def main():
         import re
         plain_body = re.sub(r'<[^>]+>', '', html_body)
         plain_body = re.sub(r'\n\s*\n', '\n\n', plain_body)
+
+    if args.signature_html_file:
+        with open(args.signature_html_file, 'r') as f:
+            html_body = f"{html_body}\n{f.read()}"
+
+    if args.signature_plain_file:
+        with open(args.signature_plain_file, 'r') as f:
+            plain_body = f"{plain_body.rstrip()}\n\n{f.read()}"
     
     if not html_body and not plain_body:
         print("Error: No email body provided")
@@ -179,7 +222,8 @@ def main():
         plain_body=plain_body,
         account=args.account,
         cc=args.cc,
-        attachments=args.attachments
+        attachments=args.attachments,
+        inline_images=args.inline_images
     )
     
     sys.exit(0 if success else 1)

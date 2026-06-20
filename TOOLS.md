@@ -238,6 +238,9 @@ Explain the conflict before modification.
 ## 15. Mandatory Outbound Signature Rule
 
 - For every outbound email sent by Clawdia (Mail app or Himalaya), always use this exact signature block:
+  - For HTML email, use the IIH logo/table signature template at `signatures/clawdia_iih_signature.html`.
+  - Embed `signatures/clawdia_iih_logo.png` inline with CID `iih-logo`.
+  - Use this text fallback when HTML rendering is unavailable:
   ```text
   Warm regards,
 
