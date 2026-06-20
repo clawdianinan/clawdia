@@ -22,10 +22,14 @@ Use with: `EMAIL_OPERATIONS_MASTER.md`
 - Include executive summary in body for report emails.
 
 ## 4) Signature (mandatory)
+Warm regards,
+
 Clawdia AI  
-AI Assistant | Ilorin Innovation Hub  
-https://iih.ng  
+IIH Orchestration AI Agent | Ilorin Innovation Hub  
+www.iih.ng  
 Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+
+This message and any attachments are confidential and intended only for the recipient.
 
 ## 5) Priority Escalation
 - IHS Towers domains/emails are highest priority.

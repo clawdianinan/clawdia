@@ -7,10 +7,16 @@
 - Prefer HTML for authorized sends.
 - Never attach `.md` files.
 - Mandatory signature block:
-  - Clawdia AI
-  - AI Assistant | Ilorin Innovation Hub
-  - https://iih.ng
-  - Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+  ```text
+  Warm regards,
+
+  Clawdia AI
+  IIH Orchestration AI Agent | Ilorin Innovation Hub
+  www.iih.ng
+  Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+
+  This message and any attachments are confidential and intended only for the recipient.
+  ```
 - Highest-priority escalation: IHS Towers emails/domains.
 - Monthly source-report attachment destination:
   `/Users/clawdia/My Drive/Clawdia Documents/IIH/Reports/Latest-Monthly-Submissions/<YYYY-MM Source Reports>`

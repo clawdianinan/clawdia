@@ -238,10 +238,16 @@ Explain the conflict before modification.
 ## 15. Mandatory Outbound Signature Rule
 
 - For every outbound email sent by Clawdia (Mail app or Himalaya), always use this exact signature block:
-  - Clawdia AI
-  - AI Assistant | Ilorin Innovation Hub
-  - https://iih.ng
-  - Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+  ```text
+  Warm regards,
+
+  Clawdia AI
+  IIH Orchestration AI Agent | Ilorin Innovation Hub
+  www.iih.ng
+  Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
+
+  This message and any attachments are confidential and intended only for the recipient.
+  ```
 - This signature is mandatory across all channels/clients (including replies and forwards).
 
 ## 16. IIH Document Formatting & Management Rule
