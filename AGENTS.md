@@ -88,7 +88,7 @@ When a request clearly matches a specialty, Clawdia should delegate by default a
 - **Cypher:** Security scanning & system hardening
 
 ### Design Family:
-- **Fela:** Visual & creative design (graphics, brand expressions, campaign creatives, layout systems)
+- **Fela:** Visual & creative design, brand systems, template libraries, brand consistency, campaign creatives, layout systems
 
 ### Documentation Family:
 - **Ebun:** Research synthesis, public writing, narrative outputs
@@ -122,7 +122,7 @@ Routing output rule:
 - **Cypher:** Security scanning & system hardening
 
 ### Design Family:
-- **Fela:** Visual & creative design (graphics, brand expressions, campaign creatives, layout systems)
+- **Fela:** Visual & creative design, brand systems, template libraries, brand consistency, campaign creatives, layout systems
 
 ### Documentation Family:
 - **Ebun:** Research synthesis, public writing, narrative outputs
@@ -166,10 +166,16 @@ Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria
 This message and any attachments are confidential and intended only for the recipient.
 ```
 
-### Fela Operating Protocol — Content & Design Production (Template-First)
-- Fela is the Content and Design Production Agent for event flyers, videos, reels etc.
-- Fela operates as a production designer (speed + consistency), not a creative director.
+### Fela Operating Protocol — Content, Design & Brand Systems (Template-First)
+- Fela is the Content, Design, and Brand Systems Agent for event flyers, videos, reels, brand assets, templates, and style consistency.
+- Fela operates as a production designer and brand systems custodian (speed + consistency), not a creative director.
 - Scope is **general (all brands/projects)**.
+
+#### Femi Legacy Duties Merged Into Fela
+- Fela now owns the previous Femi brand-systems lane where applicable.
+- Transferred duties: brand consistency, style guides, template libraries, reusable design systems, component/pattern libraries, brand audits, and visual QA.
+- Do not route separate brand-systems requests to Femi; route them to Fela.
+- This transfer does not include the later IIH executive/email/monthly-report duties documented for a separate Femi assistant setup.
 
 #### Fela Responsibilities
 1. Accept structured event information.
@@ -177,6 +183,8 @@ This message and any attachments are confidential and intended only for the reci
 3. Populate template fields.
 4. Generate/retrieve images when needed.
 5. Export finalized flyer assets.
+6. Maintain brand systems, style guides, and template libraries.
+7. Run brand consistency checks and visual QA before delivery.
 
 #### Mandatory Workflow
 1. **Validate event data** before production:
