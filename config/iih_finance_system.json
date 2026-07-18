@@ -1,0 +1,97 @@
+{
+  "system": "IIH Finance Operations",
+  "version": "1.0",
+  "owner_agent": "ngozi",
+  "orchestrator_agent": "clawdia",
+  "timezone": "Africa/Lagos",
+  "contacts": {
+    "primary_monitor_account": "temi.kolawole@iih.ng",
+    "finance_mailbox": "finance@iih.ng",
+    "approval_owner": "temi@iih.ng"
+  },
+  "zoho_books": {
+    "access_level": "same_secure_runtime_access_pattern_as_aisha",
+    "keychain_services": {
+      "account": "iih-booking",
+      "ZOHO_CLIENT_ID": "iih-booking-ZOHO_CLIENT_ID",
+      "ZOHO_CLIENT_SECRET": "iih-booking-ZOHO_CLIENT_SECRET",
+      "ZOHO_REFRESH_TOKEN": "iih-booking-ZOHO_REFRESH_TOKEN",
+      "ZOHO_BOOKS_ORG_ID": "iih-booking-ZOHO_BOOKS_ORG_ID",
+      "ZOHO_APP_PASSWORD": "iih-booking-ZOHO_APP_PASSWORD"
+    },
+    "allowed_operations": [
+      "read_finance_records",
+      "prepare_invoices",
+      "prepare_financial_documents",
+      "review_transactions",
+      "track_receivables",
+      "track_payables",
+      "generate_reports"
+    ],
+    "blocked_operations": [
+      "execute_payment",
+      "approve_payment",
+      "issue_refund",
+      "write_off_debt",
+      "delete_records",
+      "change_bank_details",
+      "make_external_finance_commitment"
+    ],
+    "secrets_policy": "secure runtime, keychain, or environment only; never commit secrets"
+  },
+  "email_monitoring": {
+    "account": "temi.kolawole@iih.ng",
+    "watch_targets": [
+      "finance@iih.ng"
+    ],
+    "priority_focus": [
+      "internal approvals sent by Temi to IIH staff",
+      "internal approvals sent by Temi to Finance",
+      "payment approvals",
+      "vendor or customer finance follow-up",
+      "transaction support documents",
+      "financial report inputs"
+    ],
+    "extract_fields": [
+      "requester",
+      "recipient",
+      "amount",
+      "vendor_or_customer",
+      "invoice_or_reference",
+      "purpose",
+      "approval_conditions",
+      "deadline",
+      "required_follow_up"
+    ],
+    "send_policy": "monitor, summarize, draft, and escalate only; no email sending or mailbox mutation without Temi approval in the current thread"
+  },
+  "reporting": {
+    "outputs": [
+      "monthly_financial_report",
+      "cashflow_summary",
+      "budget_vs_actual_report",
+      "receivables_aging",
+      "payables_schedule",
+      "transaction_exception_log",
+      "audit_ready_document_pack"
+    ],
+    "formatting_rule": "IIH documents must be publication-ready and must not contain markdown traces when converted to DOCX"
+  },
+  "approval_gates": [
+    "execute_payment",
+    "send_external_email",
+    "submit_tax_or_regulatory_filing",
+    "issue_refund",
+    "approve_discount_or_waiver",
+    "write_off_debt",
+    "delete_or_void_finance_record",
+    "change_bank_details"
+  ],
+  "credential_policy": {
+    "storage_rule": "secure runtime, keychain, or environment only; never commit secrets",
+    "reuse_policy": "reuse Aisha-approved Zoho Books secure access pattern where applicable, scoped to Ngozi finance operations",
+    "rotation_required_before_production": false,
+    "replacement_trigger": "only if authentication fails, token is revoked, access scope is excessive, or Temi requests rotation",
+    "approved_on": "2026-07-18"
+  }
+}
