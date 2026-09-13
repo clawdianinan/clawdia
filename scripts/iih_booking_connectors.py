@@ -17,7 +17,8 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timedelta
+import uuid
+from datetime import date, datetime, time, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -26,6 +27,10 @@ WORKSPACE_DIR = SCRIPT_DIR.parent
 BOOKING_DIR = WORKSPACE_DIR / "documents" / "IIH" / "Bookings"
 CONFIG_PATH = WORKSPACE_DIR / "config" / "iih_booking_system.json"
 REGISTER_PATH = BOOKING_DIR / "booking_register.sqlite3"
+STATE_PATH = BOOKING_DIR / "booking_agent.sqlite3"
+MIGRATIONS_DIR = BOOKING_DIR / "migrations"
+SIGNATURE_LOGO_PATH = WORKSPACE_DIR / "analysis" / "security_report" / "1749122382045004_1686933120.png"
+SIGNATURE_LOGO_CID = "iih-signature-logo"
 
 sys.path.insert(0, str(SCRIPT_DIR))
 import iih_booking_quote as quote  # noqa: E402
@@ -46,6 +51,7 @@ OPTIONAL_SECRET_NAMES = [
 
 EVENTBOOKINGS_EMAIL = "facilitybookings@iih.ng"
 EVENTS_CC = "events@iih.ng"
+EVERYONE_CC = "everyone@iih.ng"
 BOOKING_SIGNATURE_TEXT = """Warm regards,
 
 Aisha
@@ -67,7 +73,7 @@ BOOKING_SIGNATURE_HTML = """<div style="clear: both;">
  <tr>
  <td style="vertical-align: top; width: 158.141px;">
  <div>
- <img src="/zm/ImageSignature?fileName=1749122382045004_1686933120.png&amp;accountId=3859712000000008002&amp;storeName=709990578&amp;frm=org&amp;zoid=709990578" width="155" height="74" style="float: left;" orig_width="371" orig_height="181">
+ <img src="cid:iih-signature-logo" width="155" height="74" style="float: left;" orig_width="371" orig_height="181">
  <br>
  </div>
  </td>
@@ -120,6 +126,22 @@ BOOKING_SIGNATURE_HTML = """<div style="clear: both;">
 <div style="clear: both;">
  <br>
 </div>"""
+
+
+def attach_signature_logo(message: Any) -> None:
+    if not SIGNATURE_LOGO_PATH.exists():
+        raise ConnectorError(f"Missing IIH signature logo asset: {SIGNATURE_LOGO_PATH}")
+    for part in message.walk():
+        if part.get_content_type() == "text/html":
+            part.add_related(
+                SIGNATURE_LOGO_PATH.read_bytes(),
+                maintype="image",
+                subtype="png",
+                cid=f"<{SIGNATURE_LOGO_CID}>",
+                filename=SIGNATURE_LOGO_PATH.name,
+            )
+            return
+    raise ConnectorError("Cannot attach IIH signature logo because the message has no HTML part.")
 
 
 class ConnectorError(RuntimeError):
@@ -263,6 +285,16 @@ def find_or_create_books_contact(token: str, booking: dict[str, Any], live: bool
 
 def build_invoice_payload(contact_id: str, booking: dict[str, Any]) -> dict[str, Any]:
     bundle = quote.build_bundle(booking)
+    allowed = {
+        "item_id",
+        "name",
+        "description",
+        "quantity",
+        "rate",
+        "tax_id",
+        "tax_name",
+        "tax_percentage",
+    }
     return {
         "customer_id": contact_id,
         "date": bundle["invoice"]["date"],
@@ -271,7 +303,7 @@ def build_invoice_payload(contact_id: str, booking: dict[str, Any]) -> dict[str,
             {
                 key: value
                 for key, value in item.items()
-                if key in {"item_id", "name", "description", "quantity", "rate"}
+                if key in allowed and value is not None
             }
             for item in bundle["quote"]["line_items"]
         ],
@@ -320,41 +352,47 @@ def invoice_email_payload(booking: dict[str, Any], reminder: bool = False) -> di
         f"<p>For questions, contact <a href=\"mailto:{EVENTBOOKINGS_EMAIL}\">{EVENTBOOKINGS_EMAIL}</a>.</p>"
         f"{BOOKING_SIGNATURE_HTML}"
     )
+    cc_mail_ids: list[str] = []
+    for email in [EVENTS_CC, *(booking.get("cc_emails") or [])]:
+        normalized = str(email).lower().strip()
+        if not normalized or normalized in {booking["email"].lower(), EVENTBOOKINGS_EMAIL, "md@iih.ng"}:
+            continue
+        if normalized not in cc_mail_ids:
+            cc_mail_ids.append(normalized)
     return {
         "to_mail_ids": [booking["email"]],
-        "cc_mail_ids": [EVENTS_CC],
+        "cc_mail_ids": cc_mail_ids,
         "subject": f"{subject_prefix} for {booking['facility']} Booking - {booking['event_name']} | IIH Space",
         "body": body_text,
-        "body_html": body_html,
     }
 
 
 def send_invoice_email(token: str, invoice_id: str, booking: dict[str, Any], live: bool) -> dict[str, Any]:
     payload = invoice_email_payload(booking)
     if not live:
-        return {"sent": False, "dry_run_payload": payload}
-    assert_booking_identity()
-    sent = request_json(
-        "POST",
-        books_url(f"invoices/{invoice_id}/email"),
-        token=token,
-        payload=payload,
+        return {
+            "sent": False,
+            "delivery": "download_pdf_and_reply_to_existing_thread",
+            "dry_run_payload": payload,
+        }
+    raise ConnectorError(
+        "Invoice delivery must reply to the existing client email thread with the downloaded invoice PDF attached; "
+        "do not send invoices from Zoho Books."
     )
-    return {"sent": True, "raw": sent}
 
 
 def send_payment_reminder(token: str, invoice_id: str, booking: dict[str, Any], live: bool) -> dict[str, Any]:
     payload = invoice_email_payload(booking, reminder=True)
     if not live:
-        return {"sent": False, "dry_run_payload": payload}
-    assert_booking_identity()
-    sent = request_json(
-        "POST",
-        books_url(f"invoices/{invoice_id}/email"),
-        token=token,
-        payload=payload,
+        return {
+            "sent": False,
+            "delivery": "reply_to_existing_client_thread",
+            "dry_run_payload": payload,
+        }
+    raise ConnectorError(
+        "Payment reminders must reply to the existing client email thread; "
+        "do not send payment reminders from Zoho Books or a fresh email thread."
     )
-    return {"sent": True, "raw": sent}
 
 
 def assert_booking_identity() -> None:
@@ -431,7 +469,10 @@ def calendar_uid(token: str) -> str:
 
 def build_calendar_payload(booking: dict[str, Any], status: str = "tentative") -> dict[str, Any]:
     start = datetime.strptime(f"{booking['event_date']} {booking['start_time']}", "%Y-%m-%d %H:%M")
-    end = start + timedelta(hours=float(booking["duration_hours"]))
+    if booking.get("end_time"):
+        end = datetime.strptime(f"{booking['event_date']} {booking['end_time']}", "%Y-%m-%d %H:%M")
+    else:
+        end = start + timedelta(hours=float(booking["duration_hours"]))
     label = "TENTATIVE" if status == "tentative" else "CONFIRMED"
     return {
         "dateandtime": {
@@ -450,8 +491,8 @@ def build_calendar_payload(booking: dict[str, Any], status: str = "tentative") -
         ),
         "isprivate": False,
         "attendees": [
-            {"email": EVENTS_CC, "name": "IIH Events"},
-            {"email": booking["email"], "name": booking["full_name"]},
+            {"email": EVENTS_CC},
+            {"email": EVERYONE_CC},
         ],
         "reminders": [{"minutes": "1440", "action": "email"}],
     }
@@ -466,15 +507,99 @@ def create_calendar_event(token: str, booking: dict[str, Any], live: bool, statu
         "POST",
         f"https://calendar.zoho.com/api/v1/calendars/{uid}/events",
         token=token,
-        payload=payload,
+        form={"eventdata": json.dumps(payload)},
     )
     event_uid = (created.get("events") or [{}])[0].get("uid")
     return {"event_uid": event_uid, "raw": created}
 
 
+def get_calendar_event(token: str, event_uid: str) -> dict[str, Any]:
+    """Fetch a single calendar event, returning raw data including etag."""
+    cal_uid = calendar_uid(token)
+    response = request_json(
+        "GET",
+        f"https://calendar.zoho.com/api/v1/calendars/{cal_uid}/events/{event_uid}",
+        token=token,
+    )
+    events = response.get("events") or []
+    if not events:
+        raise ConnectorError(f"Event {event_uid} not found")
+    return events[0]
+
+
+def update_calendar_event(
+    token: str, event_uid: str, updates: dict[str, Any], live: bool = False
+) -> dict[str, Any]:
+    """Update an existing calendar event via PUT with eventdata as query param.
+
+    Fetches the latest etag automatically. The `updates` dict should contain
+    the fields to change (title, dateandtime, description, etc).
+    """
+    current = get_calendar_event(token, event_uid)
+    etag = current.get("etag")
+    if not etag:
+        raise ConnectorError("No etag found on calendar event")
+
+    updates["etag"] = etag
+    cal_uid = calendar_uid(token)
+
+    if not live:
+        return {"event_uid": event_uid, "dry_run": True, "updates": updates}
+
+    params = urllib.parse.urlencode({"eventdata": json.dumps(updates)})
+    url = f"https://calendar.zoho.com/api/v1/calendars/{cal_uid}/events/{event_uid}?{params}"
+
+    req = urllib.request.Request(url, method="PUT")
+    req.add_header("Authorization", f"Zoho-oauthtoken {token}")
+    req.add_header("Content-Type", "application/x-www-form-urlencoded")
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            body = resp.read().decode()
+            result = json.loads(body)
+            ev = (result.get("events") or [{}])[0]
+            return {"event_uid": ev.get("uid", event_uid), "raw": result}
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace") if e.fp else ""
+        raise ConnectorError(f"HTTP {e.code} updating event: {body}") from e
+
+
+def delete_calendar_event(
+    token: str, event_uid: str, live: bool = False
+) -> dict[str, Any]:
+    """Delete a calendar event. Fetches the latest etag automatically."""
+    current = get_calendar_event(token, event_uid)
+    etag = current.get("etag")
+    if not etag:
+        raise ConnectorError("No etag found on calendar event")
+
+    if not live:
+        return {"event_uid": event_uid, "dry_run": True, "deleted": False}
+
+    cal_uid = calendar_uid(token)
+    url = f"https://calendar.zoho.com/api/v1/calendars/{cal_uid}/events/{event_uid}"
+
+    req = urllib.request.Request(url, method="DELETE")
+    req.add_header("Authorization", f"Zoho-oauthtoken {token}")
+    req.add_header("etag", etag)
+    req.add_header("Content-Type", "application/x-www-form-urlencoded")
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            body = resp.read().decode()
+            result = json.loads(body) if body else {"status": "deleted"}
+            ev = (result.get("events") or [{}])[0]
+            return {"event_uid": ev.get("uid", event_uid), "deleted": True, "raw": result}
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace") if e.fp else ""
+        raise ConnectorError(f"HTTP {e.code} deleting event: {body}") from e
+
+
 def ensure_register() -> sqlite3.Connection:
     BOOKING_DIR.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(REGISTER_PATH)
+    conn = sqlite3.connect(REGISTER_PATH, timeout=45)
+    conn.execute("PRAGMA busy_timeout = 45000")
+    conn.execute("PRAGMA journal_mode = WAL")
     conn.execute(
         """
         CREATE TABLE IF NOT EXISTS bookings (
@@ -490,18 +615,108 @@ def ensure_register() -> sqlite3.Connection:
         )
         """
     )
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS schema_migrations (
+            migration_id TEXT PRIMARY KEY,
+            applied_at TEXT NOT NULL
+        )
+        """
+    )
     return conn
 
 
 def booking_window(booking: dict[str, Any]) -> tuple[str, str]:
     start = datetime.strptime(f"{booking['event_date']} {booking['start_time']}", "%Y-%m-%d %H:%M")
-    end = start + timedelta(hours=float(booking["duration_hours"]))
+    if booking.get("end_time"):
+        end = datetime.strptime(f"{booking['event_date']} {booking['end_time']}", "%Y-%m-%d %H:%M")
+    else:
+        end = start + timedelta(hours=float(booking["duration_hours"]))
     return start.isoformat(timespec="minutes"), end.isoformat(timespec="minutes")
+
+
+def facility_id_for(booking_or_facility: dict[str, Any] | str) -> str:
+    config = load_config()
+    facility = booking_or_facility.get("facility") if isinstance(booking_or_facility, dict) else booking_or_facility
+    info = (config.get("facilities") or {}).get(str(facility), {})
+    return str(info.get("facility_id") or str(facility).lower().replace(" ", "_"))
+
+
+def lagos_now() -> datetime:
+    return datetime.now()
+
+
+def cutoff_for_event(event_date: str) -> datetime:
+    event_day = datetime.strptime(event_date, "%Y-%m-%d").date()
+    return datetime.combine(event_day - timedelta(days=7), time(18, 0))
+
+
+def apply_migrations(db_path: Path, prefix: str | None = None) -> dict[str, Any]:
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    applied: list[str] = []
+    with sqlite3.connect(db_path, timeout=45) as conn:
+        conn.execute("PRAGMA busy_timeout = 45000")
+        conn.execute("CREATE TABLE IF NOT EXISTS schema_migrations (migration_id TEXT PRIMARY KEY, applied_at TEXT NOT NULL)")
+        for path in sorted(MIGRATIONS_DIR.glob("*.up.sql")):
+            migration_id = path.name.removesuffix(".up.sql")
+            if prefix and not migration_id.startswith(prefix):
+                continue
+            row = conn.execute("SELECT 1 FROM schema_migrations WHERE migration_id = ?", (migration_id,)).fetchone()
+            if row:
+                continue
+            conn.executescript(path.read_text(encoding="utf-8"))
+            conn.execute(
+                "INSERT OR REPLACE INTO schema_migrations (migration_id, applied_at) VALUES (?, ?)",
+                (migration_id, lagos_now().isoformat(timespec="seconds")),
+            )
+            applied.append(migration_id)
+        conn.commit()
+    return {"database": str(db_path), "applied": applied}
+
+
+def migrate() -> dict[str, Any]:
+    return {
+        "register": apply_migrations(REGISTER_PATH, prefix="001"),
+        "state": apply_migrations(STATE_PATH, prefix="002"),
+    }
+
+
+def active_hold_conflicts(conn: sqlite3.Connection, booking: dict[str, Any]) -> list[dict[str, Any]]:
+    start, end = booking_window(booking)
+    start_time = start[11:16]
+    end_time = end[11:16]
+    rows = conn.execute(
+        """
+        SELECT hold_id, booking_id, facility_id, event_date, start_time, end_time, hold_status, expires_at
+        FROM holds
+        WHERE facility_id = ?
+          AND event_date = ?
+          AND hold_status IN ('Tentative', 'Invoice Sent', 'Payment Pending', 'Active')
+          AND start_time < ?
+          AND end_time > ?
+        ORDER BY created_at
+        """,
+        (facility_id_for(booking), booking["event_date"], end_time, start_time),
+    ).fetchall()
+    return [
+        {
+            "hold_id": row[0],
+            "booking_id": row[1],
+            "facility_id": row[2],
+            "event_date": row[3],
+            "start_time": row[4],
+            "end_time": row[5],
+            "hold_status": row[6],
+            "expires_at": row[7],
+        }
+        for row in rows
+    ]
 
 
 def availability(booking: dict[str, Any]) -> dict[str, Any]:
     start, end = booking_window(booking)
     with ensure_register() as conn:
+        apply_migrations(REGISTER_PATH, prefix="001")
         rows = conn.execute(
             """
             SELECT booking_reference, facility, event_name, client_email, starts_at, ends_at, status
@@ -514,6 +729,7 @@ def availability(booking: dict[str, Any]) -> dict[str, Any]:
             """,
             (booking["facility"], end, start),
         ).fetchall()
+        hold_conflicts = active_hold_conflicts(conn, booking)
     conflicts = [
         {
             "booking_reference": row[0],
@@ -526,13 +742,19 @@ def availability(booking: dict[str, Any]) -> dict[str, Any]:
         }
         for row in rows
     ]
-    return {"available": not conflicts, "conflicts": conflicts, "checked_window": {"start": start, "end": end}}
+    return {
+        "available": not conflicts and not hold_conflicts,
+        "conflicts": conflicts,
+        "hold_conflicts": hold_conflicts,
+        "checked_window": {"start": start, "end": end},
+    }
 
 
 def register_booking(booking: dict[str, Any], status: str, source: str) -> dict[str, Any]:
     start, end = booking_window(booking)
     reference = quote.booking_reference(booking)
     with ensure_register() as conn:
+        apply_migrations(REGISTER_PATH, prefix="001")
         conn.execute(
             """
             INSERT OR REPLACE INTO bookings (
@@ -553,6 +775,146 @@ def register_booking(booking: dict[str, Any], status: str, source: str) -> dict[
             ),
         )
     return {"registered": True, "booking_reference": reference, "status": status, "register_path": str(REGISTER_PATH)}
+
+
+def create_hold(booking: dict[str, Any], status: str = "Tentative") -> dict[str, Any]:
+    reference = quote.booking_reference(booking)
+    start, end = booking_window(booking)
+    with ensure_register() as conn:
+        apply_migrations(REGISTER_PATH, prefix="001")
+        conflicts = active_hold_conflicts(conn, booking)
+        existing_invoice_holder = [item for item in conflicts if item["hold_status"] == "Invoice Sent" and item["booking_id"] != reference]
+        if existing_invoice_holder:
+            return {
+                "held": False,
+                "blocked": True,
+                "escalate_to": ["events@iih.ng", "clawdia"],
+                "reason": "slot_already_won_by_invoice_sent_booking",
+                "conflicts": existing_invoice_holder,
+            }
+        if any(item["booking_id"] != reference for item in conflicts):
+            return {
+                "held": False,
+                "blocked": True,
+                "escalate_to": ["events@iih.ng", "clawdia"],
+                "reason": "active_hold_overlap",
+                "conflicts": conflicts,
+            }
+        hold_id = f"HOLD-{uuid.uuid4().hex[:12].upper()}"
+        conn.execute(
+            """
+            INSERT INTO holds (
+                hold_id, booking_id, facility_id, event_date, start_time, end_time,
+                hold_status, created_at, expires_at, released_reason
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NULL)
+            """,
+            (
+                hold_id,
+                reference,
+                facility_id_for(booking),
+                booking["event_date"],
+                start[11:16],
+                end[11:16],
+                status,
+                lagos_now().isoformat(timespec="seconds"),
+                cutoff_for_event(booking["event_date"]).isoformat(timespec="seconds"),
+            ),
+        )
+        conn.commit()
+    return {"held": True, "hold_id": hold_id, "booking_reference": reference, "status": status}
+
+
+def release_expired_holds(as_of: datetime | None = None) -> dict[str, Any]:
+    as_of = as_of or lagos_now()
+    with ensure_register() as conn:
+        apply_migrations(REGISTER_PATH, prefix="001")
+        rows = conn.execute(
+            """
+            SELECT hold_id, booking_id, expires_at FROM holds
+            WHERE hold_status IN ('Tentative', 'Invoice Sent', 'Payment Pending', 'Active')
+              AND expires_at <= ?
+            ORDER BY expires_at
+            """,
+            (as_of.isoformat(timespec="seconds"),),
+        ).fetchall()
+        for hold_id, booking_id, _expires_at in rows:
+            conn.execute(
+                "UPDATE holds SET hold_status = 'Released', released_reason = ? WHERE hold_id = ?",
+                ("payment_not_finance_confirmed_by_cutoff", hold_id),
+            )
+            conn.execute(
+                """
+                INSERT INTO booking_lifecycle (booking_id, action, status_from, status_to, detail_json, created_at)
+                VALUES (?, 'hold_auto_released', NULL, 'Released', ?, ?)
+                """,
+                (
+                    booking_id,
+                    json.dumps({"notify": ["events@iih.ng"], "reason": "seven_day_payment_cutoff"}, sort_keys=True),
+                    as_of.isoformat(timespec="seconds"),
+                ),
+            )
+        conn.commit()
+    return {"released": len(rows), "holds": [row[0] for row in rows], "notify_events": bool(rows)}
+
+
+def holds_needing_payment_reminder(as_of: datetime | None = None) -> dict[str, Any]:
+    as_of = as_of or lagos_now()
+    target = as_of + timedelta(hours=48)
+    with ensure_register() as conn:
+        apply_migrations(REGISTER_PATH, prefix="001")
+        rows = conn.execute(
+            """
+            SELECT hold_id, booking_id, expires_at FROM holds
+            WHERE hold_status IN ('Tentative', 'Invoice Sent', 'Payment Pending', 'Active')
+              AND expires_at > ?
+              AND expires_at <= ?
+            ORDER BY expires_at
+            """,
+            (as_of.isoformat(timespec="seconds"), target.isoformat(timespec="seconds")),
+        ).fetchall()
+    return {
+        "reminder_due": len(rows),
+        "holds": [{"hold_id": row[0], "booking_id": row[1], "expires_at": row[2]} for row in rows],
+    }
+
+
+def cancellation_terms(booking_reference: str) -> dict[str, Any]:
+    return {
+        "booking_reference": booking_reference,
+        "status": "Cancelled With Fee",
+        "cancellation_fee_percent": 30,
+        "refund_percent": 70,
+        "refund_timing": "two to three business days after confirmed cancellation",
+    }
+
+
+def reschedule_terms(booking_reference: str, event_date: str, request_date: str, reschedule_count: int) -> dict[str, Any]:
+    event_day = datetime.strptime(event_date, "%Y-%m-%d").date()
+    request_day = datetime.strptime(request_date, "%Y-%m-%d").date()
+    days_before = (event_day - request_day).days
+    if reschedule_count == 0 and days_before >= 3:
+        return {"booking_reference": booking_reference, "status": "Reschedule Requested", "fee": 0, "availability_required": True}
+    terms = cancellation_terms(booking_reference)
+    terms["reason"] = "late_or_second_reschedule_treated_as_cancellation"
+    return terms
+
+
+def deposit_resolution(booking_reference: str, damage_amount: int = 0, extra_cleaning_amount: int = 0) -> dict[str, Any]:
+    deposit = int(((load_config().get("fees") or {}).get("refundable_security_deposit") or {}).get("rate_ngn") or 100000)
+    deductions = max(0, int(damage_amount)) + max(0, int(extra_cleaning_amount))
+    status = "Deposit Refunded" if deductions == 0 else "Deposit Partially Withheld"
+    if deductions >= deposit:
+        status = "Deposit Held"
+    return {
+        "booking_reference": booking_reference,
+        "route_to": ["events@iih.ng", "finance@iih.ng"],
+        "refund_instruction_allowed": False,
+        "assessment_required_before_refund": True,
+        "deposit_ngn": deposit,
+        "deductions_ngn": deductions,
+        "status_after_assessment": status,
+        "excess_damage_billable_ngn": max(0, deductions - deposit),
+    }
 
 
 def validate_booking_file(path: Path) -> dict[str, Any]:
@@ -638,6 +1000,9 @@ def execute_steps(
     confirm_live: bool,
     confirm_email_send: bool,
     existing_invoice_id: str | None = None,
+    payment_proof_ref: str = "",
+    finance_confirmation_ref: str = "",
+    availability_evidence: str = "",
 ) -> dict[str, Any]:
     if not confirm_live:
         raise ConnectorError("Live Zoho writes require --confirm-live.")
@@ -658,8 +1023,19 @@ def execute_steps(
     if "invoice" in steps:
         if not contact_id:
             raise ConnectorError("Cannot create invoice without Books contact ID.")
+        conflict_check = availability(booking)
+        if not conflict_check["available"]:
+            raise ConnectorError(
+                "Cannot create invoice because the requested slot has a local register or hold conflict; escalate to Events and Clawdia."
+            )
+        hold = create_hold(booking, status="Invoice Sent")
+        if hold.get("blocked"):
+            raise ConnectorError(
+                "Cannot create invoice because another booking has already won or is holding the slot; escalate to Events and Clawdia."
+            )
         invoice = create_invoice(token, contact_id, booking, live=True)
         result["steps"]["invoice"] = invoice
+        result["steps"]["local-hold"] = hold
         invoice_id = invoice["invoice_id"]
 
     if "invoice-email" in steps:
@@ -684,6 +1060,29 @@ def execute_steps(
     if "calendar-confirmed" in steps:
         if not confirm_email_send:
             raise ConnectorError("Confirmed external calendar invite requires --confirm-email-send.")
+        # Policy gates (rules 1, 3, 4): a booking must not be confirmed without an
+        # invoice, client payment proof, finance@iih.ng confirmation and a fresh
+        # availability check. These are asserted here as well as in the agent CLI
+        # because this is a second, independent entry point to Confirmed state.
+        missing = []
+        if not payment_proof_ref:
+            missing.append("no_payment_proof")
+        if not finance_confirmation_ref:
+            missing.append("no_finance_confirmation")
+        if not availability_evidence:
+            missing.append("no_availability_check")
+        if missing:
+            raise ConnectorError(
+                "Refusing to create a confirmed calendar event: unmet gates -> "
+                + ", ".join(missing)
+                + ". Provide --payment-proof-ref, --finance-confirmation-ref and "
+                "--availability-evidence, each captured from its authoritative source."
+            )
+        conflict_check = availability(booking)
+        if not conflict_check["available"]:
+            raise ConnectorError(
+                "Refusing to confirm: the slot now conflicts with a local register entry or hold. Escalate to Events and Clawdia."
+            )
         result["steps"]["calendar-confirmed"] = create_calendar_event(token, booking, live=True, status="confirmed")
         result["steps"]["booking-register"] = register_booking(booking, "Confirmed", "payment-proof")
 
@@ -712,6 +1111,40 @@ def main() -> int:
     register_parser.add_argument("--approve-local-write", action="store_true")
     register_parser.add_argument("--pretty", action="store_true")
 
+    hold_parser = sub.add_parser("hold", help="Create a local active hold after conflict detection.")
+    hold_parser.add_argument("booking_json", type=Path)
+    hold_parser.add_argument("--status", default="Tentative")
+    hold_parser.add_argument("--approve-local-write", action="store_true")
+    hold_parser.add_argument("--pretty", action="store_true")
+
+    release_parser = sub.add_parser("release-expired-holds", help="Release unpaid holds past the seven-day cutoff.")
+    release_parser.add_argument("--as-of", help="Override current local timestamp, ISO format.")
+    release_parser.add_argument("--pretty", action="store_true")
+
+    reminder_parser = sub.add_parser("payment-reminders-due", help="List holds needing the 48-hour cutoff payment reminder.")
+    reminder_parser.add_argument("--as-of", help="Override current local timestamp, ISO format.")
+    reminder_parser.add_argument("--pretty", action="store_true")
+
+    cancel_parser = sub.add_parser("cancellation-terms", help="Calculate host cancellation terms.")
+    cancel_parser.add_argument("--booking-reference", required=True)
+    cancel_parser.add_argument("--pretty", action="store_true")
+
+    reschedule_parser = sub.add_parser("reschedule-terms", help="Calculate reschedule terms.")
+    reschedule_parser.add_argument("--booking-reference", required=True)
+    reschedule_parser.add_argument("--event-date", required=True)
+    reschedule_parser.add_argument("--request-date", required=True)
+    reschedule_parser.add_argument("--reschedule-count", type=int, default=0)
+    reschedule_parser.add_argument("--pretty", action="store_true")
+
+    deposit_parser = sub.add_parser("deposit-resolution", help="Route post-event deposit assessment.")
+    deposit_parser.add_argument("--booking-reference", required=True)
+    deposit_parser.add_argument("--damage-amount", type=int, default=0)
+    deposit_parser.add_argument("--extra-cleaning-amount", type=int, default=0)
+    deposit_parser.add_argument("--pretty", action="store_true")
+
+    migrate_parser = sub.add_parser("migrate", help="Apply additive booking database migrations.")
+    migrate_parser.add_argument("--pretty", action="store_true")
+
     execute_parser = sub.add_parser("execute", help="Run approved live Zoho operations.")
     execute_parser.add_argument("booking_json", type=Path)
     execute_parser.add_argument(
@@ -729,6 +1162,21 @@ def main() -> int:
         required=True,
     )
     execute_parser.add_argument("--invoice-id", help="Existing Zoho Books invoice ID for invoice email/reminder steps.")
+    execute_parser.add_argument(
+        "--payment-proof-ref",
+        default="",
+        help="Client payment proof reference, captured from the authoritative source (required for calendar-confirmed).",
+    )
+    execute_parser.add_argument(
+        "--finance-confirmation-ref",
+        default="",
+        help="finance@iih.ng confirmation reference (required for calendar-confirmed).",
+    )
+    execute_parser.add_argument(
+        "--availability-evidence",
+        default="",
+        help="Evidence that the events calendar was checked (required for calendar-confirmed).",
+    )
     execute_parser.add_argument("--confirm-live", action="store_true")
     execute_parser.add_argument("--confirm-email-send", action="store_true")
     execute_parser.add_argument("--pretty", action="store_true")
@@ -738,6 +1186,18 @@ def main() -> int:
     try:
         if args.command == "doctor":
             output = doctor()
+        elif args.command == "migrate":
+            output = migrate()
+        elif args.command == "release-expired-holds":
+            output = release_expired_holds(datetime.fromisoformat(args.as_of) if args.as_of else None)
+        elif args.command == "payment-reminders-due":
+            output = holds_needing_payment_reminder(datetime.fromisoformat(args.as_of) if args.as_of else None)
+        elif args.command == "cancellation-terms":
+            output = cancellation_terms(args.booking_reference)
+        elif args.command == "reschedule-terms":
+            output = reschedule_terms(args.booking_reference, args.event_date, args.request_date, args.reschedule_count)
+        elif args.command == "deposit-resolution":
+            output = deposit_resolution(args.booking_reference, args.damage_amount, args.extra_cleaning_amount)
         else:
             booking = validate_booking_file(args.booking_json)
             if args.command == "prepare":
@@ -748,6 +1208,10 @@ def main() -> int:
                 if not args.approve_local_write:
                     raise ConnectorError("Local register write requires --approve-local-write.")
                 output = register_booking(booking, args.status, args.source)
+            elif args.command == "hold":
+                if not args.approve_local_write:
+                    raise ConnectorError("Local hold write requires --approve-local-write.")
+                output = create_hold(booking, args.status)
             elif args.command == "execute":
                 output = execute_steps(
                     booking,
@@ -755,6 +1219,9 @@ def main() -> int:
                     args.confirm_live,
                     args.confirm_email_send,
                     existing_invoice_id=args.invoice_id,
+                    payment_proof_ref=args.payment_proof_ref,
+                    finance_confirmation_ref=args.finance_confirmation_ref,
+                    availability_evidence=args.availability_evidence,
                 )
             else:
                 raise ConnectorError(f"Unknown command: {args.command}")

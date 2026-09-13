@@ -1,6 +1,6 @@
 {
   "system": "IIH Booking System",
-  "version": "1.0",
+  "version": 3.5,
   "owner_agent": "aisha",
   "orchestrator_agent": "clawdia",
   "timezone": "Africa/Lagos",
@@ -12,12 +12,22 @@
     "Payment Pending",
     "Confirmed",
     "Cancelled",
-    "Refund Review"
+    "Refund Review",
+    "Reschedule Requested",
+    "Cancelled With Fee",
+    "Deposit Held",
+    "Deposit Refunded",
+    "Deposit Partially Withheld",
+    "Released"
   ],
   "contacts": {
     "booking_inbox": "facilitybookings@iih.ng",
     "booking_from": "facilitybookings@iih.ng",
     "booking_reply_to": "facilitybookings@iih.ng",
+    "booking_intake_channels": [
+      "facilitybookings@iih.ng",
+      "events@iih.ng"
+    ],
     "events_cc": "events@iih.ng",
     "events_manager": "maureen@iih.ng",
     "approval_owner": "temi@iih.ng",
@@ -27,23 +37,31 @@
   },
   "facilities": {
     "Main Hall": {
+      "facility_id": "main_hall",
       "billing_mode": "day",
       "rate_ngn": 750000,
+      "capacity": 400,
       "zoho_books_item_id": "6104627000000136098"
     },
     "Pitch Hall": {
+      "facility_id": "pitch_hall",
       "billing_mode": "day",
       "rate_ngn": 400000,
+      "capacity": 120,
       "zoho_books_item_id": "6104627000000136021"
     },
     "Meeting Room": {
+      "facility_id": "meeting_room",
       "billing_mode": "hour",
       "rate_ngn": 20000,
+      "capacity": 20,
       "zoho_books_item_id": "6104627000000250451"
     },
     "Private Office": {
+      "facility_id": "private_office",
       "billing_mode": "day",
       "rate_ngn": 25000,
+      "capacity": null,
       "zoho_books_item_id": "6104627000000151001",
       "available": false
     }
@@ -55,14 +73,116 @@
       "entrepreneurship",
       "youth development"
     ],
-    "initial_response_rule": "deduce available details from the enquiry first, do not list deduced details in the autoresponder, and ask only for missing or unclear fields",
-    "external_catering_policy": "external catering is not allowed by default; exceptions attract a NGN 100,000 per day corkage fee"
+    "initial_response_rule": "first check whether the enquiry already has a website submission (iih.bookings.list, match on email or event name). If it does, the intake is COMPLETE: acknowledge, confirm availability and move to quote/invoice - never send a form. If it does not, read the client's initial email, determine that it is a clear paid facility booking enquiry, then use the approved first-response wording as a flexible guide rather than a rigid script. Address the sender by a polite available name where possible, acknowledge the enquiry naturally, include the booking link (https://iih.ng/book-space), cafeteria/catering menu, external catering corkage note, and invoice-after-review next step.",
+    "external_catering_policy": "External catering is permitted with prior written approval on payment of the NGN 100,000/day corkage. Now formally in the agreement at s.10.2 - it used to contradict it.",
+    "partnership_request_policy": "For partnership or collaboration requests involving facility use, politely state in the initial response that IIH is not able to partner to provide the facility for free and that facility use comes at a cost under standard booking terms.",
+    "client_language_policy": "Do not mention Zoho Books in client-facing emails. Initial paid facility booking responses should sound specific to the client's enquiry, not generic, while still including the booking form link, cafeteria/catering menu link, and a brief note that external catering is not allowed unless the client is willing to pay the NGN 100,000 per day corkage fee. Say that once the booking form is completed and availability/details are reviewed, the client will receive an invoice.",
+    "operating_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "blackout_days": [
+      "Sunday"
+    ],
+    "operating_start": "09:00",
+    "operating_end": "18:00",
+    "grace_minutes": 30,
+    "setup_must_fit_operating_window": true,
+    "extension_after_18_requires_md_approval": true,
+    "usher_threshold": {
+      "Main Hall": 100,
+      "Pitch Hall": 30,
+      "ratio": "at least one usher per 50 attendees (Main Hall) / per 30 (Pitch Hall)",
+      "source": "Facility Use Agreement v2026.08 s.6.6"
+    },
+    "insurance_threshold": {
+      "Main Hall": 200,
+      "Pitch Hall": 60,
+      "also_required_for": [
+        "heavy equipment",
+        "minors",
+        "other elevated risk"
+      ],
+      "source": "Facility Use Agreement v2026.08 s.20"
+    },
+    "required_booking_fields": [
+      "organization",
+      "event_name",
+      "event_type",
+      "event_date",
+      "start_time",
+      "end_time",
+      "facility",
+      "expected_attendance",
+      "av_needs",
+      "setup_needs",
+      "refreshment_selection",
+      "sensitive_content_flag"
+    ],
+    "pre_event_obligations": {
+      "agenda_due_days_before": 3,
+      "attendee_list_due_before_event": true
+    },
+    "max_event_hours": 6,
+    "overtime": {
+      "rate_ngn_per_commenced_hour": 50000,
+      "settled_from": "security deposit",
+      "deduction_priority": [
+        "overtime",
+        "damage",
+        "cleaning beyond normal use",
+        "anything else due"
+      ],
+      "excess_over_deposit": "remains payable as a debt within 2 business days of an itemised demand",
+      "note": "Never quoted up front. The website refuses bookings longer than 6 hours, so overtime only ever arises post-event.",
+      "source": "Facility Use Agreement v2026.08 s.4"
+    },
+    "min_lead_days": 3,
+    "setup_policy": {
+      "earliest": "the day before the event, subject to availability and written approval",
+      "behind_prior_event": "where another event holds the same space, setup only after it ends and the space is cleared",
+      "source": "Facility Use Agreement v2026.08 s.5"
+    },
+    "smoking_alcohol": "Both prohibited entirely, indoors and outdoors. Replaces the old \"designated outdoor areas\" carve-out. (s.6.4)",
+    "power_policy": "The Hub runs on solar. Continuous supply is NOT guaranteed and the Hub no longer promises \"steady electricity\". Where solar is likely to fall short, the Host pays the actual documented diesel cost to run the Hub generator; give 24h notice with quantity, spec and approved supplier where practicable. Only Hub staff operate the generator. External heavy equipment still needs its own independent supply. Ordinary low sunlight is NOT force majeure. (s.9)"
   },
   "booking_form": {
-    "url": "https://forms.gle/psuxSJ4MG1CqQWKD8",
-    "autoresponder_rule": "include this link in every new facility booking enquiry response as the primary booking-detail capture path; do not ask clients to duplicate the same details by email unless a specific clarification is needed after review",
+    "url": "https://iih.ng/book-space",
+    "source": "website",
+    "autoresponder_rule": "include this link in every new facility booking enquiry that arrived WITHOUT a website submission, as the primary booking-detail capture path; do not ask clients to duplicate details by email unless a specific clarification is needed after review",
     "response_inbox": "facilitybookings@iih.ng",
-    "monitoring_rule": "treat form response emails as booking intake and deduce required fields before replying"
+    "monitoring_rule": "website submissions land in the iih.ng backend as facilityBookings rows with status 'new'. Discover them with the MCP tool iih.bookings.list({status:'new'}) - do not wait for an email to notice them.",
+    "complete_intake_rule": "a facilityBookings row IS complete intake. Never send a booking form in response to one. Proceed directly to availability confirmation, tentative hold, quote and invoice. Only ask the client for something the form genuinely does not capture (currently: refreshment selection, and bank details for a deposit refund).",
+    "retired_form": {
+      "url": "https://forms.gle/psuxSJ4MG1CqQWKD8",
+      "retired_on": "2026-08-11",
+      "note": "Google Form replaced by the native /book-space form. Do not send this link. Historic responses may still appear in the mailbox.",
+      "which_form": "IIH Space Booking Request Form",
+      "status": "CLOSED 17 Aug 2026 - link now redirects to /closedform and refuses responses",
+      "form_file_id": "1mC7b8P9Yi6iHq4wfS8djib6jCenav_XLWEUVC4FVtaQ",
+      "published_id": "1FAIpQLSej5NSOBEs8yfHersL503rPDw-M4Guxjsd42Y6nJAN95bVEnQ"
+    },
+    "client_self_service": {
+      "reference_format": "IIH-XXXX-XXXX",
+      "edit_link": "emailed to the client; also recoverable at https://iih.ng/my-booking with reference + email",
+      "editable_statuses": [
+        "new",
+        "reviewing"
+      ],
+      "AISHA_MUST_KNOW": "Moving a booking past \"reviewing\" (quoted, invoice_sent, ...) LOCKS the client out of editing it themselves. Do not advance the status while you are still waiting on details from them, or they will have to come through you for every correction.",
+      "material_change_rule": "If a client changes date, times, spaces, attendance, catering or their email, the website makes them re-accept the agreement and re-issues the PDF automatically. You do not need to."
+    },
+    "website_enforces": [
+      "maximum 6 hours per event, all spaces including day-rate halls",
+      "attendance capped by the largest booked space (Main Hall 400, Pitch Hall 120, Meeting Room 20)",
+      "minimum 3 days lead time",
+      "Sundays closed, 09:00-18:00 window",
+      "end time now REQUIRED on every booking, including day-rate halls"
+    ]
   },
   "keychain_services": {
     "account": "iih-booking",
@@ -82,8 +202,101 @@
     "external_catering_corkage": {
       "rate_ngn": 100000,
       "billing_mode": "day",
-      "apply_when": "external_catering == true"
+      "apply_when": "catering_mode == external"
+    },
+    "vat": {
+      "rate": 0.075,
+      "rate_percent": 7.5,
+      "apply_to": [
+        "facility_rental",
+        "refreshment",
+        "catering",
+        "external_catering_corkage"
+      ],
+      "exclude": [
+        "refundable_security_deposit"
+      ],
+      "finance_confirmation_required": true,
+      "zoho_books_tax_id": "6104627000000100010",
+      "zoho_line_item_rule": "Zoho Books applies tax PER LINE ITEM. Apply the VAT tax to EVERY line except the refundable security deposit: facility rental, catering, refreshment, corkage and any service charge. The deposit is security, not a supply, so it carries no VAT - but if part of it is later applied against a taxable charge (an overtime hour), VAT is accounted for on the amount applied and shown on the itemised account. See Agreement v2026.11 s.30.",
+      "known_gap": "Invoices raised BEFORE 17 Aug 2026 carry no VAT at all - 134 Zoho invoices have no tax field. Going forward every line except the deposit needs VAT applied. Do not retrospectively re-invoice a closed booking without asking Temi.",
+      "authoritative_figure": "iih.bookings.quote is the figure. It now marks facility hire vatable, so the quote total already includes VAT on rentals and matches what the client saw on the website. Do not recompute by hand.",
+      "agreement_reference": "Facility Use Agreement v2026.12 s.30.1-30.5 (effective 17 Aug 2026)",
+      "resolved_on": "2026-08-17",
+      "resolution": "Temi, final and superseding all earlier guidance: VAT is charged on ALL rentals. The website, the agreement and this config now agree."
+    },
+    "overtime": {
+      "changed_on": "2026-08-18",
+      "rule": "10% of the DAY RATE of each hall booked, per commenced hour. Halls only. A space billed by the hour carries no overtime charge and adds nothing to it (Agreement s.4.7), so a Meeting-Room-only booking has no overtime at all.",
+      "rate_of_rental": 0.1,
+      "per_space_per_hour": {
+        "Main Hall": 75000,
+        "Pitch Hall": 40000,
+        "Meeting Room": "NO overtime charge. Adds NOTHING to a combined booking."
+      },
+      "retired_flat_rate_ngn": 50000,
+      "historic_bookings": "A booking accepted BEFORE 18 Aug 2026 agreed to the flat NGN 50,000. Its snapshot holds that figure and it is what applies to that booking. Do not re-rate it.",
+      "authoritative_figure": "The booking record's ratesSnapshot.overtimePerHourNgn is the figure for that booking. Take it from there, never recompute.",
+      "deduction": "Comes off the security deposit first, before damage and cleaning (s.4.9). Any shortfall is a debt (s.4.10).",
+      "kwasaa_waiver": "Booking n570xfrbxa842v7kh5g01yxp6x8cbkww: overtime WAIVED entirely by Temi on 17 Aug 2026 for the approved seventh hour. Unaffected by this rate change.",
+      "combinations": {
+        "Main Hall + Meeting Room": 75000,
+        "Main Hall + Pitch Hall": 115000,
+        "All three": 115000,
+        "Meeting Room only": 0
+      },
+      "do_not": "Do not add the Meeting Room hourly rate to an overtime charge. Extra hours in the Meeting Room are ordinary rental billed at NGN 20,000/hr - that is a rental line on the invoice, never an overtime line."
     }
+  },
+  "holds": {
+    "active_statuses": [
+      "Tentative",
+      "Invoice Sent",
+      "Payment Pending"
+    ],
+    "invoice_sent_wins": true,
+    "payment_due_days_before_event": 3,
+    "payment_reminder_hours_before_cutoff": 48,
+    "release_unpaid_at_cutoff": true,
+    "notify_events_on_release": true,
+    "payment_window_source": "Facility Use Agreement v2026.08 s.3.1 (was 7 days)"
+  },
+  "reliability": {
+    "max_sends_per_run": 10,
+    "max_sends_per_rolling_hour": 30,
+    "auto_respond_enabled": true,
+    "staleness_threshold_operating_hours": 4,
+    "watchdog_minutes": 30,
+    "alert_channel": "facilitybookings@iih.ng",
+    "md_monitored_alert_channel": "temi@iih.ng",
+    "sender_rate_limit_per_hour": 20,
+    "sender_allowlist": [],
+    "sender_denylist": []
+  },
+  "data_protection": {
+    "database_file_mode": "0600",
+    "encrypted_volume_required": true,
+    "payment_screenshot_retention_days": 90,
+    "attendee_list_retention_days": 30,
+    "contact_data_retention_days": 365,
+    "attendee_data_use": [
+      "facility access",
+      "security",
+      "event coordination"
+    ],
+    "roles": [
+      "aisha",
+      "clawdia",
+      "events",
+      "finance"
+    ]
+  },
+  "templates": {
+    "registry_path": "config/templates",
+    "approval_required_by": [
+      "MD",
+      "Clawdia"
+    ]
   },
   "required_secrets": [
     "ZOHO_CLIENT_ID",
@@ -121,9 +334,10 @@
         "events@iih.ng"
       ],
       "signature_after_current_booking": "Warm regards,\n\nAisha\nIIH Facility Booking AI Agent | Ilorin Innovation Hub\nwww.iih.ng\nAhmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria\n\nThis message and any attachments are confidential and intended only for the recipient.",
-      "signature_html": "<div style=\"clear: both;\">\n Warm regards,\n <br>\n <br>\n</div>\n<div style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.5;\">\n <div>\n <table class=\"ze_tableView\" cellpadding=\"2\" cellspacing=\"2\" border=\"0\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; border: 0px solid black; color: black;\">\n <tbody>\n <tr>\n <td style=\"vertical-align: top; width: 158.141px;\">\n <div>\n <img src=\"/zm/ImageSignature?fileName=1749122382045004_1686933120.png&amp;accountId=3859712000000008002&amp;storeName=709990578&amp;frm=org&amp;zoid=709990578\" width=\"155\" height=\"74\" style=\"float: left;\" orig_width=\"371\" orig_height=\"181\">\n <br>\n </div>\n </td>\n <td style=\"vertical-align: top; width: 645.859px;\">\n <div style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.5;\">\n <div>\n <div>\n <b>\n <span class=\"size\" style=\"font-size:10.6667px\">\n Aisha\n <br>\n </span>\n </b>\n <span class=\"size\" style=\"font-size:10.6667px\">\n IIH Facility Booking AI Agent&nbsp;|\n <span class=\"colour\" style=\"color:rgb(0, 204, 0)\">\n Ilorin Innovation Hub\n </span>\n <span class=\"colour\" style=\"color: rgb(106, 168, 79); font-weight: 500;\">\n <br>\n </span>\n </span>\n <a target=\"_blank\" style=\"color: #1a73e8;\" href=\"https://iih.ng\">\n <span class=\"size\" style=\"font-size:10.6667px\">\n www.iih.ng\n </span>\n </a>\n <span class=\"size\" style=\"font-size:10.6667px\">\n <br>\n Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria\n </span>\n <br>\n </div>\n </div>\n </div>\n </td>\n </tr>\n </tbody>\n </table>\n <p>\n <span class=\"colour\" style=\"color:rgb(153, 153, 153)\">\n <span class=\"size\" style=\"font-size:10.6667px\">\n This message and any attachments are confidential and intended only for the recipient.&nbsp;\n </span>\n </span>\n <br>\n </p>\n </div>\n</div>\n<div style=\"clear: both;\">\n <br>\n</div>",
+      "signature_html": "<div style=\"clear: both;\">\n Warm regards,\n <br>\n <br>\n</div>\n<div style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.5;\">\n <div>\n <table class=\"ze_tableView\" cellpadding=\"2\" cellspacing=\"2\" border=\"0\" style=\"font-size: 10pt; font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; border: 0px solid black; color: black;\">\n <tbody>\n <tr>\n <td style=\"vertical-align: top; width: 158.141px;\">\n <div>\n <img src=\"cid:iih-signature-logo\" width=\"155\" height=\"74\" style=\"float: left;\" orig_width=\"371\" orig_height=\"181\">\n <br>\n </div>\n </td>\n <td style=\"vertical-align: top; width: 645.859px;\">\n <div style=\"font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.5;\">\n <div>\n <div>\n <b>\n <span class=\"size\" style=\"font-size:10.6667px\">\n Aisha\n <br>\n </span>\n </b>\n <span class=\"size\" style=\"font-size:10.6667px\">\n IIH Facility Booking AI Agent&nbsp;|\n <span class=\"colour\" style=\"color:rgb(0, 204, 0)\">\n Ilorin Innovation Hub\n </span>\n <span class=\"colour\" style=\"color: rgb(106, 168, 79); font-weight: 500;\">\n <br>\n </span>\n </span>\n <a target=\"_blank\" style=\"color: #1a73e8;\" href=\"https://iih.ng\">\n <span class=\"size\" style=\"font-size:10.6667px\">\n www.iih.ng\n </span>\n </a>\n <span class=\"size\" style=\"font-size:10.6667px\">\n <br>\n Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria\n </span>\n <br>\n </div>\n </div>\n </div>\n </td>\n </tr>\n </tbody>\n </table>\n <p>\n <span class=\"colour\" style=\"color:rgb(153, 153, 153)\">\n <span class=\"size\" style=\"font-size:10.6667px\">\n This message and any attachments are confidential and intended only for the recipient.&nbsp;\n </span>\n </span>\n <br>\n </p>\n </div>\n</div>\n<div style=\"clear: both;\">\n <br>\n</div>",
       "invoice_policy": "invoice is always required for facility bookings; never ask whether an invoice is required",
       "invoice_payment_goal": "send invoice, wait for matching payment proof, then mark calendar event confirmed with events@iih.ng",
+      "status_update_rule": "when a booking request has a proposed date/time and availability is clear, create a tentative calendar hold with events@iih.ng and set the booking status to Tentative; change the status to Confirmed only after payment proof has been reviewed and finance@iih.ng confirms payment",
       "availability_source": "events@iih.ng shared group calendar",
       "availability_gate": "do not invoice or confirm until the requested slot has been checked against the events@iih.ng shared group calendar or escalated if calendar access is unavailable",
       "payment_confirmation_gate": "payment proof must be emailed/reviewed with finance@iih.ng and finance confirmation recorded before final calendar confirmation",
@@ -138,27 +352,34 @@
       "approved_automation_sends": [
         "send_invoice_email_with_attachment",
         "send_payment_reminder",
-        "send_new_enquiry_autoresponse",
-        "send_external_reply_acknowledgement",
-        "send_payment_or_attachment_acknowledgement"
+        "send_new_enquiry_autoresponse"
       ],
       "external_send_gate": "booking agent may send approved invoice emails and payment reminders for validated booking threads; other external sends still require explicit approval",
       "new_enquiry_required_links": {
-        "booking_details_form": "https://forms.gle/psuxSJ4MG1CqQWKD8",
+        "booking_details_form": "https://iih.ng/book-space",
         "cafeteria_menu": "https://drive.google.com/file/d/1Tyry0_1a6dNmfruWaXRIA4kE-60iwIIm/view?usp=sharing",
-        "rule": "new enquiry replies must include both links; direct clients to complete the booking form and do not ask them to repeat form-captured details in the email; then continue intake, availability check, catering reconciliation, and Zoho Books invoice generation; stay ready for follow-up questions or change requests"
+        "rule": "new enquiry replies must first reflect the client's initial email and use the sender's polite available name where possible, then include both links; direct clients to complete the booking form and do not ask them to repeat form-captured details in the email; then continue intake, availability check, catering reconciliation, and invoice preparation; stay ready for follow-up questions or change requests",
+        "facility_use_agreement": "https://iih.ng/facility-use-agreement",
+        "retired_google_form_note": "The old forms.gle/psuxSJ4MG1CqQWKD8 link is the \"IIH Space Booking Request Form\". It was closed on 17 Aug 2026 and now refuses responses. Never send it. Only send https://iih.ng/book-space. Note a Google Form has two ids - the file id for editing and the published id for responses - so searching Drive by one will not find the other."
       },
       "mandatory_events_copy_rule": "events@iih.ng must be copied on every communication sent from facilitybookings@iih.ng, including client replies, internal coordination, invoice emails, payment reminders, samples, and change-request responses, unless Temi explicitly says not to copy Events in the current thread.",
-      "form_submission_policy": "do not reply to Google Form submission emails; treat them as data, link to existing enquiries by respondent email where possible, and continue availability/catering/invoice processing",
-      "external_reply_policy": "external replies may receive conservative acknowledgement templates while Aisha continues the booking workflow; internal IIH replies are recorded/routed without auto-reply unless approved"
+      "form_submission_policy": "identify booking Google Form submissions by their Google Forms/no-reply source and form-response context. Do not reply to Google Form submission emails. Treat existing-thread submissions as data to link by respondent email where possible. If a form submission is a completely new booking intake, review it as a new booking workflow without replying to the Google no-reply sender.",
+      "email_assessment_policy": "for every received email, read the subject and body context before deciding whether any response is needed. Do not respond just because a message is visible in the mailbox, has an attachment, mentions payment/invoice, or contains generic event language.",
+      "external_reply_policy": "external client replies, follow-ups to existing or unknown bookings, attachments, payment-looking messages, order changes, or ambiguous messages must be read and assessed before any response; do not auto-send reply acknowledgements, payment/attachment acknowledgements, or generic set messages to clients. Pause and wait for instruction unless the message is a clear new external facility-booking request sent to facilitybookings@iih.ng or events@iih.ng and eligible for the approved first-response autoresponder.",
+      "internal_visibility_policy": "internal IIH emails visible in the booking mailbox through events@iih.ng are often shared for visibility and are FYI/no-response records unless Temi explicitly instructs action or the message directly asks Aisha/facilitybookings to do booking work. Internal IIH emails addressed directly to facilitybookings@iih.ng may be assessed for an in-scope booking response or action.",
+      "client_threading_policy": "keep all client-facing booking communications in the same email thread initiated by the client. Use reply-all on the existing client message, preserve In-Reply-To and References headers, preserve appropriate copied recipients, copy events@iih.ng, and do not start a fresh client email thread unless Temi explicitly instructs it.",
+      "client_update_acknowledgement_policy": "existing-thread client messages that are purely informational updates and require no booking, invoice, payment, discount, refund, date, availability, or management action may be classified for a brief acknowledgement in the same client thread. If the update includes any request for a decision, discount, price change, invoice change, payment handling, reschedule, cancellation, or unclear action, pause for review/instruction.",
+      "request_type_gate_policy": "before any booking action, availability check, invoice work, calendar scheduling, state advance, or outbound response, first determine whether the message is a paid facility booking request, a facility tour/school excursion request, a photography/media/content approval request, an existing booking follow-up, a payment/attachment message, an internal/system notice, or unclear. Do not send a paid-booking template, booking form, catering menu, invoice wording, or payment language unless the request is clearly a paid facility booking enquiry. Photography, photoshoot, backdrop, content, mutual-benefit, credit, itinerary, identification, or indemnity approval requests are not facility booking requests unless they explicitly ask to book paid space or rent/use a hall. If the request type cannot be determined from the subject and body, do not respond to the client; send an internal guidance request to maureen@iih.ng or md@iih.ng, copying events@iih.ng when operationally appropriate.",
+      "tour_excursion_policy": "facility tours, school excursions, student visits, academy visits, and similar educational exposure visits are scheduling-only requests, not paid facility bookings. A facility booking request is different from a tour request. Do not request the booking form, catering menu, invoice, payment proof, or finance confirmation for a pure tour/excursion request. Check only for another tour or excursion at the requested date/time; ordinary blocked dates, internal events, and paid facility bookings do not automatically block tours/excursions. If there is no tour/excursion clash, schedule the visit on the Events calendar and send a polite acceptance in the same email thread with events@iih.ng copied. If there is a tour/excursion clash, offer the nearest reasonable alternative time/date with events@iih.ng copied.",
+      "invoice_sent_followup_policy": "for pending requests with invoices already sent, Aisha may send a concise same-thread payment follow-up stating that payment confirms the booking and IIH is awaiting payment from the client, while copying events@iih.ng and preserving appropriate existing copied recipients. Do not present this as a payment confirmation and do not mark confirmed until finance@iih.ng confirms payment."
     },
     "scheduled_processor": {
       "launch_agent": "ng.iih.booking-agent",
-      "interval_seconds": 600,
+      "interval_seconds": 1800,
       "command": "python3 scripts/iih_booking_agent.py poll --limit 10 --auto-respond --pretty",
-      "behavior": "poll facilitybookings inbox, classify new messages, auto-respond to external new enquiries/replies with approved templates, record all actions",
+      "behavior": "poll facilitybookings inbox, read subject/body context, classify new messages, auto-respond only to clear new external facility-booking requests sent to facilitybookings@iih.ng or events@iih.ng with the approved first-response guide and a sender-aware salutation, and record all other client replies/follow-ups for manual instruction",
       "page_size": 10,
-      "reason": "limit set to 10 so each scheduled pass completes comfortably before the next 10-minute interval"
+      "reason": "limit set to 10 so each scheduled pass completes comfortably before the next 30-minute interval (changed from 600s/10min on 2026-09-13 to reduce mailbox polling frequency)"
     }
   },
   "credential_policy": {
@@ -169,17 +390,203 @@
     "approved_on": "2026-06-15"
   },
   "approval_gates": [
-    "send_invoice_email",
-    "send_acknowledgement_email",
-    "create_external_calendar_invite",
-    "confirm_payment",
     "issue_refund",
-    "approve_discount_or_waiver",
-    "respond_to_third_party"
+    "approve_discount_or_waiver"
   ],
   "cafeteria_menu": {
     "url": "https://drive.google.com/file/d/1Tyry0_1a6dNmfruWaXRIA4kE-60iwIIm/view?usp=sharing",
     "autoresponder_rule": "include this link in every new facility booking enquiry response so clients can review catering/cafeteria options early",
-    "usage_rule": "include in new enquiry replies for early catering review; when the client submits the form or later confirms menu selections, reconcile choices against the menu, update booking state, and continue through Zoho Books invoice generation"
+    "usage_rule": "include in new enquiry replies for early catering review; when the client submits the form or later confirms menu selections, reconcile choices against the menu, update booking state, and continue through invoice preparation"
+  },
+  "website_backend": {
+    "mcp_server": "iihbookings",
+    "endpoint": "https://fabulous-cobra-716.convex.site/mcp",
+    "credential": "AISHA_BOOKINGS_MCP_TOKEN",
+    "scope": [
+      "bookings:write",
+      "events:write",
+      "programs:write",
+      "gallery:write",
+      "content:write",
+      "media:write"
+    ],
+    "tools": {
+      "iih.bookings.list": "find work: filter by status (new = a fresh website submission) and/or date range",
+      "iih.bookings.get": "the full record for one booking",
+      "iih.bookings.listSpaces": "authoritative rates, billing mode, capacity and Zoho Books item ids - bill from this",
+      "iih.bookings.computeOccupancy": "turn a requested date/days/times into the exact instants a space would occupy",
+      "iih.bookings.checkAvailability": "dry run before promising anything",
+      "iih.bookings.quote": "server-computed line items and total; the client saw this same figure on the website",
+      "iih.bookings.setStatus": "move through the lifecycle",
+      "iih.bookings.recordInvoice": "record invoice number and amount; sets status invoice_sent",
+      "iih.bookings.recordPayment": "record payment proof; set financeConfirmed once finance matches it",
+      "iih.bookings.confirm": "confirm the booking - this is what makes the dates unavailable to everyone else",
+      "iih.bookings.block": "place a tentative hold while invoicing",
+      "iih.bookings.release": "release a hold that lapsed"
+    },
+    "authority_rule": "the backend is the record of truth for booking state and money. Compute quotes with iih.bookings.quote rather than locally, so the figure the client saw on the website is the figure invoiced. Zoho Books remains the invoicing system; record the resulting invoice number back with iih.bookings.recordInvoice.",
+    "availability_rule": "the public form already prevents clients picking a date that is taken, a Sunday, or in the past. Only CONFIRMED bookings and blackouts block a date, so a tentative hold must be written with iih.bookings.block when you invoice - otherwise another client can still book the same slot while payment is pending.",
+    "role": "admin",
+    "scope_note": "Widened 17 Aug 2026 to match the iihweb agent. Beyond the booking tools you can now reach events, programs, news, gallery, social and calendar writes over the same MCP server - iih.events.*, iih.programs.*, iih.news.*, iih.gallery.*, iih.social.*, iih.calendar.*, iih.sync.*, iih.content.*, iih.audit.listRecent. Same endpoint, your own token, so the audit log still attributes writes to you."
+  },
+  "facility_use_agreement": {
+    "version": "2026.09",
+    "effective": "18 August 2026",
+    "public_url": "https://iih.ng/facility-use-agreement",
+    "supersedes": "Revised June 2026",
+    "client_acceptance": "Every website booking now carries an accepted agreement: the client types their name, title and organisation, scrolls the full text, and separately acknowledges the solar/diesel and 6-hour/overtime terms. They receive a signed PDF by email.",
+    "confirm_gate": "IMPORTANT: iih.bookings.confirm now FAILS on any booking with no accepted agreement. For bookings taken before this, or Hosts who accept by email, an events-team member must record the acceptance in /admin/bookings first (it is stored as an offline acceptance).",
+    "amendment_rule": "A booking already accepted is governed by the version named on its acceptance record. Publishing new terms does not change an accepted booking - that needs a fresh acceptance.",
+    "changed_in_2026_09": [
+      "contracting party is Ilorin Tech Park Ltd, trading as Ilorin Innovation Hub",
+      "new Section 31: VAT 7.5% on catering, refreshments and corkage only",
+      "Section 23.3 no longer claims a network address is recorded",
+      "no withholding-tax clause; payment details live on the invoice"
+    ],
+    "current_version": "2026.15",
+    "canonical_url": "https://iih.ng/facility-use-agreement",
+    "text_sha256": "8e2e2ba18f2e2262e1ba5da8a250016bdf310c25b8920653346d2c6166aa9570",
+    "drive_mirror": "https://drive.google.com/file/d/1SdD93oVzC2OIuw4wPhd3MdMkROgzHDRy/view",
+    "changes_17_aug_2026": [
+      "Section 20 INSURANCE removed entirely - do NOT ask a client for a certificate of insurance",
+      "VAT now charged on ALL facility hire (s.30.2); only the refundable deposit is outside it (s.30.3)",
+      "Setup and teardown times agreed offline with facility staff, not stated in the Booking Summary (s.5.4)"
+    ],
+    "personal_events": "PROHIBITED OUTRIGHT under s.1.2. Only professional and tech-related events. This is not a judgement call - decline and explain.",
+    "ushers": "s.6.6, now shown on the booking form from the attendance figure. Main Hall: required above 100, one usher per 50. Pitch Hall: required above 30, one per 30. Meeting Room: none. Where both halls are booked the STRICTER ratio applies, so 300 people across Main + Pitch is 10 ushers, not 6. The Hub briefs ushers but does not supply them - confirm the number with the client in writing.",
+    "changes_18_aug_2026": [
+      "Overtime is no longer a flat NGN 50,000. It is 10% of each HALL's day rate per commenced hour: Main Hall NGN 75,000/hr, Pitch Hall NGN 40,000/hr, both together NGN 115,000/hr (s.4.4).",
+      "The Meeting Room has NO overtime charge and contributes nothing to a combined booking (s.4.7). Main Hall + Meeting Room is NGN 75,000/hr, not NGN 95,000.",
+      "Charged per DATE of use (s.4.11), so a three-day hire does not multiply the hourly overtime rate.",
+      "NEW s.3.7 / s.3.8: rates and terms may be revised until the booking is CONFIRMED AND PAID. After that they are fixed for that booking.",
+      "s.31.2 now turns on confirmation and payment rather than acceptance, so it agrees with s.3.7.",
+      "v2026.15 s.5.4: unauthorised early access now has a sanction for BOTH billing modes - the Overtime Charge for a hall, the ordinary hourly rate for the Meeting Room. It previously pointed at a charge the Meeting Room no longer has."
+    ],
+    "drive_mirror_note": "An unsigned PDF snapshot of v2026.14, in the iih.ng account. Send clients the canonical URL instead where you can - it cannot go stale. Every booking made online also receives a signed PDF of the exact version accepted, so the per-client evidence copy never depends on Drive.",
+    "drive_mirror_account": "temi.kolawole@iih.ng",
+    "drive_mirror_update": "./scripts/publish-agreement-pdf.sh in the iih repo. Same file id every time, so the link and its sharing survive an update.",
+    "kwasaa_ushers": "300 in the Main Hall = 6 ushers. Tell KWASAA in writing; it is on the form now but their booking predates it.",
+    "still_not_asked_on_form": [
+      "whether minors are involved",
+      "politically or religiously sensitive content (s.12.1 needs prior approval)",
+      "public performance of music (s.25.2 licence is the Host's)"
+    ],
+    "drive_mirror_public": "Yes - anyone with the link can view. Safe to send to a client.",
+    "drive_cleanup": "Done 18 Aug 2026. The eight superseded copies under temikolawole@gmail.com are in that account's trash (recoverable 30 days). Five pre-website originals from May 2025, Feb 2026 and June 2026 were left alone. The only current copy is the public PDF under temi.kolawole@iih.ng."
+  },
+  "legal_entity": {
+    "invoicing_entity": "Ilorin Tech Park Ltd",
+    "trading_as": "Ilorin Innovation Hub",
+    "address": "Ahmadu Bello Way, GRA, Ilorin, Kwara State, Nigeria",
+    "bank": {
+      "name": "Zenith Bank",
+      "account_name": "Ilorin Tech Park Ltd",
+      "account_number": "1310169029"
+    },
+    "note": "Invoices and the agreement now name Ilorin Tech Park Ltd, trading as Ilorin Innovation Hub. Payment details belong ONLY on the invoice - never in the agreement, and never sent as an account number in a bare message. Agreement s.31.5 tells clients to telephone the Hub before paying if details arrive any other way.",
+    "rc_number": "1664691",
+    "incorporated": "4 March 2020 as Ilorin Innovation Hub Ltd; renamed Ilorin Tech Park Ltd on 17 March 2025",
+    "scope": "Ilorin Tech Park Ltd is the entity for BOTH facility rentals and the cafeteria/catering. One contracting party across the whole booking, so a single invoice covers hire and catering and the VAT on the catering side is charged by the same company.",
+    "address_confirmed": "Ahmadu Bello Way, GRA, Ilorin, Kwara State - confirmed as the operating and contract address. The TIN certificate shows 185/185A Ibrahim Taiwo Road; do not use that on invoices or letters.",
+    "tin_note": "TIN 1053743504 is held on file for invoicing. It is deliberately NOT in the agreement - the RC identifies the party, the TIN belongs on the invoice. Note the JTB certificate is still in the former company name (Ilorin Innovation Hub Ltd); same RC, same legal person."
+  },
+  "approval_policy": {
+    "changed_on": "2026-08-17",
+    "rule": "Temi's direction of 17 Aug: once a booking has been received AND the date is confirmed available, proceed without asking. Only the two actions that give money or value away still need approval.",
+    "requires_approval": [
+      "issue_refund",
+      "approve_discount_or_waiver"
+    ],
+    "automated_no_approval": [
+      "send_acknowledgement_email",
+      "send_invoice_email",
+      "send_payment_reminder",
+      "create_external_calendar_invite",
+      "confirm_payment",
+      "respond_to_third_party",
+      "place_tentative_hold",
+      "set_status",
+      "record_invoice",
+      "record_payment"
+    ],
+    "precondition": "Automation applies only after (a) the booking exists in the backend and (b) iih.bookings.checkAvailability confirms the date and space are free. If availability fails, do not email the client a hold or an invoice - come back to Temi.",
+    "still_escalate_even_though_ungated": [
+      "a booking that breaches a hard rule (over 6 hours, over capacity, inside the 3-day lead time) - an extension needs the Hub's prior written approval under Agreement s.4.3, which is Temi's call, not a booking decision",
+      "a booking with no accepted Facility Use Agreement that the client will not or cannot accept online",
+      "anything that would depart from the signed agreement for that booking"
+    ]
+  },
+  "repricing_before_payment": {
+    "added": "2026-08-18 (Agreement s.3.7, s.3.8)",
+    "when_it_applies": "Any booking not yet confirmed in writing AND paid. Once payment clears, the rates and terms for that booking are FIXED - do not reprice it.",
+    "procedure": [
+      "1. Notify the client IN WRITING of the revision and the revised amount. A verbal or implied change is not a revision.",
+      "2. Give them a real choice: accept the new figure, or withdraw and be refunded in full.",
+      "3. A withdrawal at this stage carries NO cancellation charge - s.16.3's 30% does not apply.",
+      "4. SILENCE IS NOT ACCEPTANCE. Never treat an unanswered notice as agreement. Chase it.",
+      "5. If they accept, send the booking link so the change is re-accepted on the form, which reissues the signed PDF. If they will not use the form, record it with recordOfflineAssent."
+    ],
+    "why_the_guard": "A right to reprice with no notice and no way out is what makes a contract illusory, and the June 2026 agreement had exactly that clause removed. The notice and the refund are what make this enforceable - do not skip them to save a step.",
+    "note_on_snapshots": "A booking freezes its NUMBERS (deposit, corkage, VAT rate, space rates) but not the RULES. A booking submitted before VAT applied to hire will quote with VAT on hire today. That is legitimate while it is unpaid - and it is exactly the case s.3.7 covers, so send the notice."
+  },
+  "kwasaa_next_action": {
+    "booking_id": "n570xfrbxa842v7kh5g01yxp6x8cbkww",
+    "status": "Hold placed on 27 Aug. INV-000165 for NGN 906,250 was already sent to the client on 13/14 Aug and is now recorded; status is invoice_sent. Agreement requirement waived by Temi, so confirm() will accept this booking.",
+    "expected_quote": "Main Hall 1 day NGN 750,000 + VAT 7.5% NGN 56,250 + refundable deposit NGN 100,000. Confirm against iih.bookings.quote.",
+    "tell_the_client": [
+      "Seventh hour (10:00-17:00) is approved and the overtime charge is WAIVED. Nothing extra to pay for it.",
+      "300 attendees in the Main Hall means SIX ushers, provided by the Agency. The Hub briefs them but does not supply them.",
+      "Solar power; if sunlight is low or the event runs long the Agency covers documented diesel cost.",
+      "No smoking, no alcohol.",
+      "The Facility Use Agreement follows separately as a PDF for signature."
+    ],
+    "do_not": "Do NOT send them to the booking form - it caps at six hours and would refuse their 10:00-17:00.",
+    "note_for_the_record": "The Host has NOT accepted the agreement. The liability cap, indemnity and damage clauses do not apply to this booking until they do. That is a recorded management decision, not an oversight - it is on the booking as agreementWaiver.",
+    "draft": "KWASAA_ACCEPTANCE_EMAIL.md",
+    "CORRECTION": "The event is THURSDAY 27 AUGUST 2026, not the 26th. Earlier instructions from Clawdia said 26 August - that was a UTC/WAT misread of the stored timestamp (WAT midnight on the 27th is 23:00 UTC on the 26th). Aisha caught it against the client emails and the backend. Payment is due MONDAY 24 AUGUST, three days before.",
+    "remaining": [
+      "Void the spurious INV-000166 draft in Zoho - it was staged on the wrong 26 Aug date and must not be sent.",
+      "Send the arrangements note to the client (seventh hour approved and overtime waived, six ushers, solar/diesel, no smoking or alcohol, agreement PDF to follow).",
+      "Chase payment - due Monday 24 August. recordPayment when it clears.",
+      "confirm."
+    ],
+    "payment_due": "2026-08-24 (Monday)"
+  },
+  "event_declarations": {
+    "added": "2026-08-18",
+    "what": "The form now asks whether the event involves under-18s, politically or religiously sensitive content, or public performance of music. Stored on the booking as eventDeclarations.",
+    "none_block_a_booking": "Correct - they are disclosures, not gates. Do not treat a tick as a refusal.",
+    "minors": "Ask the expected number and the supervision arrangements. Under-18s are supervised by the Host throughout.",
+    "sensitive_content": "s.12.1 REQUIRES the Hub prior approval. Get the agenda or content summary early and route it to Temi - do not let this land the week of the event.",
+    "public_music": "s.25.2 puts any performance licence on the Host. Ask to see it before the event.",
+    "in_admin": "Booking detail shows \"none declared\" vs \"not asked (booking predates this)\" - a booking from before 18 Aug is not a clean one, it is an unasked one."
+  },
+  "initial_response_protocol": {
+    "added": "2026-08-27 by Temi",
+    "rule": "If an enquiry names a date, the FIRST reply must already say whether that date is available for the facility they asked for. Do not acknowledge now and check later.",
+    "why": "The calendar check already existed but sat as a gate before invoicing, which is far too late. A client who waits two days to be told their date is gone has lost two days of planning, and the Hub has lost the chance to offer the nearest alternative while they were still deciding.",
+    "check_both": [
+      "iih.bookings.checkAvailability - the website backend. Knows about CONFIRMED bookings and blackouts only.",
+      "The events@iih.ng shared group calendar - the Hub's own events, programmes and internal use."
+    ],
+    "why_both": "They know different things and neither is sufficient. A date can be completely clear in the booking backend while the events calendar has a programme in the Main Hall that day. Answering from the backend alone is how a client gets told a date is free that is not.",
+    "what_to_say": [
+      "AVAILABLE: say so plainly, and say it is not held until confirmed and paid. Do not imply it is theirs.",
+      "NOT AVAILABLE: say so in the same reply, and offer the nearest two or three dates that ARE clear for that facility. Never make them ask.",
+      "PARTLY: if another space is free that day, or the same space at different hours, say which.",
+      "UNSURE: if you cannot reach either source, say you are confirming and give a time by which you will. Do not guess and do not go quiet."
+    ],
+    "no_date_given": "Ask for one, and give the booking form link. Nothing to check yet.",
+    "still_true": "A hold is still a separate, explicit act (iih.bookings.block). Telling a client a date is available reserves NOTHING.",
+    "client_sending": "Unchanged - this governs the CONTENT of a reply you were already going to send, under your existing sending rules.",
+    "calendar_route": {
+      "resolved": "2026-08-27. You reported this blocked; it is not. There is no calendar literally named events@iih.ng shared into this account - you were right about that - but Programs and Everyone (All Staff) ARE, and those are the ones that put people in a hall.",
+      "tool": "python3 ~/.openclaw/workspace/scripts/iih_hub_calendar.py 2026-09-19 [end-date] [--json]",
+      "reads": "Zoho CalDAV under temi.kolawole@iih.ng, app password already in the login keychain (himalaya-zoho). Verified live: 61 events in Programs for 2026.",
+      "the_trap": "Zoho CalDAV REPORT returns event HREFs with an EMPTY <D:prop/> - no inline data, whatever you ask for. A naive read sees a 14KB response with zero SUMMARY lines and concludes the calendar is empty. Each .ics must be fetched separately. The script does this; do not replace it with a one-line curl.",
+      "exit_codes": "0 means it read the calendar, whether or not anything was on. NON-ZERO means it could not read it - and a failure must NEVER be reported to a client as \"the date is free\".",
+      "still_check_both": "The script covers PROGRAMMES. iih.bookings.checkAvailability covers CONFIRMED BOOKINGS and blackouts. Neither sees the other. A date is only clear when both are.",
+      "off_site": "Events with a Luma or other external link are flagged off-site and do not occupy a room. An event with NO location is treated as possibly on-site, because assuming otherwise hides a real clash."
+    }
   }
 }
