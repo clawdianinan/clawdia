@@ -28,6 +28,8 @@ from pathlib import Path
 from typing import Any
 
 import iih_booking_connectors as connectors
+import iih_booking_llm as llm
+import iih_booking_quote as quote
 
 
 WORKSPACE_DIR = Path(__file__).resolve().parent.parent
@@ -691,6 +693,251 @@ def classify(record: MessageRecord, conn: sqlite3.Connection, thread_key: str, t
     }
 
 
+def shadow_classify(conn: sqlite3.Connection, record: MessageRecord,
+                    deterministic: dict[str, Any], thread_key: str) -> dict[str, Any]:
+    """Step 1 - request classification in SHADOW MODE.
+
+    Asks the LLM for its own classification and records it *beside* the
+    deterministic result. The deterministic classification remains
+    authoritative; the LLM output never influences state, routing or sends.
+
+    This exists to measure agreement before any LLM class is ever trusted.
+    Gated by config `llm.shadow_classification` and by provider availability,
+    so a missing key degrades to a no-op rather than an error.
+    """
+    llm_cfg = (load_config().get("llm") or {})
+    if not llm_cfg.get("shadow_classification"):
+        return {"skipped": "shadow_classification_disabled"}
+    if not llm.shadow_enabled():
+        return {"skipped": "llm_unavailable"}
+
+    allowed = [
+        "new_booking_request",
+        "payment_proof",
+        "payment_or_attachment",
+        "thread_reply",
+        "client_update_acknowledgement_only",
+        "form_submission_new_booking",
+        "form_submission_data",
+        "media_or_photography_approval_request",
+        "tour_or_excursion_request",
+        "internal_fyi_not_addressed_to_booking",
+        "system_update",
+        "outbound_booking_response",
+        "requires_human_review",
+    ]
+    schema = {
+        "required": ["classification", "confidence", "review_flag", "evidence"],
+        "enums": {"classification": allowed, "review_flag": [True, False]},
+        "types": {
+            "classification": "str",
+            "confidence": "float",
+            "review_flag": "bool",
+            "evidence": "str",
+        },
+        "null_ok": ["evidence"],
+    }
+    prompt = (
+        "You classify inbound email for an innovation-hub facility-booking mailbox. "\
+        "Reply with ONE JSON object only.\n\n"
+        f"Sender: {record.sender_email}\n"
+        f"Subject: {record.subject}\n"
+        f"Has attachment: {bool(record.has_attachment)}\n"
+        f"Existing thread status: {deterministic.get('status_context') or 'unknown'}\n"
+        "Body:\n" + (record.body or "")[:2500] + "\n\n"
+        f"Allowed classifications: {', '.join(allowed)}\n"
+        "Return keys: classification (enum, required), confidence (0-1 float, required), "
+        "review_flag (bool, required), evidence (short quote from the email, may be empty)."
+    )
+
+    result = llm.complete(prompt, schema)
+    entry = {
+        "llm_classification": result["data"]["classification"] if result.get("ok") else None,
+        "llm_confidence": result["data"]["confidence"] if result.get("ok") else None,
+        "llm_review_flag": result["data"]["review_flag"] if result.get("ok") else None,
+        "llm_evidence": result["data"].get("evidence") if result.get("ok") else None,
+        "deterministic_classification": deterministic["classification"],
+        "agreement": (
+            result["data"]["classification"] == deterministic["classification"]
+            if result.get("ok") else None
+        ),
+        "llm_ok": result["ok"],
+        "llm_reason": result.get("reason"),
+        "llm_meta": result.get("meta"),
+        "shadow": True,
+    }
+    conn.execute(
+        "INSERT INTO action_log (thread_key, action, detail_json, created_at) VALUES (?, ?, ?, ?)",
+        (thread_key, "shadow_classification", json.dumps(entry, sort_keys=True), now()),
+    )
+    conn.commit()
+    return entry
+
+
+def extract_intake_proposal(conn: sqlite3.Connection, record: MessageRecord,
+                            thread_key: str) -> dict[str, Any]:
+    """Step 2 - provenance-bearing free-text intake extraction.
+
+    Proposes typed intake fields from the email body, each with the source
+    quote it came from. Output is a PROPOSAL only:
+      - every value is validated by the deterministic validate_booking()
+        rules before a human ever sees it as usable;
+      - unstated values stay null (the model must not invent dates, times,
+        spaces or catering choices);
+      - nothing here writes booking state.
+
+    Stored under action_log as `intake_extraction_proposal` for human review.
+    """
+    llm_cfg = (load_config().get("llm") or {})
+    if not llm_cfg.get("intake_extraction"):
+        return {"skipped": "intake_extraction_disabled"}
+    if not llm.shadow_enabled():
+        return {"skipped": "llm_unavailable"}
+
+    field_names = [
+        "full_name", "email", "phone", "organization", "facility",
+        "event_name", "event_type", "event_date", "start_time", "end_time",
+        "duration_hours", "expected_attendance", "catering_mode", "av_needs",
+        "setup_needs", "refreshment_selection", "sensitive_content_flag",
+    ]
+    schema = {
+        "required": ["fields", "missing_fields", "conflicts", "clarification_questions"],
+        "types": {
+            "fields": "dict",
+            "missing_fields": "list",
+            "conflicts": "list",
+            "clarification_questions": "list",
+        },
+    }
+    prompt = (
+        "Extract facility-booking intake fields from this email. Reply with ONE JSON object only.\n\n"
+        f"Subject: {record.subject}\nBody:\n{(record.body or '')[:3000]}\n\n"
+        f"Target fields: {', '.join(field_names)}\n"
+        "Rules:\n"
+        "- Output {\"fields\": {name: {\"value\": <typed value>, \"source_quote\": <exact substring>, "
+        "\"confidence\": <0-1>}}, ...}. Include ONLY fields actually stated.\n"
+        "- NEVER invent a value. If a field is not stated, omit it and list it in missing_fields.\n"
+        "- event_date must be YYYY-MM-DD; times HH:MM (24h). expected_attendance/duration_hours integers.\n"
+        "- catering_mode must be one of: hub, external, none.\n"
+        "- flags: sensitive_content_flag bool.\n"
+        "- conflicts: list of {\"description\": str} where the email contradicts itself.\n"
+        "- clarification_questions: list of strings for genuinely missing essentials."
+    )
+
+    result = llm.complete(prompt, schema, max_tokens=3000)
+    if not result.get("ok"):
+        entry = {"proposal": None, "llm_ok": False, "llm_reason": result.get("reason"),
+                 "llm_meta": result.get("meta")}
+    else:
+        data = result["data"]
+        # Deterministic validation of the *assembled candidate*, never trusting
+        # the model's own judgement about validity.
+        candidate = {k: v.get("value") for k, v in (data.get("fields") or {}).items()
+                     if isinstance(v, dict)}
+        validation_errors = quote.validate_booking(candidate) if candidate else ["no_fields_extracted"]
+        entry = {
+            "proposal": data.get("fields"),
+            "missing_fields": data.get("missing_fields"),
+            "conflicts": data.get("conflicts"),
+            "clarification_questions": data.get("clarification_questions"),
+            "candidate_fields": candidate,
+            "deterministic_validation_errors": validation_errors,
+            "usable": not validation_errors,
+            "llm_ok": True,
+            "llm_meta": result.get("meta"),
+            "requires_human_review": True,
+        }
+    conn.execute(
+        "INSERT INTO action_log (thread_key, action, detail_json, created_at) VALUES (?, ?, ?, ?)",
+        (thread_key, "intake_extraction_proposal", json.dumps(entry, sort_keys=True), now()),
+    )
+    conn.commit()
+    return entry
+
+
+def draft_reply_proposal(conn: sqlite3.Connection, record: MessageRecord, thread_key: str,
+                         deterministic_facts: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Step 3 - human-approved client draft and escalation summary.
+
+    Produces a DRAFT for a human to approve. Hard boundaries:
+      - no recipients are resolved here and no send command is ever issued;
+      - the model may not state prices - any figures in the output must come
+        from `deterministic_facts` (availability/quote), which the caller
+        supplies from authoritative sources;
+      - output is stored under action_log as `draft_proposal_pending_approval`
+        with status 'pending_human_approval'.
+
+    Sending remains governed by the ordinary approval rules: a human must
+    approve before anything leaves facilitybookings@iih.ng.
+    """
+    llm_cfg = (load_config().get("llm") or {})
+    if not llm_cfg.get("draft_assist"):
+        return {"skipped": "draft_assist_disabled"}
+    if not llm.shadow_enabled():
+        return {"skipped": "llm_unavailable"}
+
+    facts = deterministic_facts or {}
+    schema = {
+        "required": ["draft_subject", "draft_body", "facts_used", "policy_elements"],
+        "types": {
+            "draft_subject": "str",
+            "draft_body": "str",
+            "facts_used": "list",
+            "policy_elements": "list",
+        },
+    }
+    facts_block = json.dumps(facts, indent=2, sort_keys=True) if facts else "(none supplied)"
+    prompt = (
+        "Draft a reply from IIH facility bookings to this client. Reply with ONE JSON object only.\n\n"
+        f"Inbound subject: {record.subject}\nInbound body:\n{(record.body or '')[:2500]}\n\n"
+        f"AUTHORITATIVE FACTS you may state verbatim (do not invent any other figure):\n{facts_block}\n\n"
+        "Rules:\n"
+        "- Draft a professional, concise reply. Refer to IIH as the venue; no internal notes.\n"
+        "- NEVER state a price, availability, or date that is not in AUTHORITATIVE FACTS.\n"
+        "- Do not promise confirmation; explain that a quote/invoice follows review.\n"
+        "- Include Cc events@iih.ng awareness implicitly; do not add recipients yourself.\n"
+        "- Output keys: draft_subject (str), draft_body (str, plain text), "
+        "facts_used (list of strings), policy_elements (list of strings actually reflected)."
+    )
+
+    result = llm.complete(prompt, schema, max_tokens=1200)
+    if not result.get("ok"):
+        entry = {"draft": None, "llm_ok": False, "llm_reason": result.get("reason"),
+                 "llm_meta": result.get("meta")}
+    else:
+        data = result["data"]
+        body = data["draft_body"]
+        # Deterministic money guard: reject any number in the draft that is not
+        # present in the authoritative facts block. Numbers are where an LLM
+        # silently invents a price. Compare on digit-strings with separators
+        # stripped, so 750,000 and 750000 are treated as the same figure.
+        def _norm(nums: list[str]) -> set[str]:
+            return {n.replace(",", "").lstrip("0") or "0" for n in nums}
+
+        allowed_numbers = _norm(re.findall(r"\d[\d,]*", json.dumps(facts)))
+        draft_numbers = _norm(re.findall(r"\d[\d,]*", body))
+        unsourced = sorted(n for n in draft_numbers if n not in allowed_numbers)
+        entry = {
+            "draft_subject": data["draft_subject"],
+            "draft_body": body,
+            "facts_used": data["facts_used"],
+            "policy_elements": data["policy_elements"],
+            "unsourced_numbers": unsourced,
+            "requires_human_approval": True,
+            "status": "pending_human_approval",
+            "llm_ok": True,
+            "llm_meta": result.get("meta"),
+        }
+        if unsourced:
+            entry["blocked_reason"] = "draft contains figures not present in authoritative facts"
+    conn.execute(
+        "INSERT INTO action_log (thread_key, action, detail_json, created_at) VALUES (?, ?, ?, ?)",
+        (thread_key, "draft_proposal_pending_approval", json.dumps(entry, sort_keys=True), now()),
+    )
+    conn.commit()
+    return entry
+
+
 def new_enquiry_body(record: MessageRecord) -> tuple[str, str]:
     plain, html, _template = render_template("new_enquiry_ack", {"salutation": client_salutation(record)})
     return plain, html
@@ -1343,6 +1590,19 @@ def process_envelope(
         (msg_id, record.envelope_id, thread_key, now(), "processed" if inserted else "duplicate", json.dumps(decision, sort_keys=True)),
     )
     auto_response_message_id = None
+    # Step 1 (LLM input): shadow-mode classification. Recorded separately; it
+    # cannot change `decision`, routing or sends in any way.
+    if inserted:
+        try:
+            shadow_classify(conn, record, {**decision, "status_context": decision.get("thread_reason")}, thread_key)
+            if decision["classification"] == "new_booking_request":
+                extract_intake_proposal(conn, record, thread_key)
+        except Exception as exc:  # noqa: BLE001 - shadow must never break the poll.
+            conn.execute(
+                "INSERT INTO action_log (thread_key, action, detail_json, created_at) VALUES (?, ?, ?, ?)",
+                (thread_key, "shadow_classification_failed", json.dumps({"error": str(exc)}, sort_keys=True), now()),
+            )
+            conn.commit()
     if inserted and auto_respond:
         try:
             auto_response_message_id = send_template_response(conn, thread_key, record, decision, dry_run=dry_run)
@@ -1904,6 +2164,66 @@ def record_availability_check(args: argparse.Namespace) -> dict[str, Any]:
     return {"ok": True, "thread_key": args.thread_key, "availability_checked_at": now()}
 
 
+def llm_shadow_report(limit: int) -> dict[str, Any]:
+    """Agreement summary between shadow LLM classifications and deterministic ones."""
+    with ensure_db() as conn:
+        rows = conn.execute(
+            """
+            SELECT detail_json FROM action_log
+            WHERE action = 'shadow_classification'
+            ORDER BY id DESC LIMIT ?
+            """,
+            (limit,),
+        ).fetchall()
+    total = ok = agree = 0
+    disagreements: dict[str, int] = {}
+    for (detail,) in rows:
+        try:
+            d = json.loads(detail)
+        except Exception:
+            continue
+        total += 1
+        if d.get("llm_ok"):
+            ok += 1
+            if d.get("agreement"):
+                agree += 1
+            else:
+                key = f"{d.get('deterministic_classification')} -> {d.get('llm_classification')}"
+                disagreements[key] = disagreements.get(key, 0) + 1
+    return {
+        "samples": total,
+        "llm_ok": ok,
+        "agreement": agree,
+        "agreement_rate": round(agree / ok, 3) if ok else None,
+        "top_disagreements": sorted(disagreements.items(), key=lambda x: -x[1])[:10],
+        "note": "shadow only - LLM never influences state or sends",
+    }
+
+
+def llm_draft(thread_key: str, facts_json: str) -> dict[str, Any]:
+    """Generate a draft-reply proposal for a thread (human approval required)."""
+    with ensure_db() as conn:
+        row = conn.execute(
+            "SELECT subject, client_email FROM conversations WHERE thread_key = ?",
+            (thread_key,),
+        ).fetchone()
+        if row is None:
+            raise SystemExit(f"Unknown thread_key: {thread_key}")
+        record = MessageRecord(
+            envelope_id="",
+            subject=row[0] or "",
+            sender_email=row[1] or "",
+            sender_name="",
+            date="",
+            has_attachment=False,
+            body="",
+            headers={},
+            raw={},
+        )
+        facts = json.loads(facts_json) if facts_json else {}
+        return draft_reply_proposal(conn, record, thread_key, deterministic_facts=facts)
+
+
 def state(limit: int) -> dict[str, Any]:
     with ensure_db() as conn:
         rows = conn.execute(
@@ -1985,6 +2305,15 @@ def main() -> int:
     availability_parser.add_argument("--available", type=int, default=1)
     availability_parser.add_argument("--pretty", action="store_true")
 
+    shadow_parser = sub.add_parser("llm-shadow-report", help="Shadow-classification agreement summary.")
+    shadow_parser.add_argument("--limit", type=int, default=200)
+    shadow_parser.add_argument("--pretty", action="store_true")
+
+    draft_parser = sub.add_parser("llm-draft", help="Generate a draft-reply proposal (human approval required).")
+    draft_parser.add_argument("--thread-key", required=True)
+    draft_parser.add_argument("--facts-json", default="")
+    draft_parser.add_argument("--pretty", action="store_true")
+
     watchdog_parser = sub.add_parser("watchdog", help="Alert if no successful poll has completed recently.")
     watchdog_parser.add_argument("--pretty", action="store_true")
 
@@ -2013,6 +2342,10 @@ def main() -> int:
         output = mark_finance_confirmed(args)
     elif args.command == "record-availability":
         output = record_availability_check(args)
+    elif args.command == "llm-shadow-report":
+        output = llm_shadow_report(args.limit)
+    elif args.command == "llm-draft":
+        output = llm_draft(args.thread_key, args.facts_json)
     elif args.command == "watchdog":
         output = watchdog()
     elif args.command == "reset-send-circuit":

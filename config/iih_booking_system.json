@@ -588,5 +588,20 @@
       "still_check_both": "The script covers PROGRAMMES. iih.bookings.checkAvailability covers CONFIRMED BOOKINGS and blackouts. Neither sees the other. A date is only clear when both are.",
       "off_site": "Events with a Luma or other external link are flagged off-site and do not occupy a room. An event with NO location is treated as possibly on-site, because assuming otherwise hides a real clash."
     }
+  },
+  "llm": {
+    "_doc": "LLM input boundary. The LLM may PROPOSE; it may never DECIDE anything touching money or state. See analysis/codex-llm-steps/LLM_STEPS.md.",
+    "provider": "deepseek",
+    "model": "deepseek/deepseek-v4-flash",
+    "secret_name": "DEEPSEEK_API_KEY",
+    "boundary_rule": "LLM proposal -> strict schema + source-span validation -> deterministic authoritative lookup/recalculation -> human approval where required -> updatedAt CAS + allowed transition -> idempotent transactional command + audit",
+    "kill_switch_env": "IIH_LLM_DISABLED=1 disables every LLM call without a config change",
+    "shadow_classification": true,
+    "intake_extraction": true,
+    "draft_assist": true,
+    "payment_proof_parsing": false,
+    "payment_proof_parsing_blocked_reason": "Do not enable until amount-matching against the authoritative invoice total and evidence provenance are enforced.",
+    "max_calls_per_run": 10,
+    "enabled_on": "2026-09-13"
   }
 }

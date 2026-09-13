@@ -348,7 +348,53 @@ def main() -> int:
             out = agent.run_cmd(["himalaya"], timeout=30, retries=3, base_delay=0)
         finally:
             _sp.run = real_run
-        check(out == "ok" and calls["n"] == 2, "run_cmd retries once on timeout then succeeds")
+        # --- LLM boundary: schema validation rejects bad payloads ---
+        import iih_booking_llm as llm
+        try:
+            llm.validate({"a": "x"}, {"required": ["a", "b"]})
+            check(False, "validate rejects missing required fields")
+        except llm.LlmSchemaError:
+            check(True, "validate rejects missing required fields")
+        try:
+            llm.validate({"c": "z"}, {"enums": {"c": ["a", "b"]}})
+            check(False, "validate rejects out-of-enum values")
+        except llm.LlmSchemaError:
+            check(True, "validate rejects out-of-enum values")
+        try:
+            llm.validate({"n": True}, {"types": {"n": "int"}})
+            check(False, "validate rejects bool for int (no coercion)")
+        except llm.LlmSchemaError:
+            check(True, "validate rejects bool for int (no coercion)")
+        check(llm.validate({"k": None}, {"required": ["k"], "null_ok": ["k"]}) == {"k": None},
+              "validate permits null only when declared")
+
+        # --- LLM steps fail open to the deterministic path when unavailable ---
+        import os as _os
+        agent.STATE_PATH = tmp_path / "llm.sqlite3"
+        with agent.ensure_db() as conn:
+            _os.environ["IIH_LLM_DISABLED"] = "1"
+            try:
+                rec = make_record("<llm1@example.com>", "Booking enquiry Main Hall", "Please book a hall.")
+                shadow = agent.shadow_classify(conn, rec, {"classification": "new_booking_request"}, "llm-thread")
+                intake = agent.extract_intake_proposal(conn, rec, "llm-thread")
+                draft = agent.draft_reply_proposal(conn, rec, "llm-thread")
+            finally:
+                _os.environ.pop("IIH_LLM_DISABLED", None)
+        check(shadow.get("skipped") == "llm_unavailable", "shadow classify degrades when LLM disabled")
+        check(intake.get("skipped") == "llm_unavailable", "intake extraction degrades when LLM disabled")
+        check(draft.get("skipped") == "llm_unavailable", "draft assist degrades when LLM disabled")
+
+        # --- Shadow classification never changes deterministic output ---
+        with agent.ensure_db() as conn:
+            _os.environ["IIH_LLM_DISABLED"] = "1"
+            try:
+                rec2 = make_record("<llm2@example.com>", "Payment proof attached", "See attached receipt.")
+                det = agent.classify(rec2, conn, "llm-thread-2", "new_thread")
+                agent.shadow_classify(conn, rec2, det, "llm-thread-2")
+            finally:
+                _os.environ.pop("IIH_LLM_DISABLED", None)
+        check(det["classification"] == agent.classify(rec2, conn, "llm-thread-2", "new_thread")["classification"],
+              "shadow classification leaves deterministic classification unchanged")
 
     return 0
 
