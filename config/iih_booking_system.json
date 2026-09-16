@@ -88,6 +88,13 @@
     "blackout_days": [
       "Sunday"
     ],
+    "saturday_policy": {
+      "status": "BOOKABLE",
+      "effective": "2026-09-15",
+      "decided_by": "Temi (MD)",
+      "rule": "Saturdays ARE bookable. Saturday is a normal operating day. The previous Saturday blackout reading was reverted on the MD's explicit confirmation (Option A). Sunday remains the only blackout day.",
+      "note": "Revolve Academy Conference on Saturday 26 September 2026 (IIH-9TM6-VH4F) requires no exception, because Saturdays are bookable. The 10 October 2026 alternative date is likewise a Saturday and is equally valid."
+    },
     "operating_start": "09:00",
     "operating_end": "18:00",
     "grace_minutes": 30,
@@ -180,7 +187,7 @@
       "maximum 6 hours per event, all spaces including day-rate halls",
       "attendance capped by the largest booked space (Main Hall 400, Pitch Hall 120, Meeting Room 20)",
       "minimum 3 days lead time",
-      "Sundays closed, 09:00-18:00 window",
+      "Sundays closed, 09:00-18:00 window (Mon-Sat)",
       "end time now REQUIRED on every booking, including day-rate halls"
     ]
   },
@@ -196,6 +203,8 @@
   "fees": {
     "refundable_security_deposit": {
       "rate_ngn": 100000,
+      "billing_basis": "per_space_per_day",
+      "basis_note": "NGN 100,000 per booked space per day. A 2-day Main Hall booking = NGN 200,000. Confirmed by Temi 2026-09-15; matches the website backend DEPOSIT_BASIS = per_space_day (introduced 29 Aug 2026) and its two-day test expecting NGN 200,000. The old flat 'always_apply' reading under-quoted multi-day bookings.",
       "always_apply": true,
       "zoho_books_item_id": "6104627000000150065"
     },
@@ -425,7 +434,7 @@
       "iih.bookings.release": "release a hold that lapsed"
     },
     "authority_rule": "the backend is the record of truth for booking state and money. Compute quotes with iih.bookings.quote rather than locally, so the figure the client saw on the website is the figure invoiced. Zoho Books remains the invoicing system; record the resulting invoice number back with iih.bookings.recordInvoice.",
-    "availability_rule": "the public form already prevents clients picking a date that is taken, a Sunday, or in the past. Only CONFIRMED bookings and blackouts block a date, so a tentative hold must be written with iih.bookings.block when you invoice - otherwise another client can still book the same slot while payment is pending.",
+    "availability_rule": "the public form already prevents clients picking a date that is taken, a Sunday, or in the past. Saturdays ARE bookable. Only CONFIRMED bookings and blackouts block a date, so a tentative hold must be written with iih.bookings.block when you invoice - otherwise another client can still book the same slot while payment is pending.",
     "role": "admin",
     "scope_note": "Widened 17 Aug 2026 to match the iihweb agent. Beyond the booking tools you can now reach events, programs, news, gallery, social and calendar writes over the same MCP server - iih.events.*, iih.programs.*, iih.news.*, iih.gallery.*, iih.social.*, iih.calendar.*, iih.sync.*, iih.content.*, iih.audit.listRecent. Same endpoint, your own token, so the audit log still attributes writes to you."
   },

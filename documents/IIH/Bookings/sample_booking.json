@@ -8,8 +8,14 @@
   "event_type": "Conference",
   "event_date": "2026-07-01",
   "start_time": "09:00",
+  "end_time": "17:30",
   "duration_hours": 8,
   "expected_attendance": 100,
+  "catering_mode": "hub",
   "external_catering": false,
+  "av_needs": "Projector and microphones",
+  "setup_needs": "Theatre seating",
+  "refreshment_selection": "None",
+  "sensitive_content_flag": false,
   "special_requirements": "None"
 }

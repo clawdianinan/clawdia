@@ -311,6 +311,16 @@ def build_quote(booking: dict[str, Any]) -> dict[str, Any]:
     if isinstance(quantity, float) and quantity.is_integer():
         quantity = int(quantity)
     security_deposit = fee_config(config, "refundable_security_deposit", SECURITY_DEPOSIT)
+    # Per Temi (2026-09-15): the refundable security deposit is per booked space per day,
+    # not flat. A 2-day Main Hall booking therefore carries NGN 200,000, not 100,000.
+    # This matches the website backend (DEPOSIT_BASIS = per_space_day). The config key
+    # `billing_basis` states the basis explicitly; default to per_space_per_day so an
+    # older config cannot silently under-quote a multi-day booking.
+    deposit_basis = security_deposit.get("billing_basis") or "per_space_per_day"
+    if deposit_basis == "per_space_per_day":
+        deposit_quantity = event_days * max(1, len(booking.get("spaces") or [booking.get("facility")]))
+    else:
+        deposit_quantity = 1
     corkage = fee_config(config, "external_catering_corkage", EXTERNAL_CATERING)
     catering_mode = booking.get("catering_mode") or ("external" if booking.get("external_catering") else "hub")
 
@@ -330,9 +340,14 @@ def build_quote(booking: dict[str, Any]) -> dict[str, Any]:
         {
             "name": security_deposit.get("name") or "Refundable Security Deposit",
             "item_id": security_deposit.get("item_id") or security_deposit.get("zoho_books_item_id"),
-            "quantity": 1,
+            "description": (
+                "Refundable security deposit (NGN 100,000 per space per day)"
+                if deposit_basis == "per_space_per_day" and deposit_quantity > 1
+                else None
+            ),
+            "quantity": deposit_quantity,
             "rate": security_deposit["rate_ngn"],
-            "amount": security_deposit["rate_ngn"],
+            "amount": deposit_quantity * security_deposit["rate_ngn"],
             **tax_fields(config, "refundable_security_deposit"),
         },
     ]
