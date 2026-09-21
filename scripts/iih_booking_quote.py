@@ -364,29 +364,60 @@ def build_quote(booking: dict[str, Any]) -> dict[str, Any]:
             }
         )
 
-    # Apply discount if specified — discount applies only to facility/fee items, not to
-    # refundable security deposits.
+    # A booking-code discount comes off FACILITY HIRE ONLY — never corkage, never
+    # food, never the refundable deposit.
+    #
+    # This block used to sum every line except the deposit, so a 33% code took 33%
+    # off the corkage as well, and it left the taxed amount at the GROSS hire — a
+    # 33% booking was charged VAT on the full NGN 750,000 instead of the NGN
+    # 502,500 actually owed. On one Kwara Creators booking that was a NGN 280,500
+    # discount where NGN 247,500 was agreed, and NGN 11,062.50 of VAT that was
+    # never due. Both are silent: the total looks plausible and nothing errors.
+    #
+    # The authoritative Convex backend (`buildQuote` in convex/lib/booking.ts)
+    # discounts each space from that space's own gross and lets tax follow the
+    # net. This mirrors it, and the mirrored behaviour is what the invoice uses.
     discount_percentage = booking.get("discount_percentage", 0)
     discount_amount = booking.get("discount_amount", 0)
+    # Hire lines only. `tax_category` is set by tax_fields(); the deposit and
+    # the corkage carry their own categories, so this cannot catch them even if a
+    # new fee is added later.
+    hire_lines = [item for item in line_items if item.get("tax_category") == "facility_rental"]
+    hire_total = sum(item["amount"] for item in hire_lines)
     if discount_percentage and not discount_amount:
-        # Calculate discount on non-deposit, non-fee items only
-        chargeable_total = sum(
-            item["amount"]
-            for item in line_items
-            if item["name"] not in {"Refundable Security Deposit"}
-        )
-        discount_amount = round(chargeable_total * discount_percentage / 100)
+        discount_amount = round(hire_total * discount_percentage / 100)
     if discount_amount > 0:
-        desc = f"{discount_percentage}% discount" if discount_percentage else "Special discount"
-        line_items.append(
-            {
-                "name": "Discount",
-                "description": desc,
-                "quantity": 1,
-                "rate": -discount_amount,
-                "amount": -discount_amount,
-            }
-        )
+        # Apply the credit IN PLACE on the hire line and net its rate, rather than
+        # appending a separate negative line.
+        #
+        # Both at once double-counts: the hire would be netted to 502,500 AND a
+        # -247,500 credit would sit beside it, so the invoice totals 247,500 too
+        # low. That is the same defect the Kwara Creators invoice hit the first
+        # time round (raised as NGN 1,016,250 against NGN 997,687.50) — Zoho taxes
+        # per line and cannot net a credit against a taxed line, so the tax moved
+        # to the wrong base and the two errors overlapped. Netting the line fixes
+        # the tax base and the credit in one move, and the description carries the
+        # arithmetic so the client still sees the rate, the discount and the net.
+        pct = discount_percentage if discount_percentage else None
+        remaining = discount_amount
+        for item in hire_lines:
+            if remaining <= 0:
+                break
+            take = min(item["amount"], remaining)
+            gross = item["amount"]
+            item["amount"] = gross - take
+            if item.get("quantity") == 1:
+                item["rate"] = item["amount"]
+            note = (
+                f"{pct}% partnership discount applied: NGN {gross:,.0f} less "
+                f"NGN {take:,.0f}"
+                if pct
+                else f"Discount applied: NGN {gross:,.0f} less NGN {take:,.0f}"
+            )
+            item["description"] = (
+                f"{item['description']}\n{note}" if item.get("description") else note
+            )
+            remaining -= take
 
     return {
         "currency": "NGN",
